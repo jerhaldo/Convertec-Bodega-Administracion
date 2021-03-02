@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E1FDD1F6-C19A-4682-93CF-290A58C48ECD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Convertec_Bodega_Administracion</RootNamespace>
+    <AssemblyName>Convertec Bodega Administracion</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.15.3\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business\MovimientoBusiness.cs" />
+    <Compile Include="Model\BodegaModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BodegaModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BodegaModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BodegaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BodegaModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BodegaModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Imagen_Producto.cs">
+      <DependentUpon>BodegaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Ingreso_Prod.cs">
+      <DependentUpon>BodegaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Marca.cs">
+      <DependentUpon>BodegaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Movimiento.cs">
+      <DependentUpon>BodegaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\MovimientosDTO.cs" />
+    <Compile Include="Model\Producto.cs">
+      <DependentUpon>BodegaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Proveedor.cs">
+      <DependentUpon>BodegaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Salida_Prod.cs">
+      <DependentUpon>BodegaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Trabajador.cs">
+      <DependentUpon>BodegaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Views\Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="Model\BodegaModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BodegaModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model\BodegaModel.edmx.diagram">
+      <DependentUpon>BodegaModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Convertec_Bodega_Administracion.Model.DescProductoDetalle.datasource" />
+    <None Include="Properties\DataSources\Convertec_Bodega_Administracion.Model.HistorialMovimientoTabla.datasource" />
+    <None Include="Properties\DataSources\Convertec_Bodega_Administracion.Model.MovIngresoDataGridDTO.datasource" />
+    <None Include="Properties\DataSources\Convertec_Bodega_Administracion.Model.MovSalidasDataGridDTO.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\imgProductos\AMPERÍMETRO ANÁLAOGO DC +-100A 50mV %282%29.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\imgProductos\AMPERÍMETRO ANÁLOGO DC 100A 50mV GR96 %281%29.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\imgProductos\AMPERÍMETRO ANÁLOGO DC 50A 50mV GR96 240º %281%29.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\imgProductos\CAPACITOR ELECTROLÍTICO 33.000 uF 100V.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\imgProductos\CONTACTOR GLP1-D4011 24VCC.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\imgProductos\DISIPASOR MSN 180.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\imgProductos\WB3U414U01 %280-500V AC%29.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\logos\739aca6e-bcbd-47ca-97ef-136bc7f406a1.png" />
+    <Content Include="Assets\logos\b0fd0ba3-6f9b-4370-bb2b-e4c9f8aa40bd.png" />
+    <Content Include="Assets\logos\convertec_icon.png" />
+    <Content Include="Assets\logos\convertec_icon_bw.png" />
+    <Content Include="Assets\logos\favicon.ico" />
+    <Content Include="Assets\logos\image-unavailable.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\logos\image-unavailable_650-350.png" />
+    <Content Include="Assets\logos\imageedit_5_9066887911.png" />
+    <Content Include="Assets\logos\logo - copia.png" />
+    <Content Include="Assets\logos\logo%402x.png" />
+    <Content Include="Assets\logos\logo.png" />
+    <Content Include="Assets\logos\logo_completo.jpg" />
+    <Content Include="Assets\logos\logo_completo.png" />
+    <Content Include="Assets\logos\logo_completo_bw.png" />
+    <Content Include="Model\BodegaModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>BodegaModel.Context.cs</LastGenOutput>
+      <DependentUpon>BodegaModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model\BodegaModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BodegaModel.edmx</DependentUpon>
+      <LastGenOutput>BodegaModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
