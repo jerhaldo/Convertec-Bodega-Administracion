@@ -129,4 +129,10 @@ namespace Convertec_Bodega_Administracion.Model
         public Nullable<int> valor_unitario { get; set; }
         
     }
+
+    class IdDescripcionElemento
+    {
+        public int id_producto { get; set; }
+        public string descripcion { get; set; }
+    }
 }

@@ -277,6 +277,28 @@ namespace Convertec_Bodega_Administracion.Business
             }
         }
 
+        public static List<IdDescripcionElemento> GetElementoByName()
+        {
+            using (var db = new ConvertecBodegaEntities())
+            {
+
+                var data = (
+                        from p in db.Producto
+                        where p.cod_bodega != null
+                        where p.borrado == false
+                        select new IdDescripcionElemento
+                        {
+                            id_producto = p.id_producto,
+                            descripcion = p.descripcion
+                        }
+                    ).ToList();
+
+                db.Dispose();
+                return data;
+
+            }
+        }
+
         public static DescProducto GetDescProductos(long cod)
         {
             using (var db = new ConvertecBodegaEntities())
@@ -470,12 +492,12 @@ namespace Convertec_Bodega_Administracion.Business
             {
                 if (ot.ot != "")
                 {
-                    formatedOt = formatedOt + ot.ot + ", ";
+                    formatedOt = formatedOt + ot.ot + "/";
                 }
             }
             if (formatedOt != "")
             {
-                formatedOt = formatedOt.Remove(formatedOt.Length - 2);
+                formatedOt = formatedOt.Remove(formatedOt.Length - 1);
             }
             return formatedOt;
         }
