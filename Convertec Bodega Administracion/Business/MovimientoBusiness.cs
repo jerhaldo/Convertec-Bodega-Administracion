@@ -20,11 +20,11 @@ namespace Convertec_Bodega_Administracion.Business
                     db.Database.Connection.Open();
                     if (db.Database.Connection.State == ConnectionState.Open)
                     {
-                        System.Console.WriteLine(@"INFO: ConnectionString: " + db.Database.Connection.ConnectionString
+                        /*System.Console.WriteLine(@"INFO: ConnectionString: " + db.Database.Connection.ConnectionString
                             + "\n DataBase: " + db.Database.Connection.Database
                             + "\n DataSource: " + db.Database.Connection.DataSource
                             + "\n ServerVersion: " + db.Database.Connection.ServerVersion
-                            + "\n TimeOut: " + db.Database.Connection.ConnectionTimeout);
+                            + "\n TimeOut: " + db.Database.Connection.ConnectionTimeout);*/
                         db.Database.Connection.Close();
                         Cursor.Current = Cursors.Default;
                         return true;
@@ -143,6 +143,7 @@ namespace Convertec_Bodega_Administracion.Business
                             valor = ii.valor,
                             valor_unitario = ii.valor_unitario,
                             cod_prod_prov = ii.cod_prod_prov,
+                            obs_mov = m.obs_mov
                         }
                     ).ToList();
                 }
@@ -419,40 +420,49 @@ namespace Convertec_Bodega_Administracion.Business
             }
         }
 
-        public static void InsertSalida(List<ProdSalida> prodSalList)
+        public static void InsertEntrada(List<ProdEntrada> prodEntradaList)
         {
             ConvertecBodegaEntities db = new ConvertecBodegaEntities();
-            foreach (ProdSalida prodsalida in prodSalList)
+            foreach (ProdEntrada pe in prodEntradaList)
             {
                 //INSERT MOVIMIENTO
                 Movimiento mov = new Movimiento
                 {
-                    id_producto = prodsalida.id_producto,
-                    fecha_mov = prodsalida.fecha_mov,
-                    cantidad = prodsalida.cantidad,
-                    ot = prodsalida.ot,
-                    obs_mov = prodsalida.obs_mov
+                    id_producto = pe.id_producto,
+                    fecha_mov = pe.fecha_mov,
+                    cantidad = pe.cantidad,
+                    ot = pe.ot,
+                    obs_mov = pe.obs_mov
                 };
                 db.Movimiento.Add(mov);
                 db.SaveChanges();
 
-                //INSERT SALIDA
-                Salida_Prod pd = new Salida_Prod
+                //INSERT ENTRADA
+                Ingreso_Prod pd = new Ingreso_Prod
                 {
                     id_mov = mov.id_mov,
-                    id_trabajador = prodsalida.id_trabajador,
-                    folio = prodsalida.folio
+                    id_proveedor = pe.id_proveedor,
+                    id_marca = pe.id_marca,
+                    cod_prod_prov = pe.cod_prod_prov,
+                    documento = pe.documento,
+                    valor = pe.valor,
+                    valor_unitario = pe.valor_unitario
                 };
-                db.Salida_Prod.Add(pd);
+                db.Ingreso_Prod.Add(pd);
                 db.SaveChanges();
 
-                //UPDATE STOCK DEL PRODUCTO
+                //UPDATE DATOS DEL PRODUCTO
                 try
                 {
-                    var producto = db.Producto.SingleOrDefault(p => p.id_producto == prodsalida.id_producto);
+                    var producto = db.Producto.SingleOrDefault(p => p.id_producto == pe.id_producto);
                     if (producto != null)
                     {
-                        producto.stock -= prodsalida.cantidad;
+                        producto.stock += pe.cantidad;
+                        producto.id_proveedor = pe.id_proveedor;
+                        producto.id_marca = pe.id_marca;
+                        producto.valor = pe.valor;
+                        producto.valor_unitario = pe.valor_unitario;
+                        producto.ult_fecha_compra = pe.fecha_mov;
                         db.SaveChanges();
                     }
                     else
@@ -574,6 +584,124 @@ namespace Convertec_Bodega_Administracion.Business
             }
             //put a breakpoint here and check datatable
             return dataTable;
+        }
+
+        public static DescripcionElemento GetDescripcionElemento(string descripcion)
+        {
+            using (var db = new ConvertecBodegaEntities())
+            {
+                var data = (
+                    from p in db.Producto
+                    join m in db.Marca on p.id_marca equals m.id_marca
+                    join pr in db.Proveedor on p.id_proveedor equals pr.id_proveedor
+                    where p.descripcion == descripcion
+                    select new DescripcionElemento
+                    {
+                        id_producto = p.id_producto,
+                        cod_bodega = p.cod_bodega,
+                        nom_marca = m.nom_marca,
+                        nom_proveedor = pr.nom_proveedor,
+                        parte_plano = p.parte_plano,
+                        obs = p.obs,
+                        stock = p.stock,
+                        valor = p.valor,
+                        valor_unitario = p.valor_unitario,
+                        ult_fecha_compra = p.ult_fecha_compra,
+                        unidad = p.unidad
+                    }
+                ).SingleOrDefault();
+
+                db.Dispose();
+
+                return data;
+            }
+        }
+        public static bool CheckProductoByName(string descripcion, bool disponible)
+        {
+            using (var db = new ConvertecBodegaEntities())
+            {
+                if (disponible)
+                {
+                    var result = (from p in db.Producto
+                                  where p.descripcion == descripcion
+                                  where p.borrado == false
+                                  select p.cod_bodega).Any();
+
+                    return result;
+                }
+                else
+                {
+                    var result = (from p in db.Producto
+                                  where p.descripcion == descripcion
+                                  select p.cod_bodega).Any();
+
+                    return result;
+                }
+            }
+        }
+
+        public static List<NombreIdProveedor> GetProveedorByName()
+        {
+            using (var db = new ConvertecBodegaEntities())
+            {
+
+                var data = (
+                        from p in db.Proveedor
+                        select new NombreIdProveedor
+                        {
+                            id_proveedor = p.id_proveedor,
+                            nom_proveedor = p.nom_proveedor
+                        }
+                    ).ToList();
+
+                db.Dispose();
+                return data;
+
+            }
+        }
+        public static List<NombreIdMarca> GetMarcaByName()
+        {
+            using (var db = new ConvertecBodegaEntities())
+            {
+
+                var data = (
+                        from m in db.Marca
+                        select new NombreIdMarca
+                        {
+                            id_marca = m.id_marca,
+                            nom_marca = m.nom_marca
+                        }
+                    ).ToList();
+
+                db.Dispose();
+                return data;
+
+            }
+        }
+        public static void InsertProveedor(Proveedor prov)
+        {
+            ConvertecBodegaEntities db = new ConvertecBodegaEntities();
+            Proveedor proveedor = new Proveedor
+            {
+                nom_proveedor = prov.nom_proveedor,
+                telefono = prov.telefono,
+                email = prov.email,
+                vendedor = prov.vendedor,
+                rut_empresa = prov.rut_empresa
+            };
+            db.Proveedor.Add(proveedor);
+            db.SaveChanges();
+        }
+
+        public static void InsertMarca(Marca mar)
+        {
+            ConvertecBodegaEntities db = new ConvertecBodegaEntities();
+            Marca marca = new Marca
+            {
+                nom_marca = mar.nom_marca,
+            };
+            db.Marca.Add(marca);
+            db.SaveChanges();
         }
     }
 }

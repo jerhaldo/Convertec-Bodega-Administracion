@@ -4,14 +4,14 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="ConvertecBodegaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="ConvertecBodegaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Imagen_Producto">
           <Key>
             <PropertyRef Name="id_image" />
           </Key>
           <Property Name="id_image" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="id_producto" Type="int" Nullable="false" />
-          <Property Name="image" Type="varchar" MaxLength="256" Nullable="false" />
+          <Property Name="image" Type="varchar" MaxLength="512" Nullable="false" />
         </EntityType>
         <EntityType Name="Ingreso_Prod">
           <Key>
@@ -70,6 +70,8 @@
           <Property Name="nom_proveedor" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="telefono" Type="varchar" MaxLength="50" />
           <Property Name="email" Type="varchar" MaxLength="50" />
+          <Property Name="vendedor" Type="varchar" MaxLength="50" />
+          <Property Name="rut_empresa" Type="varchar" MaxLength="10" />
         </EntityType>
         <EntityType Name="Salida_Prod">
           <Key>
@@ -247,8 +249,7 @@
             <End Role="Salida_Prod" EntitySet="Salida_Prod" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ConvertecBodegaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -258,7 +259,7 @@
           </Key>
           <Property Name="id_image" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="id_producto" Type="Int32" Nullable="false" />
-          <Property Name="image" Type="String" MaxLength="256" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="image" Type="String" MaxLength="512" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="Producto" Relationship="Self.FK_Imagen_Producto_Producto" FromRole="Imagen_Producto" ToRole="Producto" />
         </EntityType>
         <EntityType Name="Ingreso_Prod">
@@ -332,6 +333,8 @@
           <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Ingreso_Prod" Relationship="Self.FK_Ingreso_Prod_Proveedor" FromRole="Proveedor" ToRole="Ingreso_Prod" />
           <NavigationProperty Name="Producto" Relationship="Self.FK_Producto_Proveedor" FromRole="Proveedor" ToRole="Producto" />
+          <Property Name="vendedor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="rut_empresa" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Salida_Prod">
           <Key>
@@ -583,6 +586,8 @@
           <EntitySetMapping Name="Proveedor">
             <EntityTypeMapping TypeName="ConvertecBodegaModel.Proveedor">
               <MappingFragment StoreEntitySet="Proveedor">
+                <ScalarProperty Name="rut_empresa" ColumnName="rut_empresa" />
+                <ScalarProperty Name="vendedor" ColumnName="vendedor" />
                 <ScalarProperty Name="id_proveedor" ColumnName="id_proveedor" />
                 <ScalarProperty Name="nom_proveedor" ColumnName="nom_proveedor" />
                 <ScalarProperty Name="telefono" ColumnName="telefono" />

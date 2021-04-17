@@ -25,6 +25,8 @@ namespace Convertec_Bodega_Administracion.Model
         public string nom_proveedor { get; set; }
         public string telefono { get; set; }
         public string email { get; set; }
+        public string vendedor { get; set; }
+        public string rut_empresa { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Ingreso_Prod> Ingreso_Prod { get; set; }

@@ -117,6 +117,18 @@
     <Compile Include="Model\Trabajador.cs">
       <DependentUpon>BodegaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Views\AgregarMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AgregarMarca.Designer.cs">
+      <DependentUpon>AgregarMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AgregarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AgregarProveedor.Designer.cs">
+      <DependentUpon>AgregarProveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +147,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\AgregarMarca.resx">
+      <DependentUpon>AgregarMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AgregarProveedor.resx">
+      <DependentUpon>AgregarProveedor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
     </EmbeddedResource>
