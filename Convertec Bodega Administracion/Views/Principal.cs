@@ -45,6 +45,13 @@ namespace Convertec_Bodega_Administracion
             HlabelClock.Text = DateTime.Now.ToString("G");
         }
 
+        private void btnConfiguracion_Click(object sender, EventArgs e)
+        {
+            Views.Configuraciones frmConfig = new Views.Configuraciones();
+            frmConfig.ShowDialog();
+            frmConfig.Dispose();
+        }
+
         /*private void CheckDBConnection(bool showError)
         {
             if (MovimientoBusiness.CheckDBConnection(showError))
@@ -336,13 +343,12 @@ namespace Convertec_Bodega_Administracion
                         else
                             IElblUnidad.Text = "Metros";
 
-
                         var img = MovimientoBusiness.GetImages(Int32.Parse(IEcomboBoxDescripcion.SelectedValue.ToString()));
 
                         if (img != null)
                             try
                             {
-                                IEpictureBoxProducto.Image = Image.FromFile(@"D:\OneDrive\ConvertecImages\ImgProductos\" + img.image);
+                                IEpictureBoxProducto.Image = Image.FromFile(Properties.Settings.Default.ImagePath + "/" + img.image);
                             }
                             catch (System.IO.FileNotFoundException)
                             {
