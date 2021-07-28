@@ -38,27 +38,29 @@ namespace Convertec_Bodega_Administracion
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelSidebar = new System.Windows.Forms.Panel();
             this.SidebarPanelMenuButton = new System.Windows.Forms.Panel();
-            this.iconbutton = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.SidebarBtnSalidaIngreso = new FontAwesome.Sharp.IconButton();
             this.SidebarBtnCrearElemento = new FontAwesome.Sharp.IconButton();
             this.SidebarBtnIngresarElemento = new FontAwesome.Sharp.IconButton();
-            this.SidebarBtnSalidaIngreso = new FontAwesome.Sharp.IconButton();
             this.SidebarBtnMovElementos = new FontAwesome.Sharp.IconButton();
             this.SidebarPanelHeader = new System.Windows.Forms.Panel();
             this.SidebarPictureBox1 = new System.Windows.Forms.PictureBox();
             this.HlabelDiv = new System.Windows.Forms.Label();
             this.HpanelHeader = new System.Windows.Forms.Panel();
+            this.btnConfiguracion = new FontAwesome.Sharp.IconButton();
             this.label3 = new System.Windows.Forms.Label();
             this.HiconPbDataBase = new FontAwesome.Sharp.IconPictureBox();
             this.Hlabel1 = new System.Windows.Forms.Label();
@@ -96,14 +98,14 @@ namespace Convertec_Bodega_Administracion
             this.IEpanelFormElemento = new System.Windows.Forms.Panel();
             this.IEpanelFormElementoL = new System.Windows.Forms.Panel();
             this.IEpanelFormElementoL1 = new System.Windows.Forms.Panel();
-            this.IEiconErrorValor = new FontAwesome.Sharp.IconPictureBox();
+            this.IEdataGridViewProd = new System.Windows.Forms.DataGridView();
+            this.IEtxtDescripcion = new System.Windows.Forms.TextBox();
             this.IEBtnAgregarMarca = new FontAwesome.Sharp.IconButton();
             this.IEcomboBoxMarca = new System.Windows.Forms.ComboBox();
             this.IElabel9 = new System.Windows.Forms.Label();
             this.IEBtnAgregarProveedor = new FontAwesome.Sharp.IconButton();
             this.IEcomboBoxProveedor = new System.Windows.Forms.ComboBox();
             this.IElabel8 = new System.Windows.Forms.Label();
-            this.IEcomboBoxDescripcion = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.IElblUnidad = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -168,7 +170,8 @@ namespace Convertec_Bodega_Administracion
             this.BodyPanelSalidaIngreso = new System.Windows.Forms.Panel();
             this.BodypanelGeneral = new System.Windows.Forms.Panel();
             this.IEtoolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.btnConfiguracion = new FontAwesome.Sharp.IconButton();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.fechamovDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codprodprovDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidadDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -202,6 +205,7 @@ namespace Convertec_Bodega_Administracion
             this.otDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.obsmovDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.movIngresoDataGridDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idDescripcionElementoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panelSidebar.SuspendLayout();
             this.SidebarPanelMenuButton.SuspendLayout();
             this.SidebarPanelHeader.SuspendLayout();
@@ -224,7 +228,7 @@ namespace Convertec_Bodega_Administracion
             this.IEpanelFormElemento.SuspendLayout();
             this.IEpanelFormElementoL.SuspendLayout();
             this.IEpanelFormElementoL1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.IEiconErrorValor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IEdataGridViewProd)).BeginInit();
             this.IEpanelFormElementoL2.SuspendLayout();
             this.IEpanelFormElementoR.SuspendLayout();
             this.IEpanelFormElementoR1.SuspendLayout();
@@ -253,6 +257,7 @@ namespace Convertec_Bodega_Administracion
             ((System.ComponentModel.ISupportInitialize)(this.historialMovimientoTablaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.movSalidasDataGridDTOBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.movIngresoDataGridDTOBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.idDescripcionElementoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSidebar
@@ -271,11 +276,9 @@ namespace Convertec_Bodega_Administracion
             // 
             // SidebarPanelMenuButton
             // 
-            this.SidebarPanelMenuButton.Controls.Add(this.iconbutton);
-            this.SidebarPanelMenuButton.Controls.Add(this.iconButton1);
+            this.SidebarPanelMenuButton.Controls.Add(this.SidebarBtnSalidaIngreso);
             this.SidebarPanelMenuButton.Controls.Add(this.SidebarBtnCrearElemento);
             this.SidebarPanelMenuButton.Controls.Add(this.SidebarBtnIngresarElemento);
-            this.SidebarPanelMenuButton.Controls.Add(this.SidebarBtnSalidaIngreso);
             this.SidebarPanelMenuButton.Controls.Add(this.SidebarBtnMovElementos);
             this.SidebarPanelMenuButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SidebarPanelMenuButton.Location = new System.Drawing.Point(0, 95);
@@ -284,47 +287,29 @@ namespace Convertec_Bodega_Administracion
             this.SidebarPanelMenuButton.Size = new System.Drawing.Size(212, 750);
             this.SidebarPanelMenuButton.TabIndex = 7;
             // 
-            // iconbutton
+            // SidebarBtnSalidaIngreso
             // 
-            this.iconbutton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconbutton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconbutton.FlatAppearance.BorderSize = 0;
-            this.iconbutton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(58)))));
-            this.iconbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconbutton.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.iconbutton.IconColor = System.Drawing.Color.DarkGray;
-            this.iconbutton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconbutton.Location = new System.Drawing.Point(0, 560);
-            this.iconbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.iconbutton.Name = "iconbutton";
-            this.iconbutton.Size = new System.Drawing.Size(212, 112);
-            this.iconbutton.TabIndex = 1;
-            this.iconbutton.Text = "Menú";
-            this.iconbutton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconbutton.UseVisualStyleBackColor = true;
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(58)))));
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.iconButton1.IconColor = System.Drawing.Color.DarkGray;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(0, 448);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(212, 112);
-            this.iconButton1.TabIndex = 2;
-            this.iconButton1.Text = "Menú";
-            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = true;
+            this.SidebarBtnSalidaIngreso.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SidebarBtnSalidaIngreso.Dock = System.Windows.Forms.DockStyle.Top;
+            this.SidebarBtnSalidaIngreso.FlatAppearance.BorderSize = 0;
+            this.SidebarBtnSalidaIngreso.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(58)))));
+            this.SidebarBtnSalidaIngreso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SidebarBtnSalidaIngreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SidebarBtnSalidaIngreso.ForeColor = System.Drawing.Color.DarkGray;
+            this.SidebarBtnSalidaIngreso.IconChar = FontAwesome.Sharp.IconChar.ExchangeAlt;
+            this.SidebarBtnSalidaIngreso.IconColor = System.Drawing.Color.DarkGray;
+            this.SidebarBtnSalidaIngreso.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.SidebarBtnSalidaIngreso.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SidebarBtnSalidaIngreso.Location = new System.Drawing.Point(0, 336);
+            this.SidebarBtnSalidaIngreso.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SidebarBtnSalidaIngreso.Name = "SidebarBtnSalidaIngreso";
+            this.SidebarBtnSalidaIngreso.Size = new System.Drawing.Size(212, 112);
+            this.SidebarBtnSalidaIngreso.TabIndex = 3;
+            this.SidebarBtnSalidaIngreso.Text = "Salida - Ingreso Elementos";
+            this.SidebarBtnSalidaIngreso.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SidebarBtnSalidaIngreso.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.SidebarBtnSalidaIngreso.UseVisualStyleBackColor = true;
+            this.SidebarBtnSalidaIngreso.Click += new System.EventHandler(this.SidebarBtnSalidaIngreso_Click);
             // 
             // SidebarBtnCrearElemento
             // 
@@ -333,15 +318,15 @@ namespace Convertec_Bodega_Administracion
             this.SidebarBtnCrearElemento.FlatAppearance.BorderSize = 0;
             this.SidebarBtnCrearElemento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(58)))));
             this.SidebarBtnCrearElemento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SidebarBtnCrearElemento.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.SidebarBtnCrearElemento.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
             this.SidebarBtnCrearElemento.IconColor = System.Drawing.Color.DarkGray;
             this.SidebarBtnCrearElemento.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.SidebarBtnCrearElemento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.SidebarBtnCrearElemento.Location = new System.Drawing.Point(0, 336);
+            this.SidebarBtnCrearElemento.Location = new System.Drawing.Point(0, 224);
             this.SidebarBtnCrearElemento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SidebarBtnCrearElemento.Name = "SidebarBtnCrearElemento";
             this.SidebarBtnCrearElemento.Size = new System.Drawing.Size(212, 112);
-            this.SidebarBtnCrearElemento.TabIndex = 6;
+            this.SidebarBtnCrearElemento.TabIndex = 2;
             this.SidebarBtnCrearElemento.Text = "Crear Nuevo Elemento";
             this.SidebarBtnCrearElemento.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.SidebarBtnCrearElemento.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -355,44 +340,20 @@ namespace Convertec_Bodega_Administracion
             this.SidebarBtnIngresarElemento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(58)))));
             this.SidebarBtnIngresarElemento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SidebarBtnIngresarElemento.ForeColor = System.Drawing.Color.DarkGray;
-            this.SidebarBtnIngresarElemento.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.SidebarBtnIngresarElemento.IconChar = FontAwesome.Sharp.IconChar.Box;
             this.SidebarBtnIngresarElemento.IconColor = System.Drawing.Color.DarkGray;
             this.SidebarBtnIngresarElemento.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.SidebarBtnIngresarElemento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.SidebarBtnIngresarElemento.Location = new System.Drawing.Point(0, 224);
+            this.SidebarBtnIngresarElemento.Location = new System.Drawing.Point(0, 112);
             this.SidebarBtnIngresarElemento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SidebarBtnIngresarElemento.Name = "SidebarBtnIngresarElemento";
             this.SidebarBtnIngresarElemento.Size = new System.Drawing.Size(212, 112);
-            this.SidebarBtnIngresarElemento.TabIndex = 5;
-            this.SidebarBtnIngresarElemento.Text = "Ingreso de Elementos";
+            this.SidebarBtnIngresarElemento.TabIndex = 1;
+            this.SidebarBtnIngresarElemento.Text = "Ingreso de Elementos a Bodega";
             this.SidebarBtnIngresarElemento.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.SidebarBtnIngresarElemento.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.SidebarBtnIngresarElemento.UseVisualStyleBackColor = true;
             this.SidebarBtnIngresarElemento.Click += new System.EventHandler(this.SidebarBtnIngresarElemento_Click);
-            // 
-            // SidebarBtnSalidaIngreso
-            // 
-            this.SidebarBtnSalidaIngreso.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SidebarBtnSalidaIngreso.Dock = System.Windows.Forms.DockStyle.Top;
-            this.SidebarBtnSalidaIngreso.FlatAppearance.BorderSize = 0;
-            this.SidebarBtnSalidaIngreso.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(58)))));
-            this.SidebarBtnSalidaIngreso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SidebarBtnSalidaIngreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SidebarBtnSalidaIngreso.ForeColor = System.Drawing.Color.DarkGray;
-            this.SidebarBtnSalidaIngreso.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.SidebarBtnSalidaIngreso.IconColor = System.Drawing.Color.DarkGray;
-            this.SidebarBtnSalidaIngreso.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.SidebarBtnSalidaIngreso.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.SidebarBtnSalidaIngreso.Location = new System.Drawing.Point(0, 112);
-            this.SidebarBtnSalidaIngreso.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.SidebarBtnSalidaIngreso.Name = "SidebarBtnSalidaIngreso";
-            this.SidebarBtnSalidaIngreso.Size = new System.Drawing.Size(212, 112);
-            this.SidebarBtnSalidaIngreso.TabIndex = 3;
-            this.SidebarBtnSalidaIngreso.Text = "Salida - Ingreso Elementos";
-            this.SidebarBtnSalidaIngreso.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.SidebarBtnSalidaIngreso.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.SidebarBtnSalidaIngreso.UseVisualStyleBackColor = true;
-            this.SidebarBtnSalidaIngreso.Click += new System.EventHandler(this.SidebarBtnSalidaIngreso_Click);
             // 
             // SidebarBtnMovElementos
             // 
@@ -411,7 +372,7 @@ namespace Convertec_Bodega_Administracion
             this.SidebarBtnMovElementos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SidebarBtnMovElementos.Name = "SidebarBtnMovElementos";
             this.SidebarBtnMovElementos.Size = new System.Drawing.Size(212, 112);
-            this.SidebarBtnMovElementos.TabIndex = 1;
+            this.SidebarBtnMovElementos.TabIndex = 0;
             this.SidebarBtnMovElementos.Text = "Movimiento de Elementos";
             this.SidebarBtnMovElementos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.SidebarBtnMovElementos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -470,6 +431,26 @@ namespace Convertec_Bodega_Administracion
             this.HpanelHeader.Size = new System.Drawing.Size(1150, 95);
             this.HpanelHeader.TabIndex = 1;
             // 
+            // btnConfiguracion
+            // 
+            this.btnConfiguracion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnConfiguracion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConfiguracion.FlatAppearance.BorderSize = 0;
+            this.btnConfiguracion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(184)))), ((int)(((byte)(186)))));
+            this.btnConfiguracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfiguracion.IconChar = FontAwesome.Sharp.IconChar.Cogs;
+            this.btnConfiguracion.IconColor = System.Drawing.Color.DimGray;
+            this.btnConfiguracion.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnConfiguracion.IconSize = 36;
+            this.btnConfiguracion.Location = new System.Drawing.Point(902, 34);
+            this.btnConfiguracion.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.btnConfiguracion.Name = "btnConfiguracion";
+            this.btnConfiguracion.Size = new System.Drawing.Size(36, 32);
+            this.btnConfiguracion.TabIndex = 7;
+            this.btnConfiguracion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnConfiguracion.UseVisualStyleBackColor = true;
+            this.btnConfiguracion.Click += new System.EventHandler(this.btnConfiguracion_Click);
+            // 
             // label3
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -479,7 +460,7 @@ namespace Convertec_Bodega_Administracion
             this.label3.Location = new System.Drawing.Point(-584, 91);
             this.label3.Margin = new System.Windows.Forms.Padding(0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(2473, 2);
+            this.label3.Size = new System.Drawing.Size(2465, 2);
             this.label3.TabIndex = 3;
             // 
             // HiconPbDataBase
@@ -489,7 +470,7 @@ namespace Convertec_Bodega_Administracion
             this.HiconPbDataBase.IconChar = FontAwesome.Sharp.IconChar.Database;
             this.HiconPbDataBase.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(183)))), ((int)(((byte)(30)))));
             this.HiconPbDataBase.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.HiconPbDataBase.Location = new System.Drawing.Point(206, 34);
+            this.HiconPbDataBase.Location = new System.Drawing.Point(140, 34);
             this.HiconPbDataBase.Margin = new System.Windows.Forms.Padding(0, 0, 33, 0);
             this.HiconPbDataBase.Name = "HiconPbDataBase";
             this.HiconPbDataBase.Size = new System.Drawing.Size(36, 32);
@@ -510,7 +491,7 @@ namespace Convertec_Bodega_Administracion
             // 
             this.HlabelClock.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.HlabelClock.AutoSize = true;
-            this.HlabelClock.Location = new System.Drawing.Point(956, 41);
+            this.HlabelClock.Location = new System.Drawing.Point(948, 41);
             this.HlabelClock.Margin = new System.Windows.Forms.Padding(0);
             this.HlabelClock.Name = "HlabelClock";
             this.HlabelClock.Size = new System.Drawing.Size(142, 16);
@@ -715,11 +696,12 @@ namespace Convertec_Bodega_Administracion
             // 
             this.BodyPanelIngresoElementos.Controls.Add(this.IEpanelTablaElementos);
             this.BodyPanelIngresoElementos.Controls.Add(this.IEpanelFormElemento);
+            this.BodyPanelIngresoElementos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BodyPanelIngresoElementos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BodyPanelIngresoElementos.Location = new System.Drawing.Point(38, 224);
+            this.BodyPanelIngresoElementos.Location = new System.Drawing.Point(0, 0);
             this.BodyPanelIngresoElementos.Margin = new System.Windows.Forms.Padding(0);
             this.BodyPanelIngresoElementos.Name = "BodyPanelIngresoElementos";
-            this.BodyPanelIngresoElementos.Size = new System.Drawing.Size(1039, 468);
+            this.BodyPanelIngresoElementos.Size = new System.Drawing.Size(1150, 750);
             this.BodyPanelIngresoElementos.TabIndex = 6;
             this.BodyPanelIngresoElementos.Visible = false;
             // 
@@ -727,18 +709,20 @@ namespace Convertec_Bodega_Administracion
             // 
             this.IEpanelTablaElementos.Controls.Add(this.IEdataGridViewProdEntrantes);
             this.IEpanelTablaElementos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.IEpanelTablaElementos.Location = new System.Drawing.Point(0, 418);
+            this.IEpanelTablaElementos.Location = new System.Drawing.Point(0, 528);
             this.IEpanelTablaElementos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.IEpanelTablaElementos.Name = "IEpanelTablaElementos";
             this.IEpanelTablaElementos.Padding = new System.Windows.Forms.Padding(15, 0, 15, 10);
-            this.IEpanelTablaElementos.Size = new System.Drawing.Size(1039, 50);
+            this.IEpanelTablaElementos.Size = new System.Drawing.Size(1150, 222);
             this.IEpanelTablaElementos.TabIndex = 22;
             // 
             // IEdataGridViewProdEntrantes
             // 
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(255)))), ((int)(((byte)(242)))));
             this.IEdataGridViewProdEntrantes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
-            this.IEdataGridViewProdEntrantes.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.IEdataGridViewProdEntrantes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(243)))), ((int)(((byte)(246)))));
+            this.IEdataGridViewProdEntrantes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.IEdataGridViewProdEntrantes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -766,16 +750,17 @@ namespace Convertec_Bodega_Administracion
             this.marca,
             this.obs_mov});
             this.IEdataGridViewProdEntrantes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.IEdataGridViewProdEntrantes.GridColor = System.Drawing.SystemColors.ButtonShadow;
             this.IEdataGridViewProdEntrantes.Location = new System.Drawing.Point(15, 0);
             this.IEdataGridViewProdEntrantes.Margin = new System.Windows.Forms.Padding(9, 7, 9, 7);
             this.IEdataGridViewProdEntrantes.Name = "IEdataGridViewProdEntrantes";
             this.IEdataGridViewProdEntrantes.ReadOnly = true;
             this.IEdataGridViewProdEntrantes.RowHeadersVisible = false;
             this.IEdataGridViewProdEntrantes.RowHeadersWidth = 51;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.IEdataGridViewProdEntrantes.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.IEdataGridViewProdEntrantes.RowTemplate.Height = 40;
             this.IEdataGridViewProdEntrantes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.IEdataGridViewProdEntrantes.Size = new System.Drawing.Size(1009, 40);
+            this.IEdataGridViewProdEntrantes.Size = new System.Drawing.Size(1120, 212);
             this.IEdataGridViewProdEntrantes.TabIndex = 16;
             this.IEdataGridViewProdEntrantes.TabStop = false;
             this.IEdataGridViewProdEntrantes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.IEdataGridViewProdEntrantes_CellDoubleClick);
@@ -941,7 +926,7 @@ namespace Convertec_Bodega_Administracion
             this.IEpanelFormElemento.Location = new System.Drawing.Point(0, 0);
             this.IEpanelFormElemento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.IEpanelFormElemento.Name = "IEpanelFormElemento";
-            this.IEpanelFormElemento.Size = new System.Drawing.Size(1039, 418);
+            this.IEpanelFormElemento.Size = new System.Drawing.Size(1150, 528);
             this.IEpanelFormElemento.TabIndex = 21;
             // 
             // IEpanelFormElementoL
@@ -953,19 +938,19 @@ namespace Convertec_Bodega_Administracion
             this.IEpanelFormElementoL.Location = new System.Drawing.Point(0, 0);
             this.IEpanelFormElementoL.Margin = new System.Windows.Forms.Padding(4);
             this.IEpanelFormElementoL.Name = "IEpanelFormElementoL";
-            this.IEpanelFormElementoL.Size = new System.Drawing.Size(563, 418);
-            this.IEpanelFormElementoL.TabIndex = 22;
+            this.IEpanelFormElementoL.Size = new System.Drawing.Size(674, 528);
+            this.IEpanelFormElementoL.TabIndex = 0;
             // 
             // IEpanelFormElementoL1
             // 
-            this.IEpanelFormElementoL1.Controls.Add(this.IEiconErrorValor);
+            this.IEpanelFormElementoL1.Controls.Add(this.IEdataGridViewProd);
+            this.IEpanelFormElementoL1.Controls.Add(this.IEtxtDescripcion);
             this.IEpanelFormElementoL1.Controls.Add(this.IEBtnAgregarMarca);
             this.IEpanelFormElementoL1.Controls.Add(this.IEcomboBoxMarca);
             this.IEpanelFormElementoL1.Controls.Add(this.IElabel9);
             this.IEpanelFormElementoL1.Controls.Add(this.IEBtnAgregarProveedor);
             this.IEpanelFormElementoL1.Controls.Add(this.IEcomboBoxProveedor);
             this.IEpanelFormElementoL1.Controls.Add(this.IElabel8);
-            this.IEpanelFormElementoL1.Controls.Add(this.IEcomboBoxDescripcion);
             this.IEpanelFormElementoL1.Controls.Add(this.label9);
             this.IEpanelFormElementoL1.Controls.Add(this.IElblUnidad);
             this.IEpanelFormElementoL1.Controls.Add(this.label8);
@@ -991,29 +976,54 @@ namespace Convertec_Bodega_Administracion
             this.IEpanelFormElementoL1.Margin = new System.Windows.Forms.Padding(0);
             this.IEpanelFormElementoL1.Name = "IEpanelFormElementoL1";
             this.IEpanelFormElementoL1.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
-            this.IEpanelFormElementoL1.Size = new System.Drawing.Size(563, 350);
-            this.IEpanelFormElementoL1.TabIndex = 3;
+            this.IEpanelFormElementoL1.Size = new System.Drawing.Size(674, 460);
+            this.IEpanelFormElementoL1.TabIndex = 0;
             // 
-            // IEiconErrorValor
+            // IEdataGridViewProd
             // 
-            this.IEiconErrorValor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(243)))), ((int)(((byte)(246)))));
-            this.IEiconErrorValor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(56)))), ((int)(((byte)(0)))));
-            this.IEiconErrorValor.IconChar = FontAwesome.Sharp.IconChar.ExclamationTriangle;
-            this.IEiconErrorValor.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(56)))), ((int)(((byte)(0)))));
-            this.IEiconErrorValor.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IEiconErrorValor.IconSize = 22;
-            this.IEiconErrorValor.Location = new System.Drawing.Point(348, 86);
-            this.IEiconErrorValor.Margin = new System.Windows.Forms.Padding(0);
-            this.IEiconErrorValor.Name = "IEiconErrorValor";
-            this.IEiconErrorValor.Size = new System.Drawing.Size(22, 22);
-            this.IEiconErrorValor.TabIndex = 22;
-            this.IEiconErrorValor.TabStop = false;
-            this.IEtoolTip1.SetToolTip(this.IEiconErrorValor, "Valor vacío.");
-            this.IEiconErrorValor.Visible = false;
+            this.IEdataGridViewProd.AllowUserToAddRows = false;
+            this.IEdataGridViewProd.AllowUserToDeleteRows = false;
+            this.IEdataGridViewProd.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(255)))), ((int)(((byte)(242)))));
+            this.IEdataGridViewProd.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            this.IEdataGridViewProd.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.IEdataGridViewProd.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(243)))), ((int)(((byte)(246)))));
+            this.IEdataGridViewProd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.IEdataGridViewProd.Location = new System.Drawing.Point(15, 45);
+            this.IEdataGridViewProd.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.IEdataGridViewProd.MultiSelect = false;
+            this.IEdataGridViewProd.Name = "IEdataGridViewProd";
+            this.IEdataGridViewProd.ReadOnly = true;
+            this.IEdataGridViewProd.RowHeadersVisible = false;
+            this.IEdataGridViewProd.RowHeadersWidth = 51;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.IEdataGridViewProd.RowsDefaultCellStyle = dataGridViewCellStyle14;
+            this.IEdataGridViewProd.RowTemplate.Height = 24;
+            this.IEdataGridViewProd.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.IEdataGridViewProd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.IEdataGridViewProd.Size = new System.Drawing.Size(644, 97);
+            this.IEdataGridViewProd.TabIndex = 1;
+            this.IEdataGridViewProd.TabStop = false;
+            this.IEdataGridViewProd.SelectionChanged += new System.EventHandler(this.IECargarDatos);
+            // 
+            // IEtxtDescripcion
+            // 
+            this.IEtxtDescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.IEtxtDescripcion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.IEtxtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IEtxtDescripcion.Location = new System.Drawing.Point(115, 12);
+            this.IEtxtDescripcion.Margin = new System.Windows.Forms.Padding(5, 0, 0, 10);
+            this.IEtxtDescripcion.MaxLength = 50;
+            this.IEtxtDescripcion.Name = "IEtxtDescripcion";
+            this.IEtxtDescripcion.Size = new System.Drawing.Size(544, 23);
+            this.IEtxtDescripcion.TabIndex = 0;
+            this.IEtxtDescripcion.TextChanged += new System.EventHandler(this.IETableFilter);
             // 
             // IEBtnAgregarMarca
             // 
-            this.IEBtnAgregarMarca.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.IEBtnAgregarMarca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(183)))), ((int)(((byte)(30)))));
             this.IEBtnAgregarMarca.Cursor = System.Windows.Forms.Cursors.Hand;
             this.IEBtnAgregarMarca.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
@@ -1025,35 +1035,33 @@ namespace Convertec_Bodega_Administracion
             this.IEBtnAgregarMarca.IconColor = System.Drawing.Color.White;
             this.IEBtnAgregarMarca.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IEBtnAgregarMarca.IconSize = 25;
-            this.IEBtnAgregarMarca.Location = new System.Drawing.Point(523, 204);
+            this.IEBtnAgregarMarca.Location = new System.Drawing.Point(634, 308);
             this.IEBtnAgregarMarca.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.IEBtnAgregarMarca.Name = "IEBtnAgregarMarca";
             this.IEBtnAgregarMarca.Size = new System.Drawing.Size(25, 25);
-            this.IEBtnAgregarMarca.TabIndex = 21;
+            this.IEBtnAgregarMarca.TabIndex = 12;
             this.IEBtnAgregarMarca.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.IEBtnAgregarMarca.UseVisualStyleBackColor = false;
             this.IEBtnAgregarMarca.Click += new System.EventHandler(this.IEBtnAgregarMarca_Click);
             // 
             // IEcomboBoxMarca
             // 
-            this.IEcomboBoxMarca.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.IEcomboBoxMarca.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.IEcomboBoxMarca.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.IEcomboBoxMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IEcomboBoxMarca.FormattingEnabled = true;
-            this.IEcomboBoxMarca.Location = new System.Drawing.Point(444, 205);
+            this.IEcomboBoxMarca.Location = new System.Drawing.Point(444, 308);
             this.IEcomboBoxMarca.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.IEcomboBoxMarca.Name = "IEcomboBoxMarca";
-            this.IEcomboBoxMarca.Size = new System.Drawing.Size(74, 25);
+            this.IEcomboBoxMarca.Size = new System.Drawing.Size(185, 25);
             this.IEcomboBoxMarca.TabIndex = 9;
             this.IEcomboBoxMarca.Text = "--SELECCIONE MARCA--";
+            this.IEcomboBoxMarca.Leave += new System.EventHandler(this.IEcomboBoxMarca_Leave);
             // 
             // IElabel9
             // 
-            this.IElabel9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.IElabel9.AutoSize = true;
-            this.IElabel9.Location = new System.Drawing.Point(379, 208);
+            this.IElabel9.Location = new System.Drawing.Point(379, 312);
             this.IElabel9.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.IElabel9.Name = "IElabel9";
             this.IElabel9.Size = new System.Drawing.Size(55, 16);
@@ -1063,7 +1071,6 @@ namespace Convertec_Bodega_Administracion
             // 
             // IEBtnAgregarProveedor
             // 
-            this.IEBtnAgregarProveedor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.IEBtnAgregarProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(183)))), ((int)(((byte)(30)))));
             this.IEBtnAgregarProveedor.Cursor = System.Windows.Forms.Cursors.Hand;
             this.IEBtnAgregarProveedor.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
@@ -1075,35 +1082,34 @@ namespace Convertec_Bodega_Administracion
             this.IEBtnAgregarProveedor.IconColor = System.Drawing.Color.White;
             this.IEBtnAgregarProveedor.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IEBtnAgregarProveedor.IconSize = 25;
-            this.IEBtnAgregarProveedor.Location = new System.Drawing.Point(345, 204);
+            this.IEBtnAgregarProveedor.Location = new System.Drawing.Point(345, 308);
             this.IEBtnAgregarProveedor.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.IEBtnAgregarProveedor.Name = "IEBtnAgregarProveedor";
             this.IEBtnAgregarProveedor.Size = new System.Drawing.Size(25, 25);
-            this.IEBtnAgregarProveedor.TabIndex = 8;
+            this.IEBtnAgregarProveedor.TabIndex = 11;
             this.IEBtnAgregarProveedor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.IEBtnAgregarProveedor.UseVisualStyleBackColor = false;
             this.IEBtnAgregarProveedor.Click += new System.EventHandler(this.IEBtnAgregarProveedor_Click);
             // 
             // IEcomboBoxProveedor
             // 
-            this.IEcomboBoxProveedor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.IEcomboBoxProveedor.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.IEcomboBoxProveedor.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.IEcomboBoxProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IEcomboBoxProveedor.FormattingEnabled = true;
-            this.IEcomboBoxProveedor.Location = new System.Drawing.Point(115, 205);
+            this.IEcomboBoxProveedor.Location = new System.Drawing.Point(115, 308);
             this.IEcomboBoxProveedor.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.IEcomboBoxProveedor.Name = "IEcomboBoxProveedor";
             this.IEcomboBoxProveedor.Size = new System.Drawing.Size(225, 25);
-            this.IEcomboBoxProveedor.TabIndex = 7;
+            this.IEcomboBoxProveedor.TabIndex = 8;
             this.IEcomboBoxProveedor.Text = "--SELECCIONE PROVEEDOR--";
+            this.IEcomboBoxProveedor.Leave += new System.EventHandler(this.IEcomboBoxProveedor_Leave);
             // 
             // IElabel8
             // 
-            this.IElabel8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.IElabel8.AutoSize = true;
             this.IElabel8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.IElabel8.Location = new System.Drawing.Point(15, 209);
+            this.IElabel8.Location = new System.Drawing.Point(15, 312);
             this.IElabel8.Margin = new System.Windows.Forms.Padding(0);
             this.IElabel8.Name = "IElabel8";
             this.IElabel8.Size = new System.Drawing.Size(85, 16);
@@ -1111,39 +1117,22 @@ namespace Convertec_Bodega_Administracion
             this.IElabel8.Text = "Proveedor:";
             this.IElabel8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // IEcomboBoxDescripcion
-            // 
-            this.IEcomboBoxDescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.IEcomboBoxDescripcion.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.IEcomboBoxDescripcion.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.IEcomboBoxDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IEcomboBoxDescripcion.FormattingEnabled = true;
-            this.IEcomboBoxDescripcion.Location = new System.Drawing.Point(115, 10);
-            this.IEcomboBoxDescripcion.Margin = new System.Windows.Forms.Padding(5, 0, 0, 10);
-            this.IEcomboBoxDescripcion.Name = "IEcomboBoxDescripcion";
-            this.IEcomboBoxDescripcion.Size = new System.Drawing.Size(433, 25);
-            this.IEcomboBoxDescripcion.TabIndex = 0;
-            this.IEcomboBoxDescripcion.Text = "--SELECCIONE ELEMENTO--";
-            this.IEcomboBoxDescripcion.SelectedIndexChanged += new System.EventHandler(this.GetDescripcionElemento);
-            this.IEcomboBoxDescripcion.Leave += new System.EventHandler(this.CheckFormat);
-            // 
             // label9
             // 
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(-8, 349);
+            this.label9.Location = new System.Drawing.Point(-8, 458);
             this.label9.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(580, 2);
+            this.label9.Size = new System.Drawing.Size(701, 2);
             this.label9.TabIndex = 20;
             // 
             // IElblUnidad
             // 
             this.IElblUnidad.AutoSize = true;
-            this.IElblUnidad.Location = new System.Drawing.Point(261, 125);
+            this.IElblUnidad.Location = new System.Drawing.Point(261, 229);
             this.IElblUnidad.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.IElblUnidad.Name = "IElblUnidad";
             this.IElblUnidad.Size = new System.Drawing.Size(0, 16);
@@ -1155,10 +1144,10 @@ namespace Convertec_Bodega_Administracion
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(-8, 245);
+            this.label8.Location = new System.Drawing.Point(-8, 349);
             this.label8.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(580, 2);
+            this.label8.Size = new System.Drawing.Size(701, 2);
             this.label8.TabIndex = 18;
             // 
             // label7
@@ -1167,10 +1156,10 @@ namespace Convertec_Bodega_Administracion
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(-7, 159);
+            this.label7.Location = new System.Drawing.Point(-7, 263);
             this.label7.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(580, 2);
+            this.label7.Size = new System.Drawing.Size(701, 2);
             this.label7.TabIndex = 17;
             // 
             // IEtxtCodProv
@@ -1179,40 +1168,39 @@ namespace Convertec_Bodega_Administracion
             | System.Windows.Forms.AnchorStyles.Right)));
             this.IEtxtCodProv.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.IEtxtCodProv.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IEtxtCodProv.Location = new System.Drawing.Point(140, 171);
+            this.IEtxtCodProv.Location = new System.Drawing.Point(140, 275);
             this.IEtxtCodProv.Margin = new System.Windows.Forms.Padding(5, 0, 0, 10);
             this.IEtxtCodProv.MaxLength = 50;
             this.IEtxtCodProv.Name = "IEtxtCodProv";
-            this.IEtxtCodProv.Size = new System.Drawing.Size(408, 23);
-            this.IEtxtCodProv.TabIndex = 6;
+            this.IEtxtCodProv.Size = new System.Drawing.Size(519, 23);
+            this.IEtxtCodProv.TabIndex = 7;
             // 
             // IEtxtValorUni
             // 
             this.IEtxtValorUni.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.IEtxtValorUni.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IEtxtValorUni.Location = new System.Drawing.Point(494, 85);
+            this.IEtxtValorUni.Location = new System.Drawing.Point(494, 189);
             this.IEtxtValorUni.Margin = new System.Windows.Forms.Padding(5, 0, 0, 10);
             this.IEtxtValorUni.MaxLength = 10;
             this.IEtxtValorUni.Name = "IEtxtValorUni";
-            this.IEtxtValorUni.Size = new System.Drawing.Size(54, 23);
-            this.IEtxtValorUni.TabIndex = 4;
+            this.IEtxtValorUni.Size = new System.Drawing.Size(165, 23);
+            this.IEtxtValorUni.TabIndex = 5;
             this.IEtxtValorUni.Text = "0";
             this.IEtxtValorUni.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CheckNumber);
+            this.IEtxtValorUni.Leave += new System.EventHandler(this.IEtxtValorUni_Leave);
             // 
             // IEtxtValor
             // 
             this.IEtxtValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IEtxtValor.Location = new System.Drawing.Point(115, 85);
+            this.IEtxtValor.Location = new System.Drawing.Point(115, 189);
             this.IEtxtValor.Margin = new System.Windows.Forms.Padding(5, 0, 0, 10);
             this.IEtxtValor.MaxLength = 10;
             this.IEtxtValor.Name = "IEtxtValor";
-            this.IEtxtValor.Size = new System.Drawing.Size(225, 23);
-            this.IEtxtValor.TabIndex = 3;
+            this.IEtxtValor.Size = new System.Drawing.Size(255, 23);
+            this.IEtxtValor.TabIndex = 4;
             this.IEtxtValor.Text = "0";
-            this.IEtxtValor.TextChanged += new System.EventHandler(this.IEtxtValor_TextChanged);
             this.IEtxtValor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CheckNumber);
-            this.IEtxtValor.Leave += new System.EventHandler(this.IEtxtValor_Leave);
             // 
             // IEtxtOT
             // 
@@ -1220,28 +1208,28 @@ namespace Convertec_Bodega_Administracion
             | System.Windows.Forms.AnchorStyles.Right)));
             this.IEtxtOT.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.IEtxtOT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IEtxtOT.Location = new System.Drawing.Point(417, 48);
+            this.IEtxtOT.Location = new System.Drawing.Point(417, 152);
             this.IEtxtOT.Margin = new System.Windows.Forms.Padding(5, 0, 0, 10);
             this.IEtxtOT.MaxLength = 256;
             this.IEtxtOT.Name = "IEtxtOT";
-            this.IEtxtOT.Size = new System.Drawing.Size(131, 23);
-            this.IEtxtOT.TabIndex = 2;
+            this.IEtxtOT.Size = new System.Drawing.Size(242, 23);
+            this.IEtxtOT.TabIndex = 3;
             // 
             // IEtxtDocumento
             // 
             this.IEtxtDocumento.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.IEtxtDocumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IEtxtDocumento.Location = new System.Drawing.Point(115, 48);
+            this.IEtxtDocumento.Location = new System.Drawing.Point(115, 152);
             this.IEtxtDocumento.Margin = new System.Windows.Forms.Padding(5, 0, 0, 10);
             this.IEtxtDocumento.MaxLength = 50;
             this.IEtxtDocumento.Name = "IEtxtDocumento";
             this.IEtxtDocumento.Size = new System.Drawing.Size(255, 23);
-            this.IEtxtDocumento.TabIndex = 1;
+            this.IEtxtDocumento.TabIndex = 2;
             // 
             // IElabel7
             // 
             this.IElabel7.AutoSize = true;
-            this.IElabel7.Location = new System.Drawing.Point(15, 174);
+            this.IElabel7.Location = new System.Drawing.Point(15, 278);
             this.IElabel7.Name = "IElabel7";
             this.IElabel7.Size = new System.Drawing.Size(117, 16);
             this.IElabel7.TabIndex = 7;
@@ -1250,7 +1238,7 @@ namespace Convertec_Bodega_Administracion
             // IElabel3
             // 
             this.IElabel3.AutoSize = true;
-            this.IElabel3.Location = new System.Drawing.Point(379, 51);
+            this.IElabel3.Location = new System.Drawing.Point(379, 155);
             this.IElabel3.Margin = new System.Windows.Forms.Padding(0);
             this.IElabel3.Name = "IElabel3";
             this.IElabel3.Size = new System.Drawing.Size(33, 16);
@@ -1260,7 +1248,7 @@ namespace Convertec_Bodega_Administracion
             // IElabel2
             // 
             this.IElabel2.AutoSize = true;
-            this.IElabel2.Location = new System.Drawing.Point(15, 51);
+            this.IElabel2.Location = new System.Drawing.Point(15, 155);
             this.IElabel2.Name = "IElabel2";
             this.IElabel2.Size = new System.Drawing.Size(90, 16);
             this.IElabel2.TabIndex = 5;
@@ -1269,7 +1257,7 @@ namespace Convertec_Bodega_Administracion
             // IElabel5
             // 
             this.IElabel5.AutoSize = true;
-            this.IElabel5.Location = new System.Drawing.Point(379, 88);
+            this.IElabel5.Location = new System.Drawing.Point(379, 192);
             this.IElabel5.Name = "IElabel5";
             this.IElabel5.Size = new System.Drawing.Size(107, 16);
             this.IElabel5.TabIndex = 4;
@@ -1278,7 +1266,7 @@ namespace Convertec_Bodega_Administracion
             // IElabel4
             // 
             this.IElabel4.AutoSize = true;
-            this.IElabel4.Location = new System.Drawing.Point(15, 88);
+            this.IElabel4.Location = new System.Drawing.Point(15, 192);
             this.IElabel4.Name = "IElabel4";
             this.IElabel4.Size = new System.Drawing.Size(49, 16);
             this.IElabel4.TabIndex = 3;
@@ -1287,7 +1275,7 @@ namespace Convertec_Bodega_Administracion
             // IElabel6
             // 
             this.IElabel6.AutoSize = true;
-            this.IElabel6.Location = new System.Drawing.Point(15, 125);
+            this.IElabel6.Location = new System.Drawing.Point(15, 229);
             this.IElabel6.Margin = new System.Windows.Forms.Padding(0);
             this.IElabel6.Name = "IElabel6";
             this.IElabel6.Size = new System.Drawing.Size(74, 16);
@@ -1310,18 +1298,18 @@ namespace Convertec_Bodega_Administracion
             | System.Windows.Forms.AnchorStyles.Right)));
             this.IEtxtObsIngreso.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.IEtxtObsIngreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IEtxtObsIngreso.Location = new System.Drawing.Point(140, 257);
+            this.IEtxtObsIngreso.Location = new System.Drawing.Point(140, 361);
             this.IEtxtObsIngreso.Margin = new System.Windows.Forms.Padding(5, 0, 0, 10);
             this.IEtxtObsIngreso.MaxLength = 512;
             this.IEtxtObsIngreso.Name = "IEtxtObsIngreso";
-            this.IEtxtObsIngreso.Size = new System.Drawing.Size(408, 83);
-            this.IEtxtObsIngreso.TabIndex = 11;
+            this.IEtxtObsIngreso.Size = new System.Drawing.Size(519, 83);
+            this.IEtxtObsIngreso.TabIndex = 10;
             this.IEtxtObsIngreso.Text = "";
             // 
             // IElabel10
             // 
             this.IElabel10.AutoSize = true;
-            this.IElabel10.Location = new System.Drawing.Point(15, 259);
+            this.IElabel10.Location = new System.Drawing.Point(15, 363);
             this.IElabel10.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
             this.IElabel10.Name = "IElabel10";
             this.IElabel10.Size = new System.Drawing.Size(117, 16);
@@ -1331,12 +1319,12 @@ namespace Convertec_Bodega_Administracion
             // IEtxtCant
             // 
             this.IEtxtCant.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IEtxtCant.Location = new System.Drawing.Point(115, 122);
+            this.IEtxtCant.Location = new System.Drawing.Point(115, 226);
             this.IEtxtCant.Margin = new System.Windows.Forms.Padding(5, 0, 0, 10);
             this.IEtxtCant.MaxLength = 5;
             this.IEtxtCant.Name = "IEtxtCant";
             this.IEtxtCant.Size = new System.Drawing.Size(127, 23);
-            this.IEtxtCant.TabIndex = 5;
+            this.IEtxtCant.TabIndex = 6;
             this.IEtxtCant.Text = "1";
             this.IEtxtCant.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CheckUnidad);
             this.IEtxtCant.Leave += new System.EventHandler(this.IECheckDecimalCantidad);
@@ -1347,12 +1335,12 @@ namespace Convertec_Bodega_Administracion
             this.IEpanelFormElementoL2.Controls.Add(this.IEbtnQuitar);
             this.IEpanelFormElementoL2.Controls.Add(this.IEbtnAgregar);
             this.IEpanelFormElementoL2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.IEpanelFormElementoL2.Location = new System.Drawing.Point(0, 350);
+            this.IEpanelFormElementoL2.Location = new System.Drawing.Point(0, 460);
             this.IEpanelFormElementoL2.Margin = new System.Windows.Forms.Padding(0);
             this.IEpanelFormElementoL2.Name = "IEpanelFormElementoL2";
             this.IEpanelFormElementoL2.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
-            this.IEpanelFormElementoL2.Size = new System.Drawing.Size(563, 68);
-            this.IEpanelFormElementoL2.TabIndex = 4;
+            this.IEpanelFormElementoL2.Size = new System.Drawing.Size(674, 68);
+            this.IEpanelFormElementoL2.TabIndex = 1;
             // 
             // IEbtnEditar
             // 
@@ -1374,7 +1362,7 @@ namespace Convertec_Bodega_Administracion
             this.IEbtnEditar.MinimumSize = new System.Drawing.Size(164, 46);
             this.IEbtnEditar.Name = "IEbtnEditar";
             this.IEbtnEditar.Size = new System.Drawing.Size(164, 47);
-            this.IEbtnEditar.TabIndex = 6;
+            this.IEbtnEditar.TabIndex = 1;
             this.IEbtnEditar.Text = "Editar";
             this.IEbtnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.IEbtnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -1401,7 +1389,7 @@ namespace Convertec_Bodega_Administracion
             this.IEbtnQuitar.MinimumSize = new System.Drawing.Size(164, 46);
             this.IEbtnQuitar.Name = "IEbtnQuitar";
             this.IEbtnQuitar.Size = new System.Drawing.Size(164, 47);
-            this.IEbtnQuitar.TabIndex = 5;
+            this.IEbtnQuitar.TabIndex = 2;
             this.IEbtnQuitar.Text = "Quitar";
             this.IEbtnQuitar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.IEbtnQuitar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -1428,7 +1416,7 @@ namespace Convertec_Bodega_Administracion
             this.IEbtnAgregar.MinimumSize = new System.Drawing.Size(164, 46);
             this.IEbtnAgregar.Name = "IEbtnAgregar";
             this.IEbtnAgregar.Size = new System.Drawing.Size(164, 47);
-            this.IEbtnAgregar.TabIndex = 3;
+            this.IEbtnAgregar.TabIndex = 0;
             this.IEbtnAgregar.Text = "Agregar";
             this.IEbtnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.IEbtnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -1440,14 +1428,16 @@ namespace Convertec_Bodega_Administracion
             this.IEpanelFormElementoR.Controls.Add(this.IEpanelFormElementoR1);
             this.IEpanelFormElementoR.Controls.Add(this.IEpanelFormElementoR2);
             this.IEpanelFormElementoR.Dock = System.Windows.Forms.DockStyle.Right;
-            this.IEpanelFormElementoR.Location = new System.Drawing.Point(563, 0);
+            this.IEpanelFormElementoR.Location = new System.Drawing.Point(674, 0);
             this.IEpanelFormElementoR.Margin = new System.Windows.Forms.Padding(0);
             this.IEpanelFormElementoR.Name = "IEpanelFormElementoR";
-            this.IEpanelFormElementoR.Size = new System.Drawing.Size(476, 418);
-            this.IEpanelFormElementoR.TabIndex = 21;
+            this.IEpanelFormElementoR.Size = new System.Drawing.Size(476, 528);
+            this.IEpanelFormElementoR.TabIndex = 1;
             // 
             // IEpanelFormElementoR1
             // 
+            this.IEpanelFormElementoR1.Controls.Add(this.label5);
+            this.IEpanelFormElementoR1.Controls.Add(this.label4);
             this.IEpanelFormElementoR1.Controls.Add(this.label10);
             this.IEpanelFormElementoR1.Controls.Add(this.IEpanelDetalle);
             this.IEpanelFormElementoR1.Controls.Add(this.IEpanelImagen);
@@ -1455,8 +1445,8 @@ namespace Convertec_Bodega_Administracion
             this.IEpanelFormElementoR1.Location = new System.Drawing.Point(0, 0);
             this.IEpanelFormElementoR1.Margin = new System.Windows.Forms.Padding(4);
             this.IEpanelFormElementoR1.Name = "IEpanelFormElementoR1";
-            this.IEpanelFormElementoR1.Size = new System.Drawing.Size(476, 350);
-            this.IEpanelFormElementoR1.TabIndex = 15;
+            this.IEpanelFormElementoR1.Size = new System.Drawing.Size(476, 460);
+            this.IEpanelFormElementoR1.TabIndex = 0;
             // 
             // label10
             // 
@@ -1479,17 +1469,17 @@ namespace Convertec_Bodega_Administracion
             this.IEpanelDetalle.Controls.Add(this.IElabelPartePlano);
             this.IEpanelDetalle.Controls.Add(this.IElabelCodBodega);
             this.IEpanelDetalle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.IEpanelDetalle.Location = new System.Drawing.Point(0, 245);
+            this.IEpanelDetalle.Location = new System.Drawing.Point(0, 265);
             this.IEpanelDetalle.Margin = new System.Windows.Forms.Padding(0);
             this.IEpanelDetalle.Name = "IEpanelDetalle";
             this.IEpanelDetalle.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
-            this.IEpanelDetalle.Size = new System.Drawing.Size(476, 105);
+            this.IEpanelDetalle.Size = new System.Drawing.Size(476, 195);
             this.IEpanelDetalle.TabIndex = 23;
             // 
             // IElabelStock
             // 
             this.IElabelStock.AutoSize = true;
-            this.IElabelStock.Location = new System.Drawing.Point(141, 74);
+            this.IElabelStock.Location = new System.Drawing.Point(141, 129);
             this.IElabelStock.Margin = new System.Windows.Forms.Padding(5, 0, 0, 10);
             this.IElabelStock.Name = "IElabelStock";
             this.IElabelStock.Size = new System.Drawing.Size(0, 16);
@@ -1498,7 +1488,7 @@ namespace Convertec_Bodega_Administracion
             // IElabel11
             // 
             this.IElabel11.AutoSize = true;
-            this.IElabel11.Location = new System.Drawing.Point(15, 74);
+            this.IElabel11.Location = new System.Drawing.Point(15, 129);
             this.IElabel11.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
             this.IElabel11.Name = "IElabel11";
             this.IElabel11.Size = new System.Drawing.Size(98, 16);
@@ -1508,7 +1498,7 @@ namespace Convertec_Bodega_Administracion
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 44);
+            this.label2.Location = new System.Drawing.Point(15, 99);
             this.label2.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(93, 16);
@@ -1528,7 +1518,7 @@ namespace Convertec_Bodega_Administracion
             // IElabelPartePlano
             // 
             this.IElabelPartePlano.AutoSize = true;
-            this.IElabelPartePlano.Location = new System.Drawing.Point(141, 44);
+            this.IElabelPartePlano.Location = new System.Drawing.Point(141, 99);
             this.IElabelPartePlano.Margin = new System.Windows.Forms.Padding(5, 0, 0, 10);
             this.IElabelPartePlano.Name = "IElabelPartePlano";
             this.IElabelPartePlano.Size = new System.Drawing.Size(0, 16);
@@ -1551,8 +1541,8 @@ namespace Convertec_Bodega_Administracion
             this.IEpanelImagen.Margin = new System.Windows.Forms.Padding(0);
             this.IEpanelImagen.Name = "IEpanelImagen";
             this.IEpanelImagen.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
-            this.IEpanelImagen.Size = new System.Drawing.Size(476, 245);
-            this.IEpanelImagen.TabIndex = 22;
+            this.IEpanelImagen.Size = new System.Drawing.Size(476, 265);
+            this.IEpanelImagen.TabIndex = 0;
             // 
             // IEpictureBoxProducto
             // 
@@ -1565,7 +1555,7 @@ namespace Convertec_Bodega_Administracion
             this.IEpictureBoxProducto.Location = new System.Drawing.Point(15, 10);
             this.IEpictureBoxProducto.Margin = new System.Windows.Forms.Padding(12, 10, 12, 10);
             this.IEpictureBoxProducto.Name = "IEpictureBoxProducto";
-            this.IEpictureBoxProducto.Size = new System.Drawing.Size(446, 225);
+            this.IEpictureBoxProducto.Size = new System.Drawing.Size(446, 245);
             this.IEpictureBoxProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.IEpictureBoxProducto.TabIndex = 14;
             this.IEpictureBoxProducto.TabStop = false;
@@ -1574,12 +1564,12 @@ namespace Convertec_Bodega_Administracion
             // 
             this.IEpanelFormElementoR2.Controls.Add(this.IEbtnConfirmar);
             this.IEpanelFormElementoR2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.IEpanelFormElementoR2.Location = new System.Drawing.Point(0, 350);
+            this.IEpanelFormElementoR2.Location = new System.Drawing.Point(0, 460);
             this.IEpanelFormElementoR2.Margin = new System.Windows.Forms.Padding(4);
             this.IEpanelFormElementoR2.Name = "IEpanelFormElementoR2";
             this.IEpanelFormElementoR2.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
             this.IEpanelFormElementoR2.Size = new System.Drawing.Size(476, 68);
-            this.IEpanelFormElementoR2.TabIndex = 16;
+            this.IEpanelFormElementoR2.TabIndex = 1;
             // 
             // IEbtnConfirmar
             // 
@@ -1601,7 +1591,7 @@ namespace Convertec_Bodega_Administracion
             this.IEbtnConfirmar.MinimumSize = new System.Drawing.Size(164, 46);
             this.IEbtnConfirmar.Name = "IEbtnConfirmar";
             this.IEbtnConfirmar.Size = new System.Drawing.Size(164, 47);
-            this.IEbtnConfirmar.TabIndex = 6;
+            this.IEbtnConfirmar.TabIndex = 0;
             this.IEbtnConfirmar.Text = "Confirmar";
             this.IEbtnConfirmar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.IEbtnConfirmar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -1613,13 +1603,12 @@ namespace Convertec_Bodega_Administracion
             this.BodyPanelMovElementos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.BodyPanelMovElementos.Controls.Add(this.MVpanelHistProdTable);
             this.BodyPanelMovElementos.Controls.Add(this.MVpanelBuscador);
-            this.BodyPanelMovElementos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BodyPanelMovElementos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BodyPanelMovElementos.ForeColor = System.Drawing.Color.Black;
             this.BodyPanelMovElementos.Location = new System.Drawing.Point(0, 0);
             this.BodyPanelMovElementos.Margin = new System.Windows.Forms.Padding(0);
             this.BodyPanelMovElementos.Name = "BodyPanelMovElementos";
-            this.BodyPanelMovElementos.Size = new System.Drawing.Size(1150, 750);
+            this.BodyPanelMovElementos.Size = new System.Drawing.Size(1077, 88);
             this.BodyPanelMovElementos.TabIndex = 7;
             // 
             // MVpanelHistProdTable
@@ -1646,8 +1635,8 @@ namespace Convertec_Bodega_Administracion
             this.MVpanelHistProdTable.Panel2.Controls.Add(this.MVpanelTablaMov1);
             this.MVpanelHistProdTable.Panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MVpanelHistProdTable.Panel2.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
-            this.MVpanelHistProdTable.Size = new System.Drawing.Size(1150, 473);
-            this.MVpanelHistProdTable.SplitterDistance = 216;
+            this.MVpanelHistProdTable.Size = new System.Drawing.Size(1077, 51);
+            this.MVpanelHistProdTable.SplitterDistance = 25;
             this.MVpanelHistProdTable.SplitterWidth = 1;
             this.MVpanelHistProdTable.TabIndex = 3;
             this.MVpanelHistProdTable.TabStop = false;
@@ -1660,7 +1649,7 @@ namespace Convertec_Bodega_Administracion
             this.MVpanelTablaElementos2.Margin = new System.Windows.Forms.Padding(0);
             this.MVpanelTablaElementos2.Name = "MVpanelTablaElementos2";
             this.MVpanelTablaElementos2.Padding = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.MVpanelTablaElementos2.Size = new System.Drawing.Size(1120, 166);
+            this.MVpanelTablaElementos2.Size = new System.Drawing.Size(1047, 0);
             this.MVpanelTablaElementos2.TabIndex = 2;
             // 
             // MVdataGridViewProdHist
@@ -1668,22 +1657,25 @@ namespace Convertec_Bodega_Administracion
             this.MVdataGridViewProdHist.AllowUserToAddRows = false;
             this.MVdataGridViewProdHist.AllowUserToDeleteRows = false;
             this.MVdataGridViewProdHist.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(255)))), ((int)(((byte)(242)))));
-            this.MVdataGridViewProdHist.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(255)))), ((int)(((byte)(242)))));
+            this.MVdataGridViewProdHist.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle15;
             this.MVdataGridViewProdHist.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(243)))), ((int)(((byte)(246)))));
             this.MVdataGridViewProdHist.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.MVdataGridViewProdHist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.MVdataGridViewProdHist.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MVdataGridViewProdHist.Location = new System.Drawing.Point(6, 0);
             this.MVdataGridViewProdHist.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MVdataGridViewProdHist.MultiSelect = false;
             this.MVdataGridViewProdHist.Name = "MVdataGridViewProdHist";
             this.MVdataGridViewProdHist.ReadOnly = true;
             this.MVdataGridViewProdHist.RowHeadersWidth = 51;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MVdataGridViewProdHist.RowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MVdataGridViewProdHist.RowsDefaultCellStyle = dataGridViewCellStyle16;
             this.MVdataGridViewProdHist.RowTemplate.Height = 24;
-            this.MVdataGridViewProdHist.Size = new System.Drawing.Size(1108, 166);
+            this.MVdataGridViewProdHist.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.MVdataGridViewProdHist.Size = new System.Drawing.Size(1035, 0);
             this.MVdataGridViewProdHist.TabIndex = 0;
+            this.MVdataGridViewProdHist.TabStop = false;
             this.MVdataGridViewProdHist.SelectionChanged += new System.EventHandler(this.CargarDatos);
             // 
             // MVpanelTablaElementos1
@@ -1693,7 +1685,7 @@ namespace Convertec_Bodega_Administracion
             this.MVpanelTablaElementos1.Location = new System.Drawing.Point(15, 10);
             this.MVpanelTablaElementos1.Margin = new System.Windows.Forms.Padding(0);
             this.MVpanelTablaElementos1.Name = "MVpanelTablaElementos1";
-            this.MVpanelTablaElementos1.Size = new System.Drawing.Size(1120, 30);
+            this.MVpanelTablaElementos1.Size = new System.Drawing.Size(1047, 30);
             this.MVpanelTablaElementos1.TabIndex = 1;
             // 
             // MVlabel4
@@ -1716,7 +1708,7 @@ namespace Convertec_Bodega_Administracion
             this.MVpanelTablaMov2.Margin = new System.Windows.Forms.Padding(0);
             this.MVpanelTablaMov2.Name = "MVpanelTablaMov2";
             this.MVpanelTablaMov2.Padding = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.MVpanelTablaMov2.Size = new System.Drawing.Size(1120, 206);
+            this.MVpanelTablaMov2.Size = new System.Drawing.Size(1047, 0);
             this.MVpanelTablaMov2.TabIndex = 1;
             // 
             // MVdataGridViewHistorial
@@ -1724,20 +1716,20 @@ namespace Convertec_Bodega_Administracion
             this.MVdataGridViewHistorial.AllowUserToAddRows = false;
             this.MVdataGridViewHistorial.AllowUserToDeleteRows = false;
             this.MVdataGridViewHistorial.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(255)))), ((int)(((byte)(242)))));
-            this.MVdataGridViewHistorial.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(255)))), ((int)(((byte)(242)))));
+            this.MVdataGridViewHistorial.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
             this.MVdataGridViewHistorial.AutoGenerateColumns = false;
             this.MVdataGridViewHistorial.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(243)))), ((int)(((byte)(246)))));
             this.MVdataGridViewHistorial.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.MVdataGridViewHistorial.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.MVdataGridViewHistorial.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.MVdataGridViewHistorial.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
             this.MVdataGridViewHistorial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.MVdataGridViewHistorial.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.fechamovDataGridViewTextBoxColumn2,
@@ -1760,10 +1752,10 @@ namespace Convertec_Bodega_Administracion
             this.MVdataGridViewHistorial.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.MVdataGridViewHistorial.RowHeadersVisible = false;
             this.MVdataGridViewHistorial.RowHeadersWidth = 51;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MVdataGridViewHistorial.RowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MVdataGridViewHistorial.RowsDefaultCellStyle = dataGridViewCellStyle19;
             this.MVdataGridViewHistorial.RowTemplate.Height = 24;
-            this.MVdataGridViewHistorial.Size = new System.Drawing.Size(1108, 206);
+            this.MVdataGridViewHistorial.Size = new System.Drawing.Size(1035, 0);
             this.MVdataGridViewHistorial.TabIndex = 0;
             // 
             // obs_mov2
@@ -1783,7 +1775,7 @@ namespace Convertec_Bodega_Administracion
             this.MVpanelTablaMov1.Location = new System.Drawing.Point(15, 10);
             this.MVpanelTablaMov1.Margin = new System.Windows.Forms.Padding(0);
             this.MVpanelTablaMov1.Name = "MVpanelTablaMov1";
-            this.MVpanelTablaMov1.Size = new System.Drawing.Size(1120, 30);
+            this.MVpanelTablaMov1.Size = new System.Drawing.Size(1047, 30);
             this.MVpanelTablaMov1.TabIndex = 2;
             // 
             // MVlabel5
@@ -1808,7 +1800,7 @@ namespace Convertec_Bodega_Administracion
             this.MVpanelBuscador.Location = new System.Drawing.Point(0, 0);
             this.MVpanelBuscador.Margin = new System.Windows.Forms.Padding(0);
             this.MVpanelBuscador.Name = "MVpanelBuscador";
-            this.MVpanelBuscador.Size = new System.Drawing.Size(1150, 277);
+            this.MVpanelBuscador.Size = new System.Drawing.Size(1077, 277);
             this.MVpanelBuscador.TabIndex = 2;
             // 
             // MVpanelBuscadorLeft
@@ -1826,7 +1818,7 @@ namespace Convertec_Bodega_Administracion
             this.MVpanelBuscadorLeft.Margin = new System.Windows.Forms.Padding(0);
             this.MVpanelBuscadorLeft.Name = "MVpanelBuscadorLeft";
             this.MVpanelBuscadorLeft.Padding = new System.Windows.Forms.Padding(15, 12, 8, 12);
-            this.MVpanelBuscadorLeft.Size = new System.Drawing.Size(568, 277);
+            this.MVpanelBuscadorLeft.Size = new System.Drawing.Size(495, 277);
             this.MVpanelBuscadorLeft.TabIndex = 9;
             // 
             // MVlabelDiv2
@@ -1838,7 +1830,7 @@ namespace Convertec_Bodega_Administracion
             this.MVlabelDiv2.Location = new System.Drawing.Point(-24, 274);
             this.MVlabelDiv2.Margin = new System.Windows.Forms.Padding(0);
             this.MVlabelDiv2.Name = "MVlabelDiv2";
-            this.MVlabelDiv2.Size = new System.Drawing.Size(1198, 2);
+            this.MVlabelDiv2.Size = new System.Drawing.Size(1125, 2);
             this.MVlabelDiv2.TabIndex = 8;
             // 
             // MVlabel1
@@ -1859,7 +1851,7 @@ namespace Convertec_Bodega_Administracion
             this.MVtxtFiltroHist.Location = new System.Drawing.Point(198, 12);
             this.MVtxtFiltroHist.Margin = new System.Windows.Forms.Padding(0);
             this.MVtxtFiltroHist.Name = "MVtxtFiltroHist";
-            this.MVtxtFiltroHist.Size = new System.Drawing.Size(358, 22);
+            this.MVtxtFiltroHist.Size = new System.Drawing.Size(285, 22);
             this.MVtxtFiltroHist.TabIndex = 0;
             this.MVtxtFiltroHist.TextChanged += new System.EventHandler(this.TableFilter);
             // 
@@ -1891,7 +1883,7 @@ namespace Convertec_Bodega_Administracion
             this.MVtxtOtFilter.Location = new System.Drawing.Point(198, 59);
             this.MVtxtOtFilter.Margin = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.MVtxtOtFilter.Name = "MVtxtOtFilter";
-            this.MVtxtOtFilter.Size = new System.Drawing.Size(358, 22);
+            this.MVtxtOtFilter.Size = new System.Drawing.Size(285, 22);
             this.MVtxtOtFilter.TabIndex = 6;
             this.MVtxtOtFilter.TextChanged += new System.EventHandler(this.TableFilter);
             // 
@@ -1904,7 +1896,7 @@ namespace Convertec_Bodega_Administracion
             this.MVtxtOtHist.Location = new System.Drawing.Point(198, 105);
             this.MVtxtOtHist.Margin = new System.Windows.Forms.Padding(0);
             this.MVtxtOtHist.Name = "MVtxtOtHist";
-            this.MVtxtOtHist.Size = new System.Drawing.Size(358, 159);
+            this.MVtxtOtHist.Size = new System.Drawing.Size(285, 159);
             this.MVtxtOtHist.TabIndex = 5;
             this.MVtxtOtHist.Text = "";
             // 
@@ -1913,7 +1905,7 @@ namespace Convertec_Bodega_Administracion
             this.MVpanelBuscadorRight.Controls.Add(this.MVlabelDiv3);
             this.MVpanelBuscadorRight.Controls.Add(this.MVpanelImage);
             this.MVpanelBuscadorRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.MVpanelBuscadorRight.Location = new System.Drawing.Point(568, 0);
+            this.MVpanelBuscadorRight.Location = new System.Drawing.Point(495, 0);
             this.MVpanelBuscadorRight.Margin = new System.Windows.Forms.Padding(4);
             this.MVpanelBuscadorRight.Name = "MVpanelBuscadorRight";
             this.MVpanelBuscadorRight.Padding = new System.Windows.Forms.Padding(8, 12, 15, 12);
@@ -1970,8 +1962,8 @@ namespace Convertec_Bodega_Administracion
             // 
             // BodypanelGeneral
             // 
-            this.BodypanelGeneral.Controls.Add(this.BodyPanelMovElementos);
             this.BodypanelGeneral.Controls.Add(this.BodyPanelIngresoElementos);
+            this.BodypanelGeneral.Controls.Add(this.BodyPanelMovElementos);
             this.BodypanelGeneral.Controls.Add(this.BodyPanelSalidaIngreso);
             this.BodypanelGeneral.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BodypanelGeneral.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1985,25 +1977,29 @@ namespace Convertec_Bodega_Administracion
             // 
             this.IEtoolTip1.ToolTipTitle = "Error en Valor.";
             // 
-            // btnConfiguracion
+            // label4
             // 
-            this.btnConfiguracion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnConfiguracion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnConfiguracion.FlatAppearance.BorderSize = 0;
-            this.btnConfiguracion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(184)))), ((int)(((byte)(186)))));
-            this.btnConfiguracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfiguracion.IconChar = FontAwesome.Sharp.IconChar.Cogs;
-            this.btnConfiguracion.IconColor = System.Drawing.Color.DimGray;
-            this.btnConfiguracion.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnConfiguracion.IconSize = 36;
-            this.btnConfiguracion.Location = new System.Drawing.Point(910, 34);
-            this.btnConfiguracion.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.btnConfiguracion.Name = "btnConfiguracion";
-            this.btnConfiguracion.Size = new System.Drawing.Size(36, 32);
-            this.btnConfiguracion.TabIndex = 7;
-            this.btnConfiguracion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnConfiguracion.UseVisualStyleBackColor = true;
-            this.btnConfiguracion.Click += new System.EventHandler(this.btnConfiguracion_Click);
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(-36, 458);
+            this.label4.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(548, 2);
+            this.label4.TabIndex = 24;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(-36, 263);
+            this.label5.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(548, 2);
+            this.label5.TabIndex = 25;
             // 
             // fechamovDataGridViewTextBoxColumn2
             // 
@@ -2317,6 +2313,10 @@ namespace Convertec_Bodega_Administracion
             // 
             this.movIngresoDataGridDTOBindingSource.DataSource = typeof(Convertec_Bodega_Administracion.Model.MovIngresoDataGridDTO);
             // 
+            // idDescripcionElementoBindingSource
+            // 
+            this.idDescripcionElementoBindingSource.DataSource = typeof(Convertec_Bodega_Administracion.Model.IdDescripcionElemento);
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
@@ -2361,7 +2361,7 @@ namespace Convertec_Bodega_Administracion
             this.IEpanelFormElementoL.ResumeLayout(false);
             this.IEpanelFormElementoL1.ResumeLayout(false);
             this.IEpanelFormElementoL1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.IEiconErrorValor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IEdataGridViewProd)).EndInit();
             this.IEpanelFormElementoL2.ResumeLayout(false);
             this.IEpanelFormElementoL2.PerformLayout();
             this.IEpanelFormElementoR.ResumeLayout(false);
@@ -2396,6 +2396,7 @@ namespace Convertec_Bodega_Administracion
             ((System.ComponentModel.ISupportInitialize)(this.historialMovimientoTablaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.movSalidasDataGridDTOBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.movIngresoDataGridDTOBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.idDescripcionElementoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2411,8 +2412,6 @@ namespace Convertec_Bodega_Administracion
         private FontAwesome.Sharp.IconButton SidebarBtnIngresarElemento;
         private FontAwesome.Sharp.IconButton SidebarBtnSalidaIngreso;
         private FontAwesome.Sharp.IconButton SidebarBtnMovElementos;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private FontAwesome.Sharp.IconButton iconbutton;
         private System.Windows.Forms.DataGridView SIdataGridViewSalidas;
         private System.Windows.Forms.DataGridView SIdataGridViewIngresos;
         private System.Windows.Forms.BindingSource movSalidasDataGridDTOBindingSource;
@@ -2512,7 +2511,6 @@ namespace Convertec_Bodega_Administracion
         private System.Windows.Forms.Label IElblUnidad;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox IEcomboBoxDescripcion;
         private System.Windows.Forms.ComboBox IEcomboBoxMarca;
         private System.Windows.Forms.ComboBox IEcomboBoxProveedor;
         private System.Windows.Forms.Panel IEpanelImagen;
@@ -2539,7 +2537,6 @@ namespace Convertec_Bodega_Administracion
         private System.Windows.Forms.DataGridViewTextBoxColumn proveedor;
         private System.Windows.Forms.DataGridViewTextBoxColumn marca;
         private System.Windows.Forms.DataGridViewTextBoxColumn obs_mov;
-        private FontAwesome.Sharp.IconPictureBox IEiconErrorValor;
         private System.Windows.Forms.ToolTip IEtoolTip1;
         private FontAwesome.Sharp.IconButton IEbtnEditar;
         private System.Windows.Forms.Label label3;
@@ -2557,6 +2554,11 @@ namespace Convertec_Bodega_Administracion
         private System.Windows.Forms.DataGridViewTextBoxColumn valorunitarioDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn obs_mov2;
         private FontAwesome.Sharp.IconButton btnConfiguracion;
+        private System.Windows.Forms.BindingSource idDescripcionElementoBindingSource;
+        private System.Windows.Forms.TextBox IEtxtDescripcion;
+        private System.Windows.Forms.DataGridView IEdataGridViewProd;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
     }
 }
 

@@ -47,61 +47,21 @@ namespace Convertec_Bodega_Administracion.Model
         public int id_producto { get; set; }
     }
 
+    class DescripcionProducto
+    {
+        public Nullable<long> cod_bodega { get; set; }
+        public string descripcion { get; set; }
+        public int id_producto { get; set; }
+    }
+
     class OtProducto
     {
         public string ot { get; set; }
     }
 
-    class IdTrabajdor
-    {
-        public int id_trabajador { get; set; }
-    }
-
-    class NumeroOt
-    {
-        public string ot { get; set; }
-    }
-
-    class CodBodegaProducto
-    {
-        public Nullable<long> cod_bodega { get; set; }
-    }
-
-    class NombreTrabajador
-    {
-        public string nombre { get; set; }
-        public string apellidos { get; set; }
-    }
-
-    class DescProducto
-    {
-        public string descripcion { get; set; }
-        public string nom_proveedor { get; set; }
-        public string nom_marca { get; set; }
-        public string parte_plano { get; set; }
-        public string obs { get; set; }
-        public int id_producto { get; set; }
-        public double stock { get; set; }
-        public bool unidad { get; set; }
-    }
-
     class ImagesProducto
     {
         public string image { get; set; }
-    }
-
-    class DescProductoDetalle
-    {
-        public string descripcion { get; set; }
-        public string nom_proveedor { get; set; }
-        public string nom_marca { get; set; }
-        public string parte_plano { get; set; }
-        public string obs { get; set; }
-        public string image { get; set; }
-        public double stock { get; set; }
-        public System.DateTime ult_fecha_compra { get; set; }
-        public bool borrado { get; set; }
-
     }
 
     class ProdEntrada

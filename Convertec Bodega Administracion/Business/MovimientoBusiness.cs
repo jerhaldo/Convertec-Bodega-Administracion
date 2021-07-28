@@ -157,127 +157,6 @@ namespace Convertec_Bodega_Administracion.Business
             }
         }
 
-        public static List<IdTrabajdor> GetIDs()
-        {
-            using (var db = new ConvertecBodegaEntities())
-            {
-                var data = new List<IdTrabajdor>();
-                try
-                {
-                    data = (
-                        from t in db.Trabajador
-                        select new IdTrabajdor
-                        {
-                            id_trabajador = t.id_trabajador
-                        }
-                    ).ToList();
-                }
-                catch (System.Data.Entity.Core.EntityException ex)
-                {
-                    System.Console.WriteLine("Property: {0} throws Error: {1}", ex.Source, ex.Message);
-                }
-
-                db.Dispose();
-                return data;
-            }
-        }
-
-        public static List<NumeroOt> GetOt()
-        {
-            using (var db = new ConvertecBodegaEntities())
-            {
-                var data = new List<NumeroOt>();
-                try
-                {
-                    data = (
-                        from m in db.Movimiento
-                        orderby m.ot
-                        select new NumeroOt
-                        {
-                            ot = m.ot
-                        }
-                    ).ToList();
-                }
-                catch (System.Data.Entity.Core.EntityException ex)
-                {
-                    System.Console.WriteLine("Property: {0} throws Error: {1}", ex.Data, ex.Message);
-                }
-
-                db.Dispose();
-
-                return data;
-            }
-        }
-
-        public static NombreTrabajador GetNombre(int id)
-        {
-            using (var db = new ConvertecBodegaEntities())
-            {
-                var data = (
-                    from t in db.Trabajador
-                    where t.id_trabajador == id
-                    select new NombreTrabajador
-                    {
-                        nombre = t.nombre,
-                        apellidos = t.apellidos
-                    }
-                ).SingleOrDefault();
-
-                db.Dispose();
-
-                return data;
-            }
-        }
-
-        public static bool CheckId(int id)
-        {
-            using (var db = new ConvertecBodegaEntities())
-            {
-                var result = (from t in db.Trabajador
-                              where t.id_trabajador == id
-                              select t.id_trabajador).Any();
-
-                return result;
-            }
-        }
-
-        public static List<CodBodegaProducto> GetCodBodegaProductos(bool disponible)
-        {
-            using (var db = new ConvertecBodegaEntities())
-            {
-                if (disponible)
-                {
-                    var data = (
-                        from p in db.Producto
-                        where p.cod_bodega != null
-                        where p.borrado == false
-                        select new CodBodegaProducto
-                        {
-                            cod_bodega = p.cod_bodega
-                        }
-                    ).ToList();
-
-                    db.Dispose();
-                    return data;
-
-                }
-                else
-                {
-                    var data = (
-                        from p in db.Producto
-                        where p.cod_bodega != null
-                        select new CodBodegaProducto
-                        {
-                            cod_bodega = p.cod_bodega
-                        }
-                    ).ToList();
-
-                    db.Dispose();
-                    return data;
-                }
-            }
-        }
-
         public static List<IdDescripcionElemento> GetElementoByName()
         {
             using (var db = new ConvertecBodegaEntities())
@@ -299,85 +178,25 @@ namespace Convertec_Bodega_Administracion.Business
 
             }
         }
-
-        public static DescProducto GetDescProductos(long cod)
+        public static List<IdDescripcionElemento> GetElementoByFilteredName(string filteredElement)
         {
             using (var db = new ConvertecBodegaEntities())
             {
+
                 var data = (
-                    from p in db.Producto
-                    join m in db.Marca on p.id_marca equals m.id_marca
-                    join pr in db.Proveedor on p.id_proveedor equals pr.id_proveedor
-                    where p.cod_bodega == cod
-                    where p.borrado == false
-                    select new DescProducto
-                    {
-                        descripcion = p.descripcion,
-                        nom_marca = m.nom_marca,
-                        nom_proveedor = pr.nom_proveedor,
-                        parte_plano = p.parte_plano,
-                        obs = p.obs,
-                        id_producto = p.id_producto,
-                        stock = p.stock,
-                        unidad = p.unidad
-                    }
-                ).SingleOrDefault();
+                        from p in db.Producto
+                        where p.descripcion.Contains(filteredElement)
+                        where p.cod_bodega != null
+                        where p.borrado == false
+                        select new IdDescripcionElemento
+                        {
+                            id_producto = p.id_producto,
+                            descripcion = p.descripcion
+                        }
+                    ).ToList();
 
                 db.Dispose();
-
                 return data;
-            }
-        }
-
-        public static DescProductoDetalle GetDescProductosDetalle(long cod)
-        {
-            using (var db = new ConvertecBodegaEntities())
-            {
-                var data = (
-                    from p in db.Producto
-                    join m in db.Marca on p.id_marca equals m.id_marca
-                    join pr in db.Proveedor on p.id_proveedor equals pr.id_proveedor
-                    where p.cod_bodega == cod
-                    select new DescProductoDetalle
-                    {
-                        descripcion = p.descripcion,
-                        nom_marca = m.nom_marca,
-                        nom_proveedor = pr.nom_proveedor,
-                        parte_plano = p.parte_plano,
-                        obs = p.obs,
-                        stock = p.stock,
-                        ult_fecha_compra = p.ult_fecha_compra,
-                        borrado = p.borrado
-                    }
-                ).SingleOrDefault();
-
-                db.Dispose();
-
-                return data;
-            }
-        }
-
-        public static bool CheckProducto(long cod, bool disponible)
-        {
-            using (var db = new ConvertecBodegaEntities())
-            {
-                if (disponible)
-                {
-                    var result = (from p in db.Producto
-                                  where p.cod_bodega == cod
-                                  where p.borrado == false
-                                  select p.cod_bodega).Any();
-
-                    return result;
-                }
-                else
-                {
-                    var result = (from p in db.Producto
-                                  where p.cod_bodega == cod
-                                  select p.cod_bodega).Any();
-
-                    return result;
-                }
             }
         }
 
@@ -483,18 +302,6 @@ namespace Convertec_Bodega_Administracion.Business
             }
         }
 
-        public static bool GetDisponibilidad(double stock, double cant)
-        {
-            if ((stock - cant) < 0)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
-        }
-
         public static string GetFormatedOts(int id)
         {
             string formatedOt = "";
@@ -561,6 +368,42 @@ namespace Convertec_Bodega_Administracion.Business
             }
         }
 
+        public static List<DescripcionProducto> GetProductos()
+        {
+            using (var db = new ConvertecBodegaEntities())
+            {
+                var data = (
+                    from p in db.Producto
+                    join m in db.Marca on p.id_marca equals m.id_marca
+                    join pr in db.Proveedor on p.id_proveedor equals pr.id_proveedor
+                    select new DescripcionProducto
+                    {
+                        cod_bodega = p.cod_bodega,
+                        descripcion = p.descripcion,
+                        id_producto = p.id_producto
+                    }
+                ).ToList();
+
+                List<DescripcionProducto> listProd = new List<DescripcionProducto>();
+
+                foreach (DescripcionProducto prod in data)
+                {
+                    var descripcionProducto = new DescripcionProducto
+                    {
+                        cod_bodega = prod.cod_bodega,
+                        descripcion = prod.descripcion,
+                        id_producto = prod.id_producto
+                    };
+
+                    listProd.Add(descripcionProducto);
+                }
+
+                db.Dispose();
+
+                return listProd;
+            }
+        }
+
         public static DataTable ToDataTable<T>(List<T> items)
         {
             DataTable dataTable = new DataTable(typeof(T).Name);
@@ -586,7 +429,7 @@ namespace Convertec_Bodega_Administracion.Business
             return dataTable;
         }
 
-        public static DescripcionElemento GetDescripcionElemento(string descripcion)
+        public static DescripcionElemento GetDescripcionElemento(int id)
         {
             using (var db = new ConvertecBodegaEntities())
             {
@@ -594,7 +437,7 @@ namespace Convertec_Bodega_Administracion.Business
                     from p in db.Producto
                     join m in db.Marca on p.id_marca equals m.id_marca
                     join pr in db.Proveedor on p.id_proveedor equals pr.id_proveedor
-                    where p.descripcion == descripcion
+                    where p.id_producto == id
                     select new DescripcionElemento
                     {
                         id_producto = p.id_producto,

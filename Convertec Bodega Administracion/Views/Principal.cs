@@ -14,6 +14,7 @@ namespace Convertec_Bodega_Administracion
     public partial class FormPrincipal : Form
     {
         private DataTable tableProductoHist;
+        private DataTable tableProducto;
         private Panel panelActive;
         private FontAwesome.Sharp.IconButton btnActive;
         private bool IEUnidad;
@@ -233,9 +234,9 @@ namespace Convertec_Bodega_Administracion
 
         private void CleanDataIE()
         {
-            //IEcomboBoxDescripcion.Clear();
-            IEtxtCant.Text = "1";
+            IEtxtDescripcion.Clear();
             IEtxtCodProv.Clear();
+            IEtxtCant.Text = "1";
             IElblUnidad.Text = "";
             IElabelCodBodega.Text = "";
             IElabelPartePlano.Text = "";
@@ -243,20 +244,98 @@ namespace Convertec_Bodega_Administracion
 
             IEtxtDocumento.Clear();
             IEtxtOT.Clear();
+            IEtxtObsIngreso.Clear();
             IEtxtValor.Text = "0";
             IEtxtValorUni.Text = "0";
-            IEtxtObsIngreso.Clear();
             IEpictureBoxProducto.Image = Properties.Resources.image_unavailable;
+        }
+
+        private void FormatTableProd(DataGridView dgv)
+        {
+            dgv.Columns["cod_bodega"].HeaderText = "Código";
+            dgv.Columns["descripcion"].HeaderText = "Descripción";
+            dgv.Columns["id_producto"].HeaderText = "ID";
+            dgv.Columns["id_producto"].Visible = false;
+
+            foreach (DataGridViewColumn col in IEdataGridViewProd.Columns)
+            {
+                col.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            }
+        }
+
+        private void IETableFilter(object sender, EventArgs e)
+        {
+            DataView dv = tableProducto.DefaultView;
+            dv.RowFilter = "(cod_bodega LIKE '%" + IEtxtDescripcion.Text + "%'"
+                            + "or descripcion LIKE '%" + IEtxtDescripcion.Text + "%')";
+            IEdataGridViewProd.DataSource = dv;
+        }
+
+        private void PopulateProdTable()
+        {
+            tableProducto = MovimientoBusiness.ToDataTable(MovimientoBusiness.GetProductos());
+            IEdataGridViewProd.DataSource = tableProducto;
+            FormatTableProd(IEdataGridViewProd);
+        }
+
+        private int IESelectedRow()
+        {
+            if (IEdataGridViewProd.SelectedRows.Count == 1)
+            {
+                int cellValue = Int32.Parse(
+                                    IEdataGridViewProd.Rows[IEdataGridViewProd.SelectedCells[0].RowIndex]
+                                    .Cells["id_producto"].Value.ToString());
+                return cellValue;
+            }
+            return -1;
+        }
+
+        private void IECargarDatos(object sender, EventArgs e)
+        {
+            int id = IESelectedRow();
+            if (id != -1)
+            {
+                var de = MovimientoBusiness.GetDescripcionElemento(id);
+                IEcomboBoxProveedor.SelectedIndex = IEcomboBoxProveedor.FindString(de.nom_proveedor);
+                IEcomboBoxMarca.SelectedIndex = IEcomboBoxMarca.FindString(de.nom_marca);
+                IEtxtValor.Text = de.valor.ToString();
+                IEtxtValorUni.Text = de.valor_unitario.ToString();
+                IElabelCodBodega.Text = de.cod_bodega.ToString();
+                IElabelPartePlano.Text = de.parte_plano;
+                IElabelStock.Text = de.stock.ToString();
+                
+                if (string.IsNullOrWhiteSpace(IEtxtValorUni.Text))
+                {
+                    IEtxtValorUni.Text = "0";
+                }
+
+                this.IEUnidad = de.unidad;
+                if (this.IEUnidad)
+                    IElblUnidad.Text = "Unidad";
+                else
+                    IElblUnidad.Text = "Metros";                
+                var img = MovimientoBusiness.GetImages(id);
+
+                if (img != null)
+                    IEpictureBoxProducto.Load(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "/Assets/imgProductos/" + img.image);
+                else
+                    IEpictureBoxProducto.Load(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "/Assets/logos/image-unavailable.png");
+
+            }
+            else
+            {
+                IEpictureBoxProducto.Load(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "/Assets/logos/image-unavailable.png");
+            }
         }
 
         private void SidebarBtnIngresarElemento_Click(object sender, EventArgs e)
         {
-            AutoCompleteTextElemento();
+            PopulateProdTable();
             AutoCompleteTextProveedor();
             AutoCompleteTextMarca();
             SetDefaultPanelsAndButtons(panelActive, btnActive);
             SetVisible(BodyPanelIngresoElementos, SidebarBtnIngresarElemento);
-            IEcomboBoxDescripcion.Focus();
+            IEtxtDescripcion.Focus();
         }
 
         public void AutoCompleteTextProveedor()
@@ -287,95 +366,21 @@ namespace Convertec_Bodega_Administracion
             IEcomboBoxMarca.AutoCompleteSource = AutoCompleteSource.ListItems;
         }
 
-        private void AutoCompleteTextElemento()
-        {
-            List<Model.IdDescripcionElemento> listElementos = new List<Model.IdDescripcionElemento>();
-            foreach (Model.IdDescripcionElemento elemento in MovimientoBusiness.GetElementoByName())
-            {
-                listElementos.Add(new Model.IdDescripcionElemento() { id_producto = elemento.id_producto, descripcion = elemento.descripcion });
-            }
-            IEcomboBoxDescripcion.DisplayMember = "descripcion";
-            IEcomboBoxDescripcion.ValueMember = "id_producto";
-            IEcomboBoxDescripcion.DataSource = listElementos;
-            IEcomboBoxDescripcion.AutoCompleteSource = AutoCompleteSource.ListItems;
-
-        }
-
-        private void CheckFormat(object sender, EventArgs e)
-        {
-            if (IEcomboBoxDescripcion.SelectedIndex == -1 && IEcomboBoxDescripcion.Text != "")
-            {
-                string texto = IEcomboBoxDescripcion.Text;
-                if (texto.EndsWith("/") || texto.EndsWith(@"\"))
-                {
-                    IEcomboBoxDescripcion.SelectedIndex = IEcomboBoxDescripcion.FindString(texto);
-                }
-            }
-        }
-
-        private void GetDescripcionElemento(object sender, EventArgs e)
-        {
-            if (IEcomboBoxDescripcion.SelectedValue != null && Convert.ToInt32(IEcomboBoxDescripcion.SelectedValue) == -1)
-            {
-                AlertMessage("Por favor seleccione un elemento.", MessageBoxIcon.Error);
-                CleanDataIE();
-                IEcomboBoxDescripcion.Focus();
-            }
-            else 
-            { 
-                //Chequea si existe conexión con la BD
-                if (MovimientoBusiness.CheckDBConnection(true))
-                {
-                    if (MovimientoBusiness.CheckProductoByName(IEcomboBoxDescripcion.Text, true))
-                    {
-                        var de = MovimientoBusiness.GetDescripcionElemento(IEcomboBoxDescripcion.Text);
-                        IEcomboBoxProveedor.SelectedIndex = IEcomboBoxProveedor.FindString(de.nom_proveedor);
-                        IEcomboBoxMarca.SelectedIndex = IEcomboBoxMarca.FindString(de.nom_marca);
-                        IEtxtValor.Text = de.valor.ToString();
-                        IEtxtValorUni.Text = de.valor_unitario.ToString();
-                        IElabelCodBodega.Text = de.cod_bodega.ToString();
-                        IElabelPartePlano.Text = de.parte_plano;
-                        IElabelStock.Text = de.stock.ToString();
-
-                        this.IEUnidad = de.unidad;
-                        if (this.IEUnidad)
-                            IElblUnidad.Text = "Unidad";
-                        else
-                            IElblUnidad.Text = "Metros";
-
-                        var img = MovimientoBusiness.GetImages(Int32.Parse(IEcomboBoxDescripcion.SelectedValue.ToString()));
-
-                        if (img != null)
-                            try
-                            {
-                                IEpictureBoxProducto.Image = Image.FromFile(Properties.Settings.Default.ImagePath + "/" + img.image);
-                            }
-                            catch (System.IO.FileNotFoundException)
-                            {
-                                IEpictureBoxProducto.Image = Properties.Resources.image_unavailable;
-                            }
-
-                        else
-                            IEpictureBoxProducto.Image = Properties.Resources.image_unavailable;
-
-                    }
-                    else
-                    {
-                        AlertMessage("Error, el producto ingresado no se encuentra en el sistema.", MessageBoxIcon.Error);
-                        CleanDataIE();
-                        IEcomboBoxDescripcion.Focus();
-                    }
-                }
-            }
-            
-        }
-
         private void IEbtnAgregar_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(IEtxtValor.Text))
             {
                 AlertMessage("Error, el valor se encuentra vacío.", MessageBoxIcon.Error);
                 IEtxtValor.Focus();
+            }
+            else if (string.IsNullOrWhiteSpace(IEtxtCant.Text))
+            {
+                AlertMessage("Error, la cantidad se encuentra vacía.", MessageBoxIcon.Error);
+                IEtxtCant.Focus();
+            } else if (string.IsNullOrWhiteSpace(IEtxtOT.Text))
+            {
+                AlertMessage("Error, la OT se encuentra sin asignar.", MessageBoxIcon.Error);
+                IEtxtCant.Focus();
             }
             else
             {
@@ -385,12 +390,12 @@ namespace Convertec_Bodega_Administracion
                     {
                         //ADD
                         IEdataGridViewProdEntrantes.Rows.Add(
-                            IEcomboBoxDescripcion.SelectedValue,
+                            IEdataGridViewProd.Rows[IEdataGridViewProd.SelectedRows[0].Index].Cells["id_producto"].Value.ToString(),
                             IEcomboBoxProveedor.SelectedValue,
                             IEcomboBoxMarca.SelectedValue,
                             DateTime.Now,
                             IElabelCodBodega.Text,
-                            IEcomboBoxDescripcion.Text,
+                            IEdataGridViewProd.Rows[IEdataGridViewProd.SelectedRows[0].Index].Cells["descripcion"].Value.ToString(),
                             IEtxtCant.Text,
                             IElblUnidad.Text,
                             IEtxtValor.Text,
@@ -400,12 +405,11 @@ namespace Convertec_Bodega_Administracion
                             IEtxtCodProv.Text,
                             IEcomboBoxProveedor.Text,
                             IEcomboBoxMarca.Text,
-                            IEtxtObsIngreso.Text);
-                        CleanDataIE();
-                        IEcomboBoxDescripcion.Focus();
+                            IEtxtObsIngreso.Text
+                        );
                         break;
                     }
-                    else if (row.Cells["id_producto"].Value.ToString().Equals(this.IEcomboBoxDescripcion.SelectedValue.ToString()))
+                    else if (row.Cells["id_producto"].Value.Equals(IESelectedRow().ToString()))
                     {
                         //UPDATE
                         row.Cells["id_proveedor"].Value = IEcomboBoxProveedor.SelectedValue;
@@ -424,7 +428,8 @@ namespace Convertec_Bodega_Administracion
                     }
                 }
             }
-
+            IEtxtDescripcion.Focus();
+            CleanDataIE();
         }
 
         private void IEBtnAgregarProveedor_Click(object sender, EventArgs e)
@@ -469,19 +474,23 @@ namespace Convertec_Bodega_Administracion
             {
                 if (IEdataGridViewProdEntrantes.CurrentCell.RowIndex > -1)
                 {
-                    IEcomboBoxDescripcion.SelectedIndex = IEcomboBoxDescripcion.FindString(row.Cells["nombre_prod"].Value.ToString());
+                    IEtxtDescripcion.Text = row.Cells["nombre_prod"].Value.ToString();
                     IEcomboBoxProveedor.SelectedIndex = IEcomboBoxProveedor.FindString(row.Cells["proveedor"].Value.ToString());
                     IEcomboBoxMarca.SelectedIndex = IEcomboBoxMarca.FindString(row.Cells["marca"].Value.ToString());
                     IEtxtValor.Text = row.Cells["valor"].Value.ToString();
                     IEtxtValorUni.Text = row.Cells["valor_unitario"].Value.ToString();
                     IElblUnidad.Text = row.Cells["unidad"].Value.ToString();
+                    IEtxtDocumento.Text = row.Cells["documento"].Value.ToString();
+                    IEtxtOT.Text = row.Cells["ot"].Value.ToString();
+                    IElabelCodBodega.Text = row.Cells["cod_bodega"].Value.ToString();
 
-                    var img = MovimientoBusiness.GetImages(Int32.Parse(IEcomboBoxDescripcion.SelectedValue.ToString()));
+
+                    var img = MovimientoBusiness.GetImages(IESelectedRow());
 
                     if (img != null)
                         try
                         {
-                            IEpictureBoxProducto.Image = Image.FromFile(@"D:\OneDrive\ConvertecImages\ImgProductos\" + img.image);
+                            IEpictureBoxProducto.Image = Image.FromFile(Properties.Settings.Default.ImagePath + "/" + img.image);
                         }
                         catch (System.IO.FileNotFoundException)
                         {
@@ -508,55 +517,6 @@ namespace Convertec_Bodega_Administracion
             CargarElementoEditar(IEdataGridViewProdEntrantes.Rows[e.RowIndex]);
         }
 
-        private void IECheckDecimalCantidad(object sender, EventArgs e)
-        {
-            if (!this.IEUnidad)
-            {
-                IEtxtCant.Text = IEtxtCant.Text.Replace(".", ",");
-                if (!decimal.TryParse(IEtxtCant.Text, out decimal cantidad))
-                {
-                    AlertMessage("Por favor ingrese un número válido.", MessageBoxIcon.Error);
-                    IEtxtCant.Text = "1";
-                    IEtxtCant.Focus();
-                }
-            }
-            CheckCantidad(Double.Parse(IEtxtCant.Text));
-        }
-        private void CheckCantidad(double cantidad)
-        {
-            if (!(cantidad > 0))
-            {
-                AlertMessage("Por favor ingrese un número mayor a 0.", MessageBoxIcon.Error);
-                IEtxtCant.Clear();
-                IEtxtCant.Focus();
-            }
-        }
-        private void CheckUnidad(object sender, KeyPressEventArgs e)
-        {
-            if (this.IEUnidad)
-            {
-                CheckNumber(sender, e);
-            }
-        }
-        private void IEtxtValor_Leave(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(IEtxtValor.Text))
-            {
-                IEiconErrorValor.Visible = true;
-            }
-        }
-        private void IEtxtValor_TextChanged(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(IEtxtValor.Text))
-            {
-
-                IEiconErrorValor.Visible = true;
-            }
-            else
-            {
-                IEiconErrorValor.Visible = false;
-            }
-        }
         private void IEbtnConfirmar_Click(object sender, EventArgs e)
         {
             if (IEdataGridViewProdEntrantes.Rows != null && IEdataGridViewProdEntrantes.Rows.Count > 1)
@@ -578,18 +538,11 @@ namespace Convertec_Bodega_Administracion
                             id_marca = Int32.Parse(row.Cells["id_marca"].Value.ToString()),
                             cod_prod_prov = row.Cells["codigo_prov"].Value.ToString(),
                             documento = row.Cells["documento"].Value.ToString(),
-                            valor = Int32.Parse(row.Cells["valor"].Value.ToString())
-                        };
+                            valor = Int32.Parse(row.Cells["valor"].Value.ToString()),
+                            valor_unitario = Int32.Parse(row.Cells["valor_unitario"].Value.ToString())
+                    };
 
-                        if (row.Cells["valor_unitario"].Value.ToString() != null) {
-                            prodEntrada.valor_unitario = 0;
-                        }
-                        else
-                        {
-                            prodEntrada.valor_unitario = Int32.Parse(row.Cells["valor_unitario"].Value.ToString());
-                        }
-
-                        prodEntradaList.Add(prodEntrada);
+                    prodEntradaList.Add(prodEntrada);
                     }
                 }
                 var result = MessageBox.Show("Desea finalizar y confirmar el proceso?"
@@ -612,6 +565,89 @@ namespace Convertec_Bodega_Administracion
         private void IEbtnEditar_Click(object sender, EventArgs e)
         {
             CargarElementoEditar(IEdataGridViewProdEntrantes.CurrentRow);
+        }
+        private void IECheckDecimalCantidad(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(IEtxtCant.Text))
+            {
+                IEtxtCant.Text = "1";
+            }
+            else
+            {
+                if (!this.IEUnidad)
+                {
+                    IEtxtCant.Text = IEtxtCant.Text.Replace(".", ",");
+                    if (!decimal.TryParse(IEtxtCant.Text, out decimal cantidad))
+                    {
+                        AlertMessage("Por favor ingrese un número válido.", MessageBoxIcon.Error);
+                        IEtxtCant.Text = "1";
+                        IEtxtCant.Focus();
+                    }
+                }
+                CheckCantidad(Double.Parse(IEtxtCant.Text));
+            }
+        }
+
+        private void CheckCantidad(double cantidad)
+        {
+            try
+            {
+                if (!(cantidad > 0))
+                {
+                    AlertMessage("Por favor ingrese un valor mayor a 0.", MessageBoxIcon.Error);
+                    IEtxtCant.Clear();
+                    IEtxtCant.Focus();
+                }
+            }
+            catch (Exception)
+            {
+                AlertMessage("Por favor ingrese un valor.", MessageBoxIcon.Error);
+                throw;
+            }
+        }
+
+        private void CheckUnidad(object sender, KeyPressEventArgs e)
+        {
+            if (this.IEUnidad)
+            {
+                CheckNumber(sender, e);
+            }
+        }
+
+        private void IEtxtValorUni_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(IEtxtValorUni.Text))
+            {
+                IEtxtValorUni.Text = "0";
+            }
+        }
+
+        private void IEcomboBoxProveedor_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(IEcomboBoxProveedor.Text))
+            {
+                AlertMessage("Error, Debe seleccionar un proveedor.", MessageBoxIcon.Error);
+                IEcomboBoxProveedor.Focus();
+            }
+            else if(IEcomboBoxProveedor.FindStringExact(IEcomboBoxProveedor.Text) < 0)  //Si no se encuentra dentro de las opciones del combobox
+            {
+                AlertMessage("Error, Seleccione un proveedor válido.", MessageBoxIcon.Error);
+                IEcomboBoxProveedor.Focus();
+            }
+        }
+
+        private void IEcomboBoxMarca_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(IEcomboBoxMarca.Text))
+            {
+                AlertMessage("Error, Debe seleccionar una marca.", MessageBoxIcon.Error);
+                IEcomboBoxMarca.Focus();
+            }
+            else if(IEcomboBoxMarca.FindStringExact(IEcomboBoxMarca.Text) < 0)  //Si no se encuentra dentro de las opciones del combobox
+            {
+                AlertMessage("Error, Seleccione una marca válida.", MessageBoxIcon.Error);
+                IEcomboBoxMarca.Focus();
+            }
         }
 
         #endregion
