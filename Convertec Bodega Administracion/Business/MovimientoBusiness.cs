@@ -10,7 +10,7 @@ namespace Convertec_Bodega_Administracion.Business
 {
     class MovimientoBusiness
     {
-        public static bool CheckDBConnection(bool showError)
+        public static bool CheckDBConnection(bool showSuccess, bool showError)
         {
             using (var db = new ConvertecBodegaEntities())
             {
@@ -27,6 +27,10 @@ namespace Convertec_Bodega_Administracion.Business
                             + "\n TimeOut: " + db.Database.Connection.ConnectionTimeout);*/
                         db.Database.Connection.Close();
                         Cursor.Current = Cursors.Default;
+                        if (showSuccess)
+                        {
+                            MessageBox.Show("La conexión al servidor funciona de forma correcta.", "Estado de conexión", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
                         return true;
                     }
                     else
@@ -37,7 +41,7 @@ namespace Convertec_Bodega_Administracion.Business
                     Cursor.Current = Cursors.Default;
                     if (showError)
                     {
-                        MessageBox.Show(ex.Message, "Error en conexión con el servidor", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Se ha generado un error con la conexión a la base de datos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     return false;
                 }
@@ -107,7 +111,7 @@ namespace Convertec_Bodega_Administracion.Business
             }
         }
 
-        public static List<HistorialMovimientoTabla> GetHistorial(int id)
+        public static List<HistorialMovimientoTabla> GetHistorial(int id, int anno)
         {
             using (var db = new ConvertecBodegaEntities())
             {
@@ -129,7 +133,7 @@ namespace Convertec_Bodega_Administracion.Business
                         join mar in db.Marca on ii.id_marca equals mar.id_marca
                             into Marca
                             from mm in Marca.DefaultIfEmpty()
-                        where p.id_producto == id
+                        where p.id_producto == id && m.fecha_mov.Year == anno
                         orderby m.fecha_mov descending
                         select new HistorialMovimientoTabla
                         {
@@ -545,6 +549,201 @@ namespace Convertec_Bodega_Administracion.Business
             };
             db.Marca.Add(marca);
             db.SaveChanges();
+        }
+
+        public static List<ElementoStockBodega> GetStockBodega(string proveedor, string marca, bool criticos)
+        {
+            using (var db = new ConvertecBodegaEntities())
+            {
+                var data = new List<ElementoStockBodega>();
+
+                if (criticos)
+                {
+                    data = (
+                        from p in db.Producto
+                        join m in db.Marca on p.id_marca equals m.id_marca
+                        join pr in db.Proveedor on p.id_proveedor equals pr.id_proveedor
+                        where p.cod_bodega != null && pr.nom_proveedor.Contains(proveedor) && m.nom_marca.Contains(marca) && p.stock <= p.stock_min
+                        select new ElementoStockBodega
+                        {
+                            cod_bodega = p.cod_bodega,
+                            descripcion = p.descripcion,
+                            stock = p.stock,
+                            stock_min = p.stock_min,
+                            nom_marca = m.nom_marca,
+                            nom_proveedor = pr.nom_proveedor,
+                            valor = p.valor,
+                            valor_unitario = p.valor_unitario
+                        }
+                    ).ToList();
+                } else
+                {
+                    data = (
+                        from p in db.Producto
+                        join m in db.Marca on p.id_marca equals m.id_marca
+                        join pr in db.Proveedor on p.id_proveedor equals pr.id_proveedor
+                        where p.cod_bodega != null && pr.nom_proveedor.Contains(proveedor) && m.nom_marca.Contains(marca)
+                        select new ElementoStockBodega
+                        {
+                            cod_bodega = p.cod_bodega,
+                            descripcion = p.descripcion,
+                            stock = p.stock,
+                            stock_min = p.stock_min,
+                            nom_marca = m.nom_marca,
+                            nom_proveedor = pr.nom_proveedor,
+                            valor = p.valor,
+                            valor_unitario = p.valor_unitario
+                        }
+                    ).ToList();
+                }
+
+
+                List<ElementoStockBodega> listProd = new List<ElementoStockBodega>();
+
+                foreach (ElementoStockBodega prod in data)
+                {
+                    var productoStockBodega = new ElementoStockBodega
+                    {
+                        cod_bodega = prod.cod_bodega,
+                        descripcion = prod.descripcion,
+                        stock = prod.stock,
+                        stock_min = prod.stock_min,
+                        nom_marca = prod.nom_marca,
+                        nom_proveedor = prod.nom_proveedor,
+                        valor = prod.valor,
+                        valor_unitario = prod.valor_unitario
+                    };
+
+                    listProd.Add(productoStockBodega);
+                }
+
+                db.Dispose();
+
+                return listProd;
+            }
+        }
+
+        public static List<ElementoStockBodega> GetStockBodegaImportacion(string proveedor, string marca, bool criticos)
+        {
+            using (var db = new ConvertecBodegaEntities())
+            {
+                var data = new List<ElementoStockBodega>();
+
+
+
+                if (criticos)
+                {
+                    data = (
+                    from p in db.Producto
+                    join m in db.Marca on p.id_marca equals m.id_marca
+                    join pr in db.Proveedor on p.id_proveedor equals pr.id_proveedor
+                    where p.cod_bodega != null && p.obs.Contains("IMPORTACIÓN") && pr.nom_proveedor.Contains(proveedor) && m.nom_marca.Contains(marca) && p.stock <= p.stock_min
+                    select new ElementoStockBodega
+                    {
+                        cod_bodega = p.cod_bodega,
+                        descripcion = p.descripcion,
+                        stock = p.stock,
+                        stock_min = p.stock_min,
+                        nom_marca = m.nom_marca,
+                        nom_proveedor = pr.nom_proveedor,
+                        valor = p.valor,
+                        valor_unitario = p.valor_unitario
+                    }
+                    ).ToList();
+                }
+                else
+                {
+                    data = (
+                    from p in db.Producto
+                    join m in db.Marca on p.id_marca equals m.id_marca
+                    join pr in db.Proveedor on p.id_proveedor equals pr.id_proveedor
+                    where p.cod_bodega != null && p.obs.Contains("IMPORTACIÓN") && pr.nom_proveedor.Contains(proveedor) && m.nom_marca.Contains(marca)
+                    select new ElementoStockBodega
+                    {
+                        cod_bodega = p.cod_bodega,
+                        descripcion = p.descripcion,
+                        stock = p.stock,
+                        stock_min = p.stock_min,
+                        nom_marca = m.nom_marca,
+                        nom_proveedor = pr.nom_proveedor,
+                        valor = p.valor,
+                        valor_unitario = p.valor_unitario
+                    }
+                    ).ToList();
+                }
+
+                List<ElementoStockBodega> listProd = new List<ElementoStockBodega>();
+                foreach (ElementoStockBodega prod in data)
+                {
+                    var productoStockBodega = new ElementoStockBodega
+                    {
+                        cod_bodega = prod.cod_bodega,
+                        descripcion = prod.descripcion,
+                        stock = prod.stock,
+                        stock_min = prod.stock_min,
+                        nom_marca = prod.nom_marca,
+                        nom_proveedor = prod.nom_proveedor,
+                        valor = prod.valor,
+                        valor_unitario = prod.valor_unitario
+                    };
+
+                    listProd.Add(productoStockBodega);
+                }
+
+                db.Dispose();
+
+                return listProd;
+            }
+        }
+
+        public static List<ElementoUtilizadoOT> GetElementoUtilizadoOT(string OT)
+        {
+            using (var db = new ConvertecBodegaEntities())
+            {
+                var data = (
+
+                    from p in db.Producto
+                    join m in db.Movimiento on p.id_producto equals m.id_producto
+                    join s in db.Salida_Prod on m.id_mov equals s.id_mov
+                    join ma in db.Marca on p.id_marca equals ma.id_marca
+                    join pro in db.Proveedor on p.id_proveedor equals pro.id_proveedor
+                    where p.cod_bodega != null && m.ot == OT
+                    group m by new { p.parte_plano, p.descripcion, ma.nom_marca, pro.nom_proveedor, p.valor, p.valor_unitario } into g
+                    select new ElementoUtilizadoOT
+                    {
+                        parte_plano = g.Key.parte_plano,
+                        descripcion = g.Key.descripcion,
+                        cantidad = g.Sum(i => i.cantidad),
+                        nom_marca = g.Key.nom_marca,
+                        nom_proveedor = g.Key.nom_proveedor,
+                        valor = g.Key.valor,
+                        valor_unitario = g.Key.valor_unitario
+                    } 
+                   
+                ).ToList();
+
+                List<ElementoUtilizadoOT> listProd = new List<ElementoUtilizadoOT>();
+
+                foreach (ElementoUtilizadoOT prod in data)
+                {
+                    var elementoUtilizadoOT = new ElementoUtilizadoOT
+                    {
+                        parte_plano = prod.parte_plano,
+                        descripcion = prod.descripcion,
+                        cantidad = prod.cantidad,
+                        nom_marca = prod.nom_marca,
+                        nom_proveedor = prod.nom_proveedor,
+                        valor = prod.valor,
+                        valor_unitario = prod.valor_unitario
+                    };
+
+                    listProd.Add(elementoUtilizadoOT);
+                }
+
+                db.Dispose();
+
+                return listProd;
+            }
         }
     }
 }

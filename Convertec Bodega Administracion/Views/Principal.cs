@@ -18,6 +18,7 @@ namespace Convertec_Bodega_Administracion
         private Panel panelActive;
         private FontAwesome.Sharp.IconButton btnActive;
         private bool IEUnidad;
+        private int anno;
 
         public FormPrincipal()
         {
@@ -27,15 +28,17 @@ namespace Convertec_Bodega_Administracion
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
             timer1.Start();
-            //CheckDBConnection(true);           
+            //CheckDBConnection(false, true);
             this.BodyPanelSalidaIngreso.Dock = DockStyle.Fill;
             this.BodyPanelIngresoElementos.Dock = DockStyle.Fill;
             this.BodyPanelMovElementos.Dock = DockStyle.Fill;
+            this.BodyPanelInformes.Dock = DockStyle.Fill;
             panelActive = BodyPanelMovElementos;
             btnActive = SidebarBtnMovElementos;
-            PopulateProdHistTable();
             SetDefaultPanelsAndButtons(panelActive, btnActive);
+            PopulateProdHistTable();
             SetVisible(BodyPanelMovElementos, SidebarBtnMovElementos);
+            anno = MVdateTimePickerFiltro.Value.Year;
         }
 
         //Metodos Generales
@@ -53,18 +56,25 @@ namespace Convertec_Bodega_Administracion
             frmConfig.Dispose();
         }
 
-        /*private void CheckDBConnection(bool showError)
+        private void HbtnDatabase_Click(object sender, EventArgs e)
         {
-            if (MovimientoBusiness.CheckDBConnection(showError))
+            CheckDBConnection(true, true);
+        }
+
+        public bool CheckDBConnection(bool showSuccess, bool showError)
+        {
+            if (MovimientoBusiness.CheckDBConnection(showSuccess, showError))
             {
-                HiconPbDataBase.IconColor = Color.FromArgb(138, 183, 30);
+                HbtnDatabase.IconColor = Color.FromArgb(138, 183, 30);
+                return true;
             }
             else
             {
                 //MessageBox.Show("Error, No se ha podido establecer una conexión con la base de datos.", "Error de conexión.", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                HiconPbDataBase.IconColor = Color.FromArgb(255, 56, 0);
+                HbtnDatabase.IconColor = Color.FromArgb(255, 56, 0);
+                return false;
             }
-        }*/
+        }
 
         /*private void IconPbDataBase_Click(object sender, EventArgs e)
         {
@@ -73,31 +83,62 @@ namespace Convertec_Bodega_Administracion
             CheckDBConnection(true);
             timer2.Start();
         }*/
+
         private void AlertMessage(string message, MessageBoxIcon icon)
         {
-            string caption = "Error Detectado en el Código de Producto";
+            string caption = "Error";
             MessageBoxButtons buttons = MessageBoxButtons.OK;
 
             //Muestra el MessageBox.
             MessageBox.Show(message, caption, buttons, icon);
         }
+
         private void SetDefaultPanelsAndButtons(Panel panel, FontAwesome.Sharp.IconButton btn)
         {
-            panel.Visible = false;
             btn.BackColor = Color.FromArgb(49, 76, 76);
             btn.ForeColor = Color.DarkGray;
             btn.IconColor = Color.DarkGray;
+            panel.Visible = false;
+            ClearData();
         }
 
         private void SetVisible(Panel panel, FontAwesome.Sharp.IconButton btn)
         {
-            panel.Visible = true;
             btn.BackColor = Color.FromArgb(39, 57, 58);
             btn.ForeColor = Color.FromArgb(138, 183, 30);
             btn.IconColor = Color.FromArgb(138, 183, 30);
+            panel.Visible = true;
             panelActive = panel;
             btnActive = btn;
         }
+
+        private void ClearData()
+        {
+            if (panelActive != null)
+            {
+                switch (panelActive.Name)
+                {
+                    case "BodyPanelMovElementos":
+                        MVdataGridViewHistorial.DataSource = null;
+                        MVdataGridViewProdHist.DataSource = null;
+                        MVtxtOtHist.Text = null;
+                        break;
+                    case "BodyPanelIngresoElementos":
+                        IEdataGridViewProd.DataSource = null;
+                        break;
+                    case "BodyPanelSalidaIngreso":
+                        SIdataGridViewIngresos.DataSource = null;
+                        SIdataGridViewSalidas.DataSource = null;
+                        break;
+                    case "BodyPanelInformes":
+                        INFdataGridViewListadoOT.DataSource = null;
+                        INFdataGridViewStockBodega.DataSource = null;
+                        INFdataGridViewStockBodegaImportacion.DataSource = null;
+                        break;
+                }
+            }
+        }
+
         private void CheckNumber(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
@@ -114,16 +155,26 @@ namespace Convertec_Bodega_Administracion
 
         private void SidebarBtnMovElementos_Click(object sender, EventArgs e)
         {
-            SetDefaultPanelsAndButtons(panelActive, btnActive);
-            SetVisible(BodyPanelMovElementos, SidebarBtnMovElementos);
-            PopulateProdHistTable();
+            if (btnActive.Name != SidebarBtnMovElementos.Name)
+            {
+                PopulateProdHistTable();
+                SetDefaultPanelsAndButtons(panelActive, btnActive);
+                SetVisible(BodyPanelMovElementos, SidebarBtnMovElementos);
+            }
         }
 
         private void PopulateProdHistTable()
         {
-            tableProductoHist = MovimientoBusiness.ToDataTable(MovimientoBusiness.GetProductosDetalle());
-            MVdataGridViewProdHist.DataSource = tableProductoHist;
-            FormatTableProdHist(MVdataGridViewProdHist);
+            if(CheckDBConnection(false, true))
+            {
+                tableProductoHist = MovimientoBusiness.ToDataTable(MovimientoBusiness.GetProductosDetalle());
+                MVdataGridViewProdHist.DataSource = tableProductoHist;
+                FormatTableProdHist(MVdataGridViewProdHist);
+            }
+            else
+            {
+                Console.WriteLine("PopulateHist");
+            }
         }
 
         private void FormatTableProdHist(DataGridView dgv)
@@ -172,32 +223,41 @@ namespace Convertec_Bodega_Administracion
             return -1;
         }
 
-        private void CargarDatos(object sender, EventArgs e)
+        private void SelectionChangedCargarDatos(object sender, EventArgs e)
+        {
+            CargarDatos(MVdateTimePickerFiltro.Value.Year);
+        }
+
+        private void CargarDatos(int anno)
         {
             MVtxtOtHist.Clear();
             int id = SelectedRow();
             if (id != -1)
             {
-                MVdataGridViewHistorial.DataSource = MovimientoBusiness.GetHistorial(id);
-                foreach (DataGridViewRow row in MVdataGridViewHistorial.Rows)
-                    if (row.Cells[5].Value != null)
-                    {
-                        //row.DefaultCellStyle.ForeColor = Color.FromArgb(138, 183, 30);
-                        row.DefaultCellStyle.BackColor = Color.FromArgb(138, 183, 30);
-                    }
-
-                var img = MovimientoBusiness.GetImages(id);
-
-                if (img != null)
-                    MVpictureBoxProducto.Load(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "/Assets/imgProductos/" + img.image);
-                else
-                    MVpictureBoxProducto.Load(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "/Assets/logos/image-unavailable.png");
-
-                foreach (Model.OtProducto ot in MovimientoBusiness.GetOtProducto(id))
+                if (CheckDBConnection(false, true))
                 {
-                    if (ot.ot != "")
+                    MVdataGridViewHistorial.DataSource = MovimientoBusiness.GetHistorial(id, anno);
+                    foreach (DataGridViewRow row in MVdataGridViewHistorial.Rows)
                     {
-                        MVtxtOtHist.Text = MVtxtOtHist.Text + ot.ot + Environment.NewLine;
+                        if (row.Cells[5].Value != null)
+                        {
+                            //row.DefaultCellStyle.ForeColor = Color.FromArgb(138, 183, 30);
+                            row.DefaultCellStyle.BackColor = Color.FromArgb(138, 183, 30);
+                        }
+                    }
+                    var img = MovimientoBusiness.GetImages(id);
+
+                    if (img != null)
+                        MVpictureBoxProducto.Load(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "/Assets/imgProductos/" + img.image);
+                    else
+                        MVpictureBoxProducto.Load(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "/Assets/logos/image-unavailable.png");
+
+                    foreach (Model.OtProducto ot in MovimientoBusiness.GetOtProducto(id))
+                    {
+                        if (ot.ot != "")
+                        {
+                            MVtxtOtHist.Text = MVtxtOtHist.Text + ot.ot + Environment.NewLine;
+                        }
                     }
                 }
             }
@@ -207,6 +267,17 @@ namespace Convertec_Bodega_Administracion
                 MVpictureBoxProducto.Load(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "/Assets/logos/image-unavailable.png");
             }
         }
+
+        private void MVdateTimePickerFiltro_ValueChanged(object sender, EventArgs e)
+        {
+            if(this.anno != MVdateTimePickerFiltro.Value.Year)
+            {
+                this.anno = MVdateTimePickerFiltro.Value.Year;
+                CargarDatos(this.anno);
+            }
+            
+        }
+
         #endregion
         //Fin Metodos Movimientos de Elementos
 
@@ -215,15 +286,24 @@ namespace Convertec_Bodega_Administracion
 
         public void PopulateDataSalidaIngreso()
         {
-            SIdataGridViewSalidas.DataSource = MovimientoBusiness.GetMovimientosSalidas();
-            SIdataGridViewIngresos.DataSource = MovimientoBusiness.GetMovimientosIngresos();
+            if (CheckDBConnection(false, true))
+            {
+                SIdataGridViewSalidas.DataSource = MovimientoBusiness.GetMovimientosSalidas();
+                SIdataGridViewIngresos.DataSource = MovimientoBusiness.GetMovimientosIngresos();
+            }else
+            {
+                Console.WriteLine("PopulatedatasalidaIngreso");
+            }
         }
 
         private void SidebarBtnSalidaIngreso_Click(object sender, EventArgs e)
         {
-            SetDefaultPanelsAndButtons(panelActive, btnActive);
-            PopulateDataSalidaIngreso();
-            SetVisible(BodyPanelSalidaIngreso, SidebarBtnSalidaIngreso);
+            if (btnActive.Name != SidebarBtnSalidaIngreso.Name)
+            {
+                PopulateDataSalidaIngreso();
+                SetDefaultPanelsAndButtons(panelActive, btnActive);
+                SetVisible(BodyPanelSalidaIngreso, SidebarBtnSalidaIngreso);
+            }
         }
 
         #endregion
@@ -231,6 +311,18 @@ namespace Convertec_Bodega_Administracion
 
         //Metodos Ingreso de Elementos
         #region Metodos Ingreso de Elementos
+        private void SidebarBtnIngresarElemento_Click(object sender, EventArgs e)
+        {
+            if (btnActive.Name != SidebarBtnIngresarElemento.Name)
+            {
+                SetDefaultPanelsAndButtons(panelActive, btnActive);
+                PopulateProdTable();
+                AutoCompleteTextProveedor();
+                AutoCompleteTextMarca();
+                SetVisible(BodyPanelIngresoElementos, SidebarBtnIngresarElemento);
+                IEtxtDescripcion.Focus();
+            }
+        }
 
         private void CleanDataIE()
         {
@@ -273,9 +365,16 @@ namespace Convertec_Bodega_Administracion
 
         private void PopulateProdTable()
         {
-            tableProducto = MovimientoBusiness.ToDataTable(MovimientoBusiness.GetProductos());
-            IEdataGridViewProd.DataSource = tableProducto;
-            FormatTableProd(IEdataGridViewProd);
+            if (CheckDBConnection(false, true))
+            {
+                tableProducto = MovimientoBusiness.ToDataTable(MovimientoBusiness.GetProductos());
+                IEdataGridViewProd.DataSource = tableProducto;
+                FormatTableProd(IEdataGridViewProd);
+            }
+            else
+            {
+                Console.WriteLine("PopulateHistProdTable");
+            }
         }
 
         private int IESelectedRow()
@@ -295,32 +394,34 @@ namespace Convertec_Bodega_Administracion
             int id = IESelectedRow();
             if (id != -1)
             {
-                var de = MovimientoBusiness.GetDescripcionElemento(id);
-                IEcomboBoxProveedor.SelectedIndex = IEcomboBoxProveedor.FindString(de.nom_proveedor);
-                IEcomboBoxMarca.SelectedIndex = IEcomboBoxMarca.FindString(de.nom_marca);
-                IEtxtValor.Text = de.valor.ToString();
-                IEtxtValorUni.Text = de.valor_unitario.ToString();
-                IElabelCodBodega.Text = de.cod_bodega.ToString();
-                IElabelPartePlano.Text = de.parte_plano;
-                IElabelStock.Text = de.stock.ToString();
-                
-                if (string.IsNullOrWhiteSpace(IEtxtValorUni.Text))
+                if (CheckDBConnection(false, false))
                 {
-                    IEtxtValorUni.Text = "0";
+                    var de = MovimientoBusiness.GetDescripcionElemento(id);
+                    IEcomboBoxProveedor.SelectedIndex = IEcomboBoxProveedor.FindString(de.nom_proveedor);
+                    IEcomboBoxMarca.SelectedIndex = IEcomboBoxMarca.FindString(de.nom_marca);
+                    IEtxtValor.Text = de.valor.ToString();
+                    IEtxtValorUni.Text = de.valor_unitario.ToString();
+                    IElabelCodBodega.Text = de.cod_bodega.ToString();
+                    IElabelPartePlano.Text = de.parte_plano;
+                    IElabelStock.Text = de.stock.ToString();
+
+                    if (string.IsNullOrWhiteSpace(IEtxtValorUni.Text))
+                    {
+                        IEtxtValorUni.Text = "0";
+                    }
+
+                    this.IEUnidad = de.unidad;
+                    if (this.IEUnidad)
+                        IElblUnidad.Text = "Unidad";
+                    else
+                        IElblUnidad.Text = "Metros";
+                    var img = MovimientoBusiness.GetImages(id);
+
+                    if (img != null)
+                        IEpictureBoxProducto.Load(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "/Assets/imgProductos/" + img.image);
+                    else
+                        IEpictureBoxProducto.Load(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "/Assets/logos/image-unavailable.png");
                 }
-
-                this.IEUnidad = de.unidad;
-                if (this.IEUnidad)
-                    IElblUnidad.Text = "Unidad";
-                else
-                    IElblUnidad.Text = "Metros";                
-                var img = MovimientoBusiness.GetImages(id);
-
-                if (img != null)
-                    IEpictureBoxProducto.Load(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "/Assets/imgProductos/" + img.image);
-                else
-                    IEpictureBoxProducto.Load(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "/Assets/logos/image-unavailable.png");
-
             }
             else
             {
@@ -328,42 +429,38 @@ namespace Convertec_Bodega_Administracion
             }
         }
 
-        private void SidebarBtnIngresarElemento_Click(object sender, EventArgs e)
-        {
-            PopulateProdTable();
-            AutoCompleteTextProveedor();
-            AutoCompleteTextMarca();
-            SetDefaultPanelsAndButtons(panelActive, btnActive);
-            SetVisible(BodyPanelIngresoElementos, SidebarBtnIngresarElemento);
-            IEtxtDescripcion.Focus();
-        }
-
         public void AutoCompleteTextProveedor()
         {
-            List<Model.NombreIdProveedor> listProveedores = new List<Model.NombreIdProveedor>();
-            foreach (Model.NombreIdProveedor proveedor in MovimientoBusiness.GetProveedorByName())
+            if (CheckDBConnection(false, false))
             {
-                listProveedores.Add(new Model.NombreIdProveedor() { id_proveedor = proveedor.id_proveedor, nom_proveedor = proveedor.nom_proveedor });
+                List<Model.NombreIdProveedor> listProveedores = new List<Model.NombreIdProveedor>();
+                foreach (Model.NombreIdProveedor proveedor in MovimientoBusiness.GetProveedorByName())
+                {
+                    listProveedores.Add(new Model.NombreIdProveedor() { id_proveedor = proveedor.id_proveedor, nom_proveedor = proveedor.nom_proveedor });
+                }
+
+                IEcomboBoxProveedor.DisplayMember = "nom_proveedor";
+                IEcomboBoxProveedor.ValueMember = "id_proveedor";
+                IEcomboBoxProveedor.DataSource = listProveedores;
+                IEcomboBoxProveedor.AutoCompleteSource = AutoCompleteSource.ListItems;
             }
-            
-            IEcomboBoxProveedor.DisplayMember = "nom_proveedor";
-            IEcomboBoxProveedor.ValueMember = "id_proveedor";
-            IEcomboBoxProveedor.DataSource = listProveedores;
-            IEcomboBoxProveedor.AutoCompleteSource = AutoCompleteSource.ListItems;
         }
 
         public void AutoCompleteTextMarca()
         {
-            List<Model.NombreIdMarca> listMarcas = new List<Model.NombreIdMarca>();
-            foreach (Model.NombreIdMarca marca in MovimientoBusiness.GetMarcaByName())
+            if (CheckDBConnection(false, false))
             {
-                listMarcas.Add(new Model.NombreIdMarca() { id_marca = marca.id_marca, nom_marca = marca.nom_marca });
-            }
+                List<Model.NombreIdMarca> listMarcas = new List<Model.NombreIdMarca>();
+                foreach (Model.NombreIdMarca marca in MovimientoBusiness.GetMarcaByName())
+                {
+                    listMarcas.Add(new Model.NombreIdMarca() { id_marca = marca.id_marca, nom_marca = marca.nom_marca });
+                }
 
-            IEcomboBoxMarca.DisplayMember = "nom_marca";
-            IEcomboBoxMarca.ValueMember = "id_marca";
-            IEcomboBoxMarca.DataSource = listMarcas;
-            IEcomboBoxMarca.AutoCompleteSource = AutoCompleteSource.ListItems;
+                IEcomboBoxMarca.DisplayMember = "nom_marca";
+                IEcomboBoxMarca.ValueMember = "id_marca";
+                IEcomboBoxMarca.DataSource = listMarcas;
+                IEcomboBoxMarca.AutoCompleteSource = AutoCompleteSource.ListItems;
+            }
         }
 
         private void IEbtnAgregar_Click(object sender, EventArgs e)
@@ -484,21 +581,23 @@ namespace Convertec_Bodega_Administracion
                     IEtxtOT.Text = row.Cells["ot"].Value.ToString();
                     IElabelCodBodega.Text = row.Cells["cod_bodega"].Value.ToString();
 
+                    if (CheckDBConnection(false, true))
+                    {
+                        var img = MovimientoBusiness.GetImages(IESelectedRow());
 
-                    var img = MovimientoBusiness.GetImages(IESelectedRow());
+                        if (img != null)
+                            try
+                            {
+                                IEpictureBoxProducto.Image = Image.FromFile(Properties.Settings.Default.ImagePath + "/" + img.image);
+                            }
+                            catch (System.IO.FileNotFoundException)
+                            {
+                                IEpictureBoxProducto.Image = Properties.Resources.image_unavailable;
+                            }
 
-                    if (img != null)
-                        try
-                        {
-                            IEpictureBoxProducto.Image = Image.FromFile(Properties.Settings.Default.ImagePath + "/" + img.image);
-                        }
-                        catch (System.IO.FileNotFoundException)
-                        {
+                        else
                             IEpictureBoxProducto.Image = Properties.Resources.image_unavailable;
-                        }
-
-                    else
-                        IEpictureBoxProducto.Image = Properties.Resources.image_unavailable;
+                    }
                 }
             }
             catch (Exception ex)
@@ -508,7 +607,6 @@ namespace Convertec_Bodega_Administracion
                     MessageBox.Show("Debe seleccionar una fila para editar.", "Error al editar", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
-                throw;
             }
         }
 
@@ -548,7 +646,7 @@ namespace Convertec_Bodega_Administracion
                 var result = MessageBox.Show("Desea finalizar y confirmar el proceso?"
                                 , "Confirmación de guardado.", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
-                if (result == DialogResult.Yes && MovimientoBusiness.CheckDBConnection(true))
+                if (result == DialogResult.Yes && CheckDBConnection(false, true))
                 {
                     MovimientoBusiness.InsertEntrada(prodEntradaList);
                     IEdataGridViewProdEntrantes.Rows.Clear();
@@ -657,5 +755,285 @@ namespace Convertec_Bodega_Administracion
         #region Metodos Crear Elemento
         #endregion
         //Fin Metodos Crear Elemento
+
+        //Metodos Informes
+        #region Metodos Informes
+
+        private void SidebarBtnInformes_Click(object sender, EventArgs e)
+        {
+            if (btnActive.Name != SidebarBtnInformes.Name)
+            {
+                PopulateStockBodegaTable();
+                SetDefaultPanelsAndButtons(panelActive, btnActive);
+                SetVisible(BodyPanelInformes, SidebarBtnInformes);
+            }
+        }
+
+        private void PopulateStockBodegaTable()
+        {
+            if (CheckDBConnection(false, true))
+            {
+                INFdataGridViewStockBodega.DataSource = MovimientoBusiness.ToDataTable(MovimientoBusiness.GetStockBodega(INFtxtFiltroProveedorStock.Text, INFtxtfiltroMarcaStock.Text, INFcheckBoxCriticosStock.Checked));
+                foreach (DataGridViewRow row in INFdataGridViewStockBodega.Rows)
+                {
+                    if (Double.Parse(row.Cells["stock"].Value.ToString()) <= Double.Parse(row.Cells["stock_min"].Value.ToString()))
+                    {
+                        row.DefaultCellStyle.BackColor = Color.FromArgb(255, 102, 102);
+                    }
+                }
+            }
+        }
+
+        private void PopulateStockImportacionBodegaTable()
+        {
+            if (CheckDBConnection(false, true))
+            {
+                INFdataGridViewStockBodegaImportacion.DataSource = MovimientoBusiness.ToDataTable(MovimientoBusiness.GetStockBodegaImportacion(INFtxtFiltroProveedorStockImportacion.Text, INFtxtfiltroMarcaStockImportacion.Text, INFcheckBoxCriticosStockImport.Checked));
+                foreach (DataGridViewRow row in INFdataGridViewStockBodegaImportacion.Rows)
+                {
+                    if (Double.Parse(row.Cells["stock_imp"].Value.ToString()) <= Double.Parse(row.Cells["stock_min_imp"].Value.ToString()))
+                    {
+                        row.DefaultCellStyle.BackColor = Color.FromArgb(255, 102, 102);
+                    }
+                }
+            }
+        }
+
+        private void PopulateListadoOTTable()
+        {
+            if (CheckDBConnection(false, true))
+            {
+                INFdataGridViewListadoOT.DataSource = MovimientoBusiness.ToDataTable(MovimientoBusiness.GetElementoUtilizadoOT(INFtxtOT.Text));
+            }
+        }
+
+        private void SelectedTabChanged(object sender, EventArgs e)
+        {
+            switch (INFtabControlInformes.SelectedIndex)
+            {
+                case 0:
+                    PopulateStockBodegaTable();
+                    break;
+                case 1:
+                    PopulateStockImportacionBodegaTable();
+                    break;
+                case 2:
+                    INFtxtOT.Focus();
+                    break;
+            }
+        }
+
+
+        private void INFbtnBuscarOT_Click(object sender, EventArgs e)
+        {
+            PopulateListadoOTTable();
+        }
+
+        private void INFbtnBuscarStock_Click(object sender, EventArgs e)
+        {
+            PopulateStockBodegaTable();
+        }
+
+        private void INFcheckBoxCriticos_CheckedChanged(object sender, EventArgs e)
+        {
+            PopulateStockBodegaTable();
+        }
+
+        private void INFcheckBoxCriticosStockImport_CheckedChanged(object sender, EventArgs e)
+        {
+            PopulateStockImportacionBodegaTable();
+        }
+
+        private void INFbtnRestablecerFiltroStock_Click(object sender, EventArgs e)
+        {
+            INFtxtFiltroProveedorStock.Clear();
+            INFtxtfiltroMarcaStock.Clear();
+            INFcheckBoxCriticosStock.Checked = false;
+            PopulateStockBodegaTable();
+        }
+
+        private void INFbtnBuscarStockImportacion_Click(object sender, EventArgs e)
+        {
+            PopulateStockImportacionBodegaTable();
+        }
+
+        private void INFbtnRestablecerFiltroStockImportacion_Click(object sender, EventArgs e)
+        {
+            INFtxtFiltroProveedorStockImportacion.Clear();
+            INFtxtfiltroMarcaStockImportacion.Clear();
+            PopulateStockImportacionBodegaTable();
+        }
+
+        private void exportToExcel(DataGridView dataGrid, Boolean isBodega)
+        {
+            if (dataGrid.Rows.Count > 0)
+            {
+                Microsoft.Office.Interop.Excel.Application excelApp = new Microsoft.Office.Interop.Excel.Application();
+                Microsoft.Office.Interop.Excel.Workbook wb = excelApp.Workbooks.Add(Type.Missing);
+                //Microsoft.Office.Interop.Excel.Worksheet sheet = null;
+
+                if (isBodega)
+                {
+                    for (int i = 1; i < dataGrid.Columns.Count + 1; i++)
+                    {
+                        excelApp.Cells[1, i] = dataGrid.Columns[i - 1].HeaderText;
+                    }
+
+                    for (int i = 0; i < dataGrid.Rows.Count; i++)
+                    {
+                        for (int j = 0; j < dataGrid.Columns.Count; j++)
+                        {
+                            excelApp.Cells[i + 2, j + 1] = dataGrid.Rows[i].Cells[j].Value;
+                        }
+                    }
+
+                    excelApp.Range["A1", ("H" + (dataGrid.Rows.Count + 1))].Borders.LineStyle = true;
+
+                    excelApp.Columns.AutoFit();
+                    var header = excelApp.Range["A1", "H1"];
+                    var col_valor = excelApp.Range["G2"].EntireColumn;
+                    var col_valor_uni = excelApp.Range["H2"].EntireColumn;
+                    col_valor.NumberFormat = "[$$-es-CL] #,##0";
+                    col_valor_uni.NumberFormat = "[$$-es-CL] #,##0";
+                    header.Font.Bold = true;
+                    header.Interior.Color = Microsoft.Office.Interop.Excel.XlRgbColor.rgbLightGray;
+                    excelApp.Visible = true;
+                } else
+                {
+                    excelApp.Cells[1, 1] = "LISTADO DE PARTES";
+                    excelApp.Cells[3, 1] = "OT";
+                    excelApp.Cells[4, 1] = "EQUIPO";
+                    excelApp.Cells[5, 1] = "FECHA";
+
+                    excelApp.Cells[1, 1].Font.Bold = true;
+                    excelApp.Cells[1, 1].Font.Underline = true;
+                    excelApp.Range["A3", "B5"].Borders.LineStyle = true;
+                    excelApp.Cells[3, 1].Font.Bold = true;
+                    excelApp.Cells[4, 1].Font.Bold = true;
+                    excelApp.Cells[5, 1].Font.Bold = true;
+
+                    excelApp.Cells[3, 2] = INFtxtOT.Text;
+                    
+                    excelApp.Cells[10, 1] = "Item";
+
+                    int item = 1;
+                    double total = 0;
+                    double subtotal = 0;
+                    int rows = INFdataGridViewListadoOT.Rows.Count;
+
+                    for (int i = 1; i < INFdataGridViewListadoOT.Columns.Count + 1; i++)
+                    {
+                        excelApp.Cells[10, i + 1] = INFdataGridViewListadoOT.Columns[i - 1].HeaderText;
+                    }
+                    for (int i = 0; i < rows; i++)
+                    {
+                        excelApp.Cells[i + 11, 1] = item;
+                        item += 1;
+
+                        for (int j = 0; j < INFdataGridViewListadoOT.Columns.Count; j++)
+                        {
+                            excelApp.Cells[i + 11, j + 2] = INFdataGridViewListadoOT.Rows[i].Cells[j].Value;
+                        }
+                        subtotal = Double.Parse(INFdataGridViewListadoOT.Rows[i].Cells[5].Value.ToString()) * Double.Parse(INFdataGridViewListadoOT.Rows[i].Cells[6].Value.ToString());
+                        excelApp.Cells[i + 11, 11] = subtotal;
+                        total += subtotal;
+                    }
+
+                    excelApp.Columns.AutoFit();
+                    var header = excelApp.Range["A10", "K10"];
+                    var col_valor = excelApp.Range["F11"].EntireColumn;
+                    var col_valor_uni = excelApp.Range["G11"].EntireColumn;
+                    var col_sub_total = excelApp.Range["K11"].EntireColumn;
+                    col_valor.NumberFormat = "[$$-es-CL] #,##0";
+                    col_valor_uni.NumberFormat = "[$$-es-CL] #,##0";
+                    col_sub_total.NumberFormat = "[$$-es-CL] #,##0";
+                    header.Font.Bold = true;
+                    header.Interior.Color = Microsoft.Office.Interop.Excel.XlRgbColor.rgbLightGray;
+
+                    excelApp.Range["A10", ("K" + (rows + 10))].Borders.LineStyle = true;
+
+                    excelApp.Range[("J" + (rows + 11)), ("K" + (rows + 11))].Borders.LineStyle = true;
+                    excelApp.Range[("J" + (rows + 11)), ("K" + (rows + 11))].Font.Bold = true;
+                    excelApp.Cells[(rows + 11), 10] = "Total";
+                    excelApp.Cells[(rows + 11), 11] = total;
+
+                    excelApp.Visible = true;
+                }
+            }
+        }
+
+        private void INFbtnExportarStock_Click(object sender, EventArgs e)
+        {
+            exportToExcel(INFdataGridViewStockBodega, true);
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
+        }
+
+        private void INFbtnExportarStockImportacion_Click(object sender, EventArgs e)
+        {
+            exportToExcel(INFdataGridViewStockBodegaImportacion, true);
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
+        }
+
+        private void INFbtnExportarListadoOT_Click(object sender, EventArgs e)
+        {
+            exportToExcel(INFdataGridViewListadoOT, false);
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
+        }
+
+
+        private void EnterKeySearchInforme(KeyEventArgs e, int informe)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+                switch (informe)
+                {
+                    case 0:
+                        PopulateStockBodegaTable();
+                        break;
+                    case 1:
+                        PopulateStockImportacionBodegaTable();
+                        break;
+                    case 2:
+                        PopulateListadoOTTable();
+                        break;
+                    default:
+                        break;
+                }
+                
+            }
+        }
+
+        private void INFtxtFiltroProveedorStock_KeyDown(object sender, KeyEventArgs e)
+        {
+            EnterKeySearchInforme(e, 0);
+        }
+
+        private void INFtxtfiltroMarcaStock_KeyDown(object sender, KeyEventArgs e)
+        {
+            EnterKeySearchInforme(e, 0);
+        }
+
+        private void INFtxtFiltroProveedorStockImportacion_KeyDown(object sender, KeyEventArgs e)
+        {
+            EnterKeySearchInforme(e, 1);
+        }
+
+        private void INFtxtfiltroMarcaStockImportacion_KeyDown(object sender, KeyEventArgs e)
+        {
+            EnterKeySearchInforme(e, 1);
+        }
+
+        private void INFtxtOT_KeyDown(object sender, KeyEventArgs e)
+        {
+            EnterKeySearchInforme(e, 2);
+        }
+
+        #endregion
+        //Fin Metodos Informes
     }
 }

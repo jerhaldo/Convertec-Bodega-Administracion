@@ -44,7 +44,7 @@ namespace Convertec_Bodega_Administracion.Views
                 var result = MessageBox.Show("Desea Guardar la Marca?", "Confirmación de guardado.",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
-                if (result == DialogResult.Yes && MovimientoBusiness.CheckDBConnection(true))
+                if (result == DialogResult.Yes && principal.CheckDBConnection(false, true))
                 {
                     Model.Marca marca = new Model.Marca
                     {

@@ -127,4 +127,26 @@ namespace Convertec_Bodega_Administracion.Model
         public string nom_marca { get; set; }
     }
 
+    class ElementoStockBodega
+    {
+        public Nullable<long> cod_bodega { get; set; }
+        public string descripcion { get; set; }
+        public double stock { get; set; }
+        public double stock_min { get; set; }
+        public string nom_proveedor { get; set; }
+        public string nom_marca { get; set; }
+        public Nullable<int> valor { get; set; }
+        public Nullable<int> valor_unitario { get; set; }
+    }
+
+    class ElementoUtilizadoOT
+    {
+        public string parte_plano { get; set; }
+        public string descripcion { get; set; }
+        public double cantidad { get; set; }
+        public string nom_proveedor { get; set; }
+        public string nom_marca { get; set; }
+        public Nullable<int> valor { get; set; }
+        public Nullable<int> valor_unitario { get; set; }
+    }
 }

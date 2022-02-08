@@ -48,7 +48,7 @@ namespace Convertec_Bodega_Administracion.Views
                     var result = MessageBox.Show("Desea Guardar al Proveedor?", "Confirmación de guardado.",
                     MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
-                    if (result == DialogResult.Yes && MovimientoBusiness.CheckDBConnection(true))
+                    if (result == DialogResult.Yes && principal.CheckDBConnection(false, true))
                     {
                         Model.Proveedor proveedor = new Model.Proveedor
                         {
