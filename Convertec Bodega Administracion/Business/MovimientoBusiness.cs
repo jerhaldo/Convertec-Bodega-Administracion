@@ -36,7 +36,7 @@ namespace Convertec_Bodega_Administracion.Business
                     else
                         return false;
                 }
-                catch (SqlException ex)
+                catch (SqlException)
                 {
                     Cursor.Current = Cursors.Default;
                     if (showError)

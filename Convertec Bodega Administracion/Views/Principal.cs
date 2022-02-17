@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,8 @@ namespace Convertec_Bodega_Administracion
         public FormPrincipal()
         {
             InitializeComponent();
+            CultureInfo.CurrentCulture = new CultureInfo("es-CL", false);
+            Console.WriteLine("CurrentCulture is now {0}.", CultureInfo.CurrentCulture.Name);
         }
 
         private void FormPrincipal_Load(object sender, EventArgs e)
@@ -75,14 +78,6 @@ namespace Convertec_Bodega_Administracion
                 return false;
             }
         }
-
-        /*private void IconPbDataBase_Click(object sender, EventArgs e)
-        {
-            //Forzar chequeo
-            timer2.Stop();
-            CheckDBConnection(true);
-            timer2.Start();
-        }*/
 
         private void AlertMessage(string message, MessageBoxIcon icon)
         {
@@ -139,13 +134,78 @@ namespace Convertec_Bodega_Administracion
             }
         }
 
-        private void CheckNumber(object sender, KeyPressEventArgs e)
+        private bool CheckNumber(KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+                return true;
+            else
+                return false;
+        }
+
+
+        private void CheckNumberOnly(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
             }
         }
+
+        private void CheckNumberDecimal(KeyPressEventArgs e, TextBox txt)
+        {
+            if (e.KeyChar == '.')
+            {
+                e.KeyChar = ',';
+            }
+
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != ',') && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            if ((e.KeyChar == ',') && (txt.Text.IndexOf(',') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void CheckCantidad(TextBox txt, double cantidad)
+        {
+            try
+            {
+                if (!(cantidad > 0))
+                {
+                    AlertMessage("Por favor ingrese un valor mayor a 0.", MessageBoxIcon.Error);
+                    txt.Clear();
+                    txt.Focus();
+                }
+            }
+            catch (Exception)
+            {
+                AlertMessage("Por favor ingrese un valor.", MessageBoxIcon.Error);
+                throw;
+            }
+        }
+
+        private void ParseDecimal(TextBox txt)
+        {
+            if (string.IsNullOrWhiteSpace(txt.Text))
+            {
+                txt.Text = "1";
+            }
+            else
+            {
+                if (!decimal.TryParse(txt.Text, out decimal cantidad))
+                {
+                    AlertMessage("Por favor ingrese un valor válido.", MessageBoxIcon.Error);
+                    txt.Text = "1";
+                    txt.Focus();
+                }
+                CheckCantidad(txt, Double.Parse(txt.Text));
+            }
+        }
+
+
 
         #endregion
         //Fin Metodos Generales
@@ -317,8 +377,8 @@ namespace Convertec_Bodega_Administracion
             {
                 SetDefaultPanelsAndButtons(panelActive, btnActive);
                 PopulateProdTable();
-                AutoCompleteTextProveedor();
-                AutoCompleteTextMarca();
+                AutoCompleteTextProveedor(IEcomboBoxProveedor);
+                AutoCompleteTextMarca(IEcomboBoxMarca);
                 SetVisible(BodyPanelIngresoElementos, SidebarBtnIngresarElemento);
                 IEtxtDescripcion.Focus();
             }
@@ -429,7 +489,7 @@ namespace Convertec_Bodega_Administracion
             }
         }
 
-        public void AutoCompleteTextProveedor()
+        public void AutoCompleteTextProveedor(ComboBox combo)
         {
             if (CheckDBConnection(false, false))
             {
@@ -439,14 +499,14 @@ namespace Convertec_Bodega_Administracion
                     listProveedores.Add(new Model.NombreIdProveedor() { id_proveedor = proveedor.id_proveedor, nom_proveedor = proveedor.nom_proveedor });
                 }
 
-                IEcomboBoxProveedor.DisplayMember = "nom_proveedor";
-                IEcomboBoxProveedor.ValueMember = "id_proveedor";
-                IEcomboBoxProveedor.DataSource = listProveedores;
-                IEcomboBoxProveedor.AutoCompleteSource = AutoCompleteSource.ListItems;
+                combo.DisplayMember = "nom_proveedor";
+                combo.ValueMember = "id_proveedor";
+                combo.DataSource = listProveedores;
+                combo.AutoCompleteSource = AutoCompleteSource.ListItems;
             }
         }
 
-        public void AutoCompleteTextMarca()
+        public void AutoCompleteTextMarca(ComboBox combo)
         {
             if (CheckDBConnection(false, false))
             {
@@ -456,10 +516,10 @@ namespace Convertec_Bodega_Administracion
                     listMarcas.Add(new Model.NombreIdMarca() { id_marca = marca.id_marca, nom_marca = marca.nom_marca });
                 }
 
-                IEcomboBoxMarca.DisplayMember = "nom_marca";
-                IEcomboBoxMarca.ValueMember = "id_marca";
-                IEcomboBoxMarca.DataSource = listMarcas;
-                IEcomboBoxMarca.AutoCompleteSource = AutoCompleteSource.ListItems;
+                combo.DisplayMember = "nom_marca";
+                combo.ValueMember = "id_marca";
+                combo.DataSource = listMarcas;
+                combo.AutoCompleteSource = AutoCompleteSource.ListItems;
             }
         }
 
@@ -531,14 +591,14 @@ namespace Convertec_Bodega_Administracion
 
         private void IEBtnAgregarProveedor_Click(object sender, EventArgs e)
         {
-            Views.AgregarProveedor frmAddProveedor = new Views.AgregarProveedor(this);
+            Views.AgregarProveedor frmAddProveedor = new Views.AgregarProveedor(this, IEcomboBoxProveedor);
             frmAddProveedor.ShowDialog();
             frmAddProveedor.Dispose();
         }
 
         private void IEBtnAgregarMarca_Click(object sender, EventArgs e)
         {
-            Views.AgregarMarca frmAddMarca = new Views.AgregarMarca(this);
+            Views.AgregarMarca frmAddMarca = new Views.AgregarMarca(this, IEcomboBoxMarca);
             frmAddMarca.ShowDialog();
             frmAddMarca.Dispose();
         }
@@ -664,52 +724,19 @@ namespace Convertec_Bodega_Administracion
         {
             CargarElementoEditar(IEdataGridViewProdEntrantes.CurrentRow);
         }
-        private void IECheckDecimalCantidad(object sender, EventArgs e)
+
+        private void IEParseDecimal(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(IEtxtCant.Text))
-            {
-                IEtxtCant.Text = "1";
-            }
-            else
-            {
-                if (!this.IEUnidad)
-                {
-                    IEtxtCant.Text = IEtxtCant.Text.Replace(".", ",");
-                    if (!decimal.TryParse(IEtxtCant.Text, out decimal cantidad))
-                    {
-                        AlertMessage("Por favor ingrese un número válido.", MessageBoxIcon.Error);
-                        IEtxtCant.Text = "1";
-                        IEtxtCant.Focus();
-                    }
-                }
-                CheckCantidad(Double.Parse(IEtxtCant.Text));
-            }
+            IEtxtCant.Text = IEtxtCant.Text.Replace(".", ",");
+            ParseDecimal(IEtxtCant);
         }
 
-        private void CheckCantidad(double cantidad)
-        {
-            try
-            {
-                if (!(cantidad > 0))
-                {
-                    AlertMessage("Por favor ingrese un valor mayor a 0.", MessageBoxIcon.Error);
-                    IEtxtCant.Clear();
-                    IEtxtCant.Focus();
-                }
-            }
-            catch (Exception)
-            {
-                AlertMessage("Por favor ingrese un valor.", MessageBoxIcon.Error);
-                throw;
-            }
-        }
-
-        private void CheckUnidad(object sender, KeyPressEventArgs e)
+        private void IECheckUnidad(object sender, KeyPressEventArgs e)
         {
             if (this.IEUnidad)
-            {
-                CheckNumber(sender, e);
-            }
+                CheckNumberOnly(sender, e);
+            else
+                CheckNumberDecimal(e, IEtxtCant);
         }
 
         private void IEtxtValorUni_Leave(object sender, EventArgs e)
@@ -750,11 +777,6 @@ namespace Convertec_Bodega_Administracion
 
         #endregion
         //Fin Metodos Ingreso de Elementos
-
-        //Metodos Crear Elemento
-        #region Metodos Crear Elemento
-        #endregion
-        //Fin Metodos Crear Elemento
 
         //Metodos Informes
         #region Metodos Informes
@@ -898,7 +920,8 @@ namespace Convertec_Bodega_Administracion
                     header.Font.Bold = true;
                     header.Interior.Color = Microsoft.Office.Interop.Excel.XlRgbColor.rgbLightGray;
                     excelApp.Visible = true;
-                } else
+                }
+                else
                 {
                     excelApp.Cells[1, 1] = "LISTADO DE PARTES";
                     excelApp.Cells[3, 1] = "OT";
@@ -913,7 +936,7 @@ namespace Convertec_Bodega_Administracion
                     excelApp.Cells[5, 1].Font.Bold = true;
 
                     excelApp.Cells[3, 2] = INFtxtOT.Text;
-                    
+
                     excelApp.Cells[10, 1] = "Item";
 
                     int item = 1;
@@ -1004,7 +1027,7 @@ namespace Convertec_Bodega_Administracion
                     default:
                         break;
                 }
-                
+
             }
         }
 
@@ -1035,5 +1058,124 @@ namespace Convertec_Bodega_Administracion
 
         #endregion
         //Fin Metodos Informes
+
+        //Metodos Crear Modificar Elemento
+        #region Metodos Crear Modificar Elemento
+
+        private void SidebarBtnCrearElemento_Click(object sender, EventArgs e)
+        {
+            if (btnActive.Name != SidebarBtnCrearElemento.Name)
+            {
+                SetDefaultPanelsAndButtons(panelActive, btnActive);
+                AutoCompleteTextProveedor(CEcomboBoxProv);
+                AutoCompleteTextMarca(CEcomboBoxMarca);
+                SetVisible(BodyPanelCrearModifElemento, SidebarBtnCrearElemento);
+                CEtxtDescripcion.Focus();
+            }
+        }
+
+        private void CEbtnAgregarImg_Click(object sender, EventArgs e)
+        {
+            CEopenFileDialogImagen.Filter = "Imágenes|*.jpg;*.jpeg;*.png;";
+
+            if (CEopenFileDialogImagen.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    //string iName = CEopenFileDialogImagen.SafeFileName;
+                    //string filepath = CEopenFileDialogImagen.FileName;
+                    //System.IO.File.Copy(filepath, Properties.Settings.Default.ImagePath + "/" + iName);
+                    CEpictureBoxElem.Load(CEopenFileDialogImagen.FileName);
+                    Console.WriteLine(CEpictureBoxElem.ImageLocation);
+                }
+                catch (Exception exp)
+                {
+                    MessageBox.Show("Hubo un problema al cargar el archivo.\n" + exp.Message);
+                }
+            }
+            else
+            {
+                CEpictureBoxElem.Image = CEpictureBoxElem.InitialImage;
+                //CEpictureBoxElem.Load(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "/Assets/logos/image-unavailable.png");
+            }
+        }
+
+        private void CEbtnAgregarProv_Click(object sender, EventArgs e)
+        {
+            Views.AgregarProveedor frmAddProveedor = new Views.AgregarProveedor(this, CEcomboBoxProv);
+            frmAddProveedor.ShowDialog();
+            frmAddProveedor.Dispose();
+        }
+
+        private void CEbtnAgregarMarca_Click(object sender, EventArgs e)
+        {
+            Views.AgregarMarca frmAddMarca = new Views.AgregarMarca(this, CEcomboBoxMarca);
+            frmAddMarca.ShowDialog();
+            frmAddMarca.Dispose();
+        }
+
+        private void CEbtnCancelar_Click(object sender, EventArgs e)
+        {
+            CEtxtDescripcion.Clear();
+            CEtxtCodBodega.Clear();
+            CEtxtPartePlano.Clear();
+            CEtxtValor.Text = "0";
+            CEtxtValorUnitario.Text = "0";
+            CEtxtStock.Text = "1";
+            CEtxtStockMin.Text = "1";
+            CEtxtDocumento.Clear();
+            CEtxtDocumento.Clear();
+            CEtxtObs.Clear();
+            CEpictureBoxElem.Image = CEpictureBoxElem.InitialImage;
+
+            try
+            {
+                CEcomboBoxProv.SelectedIndex = 0;
+                CEcomboBoxMarca.SelectedIndex = 0;
+            }
+            catch (Exception)
+            {
+                
+            }
+        }
+
+        private void CEbtnAgregar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CEcheckUnidadStock(object sender, KeyPressEventArgs e)
+        {
+            if (CEradioButtonMetros.Checked)
+                CheckNumberDecimal(e, CEtxtStock);
+            else
+                CheckNumberOnly(sender, e);
+        }
+
+        private void CEcheckUnidadStockMin(object sender, KeyPressEventArgs e)
+        {
+            if (CEradioButtonMetros.Checked)
+            {
+                CheckNumberDecimal(e, CEtxtStockMin);
+            }
+            else
+                CheckNumberOnly(sender, e);
+        }
+
+        private void CEParseDecimal(object sender, EventArgs e)
+        {
+            ParseDecimal(CEtxtStock);
+        }
+
+        private void CECheckChange(object sender, EventArgs e)
+        {
+            if (!CEradioButtonMetros.Checked)
+            {
+               
+            }
+        }
+
+        #endregion
+        //Fin Metodos Crear Modificar Elemento
     }
 }

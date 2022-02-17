@@ -15,11 +15,13 @@ namespace Convertec_Bodega_Administracion.Views
     public partial class AgregarMarca : Form
     {
         private FormPrincipal principal;
+        private ComboBox combo;
 
-        public AgregarMarca(FormPrincipal Principal)
+        public AgregarMarca(FormPrincipal Principal, ComboBox Combo)
         {
             InitializeComponent();
             principal = Principal;
+            combo = Combo;
 
         }
 
@@ -52,7 +54,7 @@ namespace Convertec_Bodega_Administracion.Views
 
                     };
                     MovimientoBusiness.InsertMarca(marca);
-                    principal.AutoCompleteTextMarca();
+                    principal.AutoCompleteTextMarca(combo);
                 }
                 this.Close();
             }

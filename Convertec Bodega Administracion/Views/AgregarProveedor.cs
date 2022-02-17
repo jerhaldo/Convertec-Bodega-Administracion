@@ -16,13 +16,15 @@ namespace Convertec_Bodega_Administracion.Views
     {
         private string patronEmail = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
         private FormPrincipal principal;
+        private ComboBox combo;
         private bool errorEmail = false;
 
-        public AgregarProveedor(FormPrincipal Principal)
+        public AgregarProveedor(FormPrincipal Principal, ComboBox Combo)
         {
             InitializeComponent();
             principal = Principal;
-
+            combo = Combo;
+            
         }
 
         private void AlertMessage(string message, MessageBoxIcon icon)
@@ -59,7 +61,7 @@ namespace Convertec_Bodega_Administracion.Views
                             rut_empresa = txtRutEmp.Text
                         };
                         MovimientoBusiness.InsertProveedor(proveedor);
-                        principal.AutoCompleteTextProveedor();
+                        principal.AutoCompleteTextProveedor(combo);
                     }
                     this.Close();
                 }

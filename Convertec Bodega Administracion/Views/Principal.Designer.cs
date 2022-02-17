@@ -50,16 +50,16 @@ namespace Convertec_Bodega_Administracion
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
             this.panelSidebar = new System.Windows.Forms.Panel();
             this.SidebarPanelMenuButton = new System.Windows.Forms.Panel();
@@ -79,29 +79,7 @@ namespace Convertec_Bodega_Administracion
             this.HlabelClock = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SIdataGridViewSalidas = new System.Windows.Forms.DataGridView();
-            this.codbodegaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechamovDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.otDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellidosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.obsmovDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.movSalidasDataGridDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.SIdataGridViewIngresos = new System.Windows.Forms.DataGridView();
-            this.codbodegaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidadDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.documentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valorunitarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomproveedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nommarcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechamovDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.parteplanoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.otDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.obsmovDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.movIngresoDataGridDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.splitContainerBodyPrincipal = new System.Windows.Forms.SplitContainer();
             this.SIpanelSalidas2 = new System.Windows.Forms.Panel();
             this.SIpanelSalidas1 = new System.Windows.Forms.Panel();
@@ -109,7 +87,6 @@ namespace Convertec_Bodega_Administracion
             this.SIpanelIngresos2 = new System.Windows.Forms.Panel();
             this.SIpanelIngresos1 = new System.Windows.Forms.Panel();
             this.SIlabel2 = new System.Windows.Forms.Label();
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.BodyPanelIngresoElementos = new System.Windows.Forms.Panel();
             this.IEpanelTablaElementos = new System.Windows.Forms.Panel();
             this.IEdataGridViewProdEntrantes = new System.Windows.Forms.DataGridView();
@@ -190,18 +167,7 @@ namespace Convertec_Bodega_Administracion
             this.MVlabel4 = new System.Windows.Forms.Label();
             this.MVpanelTablaMov2 = new System.Windows.Forms.Panel();
             this.MVdataGridViewHistorial = new System.Windows.Forms.DataGridView();
-            this.fechamovDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codprodprovDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidadDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.otDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.folioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.documentoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomproveedorDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nommarcaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valorDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valorunitarioDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.obs_mov2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.historialMovimientoTablaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.MVpanelTablaMov1 = new System.Windows.Forms.Panel();
             this.MVdateTimePickerFiltro = new System.Windows.Forms.DateTimePicker();
             this.MVlabel5 = new System.Windows.Forms.Label();
@@ -220,20 +186,56 @@ namespace Convertec_Bodega_Administracion
             this.MVpictureBoxProducto = new System.Windows.Forms.PictureBox();
             this.BodyPanelSalidaIngreso = new System.Windows.Forms.Panel();
             this.BodypanelGeneral = new System.Windows.Forms.Panel();
+            this.BodyPanelCrearModifElemento = new System.Windows.Forms.Panel();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.CMEtabCrear = new System.Windows.Forms.TabPage();
+            this.CEpanelL = new System.Windows.Forms.Panel();
+            this.CEtxtDocumento = new System.Windows.Forms.TextBox();
+            this.CElabel12 = new System.Windows.Forms.Label();
+            this.CElabel8 = new System.Windows.Forms.Label();
+            this.CEtxtStockMin = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.CElabel3 = new System.Windows.Forms.Label();
+            this.CEtxtPartePlano = new System.Windows.Forms.TextBox();
+            this.CEtxtCodBodega = new System.Windows.Forms.TextBox();
+            this.CElabel2 = new System.Windows.Forms.Label();
+            this.CEradioButtonUnidad = new System.Windows.Forms.RadioButton();
+            this.CEradioButtonMetros = new System.Windows.Forms.RadioButton();
+            this.CEbtnAgregarMarca = new FontAwesome.Sharp.IconButton();
+            this.CEcomboBoxMarca = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.CEbtnAgregarProv = new FontAwesome.Sharp.IconButton();
+            this.CEcomboBoxProv = new System.Windows.Forms.ComboBox();
+            this.CElabel10 = new System.Windows.Forms.Label();
+            this.CElabel7 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.CEtxtCodProv = new System.Windows.Forms.TextBox();
+            this.CEtxtValorUnitario = new System.Windows.Forms.TextBox();
+            this.CEtxtValor = new System.Windows.Forms.TextBox();
+            this.CElabel9 = new System.Windows.Forms.Label();
+            this.CElabel5 = new System.Windows.Forms.Label();
+            this.CElabel4 = new System.Windows.Forms.Label();
+            this.CElabel6 = new System.Windows.Forms.Label();
+            this.CEtxtObs = new System.Windows.Forms.RichTextBox();
+            this.CElabel11 = new System.Windows.Forms.Label();
+            this.CEtxtStock = new System.Windows.Forms.TextBox();
+            this.CElabel1 = new System.Windows.Forms.Label();
+            this.CEtxtDescripcion = new System.Windows.Forms.TextBox();
+            this.CEpanelR = new System.Windows.Forms.Panel();
+            this.CEbtnCancelar = new FontAwesome.Sharp.IconButton();
+            this.CEbtnAgregar = new FontAwesome.Sharp.IconButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.CEbtnAgregarImg = new FontAwesome.Sharp.IconButton();
+            this.CEpanelImagen = new System.Windows.Forms.Panel();
+            this.CEpictureBoxElem = new System.Windows.Forms.PictureBox();
+            this.CMEtabModificar = new System.Windows.Forms.TabPage();
             this.BodyPanelInformes = new System.Windows.Forms.Panel();
             this.INFtabControlInformes = new System.Windows.Forms.TabControl();
             this.INFtabPageStock = new System.Windows.Forms.TabPage();
             this.INFpanelStockBodega2 = new System.Windows.Forms.Panel();
             this.INFdataGridViewStockBodega = new System.Windows.Forms.DataGridView();
-            this.codbodegaDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stock_min = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomproveedorDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nommarcaDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valorDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valorunitarioDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.elementoStockBodegaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.INFpanelStockBodega1 = new System.Windows.Forms.Panel();
             this.INFcheckBoxCriticosStock = new System.Windows.Forms.CheckBox();
             this.INFbtnExportarStock = new FontAwesome.Sharp.IconButton();
@@ -246,14 +248,7 @@ namespace Convertec_Bodega_Administracion
             this.INFtabPageImportacion = new System.Windows.Forms.TabPage();
             this.INFpanelStockImportacion2 = new System.Windows.Forms.Panel();
             this.INFdataGridViewStockBodegaImportacion = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stock_imp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stock_min_imp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.INFpanelStockImportacion1 = new System.Windows.Forms.Panel();
             this.INFcheckBoxCriticosStockImport = new System.Windows.Forms.CheckBox();
             this.INFbtnExportarStockImportacion = new FontAwesome.Sharp.IconButton();
@@ -266,17 +261,9 @@ namespace Convertec_Bodega_Administracion
             this.INFtabPagListadoOT = new System.Windows.Forms.TabPage();
             this.INFpanelListadoOT2 = new System.Windows.Forms.Panel();
             this.INFdataGridViewListadoOT = new System.Windows.Forms.DataGridView();
-            this.parteplanoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomproveedorDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nommarcaDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valorDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valorunitarioDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidadDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bodega = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.compra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.elementoUtilizadoOTBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.INFpanelListadoOT1 = new System.Windows.Forms.Panel();
             this.INFbtnExportarListadoOT = new FontAwesome.Sharp.IconButton();
             this.INFbtnBuscarOT = new FontAwesome.Sharp.IconButton();
@@ -284,6 +271,63 @@ namespace Convertec_Bodega_Administracion
             this.INFlabel1 = new System.Windows.Forms.Label();
             this.ErrorValorToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.InfoToolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.CEopenFileDialogImagen = new System.Windows.Forms.OpenFileDialog();
+            this.fechamovDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codprodprovDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidadDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.otDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.folioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.documentoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomproveedorDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nommarcaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorunitarioDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.historialMovimientoTablaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.codbodegaDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomproveedorDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nommarcaDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorunitarioDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.elementoStockBodegaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stock_imp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.parteplanoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomproveedorDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nommarcaDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorunitarioDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidadDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.elementoUtilizadoOTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.codbodegaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechamovDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.otDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellidosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.obsmovDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.movSalidasDataGridDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.codbodegaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidadDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.documentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorunitarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomproveedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nommarcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechamovDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.parteplanoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.otDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.obsmovDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.movIngresoDataGridDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDescripcionElementoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panelSidebar.SuspendLayout();
             this.SidebarPanelMenuButton.SuspendLayout();
@@ -291,9 +335,7 @@ namespace Convertec_Bodega_Administracion
             ((System.ComponentModel.ISupportInitialize)(this.SidebarPictureBox1)).BeginInit();
             this.HpanelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SIdataGridViewSalidas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.movSalidasDataGridDTOBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SIdataGridViewIngresos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.movIngresoDataGridDTOBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerBodyPrincipal)).BeginInit();
             this.splitContainerBodyPrincipal.Panel1.SuspendLayout();
             this.splitContainerBodyPrincipal.Panel2.SuspendLayout();
@@ -327,7 +369,6 @@ namespace Convertec_Bodega_Administracion
             this.MVpanelTablaElementos1.SuspendLayout();
             this.MVpanelTablaMov2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MVdataGridViewHistorial)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.historialMovimientoTablaBindingSource)).BeginInit();
             this.MVpanelTablaMov1.SuspendLayout();
             this.MVpanelBuscador.SuspendLayout();
             this.MVpanelBuscadorLeft.SuspendLayout();
@@ -336,12 +377,18 @@ namespace Convertec_Bodega_Administracion
             ((System.ComponentModel.ISupportInitialize)(this.MVpictureBoxProducto)).BeginInit();
             this.BodyPanelSalidaIngreso.SuspendLayout();
             this.BodypanelGeneral.SuspendLayout();
+            this.BodyPanelCrearModifElemento.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.CMEtabCrear.SuspendLayout();
+            this.CEpanelL.SuspendLayout();
+            this.CEpanelR.SuspendLayout();
+            this.CEpanelImagen.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CEpictureBoxElem)).BeginInit();
             this.BodyPanelInformes.SuspendLayout();
             this.INFtabControlInformes.SuspendLayout();
             this.INFtabPageStock.SuspendLayout();
             this.INFpanelStockBodega2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.INFdataGridViewStockBodega)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.elementoStockBodegaBindingSource)).BeginInit();
             this.INFpanelStockBodega1.SuspendLayout();
             this.INFtabPageImportacion.SuspendLayout();
             this.INFpanelStockImportacion2.SuspendLayout();
@@ -350,8 +397,12 @@ namespace Convertec_Bodega_Administracion
             this.INFtabPagListadoOT.SuspendLayout();
             this.INFpanelListadoOT2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.INFdataGridViewListadoOT)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.elementoUtilizadoOTBindingSource)).BeginInit();
             this.INFpanelListadoOT1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.historialMovimientoTablaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.elementoStockBodegaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.elementoUtilizadoOTBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.movSalidasDataGridDTOBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.movIngresoDataGridDTOBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.idDescripcionElementoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -366,7 +417,7 @@ namespace Convertec_Bodega_Administracion
             this.panelSidebar.Location = new System.Drawing.Point(0, 0);
             this.panelSidebar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelSidebar.Name = "panelSidebar";
-            this.panelSidebar.Size = new System.Drawing.Size(212, 1041);
+            this.panelSidebar.Size = new System.Drawing.Size(212, 729);
             this.panelSidebar.TabIndex = 0;
             // 
             // SidebarPanelMenuButton
@@ -380,7 +431,7 @@ namespace Convertec_Bodega_Administracion
             this.SidebarPanelMenuButton.Location = new System.Drawing.Point(0, 95);
             this.SidebarPanelMenuButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SidebarPanelMenuButton.Name = "SidebarPanelMenuButton";
-            this.SidebarPanelMenuButton.Size = new System.Drawing.Size(212, 946);
+            this.SidebarPanelMenuButton.Size = new System.Drawing.Size(212, 634);
             this.SidebarPanelMenuButton.TabIndex = 7;
             // 
             // SidebarBtnInformes
@@ -450,11 +501,12 @@ namespace Convertec_Bodega_Administracion
             this.SidebarBtnCrearElemento.Name = "SidebarBtnCrearElemento";
             this.SidebarBtnCrearElemento.Size = new System.Drawing.Size(212, 112);
             this.SidebarBtnCrearElemento.TabIndex = 2;
-            this.SidebarBtnCrearElemento.Text = "Crear Nuevo Elemento";
+            this.SidebarBtnCrearElemento.Text = "Crear y Modificar Elemento";
             this.SidebarBtnCrearElemento.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.SidebarBtnCrearElemento.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.InfoToolTip.SetToolTip(this.SidebarBtnCrearElemento, "Pantalla para crear un nuevo elemento.");
             this.SidebarBtnCrearElemento.UseVisualStyleBackColor = true;
+            this.SidebarBtnCrearElemento.Click += new System.EventHandler(this.SidebarBtnCrearElemento_Click);
             // 
             // SidebarBtnIngresarElemento
             // 
@@ -678,90 +730,6 @@ namespace Convertec_Bodega_Administracion
             this.SIdataGridViewSalidas.TabIndex = 2;
             this.SIdataGridViewSalidas.TabStop = false;
             // 
-            // codbodegaDataGridViewTextBoxColumn
-            // 
-            this.codbodegaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.codbodegaDataGridViewTextBoxColumn.DataPropertyName = "cod_bodega";
-            this.codbodegaDataGridViewTextBoxColumn.HeaderText = "Código";
-            this.codbodegaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.codbodegaDataGridViewTextBoxColumn.Name = "codbodegaDataGridViewTextBoxColumn";
-            this.codbodegaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.codbodegaDataGridViewTextBoxColumn.Width = 83;
-            // 
-            // descripcionDataGridViewTextBoxColumn
-            // 
-            this.descripcionDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "descripcion";
-            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripción";
-            this.descripcionDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
-            this.descripcionDataGridViewTextBoxColumn.ReadOnly = true;
-            this.descripcionDataGridViewTextBoxColumn.Width = 116;
-            // 
-            // cantidadDataGridViewTextBoxColumn
-            // 
-            this.cantidadDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.cantidadDataGridViewTextBoxColumn.DataPropertyName = "cantidad";
-            this.cantidadDataGridViewTextBoxColumn.HeaderText = "Cant";
-            this.cantidadDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.cantidadDataGridViewTextBoxColumn.Name = "cantidadDataGridViewTextBoxColumn";
-            this.cantidadDataGridViewTextBoxColumn.ReadOnly = true;
-            this.cantidadDataGridViewTextBoxColumn.Width = 64;
-            // 
-            // fechamovDataGridViewTextBoxColumn
-            // 
-            this.fechamovDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.fechamovDataGridViewTextBoxColumn.DataPropertyName = "fecha_mov";
-            this.fechamovDataGridViewTextBoxColumn.HeaderText = "Fecha";
-            this.fechamovDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.fechamovDataGridViewTextBoxColumn.Name = "fechamovDataGridViewTextBoxColumn";
-            this.fechamovDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fechamovDataGridViewTextBoxColumn.Width = 76;
-            // 
-            // otDataGridViewTextBoxColumn
-            // 
-            this.otDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.otDataGridViewTextBoxColumn.DataPropertyName = "ot";
-            this.otDataGridViewTextBoxColumn.HeaderText = "OT";
-            this.otDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.otDataGridViewTextBoxColumn.Name = "otDataGridViewTextBoxColumn";
-            this.otDataGridViewTextBoxColumn.ReadOnly = true;
-            this.otDataGridViewTextBoxColumn.Width = 54;
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nombreDataGridViewTextBoxColumn.Width = 88;
-            // 
-            // apellidosDataGridViewTextBoxColumn
-            // 
-            this.apellidosDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.apellidosDataGridViewTextBoxColumn.DataPropertyName = "apellidos";
-            this.apellidosDataGridViewTextBoxColumn.HeaderText = "Apellidos";
-            this.apellidosDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.apellidosDataGridViewTextBoxColumn.Name = "apellidosDataGridViewTextBoxColumn";
-            this.apellidosDataGridViewTextBoxColumn.ReadOnly = true;
-            this.apellidosDataGridViewTextBoxColumn.Width = 99;
-            // 
-            // obsmovDataGridViewTextBoxColumn
-            // 
-            this.obsmovDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.obsmovDataGridViewTextBoxColumn.DataPropertyName = "obs_mov";
-            this.obsmovDataGridViewTextBoxColumn.HeaderText = "Obs";
-            this.obsmovDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.obsmovDataGridViewTextBoxColumn.Name = "obsmovDataGridViewTextBoxColumn";
-            this.obsmovDataGridViewTextBoxColumn.ReadOnly = true;
-            this.obsmovDataGridViewTextBoxColumn.Width = 61;
-            // 
-            // movSalidasDataGridDTOBindingSource
-            // 
-            this.movSalidasDataGridDTOBindingSource.DataSource = typeof(Convertec_Bodega_Administracion.Model.MovSalidasDataGridDTO);
-            // 
             // SIdataGridViewIngresos
             // 
             this.SIdataGridViewIngresos.AllowUserToAddRows = false;
@@ -808,130 +776,6 @@ namespace Convertec_Bodega_Administracion
             this.SIdataGridViewIngresos.Size = new System.Drawing.Size(864, 1);
             this.SIdataGridViewIngresos.TabIndex = 2;
             this.SIdataGridViewIngresos.TabStop = false;
-            // 
-            // codbodegaDataGridViewTextBoxColumn1
-            // 
-            this.codbodegaDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.codbodegaDataGridViewTextBoxColumn1.DataPropertyName = "cod_bodega";
-            this.codbodegaDataGridViewTextBoxColumn1.HeaderText = "Código";
-            this.codbodegaDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.codbodegaDataGridViewTextBoxColumn1.Name = "codbodegaDataGridViewTextBoxColumn1";
-            this.codbodegaDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.codbodegaDataGridViewTextBoxColumn1.Width = 83;
-            // 
-            // descripcionDataGridViewTextBoxColumn1
-            // 
-            this.descripcionDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.descripcionDataGridViewTextBoxColumn1.DataPropertyName = "descripcion";
-            this.descripcionDataGridViewTextBoxColumn1.HeaderText = "Descripción";
-            this.descripcionDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.descripcionDataGridViewTextBoxColumn1.Name = "descripcionDataGridViewTextBoxColumn1";
-            this.descripcionDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.descripcionDataGridViewTextBoxColumn1.Width = 116;
-            // 
-            // cantidadDataGridViewTextBoxColumn1
-            // 
-            this.cantidadDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.cantidadDataGridViewTextBoxColumn1.DataPropertyName = "cantidad";
-            this.cantidadDataGridViewTextBoxColumn1.HeaderText = "Cant";
-            this.cantidadDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.cantidadDataGridViewTextBoxColumn1.Name = "cantidadDataGridViewTextBoxColumn1";
-            this.cantidadDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.cantidadDataGridViewTextBoxColumn1.Width = 64;
-            // 
-            // documentoDataGridViewTextBoxColumn
-            // 
-            this.documentoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.documentoDataGridViewTextBoxColumn.DataPropertyName = "documento";
-            this.documentoDataGridViewTextBoxColumn.HeaderText = "Documento";
-            this.documentoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.documentoDataGridViewTextBoxColumn.Name = "documentoDataGridViewTextBoxColumn";
-            this.documentoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.documentoDataGridViewTextBoxColumn.Width = 111;
-            // 
-            // valorDataGridViewTextBoxColumn
-            // 
-            this.valorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.valorDataGridViewTextBoxColumn.DataPropertyName = "valor";
-            this.valorDataGridViewTextBoxColumn.HeaderText = "Valor";
-            this.valorDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.valorDataGridViewTextBoxColumn.Name = "valorDataGridViewTextBoxColumn";
-            this.valorDataGridViewTextBoxColumn.ReadOnly = true;
-            this.valorDataGridViewTextBoxColumn.Width = 70;
-            // 
-            // valorunitarioDataGridViewTextBoxColumn
-            // 
-            this.valorunitarioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.valorunitarioDataGridViewTextBoxColumn.DataPropertyName = "valor_unitario";
-            this.valorunitarioDataGridViewTextBoxColumn.HeaderText = "Valor Unitario";
-            this.valorunitarioDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.valorunitarioDataGridViewTextBoxColumn.Name = "valorunitarioDataGridViewTextBoxColumn";
-            this.valorunitarioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.valorunitarioDataGridViewTextBoxColumn.Width = 117;
-            // 
-            // nomproveedorDataGridViewTextBoxColumn
-            // 
-            this.nomproveedorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.nomproveedorDataGridViewTextBoxColumn.DataPropertyName = "nom_proveedor";
-            this.nomproveedorDataGridViewTextBoxColumn.HeaderText = "Proveedor";
-            this.nomproveedorDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nomproveedorDataGridViewTextBoxColumn.Name = "nomproveedorDataGridViewTextBoxColumn";
-            this.nomproveedorDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nomproveedorDataGridViewTextBoxColumn.Width = 106;
-            // 
-            // nommarcaDataGridViewTextBoxColumn
-            // 
-            this.nommarcaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.nommarcaDataGridViewTextBoxColumn.DataPropertyName = "nom_marca";
-            this.nommarcaDataGridViewTextBoxColumn.HeaderText = "Marca";
-            this.nommarcaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nommarcaDataGridViewTextBoxColumn.Name = "nommarcaDataGridViewTextBoxColumn";
-            this.nommarcaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nommarcaDataGridViewTextBoxColumn.Width = 76;
-            // 
-            // fechamovDataGridViewTextBoxColumn1
-            // 
-            this.fechamovDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.fechamovDataGridViewTextBoxColumn1.DataPropertyName = "fecha_mov";
-            this.fechamovDataGridViewTextBoxColumn1.HeaderText = "Fecha";
-            this.fechamovDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.fechamovDataGridViewTextBoxColumn1.Name = "fechamovDataGridViewTextBoxColumn1";
-            this.fechamovDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.fechamovDataGridViewTextBoxColumn1.Width = 76;
-            // 
-            // parteplanoDataGridViewTextBoxColumn
-            // 
-            this.parteplanoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.parteplanoDataGridViewTextBoxColumn.DataPropertyName = "parte_plano";
-            this.parteplanoDataGridViewTextBoxColumn.HeaderText = "Parte Plano";
-            this.parteplanoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.parteplanoDataGridViewTextBoxColumn.Name = "parteplanoDataGridViewTextBoxColumn";
-            this.parteplanoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.parteplanoDataGridViewTextBoxColumn.Width = 105;
-            // 
-            // otDataGridViewTextBoxColumn1
-            // 
-            this.otDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.otDataGridViewTextBoxColumn1.DataPropertyName = "ot";
-            this.otDataGridViewTextBoxColumn1.HeaderText = "OT";
-            this.otDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.otDataGridViewTextBoxColumn1.Name = "otDataGridViewTextBoxColumn1";
-            this.otDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.otDataGridViewTextBoxColumn1.Width = 54;
-            // 
-            // obsmovDataGridViewTextBoxColumn1
-            // 
-            this.obsmovDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.obsmovDataGridViewTextBoxColumn1.DataPropertyName = "obs_mov";
-            this.obsmovDataGridViewTextBoxColumn1.HeaderText = "Obs";
-            this.obsmovDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.obsmovDataGridViewTextBoxColumn1.Name = "obsmovDataGridViewTextBoxColumn1";
-            this.obsmovDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.obsmovDataGridViewTextBoxColumn1.Width = 61;
-            // 
-            // movIngresoDataGridDTOBindingSource
-            // 
-            this.movIngresoDataGridDTOBindingSource.DataSource = typeof(Convertec_Bodega_Administracion.Model.MovIngresoDataGridDTO);
             // 
             // splitContainerBodyPrincipal
             // 
@@ -1029,16 +873,12 @@ namespace Convertec_Bodega_Administracion
             this.SIlabel2.TabIndex = 0;
             this.SIlabel2.Text = "Ingresos Recientes:";
             // 
-            // timer2
-            // 
-            this.timer2.Interval = 60000;
-            // 
             // BodyPanelIngresoElementos
             // 
             this.BodyPanelIngresoElementos.Controls.Add(this.IEpanelTablaElementos);
             this.BodyPanelIngresoElementos.Controls.Add(this.IEpanelFormElemento);
             this.BodyPanelIngresoElementos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BodyPanelIngresoElementos.Location = new System.Drawing.Point(0, 0);
+            this.BodyPanelIngresoElementos.Location = new System.Drawing.Point(0, 116);
             this.BodyPanelIngresoElementos.Margin = new System.Windows.Forms.Padding(0);
             this.BodyPanelIngresoElementos.Name = "BodyPanelIngresoElementos";
             this.BodyPanelIngresoElementos.Size = new System.Drawing.Size(1042, 34);
@@ -1538,7 +1378,7 @@ namespace Convertec_Bodega_Administracion
             this.IEtxtValorUni.TabIndex = 5;
             this.IEtxtValorUni.Text = "0";
             this.InfoToolTip.SetToolTip(this.IEtxtValorUni, "Valor individual del elemento.\r\n*Caampo Obligatorio*");
-            this.IEtxtValorUni.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CheckNumber);
+            this.IEtxtValorUni.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CheckNumberOnly);
             this.IEtxtValorUni.Leave += new System.EventHandler(this.IEtxtValorUni_Leave);
             // 
             // IEtxtValor
@@ -1552,7 +1392,7 @@ namespace Convertec_Bodega_Administracion
             this.IEtxtValor.TabIndex = 4;
             this.IEtxtValor.Text = "0";
             this.InfoToolTip.SetToolTip(this.IEtxtValor, "Valor completo del elemento.\r\n*Campo Obligatorio*");
-            this.IEtxtValor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CheckNumber);
+            this.IEtxtValor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CheckNumberOnly);
             // 
             // IEtxtOT
             // 
@@ -1686,8 +1526,8 @@ namespace Convertec_Bodega_Administracion
             this.IEtxtCant.TabIndex = 6;
             this.IEtxtCant.Text = "1";
             this.InfoToolTip.SetToolTip(this.IEtxtCant, "Cantidad de elementos.\r\n*Campo Obligatorio*");
-            this.IEtxtCant.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CheckUnidad);
-            this.IEtxtCant.Leave += new System.EventHandler(this.IECheckDecimalCantidad);
+            this.IEtxtCant.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.IECheckUnidad);
+            this.IEtxtCant.Leave += new System.EventHandler(this.IEParseDecimal);
             // 
             // IEpanelFormElementoL2
             // 
@@ -2028,13 +1868,12 @@ namespace Convertec_Bodega_Administracion
             this.BodyPanelMovElementos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.BodyPanelMovElementos.Controls.Add(this.MVpanelHistProdTable);
             this.BodyPanelMovElementos.Controls.Add(this.MVpanelBuscador);
-            this.BodyPanelMovElementos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BodyPanelMovElementos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BodyPanelMovElementos.ForeColor = System.Drawing.Color.Black;
-            this.BodyPanelMovElementos.Location = new System.Drawing.Point(0, 0);
+            this.BodyPanelMovElementos.Location = new System.Drawing.Point(0, 6);
             this.BodyPanelMovElementos.Margin = new System.Windows.Forms.Padding(0);
             this.BodyPanelMovElementos.Name = "BodyPanelMovElementos";
-            this.BodyPanelMovElementos.Size = new System.Drawing.Size(1042, 946);
+            this.BodyPanelMovElementos.Size = new System.Drawing.Size(1042, 88);
             this.BodyPanelMovElementos.TabIndex = 7;
             // 
             // MVpanelHistProdTable
@@ -2061,8 +1900,8 @@ namespace Convertec_Bodega_Administracion
             this.MVpanelHistProdTable.Panel2.Controls.Add(this.MVpanelTablaMov1);
             this.MVpanelHistProdTable.Panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MVpanelHistProdTable.Panel2.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
-            this.MVpanelHistProdTable.Size = new System.Drawing.Size(1042, 687);
-            this.MVpanelHistProdTable.SplitterDistance = 336;
+            this.MVpanelHistProdTable.Size = new System.Drawing.Size(1042, 0);
+            this.MVpanelHistProdTable.SplitterDistance = 25;
             this.MVpanelHistProdTable.SplitterWidth = 1;
             this.MVpanelHistProdTable.TabIndex = 3;
             this.MVpanelHistProdTable.TabStop = false;
@@ -2075,7 +1914,7 @@ namespace Convertec_Bodega_Administracion
             this.MVpanelTablaElementos2.Margin = new System.Windows.Forms.Padding(0);
             this.MVpanelTablaElementos2.Name = "MVpanelTablaElementos2";
             this.MVpanelTablaElementos2.Padding = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.MVpanelTablaElementos2.Size = new System.Drawing.Size(1012, 286);
+            this.MVpanelTablaElementos2.Size = new System.Drawing.Size(1012, 0);
             this.MVpanelTablaElementos2.TabIndex = 2;
             // 
             // MVdataGridViewProdHist
@@ -2101,7 +1940,7 @@ namespace Convertec_Bodega_Administracion
             this.MVdataGridViewProdHist.RowsDefaultCellStyle = dataGridViewCellStyle16;
             this.MVdataGridViewProdHist.RowTemplate.Height = 24;
             this.MVdataGridViewProdHist.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.MVdataGridViewProdHist.Size = new System.Drawing.Size(1000, 286);
+            this.MVdataGridViewProdHist.Size = new System.Drawing.Size(1000, 0);
             this.MVdataGridViewProdHist.TabIndex = 0;
             this.MVdataGridViewProdHist.TabStop = false;
             this.MVdataGridViewProdHist.SelectionChanged += new System.EventHandler(this.SelectionChangedCargarDatos);
@@ -2136,7 +1975,7 @@ namespace Convertec_Bodega_Administracion
             this.MVpanelTablaMov2.Margin = new System.Windows.Forms.Padding(0);
             this.MVpanelTablaMov2.Name = "MVpanelTablaMov2";
             this.MVpanelTablaMov2.Padding = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.MVpanelTablaMov2.Size = new System.Drawing.Size(1012, 298);
+            this.MVpanelTablaMov2.Size = new System.Drawing.Size(1012, 0);
             this.MVpanelTablaMov2.TabIndex = 1;
             // 
             // MVdataGridViewHistorial
@@ -2184,109 +2023,9 @@ namespace Convertec_Bodega_Administracion
             dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MVdataGridViewHistorial.RowsDefaultCellStyle = dataGridViewCellStyle19;
             this.MVdataGridViewHistorial.RowTemplate.Height = 24;
-            this.MVdataGridViewHistorial.Size = new System.Drawing.Size(1000, 298);
+            this.MVdataGridViewHistorial.Size = new System.Drawing.Size(1000, 0);
             this.MVdataGridViewHistorial.TabIndex = 0;
             this.MVdataGridViewHistorial.TabStop = false;
-            // 
-            // fechamovDataGridViewTextBoxColumn2
-            // 
-            this.fechamovDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.fechamovDataGridViewTextBoxColumn2.DataPropertyName = "fecha_mov";
-            this.fechamovDataGridViewTextBoxColumn2.HeaderText = "Fecha";
-            this.fechamovDataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.fechamovDataGridViewTextBoxColumn2.Name = "fechamovDataGridViewTextBoxColumn2";
-            this.fechamovDataGridViewTextBoxColumn2.ReadOnly = true;
-            this.fechamovDataGridViewTextBoxColumn2.Width = 76;
-            // 
-            // codprodprovDataGridViewTextBoxColumn
-            // 
-            this.codprodprovDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.codprodprovDataGridViewTextBoxColumn.DataPropertyName = "cod_prod_prov";
-            this.codprodprovDataGridViewTextBoxColumn.HeaderText = "Código Proveedor";
-            this.codprodprovDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.codprodprovDataGridViewTextBoxColumn.Name = "codprodprovDataGridViewTextBoxColumn";
-            this.codprodprovDataGridViewTextBoxColumn.ReadOnly = true;
-            this.codprodprovDataGridViewTextBoxColumn.Width = 146;
-            // 
-            // cantidadDataGridViewTextBoxColumn2
-            // 
-            this.cantidadDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.cantidadDataGridViewTextBoxColumn2.DataPropertyName = "cantidad";
-            this.cantidadDataGridViewTextBoxColumn2.HeaderText = "Cant";
-            this.cantidadDataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.cantidadDataGridViewTextBoxColumn2.Name = "cantidadDataGridViewTextBoxColumn2";
-            this.cantidadDataGridViewTextBoxColumn2.ReadOnly = true;
-            this.cantidadDataGridViewTextBoxColumn2.Width = 64;
-            // 
-            // otDataGridViewTextBoxColumn2
-            // 
-            this.otDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.otDataGridViewTextBoxColumn2.DataPropertyName = "ot";
-            this.otDataGridViewTextBoxColumn2.HeaderText = "OT";
-            this.otDataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.otDataGridViewTextBoxColumn2.Name = "otDataGridViewTextBoxColumn2";
-            this.otDataGridViewTextBoxColumn2.ReadOnly = true;
-            this.otDataGridViewTextBoxColumn2.Width = 54;
-            // 
-            // folioDataGridViewTextBoxColumn
-            // 
-            this.folioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.folioDataGridViewTextBoxColumn.DataPropertyName = "folio";
-            this.folioDataGridViewTextBoxColumn.HeaderText = "Folio";
-            this.folioDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.folioDataGridViewTextBoxColumn.Name = "folioDataGridViewTextBoxColumn";
-            this.folioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.folioDataGridViewTextBoxColumn.Width = 68;
-            // 
-            // documentoDataGridViewTextBoxColumn1
-            // 
-            this.documentoDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.documentoDataGridViewTextBoxColumn1.DataPropertyName = "documento";
-            this.documentoDataGridViewTextBoxColumn1.HeaderText = "Documento";
-            this.documentoDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.documentoDataGridViewTextBoxColumn1.Name = "documentoDataGridViewTextBoxColumn1";
-            this.documentoDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.documentoDataGridViewTextBoxColumn1.Width = 111;
-            // 
-            // nomproveedorDataGridViewTextBoxColumn1
-            // 
-            this.nomproveedorDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.nomproveedorDataGridViewTextBoxColumn1.DataPropertyName = "nom_proveedor";
-            this.nomproveedorDataGridViewTextBoxColumn1.HeaderText = "Proveedor";
-            this.nomproveedorDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.nomproveedorDataGridViewTextBoxColumn1.Name = "nomproveedorDataGridViewTextBoxColumn1";
-            this.nomproveedorDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.nomproveedorDataGridViewTextBoxColumn1.Width = 106;
-            // 
-            // nommarcaDataGridViewTextBoxColumn1
-            // 
-            this.nommarcaDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.nommarcaDataGridViewTextBoxColumn1.DataPropertyName = "nom_marca";
-            this.nommarcaDataGridViewTextBoxColumn1.HeaderText = "Marca";
-            this.nommarcaDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.nommarcaDataGridViewTextBoxColumn1.Name = "nommarcaDataGridViewTextBoxColumn1";
-            this.nommarcaDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.nommarcaDataGridViewTextBoxColumn1.Width = 76;
-            // 
-            // valorDataGridViewTextBoxColumn1
-            // 
-            this.valorDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.valorDataGridViewTextBoxColumn1.DataPropertyName = "valor";
-            this.valorDataGridViewTextBoxColumn1.HeaderText = "Valor";
-            this.valorDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.valorDataGridViewTextBoxColumn1.Name = "valorDataGridViewTextBoxColumn1";
-            this.valorDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.valorDataGridViewTextBoxColumn1.Width = 70;
-            // 
-            // valorunitarioDataGridViewTextBoxColumn1
-            // 
-            this.valorunitarioDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.valorunitarioDataGridViewTextBoxColumn1.DataPropertyName = "valor_unitario";
-            this.valorunitarioDataGridViewTextBoxColumn1.HeaderText = "Valor Unitario";
-            this.valorunitarioDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.valorunitarioDataGridViewTextBoxColumn1.Name = "valorunitarioDataGridViewTextBoxColumn1";
-            this.valorunitarioDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.valorunitarioDataGridViewTextBoxColumn1.Width = 117;
             // 
             // obs_mov2
             // 
@@ -2297,10 +2036,6 @@ namespace Convertec_Bodega_Administracion
             this.obs_mov2.Name = "obs_mov2";
             this.obs_mov2.ReadOnly = true;
             this.obs_mov2.Width = 61;
-            // 
-            // historialMovimientoTablaBindingSource
-            // 
-            this.historialMovimientoTablaBindingSource.DataSource = typeof(Convertec_Bodega_Administracion.Model.HistorialMovimientoTabla);
             // 
             // MVpanelTablaMov1
             // 
@@ -2508,7 +2243,7 @@ namespace Convertec_Bodega_Administracion
             // 
             this.BodyPanelSalidaIngreso.Controls.Add(this.splitContainerBodyPrincipal);
             this.BodyPanelSalidaIngreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BodyPanelSalidaIngreso.Location = new System.Drawing.Point(5, 153);
+            this.BodyPanelSalidaIngreso.Location = new System.Drawing.Point(5, 496);
             this.BodyPanelSalidaIngreso.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BodyPanelSalidaIngreso.Name = "BodyPanelSalidaIngreso";
             this.BodyPanelSalidaIngreso.Size = new System.Drawing.Size(906, 87);
@@ -2517,8 +2252,9 @@ namespace Convertec_Bodega_Administracion
             // 
             // BodypanelGeneral
             // 
-            this.BodypanelGeneral.Controls.Add(this.BodyPanelMovElementos);
+            this.BodypanelGeneral.Controls.Add(this.BodyPanelCrearModifElemento);
             this.BodypanelGeneral.Controls.Add(this.BodyPanelIngresoElementos);
+            this.BodypanelGeneral.Controls.Add(this.BodyPanelMovElementos);
             this.BodypanelGeneral.Controls.Add(this.BodyPanelInformes);
             this.BodypanelGeneral.Controls.Add(this.BodyPanelSalidaIngreso);
             this.BodypanelGeneral.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -2526,8 +2262,631 @@ namespace Convertec_Bodega_Administracion
             this.BodypanelGeneral.Location = new System.Drawing.Point(212, 95);
             this.BodypanelGeneral.Margin = new System.Windows.Forms.Padding(0);
             this.BodypanelGeneral.Name = "BodypanelGeneral";
-            this.BodypanelGeneral.Size = new System.Drawing.Size(1042, 946);
+            this.BodypanelGeneral.Size = new System.Drawing.Size(1042, 634);
             this.BodypanelGeneral.TabIndex = 8;
+            // 
+            // BodyPanelCrearModifElemento
+            // 
+            this.BodyPanelCrearModifElemento.Controls.Add(this.tabControl1);
+            this.BodyPanelCrearModifElemento.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BodyPanelCrearModifElemento.Location = new System.Drawing.Point(0, 0);
+            this.BodyPanelCrearModifElemento.Margin = new System.Windows.Forms.Padding(0);
+            this.BodyPanelCrearModifElemento.Name = "BodyPanelCrearModifElemento";
+            this.BodyPanelCrearModifElemento.Size = new System.Drawing.Size(1042, 634);
+            this.BodyPanelCrearModifElemento.TabIndex = 10;
+            this.BodyPanelCrearModifElemento.Visible = false;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.CMEtabCrear);
+            this.tabControl1.Controls.Add(this.CMEtabModificar);
+            this.tabControl1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1042, 634);
+            this.tabControl1.TabIndex = 6;
+            // 
+            // CMEtabCrear
+            // 
+            this.CMEtabCrear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(243)))), ((int)(((byte)(246)))));
+            this.CMEtabCrear.Controls.Add(this.CEpanelL);
+            this.CMEtabCrear.Controls.Add(this.CEpanelR);
+            this.CMEtabCrear.Location = new System.Drawing.Point(4, 25);
+            this.CMEtabCrear.Margin = new System.Windows.Forms.Padding(0);
+            this.CMEtabCrear.Name = "CMEtabCrear";
+            this.CMEtabCrear.Size = new System.Drawing.Size(1034, 605);
+            this.CMEtabCrear.TabIndex = 0;
+            this.CMEtabCrear.Text = "Crear Elemento";
+            // 
+            // CEpanelL
+            // 
+            this.CEpanelL.Controls.Add(this.CEtxtDocumento);
+            this.CEpanelL.Controls.Add(this.CElabel12);
+            this.CEpanelL.Controls.Add(this.CElabel8);
+            this.CEpanelL.Controls.Add(this.CEtxtStockMin);
+            this.CEpanelL.Controls.Add(this.label25);
+            this.CEpanelL.Controls.Add(this.CElabel3);
+            this.CEpanelL.Controls.Add(this.CEtxtPartePlano);
+            this.CEpanelL.Controls.Add(this.CEtxtCodBodega);
+            this.CEpanelL.Controls.Add(this.CElabel2);
+            this.CEpanelL.Controls.Add(this.CEradioButtonUnidad);
+            this.CEpanelL.Controls.Add(this.CEradioButtonMetros);
+            this.CEpanelL.Controls.Add(this.CEbtnAgregarMarca);
+            this.CEpanelL.Controls.Add(this.CEcomboBoxMarca);
+            this.CEpanelL.Controls.Add(this.label12);
+            this.CEpanelL.Controls.Add(this.CEbtnAgregarProv);
+            this.CEpanelL.Controls.Add(this.CEcomboBoxProv);
+            this.CEpanelL.Controls.Add(this.CElabel10);
+            this.CEpanelL.Controls.Add(this.CElabel7);
+            this.CEpanelL.Controls.Add(this.label16);
+            this.CEpanelL.Controls.Add(this.label17);
+            this.CEpanelL.Controls.Add(this.CEtxtCodProv);
+            this.CEpanelL.Controls.Add(this.CEtxtValorUnitario);
+            this.CEpanelL.Controls.Add(this.CEtxtValor);
+            this.CEpanelL.Controls.Add(this.CElabel9);
+            this.CEpanelL.Controls.Add(this.CElabel5);
+            this.CEpanelL.Controls.Add(this.CElabel4);
+            this.CEpanelL.Controls.Add(this.CElabel6);
+            this.CEpanelL.Controls.Add(this.CEtxtObs);
+            this.CEpanelL.Controls.Add(this.CElabel11);
+            this.CEpanelL.Controls.Add(this.CEtxtStock);
+            this.CEpanelL.Controls.Add(this.CElabel1);
+            this.CEpanelL.Controls.Add(this.CEtxtDescripcion);
+            this.CEpanelL.Cursor = System.Windows.Forms.Cursors.Default;
+            this.CEpanelL.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CEpanelL.Location = new System.Drawing.Point(0, 0);
+            this.CEpanelL.Margin = new System.Windows.Forms.Padding(0);
+            this.CEpanelL.Name = "CEpanelL";
+            this.CEpanelL.Padding = new System.Windows.Forms.Padding(10);
+            this.CEpanelL.Size = new System.Drawing.Size(649, 605);
+            this.CEpanelL.TabIndex = 7;
+            // 
+            // CEtxtDocumento
+            // 
+            this.CEtxtDocumento.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.CEtxtDocumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CEtxtDocumento.Location = new System.Drawing.Point(136, 208);
+            this.CEtxtDocumento.Margin = new System.Windows.Forms.Padding(5, 0, 0, 10);
+            this.CEtxtDocumento.MaxLength = 50;
+            this.CEtxtDocumento.Name = "CEtxtDocumento";
+            this.CEtxtDocumento.Size = new System.Drawing.Size(503, 23);
+            this.CEtxtDocumento.TabIndex = 49;
+            this.InfoToolTip.SetToolTip(this.CEtxtDocumento, "Código del proveedor que posee el elemento respecto a la tienda.\r\n*Campo NO Oblig" +
+        "atorio*");
+            // 
+            // CElabel12
+            // 
+            this.CElabel12.AutoSize = true;
+            this.CElabel12.Location = new System.Drawing.Point(10, 212);
+            this.CElabel12.Name = "CElabel12";
+            this.CElabel12.Size = new System.Drawing.Size(90, 16);
+            this.CElabel12.TabIndex = 48;
+            this.CElabel12.Text = "Documento:";
+            // 
+            // CElabel8
+            // 
+            this.CElabel8.AutoSize = true;
+            this.CElabel8.Location = new System.Drawing.Point(10, 165);
+            this.CElabel8.Margin = new System.Windows.Forms.Padding(0);
+            this.CElabel8.Name = "CElabel8";
+            this.CElabel8.Size = new System.Drawing.Size(79, 16);
+            this.CElabel8.TabIndex = 46;
+            this.CElabel8.Text = "Stock Min:";
+            // 
+            // CEtxtStockMin
+            // 
+            this.CEtxtStockMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CEtxtStockMin.Location = new System.Drawing.Point(136, 163);
+            this.CEtxtStockMin.Margin = new System.Windows.Forms.Padding(5, 0, 10, 10);
+            this.CEtxtStockMin.MaxLength = 6;
+            this.CEtxtStockMin.Name = "CEtxtStockMin";
+            this.CEtxtStockMin.ShortcutsEnabled = false;
+            this.CEtxtStockMin.Size = new System.Drawing.Size(187, 23);
+            this.CEtxtStockMin.TabIndex = 47;
+            this.CEtxtStockMin.Text = "1";
+            this.InfoToolTip.SetToolTip(this.CEtxtStockMin, "Cantidad de elementos.\r\n*Campo Obligatorio*");
+            this.CEtxtStockMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CEcheckUnidadStockMin);
+            this.CEtxtStockMin.Leave += new System.EventHandler(this.CEParseDecimal);
+            // 
+            // label25
+            // 
+            this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label25.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label25.ForeColor = System.Drawing.Color.Black;
+            this.label25.Location = new System.Drawing.Point(-13, 85);
+            this.label25.Margin = new System.Windows.Forms.Padding(0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(668, 2);
+            this.label25.TabIndex = 45;
+            // 
+            // CElabel3
+            // 
+            this.CElabel3.AutoSize = true;
+            this.CElabel3.Location = new System.Drawing.Point(333, 56);
+            this.CElabel3.Margin = new System.Windows.Forms.Padding(0);
+            this.CElabel3.Name = "CElabel3";
+            this.CElabel3.Size = new System.Drawing.Size(114, 16);
+            this.CElabel3.TabIndex = 44;
+            this.CElabel3.Text = "Parte en Plano:";
+            // 
+            // CEtxtPartePlano
+            // 
+            this.CEtxtPartePlano.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.CEtxtPartePlano.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CEtxtPartePlano.Location = new System.Drawing.Point(452, 52);
+            this.CEtxtPartePlano.Margin = new System.Windows.Forms.Padding(5, 0, 0, 10);
+            this.CEtxtPartePlano.MaxLength = 50;
+            this.CEtxtPartePlano.Name = "CEtxtPartePlano";
+            this.CEtxtPartePlano.Size = new System.Drawing.Size(187, 23);
+            this.CEtxtPartePlano.TabIndex = 43;
+            this.InfoToolTip.SetToolTip(this.CEtxtPartePlano, "Filtro de elementos.");
+            // 
+            // CEtxtCodBodega
+            // 
+            this.CEtxtCodBodega.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CEtxtCodBodega.Location = new System.Drawing.Point(136, 52);
+            this.CEtxtCodBodega.Margin = new System.Windows.Forms.Padding(5, 0, 10, 10);
+            this.CEtxtCodBodega.MaxLength = 6;
+            this.CEtxtCodBodega.Name = "CEtxtCodBodega";
+            this.CEtxtCodBodega.Size = new System.Drawing.Size(187, 23);
+            this.CEtxtCodBodega.TabIndex = 42;
+            this.InfoToolTip.SetToolTip(this.CEtxtCodBodega, "Valor completo del elemento.\r\n*Campo Obligatorio*");
+            this.CEtxtCodBodega.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CheckNumberOnly);
+            // 
+            // CElabel2
+            // 
+            this.CElabel2.AutoSize = true;
+            this.CElabel2.Location = new System.Drawing.Point(10, 56);
+            this.CElabel2.Margin = new System.Windows.Forms.Padding(0);
+            this.CElabel2.Name = "CElabel2";
+            this.CElabel2.Size = new System.Drawing.Size(121, 16);
+            this.CElabel2.TabIndex = 41;
+            this.CElabel2.Text = "Código Bodega:";
+            // 
+            // CEradioButtonUnidad
+            // 
+            this.CEradioButtonUnidad.AutoSize = true;
+            this.CEradioButtonUnidad.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CEradioButtonUnidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CEradioButtonUnidad.Location = new System.Drawing.Point(464, 163);
+            this.CEradioButtonUnidad.Name = "CEradioButtonUnidad";
+            this.CEradioButtonUnidad.Size = new System.Drawing.Size(75, 20);
+            this.CEradioButtonUnidad.TabIndex = 40;
+            this.CEradioButtonUnidad.Text = "Unidad";
+            this.CEradioButtonUnidad.UseVisualStyleBackColor = true;
+            // 
+            // CEradioButtonMetros
+            // 
+            this.CEradioButtonMetros.AutoSize = true;
+            this.CEradioButtonMetros.Checked = true;
+            this.CEradioButtonMetros.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CEradioButtonMetros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CEradioButtonMetros.Location = new System.Drawing.Point(464, 132);
+            this.CEradioButtonMetros.Name = "CEradioButtonMetros";
+            this.CEradioButtonMetros.Size = new System.Drawing.Size(72, 20);
+            this.CEradioButtonMetros.TabIndex = 39;
+            this.CEradioButtonMetros.TabStop = true;
+            this.CEradioButtonMetros.Text = "Metros";
+            this.CEradioButtonMetros.UseVisualStyleBackColor = true;
+            this.CEradioButtonMetros.CheckedChanged += new System.EventHandler(this.CECheckChange);
+            // 
+            // CEbtnAgregarMarca
+            // 
+            this.CEbtnAgregarMarca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(183)))), ((int)(((byte)(30)))));
+            this.CEbtnAgregarMarca.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CEbtnAgregarMarca.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
+            this.CEbtnAgregarMarca.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(142)))), ((int)(((byte)(25)))));
+            this.CEbtnAgregarMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CEbtnAgregarMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CEbtnAgregarMarca.ForeColor = System.Drawing.Color.White;
+            this.CEbtnAgregarMarca.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.CEbtnAgregarMarca.IconColor = System.Drawing.Color.White;
+            this.CEbtnAgregarMarca.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.CEbtnAgregarMarca.IconSize = 25;
+            this.CEbtnAgregarMarca.Location = new System.Drawing.Point(614, 274);
+            this.CEbtnAgregarMarca.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.CEbtnAgregarMarca.Name = "CEbtnAgregarMarca";
+            this.CEbtnAgregarMarca.Size = new System.Drawing.Size(25, 25);
+            this.CEbtnAgregarMarca.TabIndex = 33;
+            this.CEbtnAgregarMarca.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.InfoToolTip.SetToolTip(this.CEbtnAgregarMarca, "Abre pantalla para agregar una nueva marca al sistema.");
+            this.CEbtnAgregarMarca.UseVisualStyleBackColor = false;
+            this.CEbtnAgregarMarca.Click += new System.EventHandler(this.CEbtnAgregarMarca_Click);
+            // 
+            // CEcomboBoxMarca
+            // 
+            this.CEcomboBoxMarca.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.CEcomboBoxMarca.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.CEcomboBoxMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CEcomboBoxMarca.FormattingEnabled = true;
+            this.CEcomboBoxMarca.Location = new System.Drawing.Point(424, 274);
+            this.CEcomboBoxMarca.Margin = new System.Windows.Forms.Padding(5, 0, 0, 10);
+            this.CEcomboBoxMarca.MinimumSize = new System.Drawing.Size(133, 0);
+            this.CEcomboBoxMarca.Name = "CEcomboBoxMarca";
+            this.CEcomboBoxMarca.Size = new System.Drawing.Size(185, 25);
+            this.CEcomboBoxMarca.TabIndex = 30;
+            this.CEcomboBoxMarca.Text = "--SELECCIONE MARCA--";
+            this.InfoToolTip.SetToolTip(this.CEcomboBoxMarca, "Seleccionar la marca correspondiente.\r\nSi no existe agregarla presionando el botó" +
+        "n que se encuentra a la derecha.\r\n*Campo Obligatorio*\r\n");
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(364, 278);
+            this.label12.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(55, 16);
+            this.label12.TabIndex = 35;
+            this.label12.Text = "Marca:";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // CEbtnAgregarProv
+            // 
+            this.CEbtnAgregarProv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(183)))), ((int)(((byte)(30)))));
+            this.CEbtnAgregarProv.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CEbtnAgregarProv.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
+            this.CEbtnAgregarProv.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(142)))), ((int)(((byte)(25)))));
+            this.CEbtnAgregarProv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CEbtnAgregarProv.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CEbtnAgregarProv.ForeColor = System.Drawing.Color.White;
+            this.CEbtnAgregarProv.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.CEbtnAgregarProv.IconColor = System.Drawing.Color.White;
+            this.CEbtnAgregarProv.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.CEbtnAgregarProv.IconSize = 25;
+            this.CEbtnAgregarProv.Location = new System.Drawing.Point(326, 274);
+            this.CEbtnAgregarProv.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.CEbtnAgregarProv.Name = "CEbtnAgregarProv";
+            this.CEbtnAgregarProv.Size = new System.Drawing.Size(25, 25);
+            this.CEbtnAgregarProv.TabIndex = 32;
+            this.CEbtnAgregarProv.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.InfoToolTip.SetToolTip(this.CEbtnAgregarProv, "Abre pantalla para agregar un nuevo proveedor al sistema.");
+            this.CEbtnAgregarProv.UseVisualStyleBackColor = false;
+            this.CEbtnAgregarProv.Click += new System.EventHandler(this.CEbtnAgregarProv_Click);
+            // 
+            // CEcomboBoxProv
+            // 
+            this.CEcomboBoxProv.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.CEcomboBoxProv.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.CEcomboBoxProv.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CEcomboBoxProv.FormattingEnabled = true;
+            this.CEcomboBoxProv.Location = new System.Drawing.Point(136, 274);
+            this.CEcomboBoxProv.Margin = new System.Windows.Forms.Padding(10, 0, 0, 10);
+            this.CEcomboBoxProv.MinimumSize = new System.Drawing.Size(133, 0);
+            this.CEcomboBoxProv.Name = "CEcomboBoxProv";
+            this.CEcomboBoxProv.Size = new System.Drawing.Size(185, 25);
+            this.CEcomboBoxProv.TabIndex = 29;
+            this.CEcomboBoxProv.Text = "--SELECCIONE PROVEEDOR--";
+            this.InfoToolTip.SetToolTip(this.CEcomboBoxProv, "Seleccionar al proveedor correspondiente.\r\nSi no existe agregarlo presionando el " +
+        "botón que se encuentra a la derecha.\r\n*Campo Obligatorio*");
+            // 
+            // CElabel10
+            // 
+            this.CElabel10.AutoSize = true;
+            this.CElabel10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CElabel10.Location = new System.Drawing.Point(10, 278);
+            this.CElabel10.Margin = new System.Windows.Forms.Padding(0);
+            this.CElabel10.Name = "CElabel10";
+            this.CElabel10.Size = new System.Drawing.Size(85, 16);
+            this.CElabel10.TabIndex = 34;
+            this.CElabel10.Text = "Proveedor:";
+            this.CElabel10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // CElabel7
+            // 
+            this.CElabel7.AutoSize = true;
+            this.CElabel7.Location = new System.Drawing.Point(333, 134);
+            this.CElabel7.Margin = new System.Windows.Forms.Padding(0);
+            this.CElabel7.Name = "CElabel7";
+            this.CElabel7.Size = new System.Drawing.Size(120, 16);
+            this.CElabel7.TabIndex = 38;
+            this.CElabel7.Text = "Tipo de Unidad:";
+            // 
+            // label16
+            // 
+            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label16.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label16.ForeColor = System.Drawing.Color.Black;
+            this.label16.Location = new System.Drawing.Point(-9, 309);
+            this.label16.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(668, 2);
+            this.label16.TabIndex = 37;
+            // 
+            // label17
+            // 
+            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label17.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label17.ForeColor = System.Drawing.Color.Black;
+            this.label17.Location = new System.Drawing.Point(-16, 196);
+            this.label17.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(668, 2);
+            this.label17.TabIndex = 36;
+            // 
+            // CEtxtCodProv
+            // 
+            this.CEtxtCodProv.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.CEtxtCodProv.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CEtxtCodProv.Location = new System.Drawing.Point(136, 241);
+            this.CEtxtCodProv.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.CEtxtCodProv.MaxLength = 50;
+            this.CEtxtCodProv.Name = "CEtxtCodProv";
+            this.CEtxtCodProv.Size = new System.Drawing.Size(503, 23);
+            this.CEtxtCodProv.TabIndex = 28;
+            this.InfoToolTip.SetToolTip(this.CEtxtCodProv, "Código del proveedor que posee el elemento respecto a la tienda.\r\n*Campo NO Oblig" +
+        "atorio*");
+            // 
+            // CEtxtValorUnitario
+            // 
+            this.CEtxtValorUnitario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CEtxtValorUnitario.Location = new System.Drawing.Point(452, 98);
+            this.CEtxtValorUnitario.Margin = new System.Windows.Forms.Padding(5, 10, 0, 10);
+            this.CEtxtValorUnitario.MaxLength = 10;
+            this.CEtxtValorUnitario.Name = "CEtxtValorUnitario";
+            this.CEtxtValorUnitario.ShortcutsEnabled = false;
+            this.CEtxtValorUnitario.Size = new System.Drawing.Size(187, 23);
+            this.CEtxtValorUnitario.TabIndex = 25;
+            this.CEtxtValorUnitario.Text = "0";
+            this.InfoToolTip.SetToolTip(this.CEtxtValorUnitario, "Valor individual del elemento.\r\n*Caampo Obligatorio*");
+            this.CEtxtValorUnitario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CheckNumberOnly);
+            // 
+            // CEtxtValor
+            // 
+            this.CEtxtValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CEtxtValor.Location = new System.Drawing.Point(136, 97);
+            this.CEtxtValor.Margin = new System.Windows.Forms.Padding(5, 10, 10, 10);
+            this.CEtxtValor.MaxLength = 10;
+            this.CEtxtValor.Name = "CEtxtValor";
+            this.CEtxtValor.ShortcutsEnabled = false;
+            this.CEtxtValor.Size = new System.Drawing.Size(187, 23);
+            this.CEtxtValor.TabIndex = 24;
+            this.CEtxtValor.Text = "0";
+            this.InfoToolTip.SetToolTip(this.CEtxtValor, "Valor completo del elemento.\r\n*Campo Obligatorio*");
+            this.CEtxtValor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CheckNumberOnly);
+            // 
+            // CElabel9
+            // 
+            this.CElabel9.AutoSize = true;
+            this.CElabel9.Location = new System.Drawing.Point(10, 245);
+            this.CElabel9.Margin = new System.Windows.Forms.Padding(0);
+            this.CElabel9.Name = "CElabel9";
+            this.CElabel9.Size = new System.Drawing.Size(117, 16);
+            this.CElabel9.TabIndex = 27;
+            this.CElabel9.Text = "Cod Proveedor:";
+            // 
+            // CElabel5
+            // 
+            this.CElabel5.AutoSize = true;
+            this.CElabel5.Location = new System.Drawing.Point(333, 101);
+            this.CElabel5.Margin = new System.Windows.Forms.Padding(0);
+            this.CElabel5.Name = "CElabel5";
+            this.CElabel5.Size = new System.Drawing.Size(107, 16);
+            this.CElabel5.TabIndex = 23;
+            this.CElabel5.Text = "Valor Unitario:";
+            // 
+            // CElabel4
+            // 
+            this.CElabel4.AutoSize = true;
+            this.CElabel4.Location = new System.Drawing.Point(11, 101);
+            this.CElabel4.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            this.CElabel4.Name = "CElabel4";
+            this.CElabel4.Size = new System.Drawing.Size(49, 16);
+            this.CElabel4.TabIndex = 22;
+            this.CElabel4.Text = "Valor:";
+            // 
+            // CElabel6
+            // 
+            this.CElabel6.AutoSize = true;
+            this.CElabel6.Location = new System.Drawing.Point(11, 134);
+            this.CElabel6.Margin = new System.Windows.Forms.Padding(0);
+            this.CElabel6.Name = "CElabel6";
+            this.CElabel6.Size = new System.Drawing.Size(96, 16);
+            this.CElabel6.TabIndex = 20;
+            this.CElabel6.Text = "Stock Inicial:";
+            // 
+            // CEtxtObs
+            // 
+            this.CEtxtObs.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CEtxtObs.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CEtxtObs.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CEtxtObs.Location = new System.Drawing.Point(136, 321);
+            this.CEtxtObs.Margin = new System.Windows.Forms.Padding(5, 0, 0, 10);
+            this.CEtxtObs.MaxLength = 256;
+            this.CEtxtObs.Name = "CEtxtObs";
+            this.CEtxtObs.Size = new System.Drawing.Size(503, 145);
+            this.CEtxtObs.TabIndex = 31;
+            this.CEtxtObs.Text = "";
+            this.InfoToolTip.SetToolTip(this.CEtxtObs, "Campo de texto para agregar información adicional del elemento, compra, etc.\r\n*Ca" +
+        "mpo NO Obligatorio*");
+            // 
+            // CElabel11
+            // 
+            this.CElabel11.AutoSize = true;
+            this.CElabel11.Location = new System.Drawing.Point(10, 324);
+            this.CElabel11.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.CElabel11.Name = "CElabel11";
+            this.CElabel11.Size = new System.Drawing.Size(117, 16);
+            this.CElabel11.TabIndex = 21;
+            this.CElabel11.Text = "Observaciones:";
+            // 
+            // CEtxtStock
+            // 
+            this.CEtxtStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CEtxtStock.Location = new System.Drawing.Point(136, 130);
+            this.CEtxtStock.Margin = new System.Windows.Forms.Padding(5, 0, 10, 10);
+            this.CEtxtStock.MaxLength = 6;
+            this.CEtxtStock.Name = "CEtxtStock";
+            this.CEtxtStock.ShortcutsEnabled = false;
+            this.CEtxtStock.Size = new System.Drawing.Size(187, 23);
+            this.CEtxtStock.TabIndex = 26;
+            this.CEtxtStock.Text = "1";
+            this.InfoToolTip.SetToolTip(this.CEtxtStock, "Cantidad de elementos.\r\n*Campo Obligatorio*");
+            this.CEtxtStock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CEcheckUnidadStock);
+            this.CEtxtStock.Leave += new System.EventHandler(this.CEParseDecimal);
+            // 
+            // CElabel1
+            // 
+            this.CElabel1.AutoSize = true;
+            this.CElabel1.Location = new System.Drawing.Point(10, 20);
+            this.CElabel1.Margin = new System.Windows.Forms.Padding(0);
+            this.CElabel1.Name = "CElabel1";
+            this.CElabel1.Size = new System.Drawing.Size(95, 16);
+            this.CElabel1.TabIndex = 2;
+            this.CElabel1.Text = "Descripción:";
+            // 
+            // CEtxtDescripcion
+            // 
+            this.CEtxtDescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CEtxtDescripcion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.CEtxtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CEtxtDescripcion.Location = new System.Drawing.Point(136, 19);
+            this.CEtxtDescripcion.Margin = new System.Windows.Forms.Padding(5, 0, 0, 10);
+            this.CEtxtDescripcion.MaxLength = 256;
+            this.CEtxtDescripcion.Name = "CEtxtDescripcion";
+            this.CEtxtDescripcion.Size = new System.Drawing.Size(503, 23);
+            this.CEtxtDescripcion.TabIndex = 1;
+            this.InfoToolTip.SetToolTip(this.CEtxtDescripcion, "Filtro de elementos.");
+            // 
+            // CEpanelR
+            // 
+            this.CEpanelR.Controls.Add(this.CEbtnCancelar);
+            this.CEpanelR.Controls.Add(this.CEbtnAgregar);
+            this.CEpanelR.Controls.Add(this.label1);
+            this.CEpanelR.Controls.Add(this.CEbtnAgregarImg);
+            this.CEpanelR.Controls.Add(this.CEpanelImagen);
+            this.CEpanelR.Cursor = System.Windows.Forms.Cursors.Default;
+            this.CEpanelR.Dock = System.Windows.Forms.DockStyle.Right;
+            this.CEpanelR.Location = new System.Drawing.Point(649, 0);
+            this.CEpanelR.Margin = new System.Windows.Forms.Padding(0);
+            this.CEpanelR.Name = "CEpanelR";
+            this.CEpanelR.Size = new System.Drawing.Size(385, 605);
+            this.CEpanelR.TabIndex = 6;
+            // 
+            // CEbtnCancelar
+            // 
+            this.CEbtnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(56)))), ((int)(((byte)(0)))));
+            this.CEbtnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CEbtnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
+            this.CEbtnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(41)))), ((int)(((byte)(2)))));
+            this.CEbtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CEbtnCancelar.ForeColor = System.Drawing.Color.White;
+            this.CEbtnCancelar.IconChar = FontAwesome.Sharp.IconChar.TimesCircle;
+            this.CEbtnCancelar.IconColor = System.Drawing.Color.White;
+            this.CEbtnCancelar.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.CEbtnCancelar.IconSize = 30;
+            this.CEbtnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.CEbtnCancelar.Location = new System.Drawing.Point(15, 314);
+            this.CEbtnCancelar.Margin = new System.Windows.Forms.Padding(12, 5, 12, 5);
+            this.CEbtnCancelar.Name = "CEbtnCancelar";
+            this.CEbtnCancelar.Size = new System.Drawing.Size(164, 40);
+            this.CEbtnCancelar.TabIndex = 52;
+            this.CEbtnCancelar.Text = "Cancelar";
+            this.CEbtnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.CEbtnCancelar.UseVisualStyleBackColor = false;
+            this.CEbtnCancelar.Click += new System.EventHandler(this.CEbtnCancelar_Click);
+            // 
+            // CEbtnAgregar
+            // 
+            this.CEbtnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(183)))), ((int)(((byte)(30)))));
+            this.CEbtnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CEbtnAgregar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
+            this.CEbtnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(142)))), ((int)(((byte)(25)))));
+            this.CEbtnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CEbtnAgregar.ForeColor = System.Drawing.Color.White;
+            this.CEbtnAgregar.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.CEbtnAgregar.IconColor = System.Drawing.Color.White;
+            this.CEbtnAgregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.CEbtnAgregar.IconSize = 30;
+            this.CEbtnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.CEbtnAgregar.Location = new System.Drawing.Point(210, 313);
+            this.CEbtnAgregar.Margin = new System.Windows.Forms.Padding(12, 5, 12, 5);
+            this.CEbtnAgregar.Name = "CEbtnAgregar";
+            this.CEbtnAgregar.Size = new System.Drawing.Size(160, 40);
+            this.CEbtnAgregar.TabIndex = 51;
+            this.CEbtnAgregar.Text = "Crear Elemento";
+            this.CEbtnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.CEbtnAgregar.UseVisualStyleBackColor = false;
+            this.CEbtnAgregar.Click += new System.EventHandler(this.CEbtnAgregar_Click);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(-187, 309);
+            this.label1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(668, 2);
+            this.label1.TabIndex = 50;
+            // 
+            // CEbtnAgregarImg
+            // 
+            this.CEbtnAgregarImg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(183)))), ((int)(((byte)(30)))));
+            this.CEbtnAgregarImg.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CEbtnAgregarImg.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
+            this.CEbtnAgregarImg.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(142)))), ((int)(((byte)(25)))));
+            this.CEbtnAgregarImg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CEbtnAgregarImg.ForeColor = System.Drawing.Color.White;
+            this.CEbtnAgregarImg.IconChar = FontAwesome.Sharp.IconChar.Images;
+            this.CEbtnAgregarImg.IconColor = System.Drawing.Color.White;
+            this.CEbtnAgregarImg.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.CEbtnAgregarImg.IconSize = 30;
+            this.CEbtnAgregarImg.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.CEbtnAgregarImg.Location = new System.Drawing.Point(15, 264);
+            this.CEbtnAgregarImg.Margin = new System.Windows.Forms.Padding(12, 5, 12, 5);
+            this.CEbtnAgregarImg.Name = "CEbtnAgregarImg";
+            this.CEbtnAgregarImg.Size = new System.Drawing.Size(355, 40);
+            this.CEbtnAgregarImg.TabIndex = 6;
+            this.CEbtnAgregarImg.Text = "Agregar Imagen";
+            this.CEbtnAgregarImg.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.CEbtnAgregarImg.UseVisualStyleBackColor = false;
+            this.CEbtnAgregarImg.Click += new System.EventHandler(this.CEbtnAgregarImg_Click);
+            // 
+            // CEpanelImagen
+            // 
+            this.CEpanelImagen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(243)))), ((int)(((byte)(246)))));
+            this.CEpanelImagen.Controls.Add(this.CEpictureBoxElem);
+            this.CEpanelImagen.Dock = System.Windows.Forms.DockStyle.Top;
+            this.CEpanelImagen.Location = new System.Drawing.Point(0, 0);
+            this.CEpanelImagen.Margin = new System.Windows.Forms.Padding(0);
+            this.CEpanelImagen.Name = "CEpanelImagen";
+            this.CEpanelImagen.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
+            this.CEpanelImagen.Size = new System.Drawing.Size(385, 259);
+            this.CEpanelImagen.TabIndex = 5;
+            // 
+            // CEpictureBoxElem
+            // 
+            this.CEpictureBoxElem.BackColor = System.Drawing.Color.White;
+            this.CEpictureBoxElem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.CEpictureBoxElem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CEpictureBoxElem.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CEpictureBoxElem.Image = global::Convertec_Bodega_Administracion.Properties.Resources.image_unavailable;
+            this.CEpictureBoxElem.InitialImage = global::Convertec_Bodega_Administracion.Properties.Resources.image_unavailable;
+            this.CEpictureBoxElem.Location = new System.Drawing.Point(15, 10);
+            this.CEpictureBoxElem.Margin = new System.Windows.Forms.Padding(12, 10, 12, 10);
+            this.CEpictureBoxElem.Name = "CEpictureBoxElem";
+            this.CEpictureBoxElem.Size = new System.Drawing.Size(355, 239);
+            this.CEpictureBoxElem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.CEpictureBoxElem.TabIndex = 0;
+            this.CEpictureBoxElem.TabStop = false;
+            // 
+            // CMEtabModificar
+            // 
+            this.CMEtabModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(243)))), ((int)(((byte)(246)))));
+            this.CMEtabModificar.Location = new System.Drawing.Point(4, 25);
+            this.CMEtabModificar.Name = "CMEtabModificar";
+            this.CMEtabModificar.Padding = new System.Windows.Forms.Padding(3);
+            this.CMEtabModificar.Size = new System.Drawing.Size(1034, 605);
+            this.CMEtabModificar.TabIndex = 1;
+            this.CMEtabModificar.Text = "Modificar Elemento";
             // 
             // BodyPanelInformes
             // 
@@ -2607,91 +2966,12 @@ namespace Convertec_Bodega_Administracion
             this.INFdataGridViewStockBodega.Size = new System.Drawing.Size(1028, 277);
             this.INFdataGridViewStockBodega.TabIndex = 0;
             // 
-            // codbodegaDataGridViewTextBoxColumn2
-            // 
-            this.codbodegaDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.codbodegaDataGridViewTextBoxColumn2.DataPropertyName = "cod_bodega";
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.codbodegaDataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle21;
-            this.codbodegaDataGridViewTextBoxColumn2.HeaderText = "Código";
-            this.codbodegaDataGridViewTextBoxColumn2.Name = "codbodegaDataGridViewTextBoxColumn2";
-            this.codbodegaDataGridViewTextBoxColumn2.ReadOnly = true;
-            this.codbodegaDataGridViewTextBoxColumn2.Width = 83;
-            // 
-            // descripcionDataGridViewTextBoxColumn2
-            // 
-            this.descripcionDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.descripcionDataGridViewTextBoxColumn2.DataPropertyName = "descripcion";
-            this.descripcionDataGridViewTextBoxColumn2.HeaderText = "Descripción";
-            this.descripcionDataGridViewTextBoxColumn2.Name = "descripcionDataGridViewTextBoxColumn2";
-            this.descripcionDataGridViewTextBoxColumn2.ReadOnly = true;
-            this.descripcionDataGridViewTextBoxColumn2.Width = 116;
-            // 
-            // stock
-            // 
-            this.stock.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.stock.DataPropertyName = "stock";
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.stock.DefaultCellStyle = dataGridViewCellStyle22;
-            this.stock.HeaderText = "Stock";
-            this.stock.Name = "stock";
-            this.stock.ReadOnly = true;
-            this.stock.Width = 72;
-            // 
             // stock_min
             // 
             this.stock_min.DataPropertyName = "stock_min";
             this.stock_min.HeaderText = "Stock Min.";
             this.stock_min.Name = "stock_min";
             this.stock_min.ReadOnly = true;
-            // 
-            // nomproveedorDataGridViewTextBoxColumn2
-            // 
-            this.nomproveedorDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.nomproveedorDataGridViewTextBoxColumn2.DataPropertyName = "nom_proveedor";
-            this.nomproveedorDataGridViewTextBoxColumn2.HeaderText = "Proveedor";
-            this.nomproveedorDataGridViewTextBoxColumn2.Name = "nomproveedorDataGridViewTextBoxColumn2";
-            this.nomproveedorDataGridViewTextBoxColumn2.ReadOnly = true;
-            this.nomproveedorDataGridViewTextBoxColumn2.Width = 106;
-            // 
-            // nommarcaDataGridViewTextBoxColumn2
-            // 
-            this.nommarcaDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.nommarcaDataGridViewTextBoxColumn2.DataPropertyName = "nom_marca";
-            this.nommarcaDataGridViewTextBoxColumn2.HeaderText = "Marca";
-            this.nommarcaDataGridViewTextBoxColumn2.Name = "nommarcaDataGridViewTextBoxColumn2";
-            this.nommarcaDataGridViewTextBoxColumn2.ReadOnly = true;
-            this.nommarcaDataGridViewTextBoxColumn2.Width = 76;
-            // 
-            // valorDataGridViewTextBoxColumn2
-            // 
-            this.valorDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.valorDataGridViewTextBoxColumn2.DataPropertyName = "valor";
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle23.Format = "C0";
-            dataGridViewCellStyle23.NullValue = null;
-            this.valorDataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle23;
-            this.valorDataGridViewTextBoxColumn2.HeaderText = "Valor";
-            this.valorDataGridViewTextBoxColumn2.Name = "valorDataGridViewTextBoxColumn2";
-            this.valorDataGridViewTextBoxColumn2.ReadOnly = true;
-            this.valorDataGridViewTextBoxColumn2.Width = 70;
-            // 
-            // valorunitarioDataGridViewTextBoxColumn2
-            // 
-            this.valorunitarioDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.valorunitarioDataGridViewTextBoxColumn2.DataPropertyName = "valor_unitario";
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle24.Format = "C0";
-            dataGridViewCellStyle24.NullValue = "-";
-            this.valorunitarioDataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle24;
-            this.valorunitarioDataGridViewTextBoxColumn2.HeaderText = "Valor Uni";
-            this.valorunitarioDataGridViewTextBoxColumn2.Name = "valorunitarioDataGridViewTextBoxColumn2";
-            this.valorunitarioDataGridViewTextBoxColumn2.ReadOnly = true;
-            this.valorunitarioDataGridViewTextBoxColumn2.Width = 97;
-            // 
-            // elementoStockBodegaBindingSource
-            // 
-            this.elementoStockBodegaBindingSource.DataSource = typeof(Convertec_Bodega_Administracion.Model.ElementoStockBodega);
             // 
             // INFpanelStockBodega1
             // 
@@ -2885,87 +3165,12 @@ namespace Convertec_Bodega_Administracion
             this.INFdataGridViewStockBodegaImportacion.TabIndex = 1;
             this.INFdataGridViewStockBodegaImportacion.TabStop = false;
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "cod_bodega";
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle26;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Código";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 83;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "descripcion";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Descripción";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 116;
-            // 
-            // stock_imp
-            // 
-            this.stock_imp.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.stock_imp.DataPropertyName = "stock";
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.stock_imp.DefaultCellStyle = dataGridViewCellStyle27;
-            this.stock_imp.HeaderText = "Stock";
-            this.stock_imp.Name = "stock_imp";
-            this.stock_imp.ReadOnly = true;
-            this.stock_imp.Width = 72;
-            // 
             // stock_min_imp
             // 
             this.stock_min_imp.DataPropertyName = "stock_min";
             this.stock_min_imp.HeaderText = "Stock Min.";
             this.stock_min_imp.Name = "stock_min_imp";
             this.stock_min_imp.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "nom_proveedor";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Proveedor";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Width = 106;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "nom_marca";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Marca";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            this.dataGridViewTextBoxColumn6.Width = 76;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "valor";
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle28.Format = "C0";
-            dataGridViewCellStyle28.NullValue = "-";
-            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle28;
-            this.dataGridViewTextBoxColumn7.HeaderText = "Valor";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            this.dataGridViewTextBoxColumn7.Width = 70;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "valor_unitario";
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle29.Format = "C0";
-            dataGridViewCellStyle29.NullValue = "-";
-            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle29;
-            this.dataGridViewTextBoxColumn8.HeaderText = "Valor Uni";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            this.dataGridViewTextBoxColumn8.Width = 97;
             // 
             // INFpanelStockImportacion1
             // 
@@ -3157,69 +3362,6 @@ namespace Convertec_Bodega_Administracion
             this.INFdataGridViewListadoOT.TabIndex = 0;
             this.INFdataGridViewListadoOT.TabStop = false;
             // 
-            // parteplanoDataGridViewTextBoxColumn1
-            // 
-            this.parteplanoDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.parteplanoDataGridViewTextBoxColumn1.DataPropertyName = "parte_plano";
-            this.parteplanoDataGridViewTextBoxColumn1.HeaderText = "Parte en Plano";
-            this.parteplanoDataGridViewTextBoxColumn1.Name = "parteplanoDataGridViewTextBoxColumn1";
-            this.parteplanoDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.parteplanoDataGridViewTextBoxColumn1.Width = 123;
-            // 
-            // descripcionDataGridViewTextBoxColumn3
-            // 
-            this.descripcionDataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.descripcionDataGridViewTextBoxColumn3.DataPropertyName = "descripcion";
-            this.descripcionDataGridViewTextBoxColumn3.HeaderText = "Descripción";
-            this.descripcionDataGridViewTextBoxColumn3.Name = "descripcionDataGridViewTextBoxColumn3";
-            this.descripcionDataGridViewTextBoxColumn3.ReadOnly = true;
-            this.descripcionDataGridViewTextBoxColumn3.Width = 116;
-            // 
-            // nomproveedorDataGridViewTextBoxColumn3
-            // 
-            this.nomproveedorDataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.nomproveedorDataGridViewTextBoxColumn3.DataPropertyName = "nom_proveedor";
-            this.nomproveedorDataGridViewTextBoxColumn3.HeaderText = "Proveedor";
-            this.nomproveedorDataGridViewTextBoxColumn3.Name = "nomproveedorDataGridViewTextBoxColumn3";
-            this.nomproveedorDataGridViewTextBoxColumn3.ReadOnly = true;
-            this.nomproveedorDataGridViewTextBoxColumn3.Width = 106;
-            // 
-            // nommarcaDataGridViewTextBoxColumn3
-            // 
-            this.nommarcaDataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.nommarcaDataGridViewTextBoxColumn3.DataPropertyName = "nom_marca";
-            this.nommarcaDataGridViewTextBoxColumn3.HeaderText = "Marca";
-            this.nommarcaDataGridViewTextBoxColumn3.Name = "nommarcaDataGridViewTextBoxColumn3";
-            this.nommarcaDataGridViewTextBoxColumn3.ReadOnly = true;
-            this.nommarcaDataGridViewTextBoxColumn3.Width = 76;
-            // 
-            // valorDataGridViewTextBoxColumn3
-            // 
-            this.valorDataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.valorDataGridViewTextBoxColumn3.DataPropertyName = "valor";
-            this.valorDataGridViewTextBoxColumn3.HeaderText = "Valor";
-            this.valorDataGridViewTextBoxColumn3.Name = "valorDataGridViewTextBoxColumn3";
-            this.valorDataGridViewTextBoxColumn3.ReadOnly = true;
-            this.valorDataGridViewTextBoxColumn3.Width = 70;
-            // 
-            // valorunitarioDataGridViewTextBoxColumn3
-            // 
-            this.valorunitarioDataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.valorunitarioDataGridViewTextBoxColumn3.DataPropertyName = "valor_unitario";
-            this.valorunitarioDataGridViewTextBoxColumn3.HeaderText = "Valor Unitario";
-            this.valorunitarioDataGridViewTextBoxColumn3.Name = "valorunitarioDataGridViewTextBoxColumn3";
-            this.valorunitarioDataGridViewTextBoxColumn3.ReadOnly = true;
-            this.valorunitarioDataGridViewTextBoxColumn3.Width = 117;
-            // 
-            // cantidadDataGridViewTextBoxColumn3
-            // 
-            this.cantidadDataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.cantidadDataGridViewTextBoxColumn3.DataPropertyName = "cantidad";
-            this.cantidadDataGridViewTextBoxColumn3.HeaderText = "Cant.";
-            this.cantidadDataGridViewTextBoxColumn3.Name = "cantidadDataGridViewTextBoxColumn3";
-            this.cantidadDataGridViewTextBoxColumn3.ReadOnly = true;
-            this.cantidadDataGridViewTextBoxColumn3.Width = 68;
-            // 
             // bodega
             // 
             this.bodega.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
@@ -3227,6 +3369,7 @@ namespace Convertec_Bodega_Administracion
             this.bodega.Name = "bodega";
             this.bodega.ReadOnly = true;
             this.bodega.Visible = false;
+            this.bodega.Width = 69;
             // 
             // compra
             // 
@@ -3235,6 +3378,7 @@ namespace Convertec_Bodega_Administracion
             this.compra.Name = "compra";
             this.compra.ReadOnly = true;
             this.compra.Visible = false;
+            this.compra.Width = 68;
             // 
             // subtotal
             // 
@@ -3243,10 +3387,7 @@ namespace Convertec_Bodega_Administracion
             this.subtotal.Name = "subtotal";
             this.subtotal.ReadOnly = true;
             this.subtotal.Visible = false;
-            // 
-            // elementoUtilizadoOTBindingSource
-            // 
-            this.elementoUtilizadoOTBindingSource.DataSource = typeof(Convertec_Bodega_Administracion.Model.ElementoUtilizadoOT);
+            this.subtotal.Width = 71;
             // 
             // INFpanelListadoOT1
             // 
@@ -3335,6 +3476,543 @@ namespace Convertec_Bodega_Administracion
             this.InfoToolTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.InfoToolTip.ToolTipTitle = "Info:";
             // 
+            // CEopenFileDialogImagen
+            // 
+            this.CEopenFileDialogImagen.FileName = "CEopenFileDialogImagen";
+            // 
+            // fechamovDataGridViewTextBoxColumn2
+            // 
+            this.fechamovDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.fechamovDataGridViewTextBoxColumn2.DataPropertyName = "fecha_mov";
+            this.fechamovDataGridViewTextBoxColumn2.HeaderText = "Fecha";
+            this.fechamovDataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.fechamovDataGridViewTextBoxColumn2.Name = "fechamovDataGridViewTextBoxColumn2";
+            this.fechamovDataGridViewTextBoxColumn2.ReadOnly = true;
+            this.fechamovDataGridViewTextBoxColumn2.Width = 76;
+            // 
+            // codprodprovDataGridViewTextBoxColumn
+            // 
+            this.codprodprovDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.codprodprovDataGridViewTextBoxColumn.DataPropertyName = "cod_prod_prov";
+            this.codprodprovDataGridViewTextBoxColumn.HeaderText = "Código Proveedor";
+            this.codprodprovDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.codprodprovDataGridViewTextBoxColumn.Name = "codprodprovDataGridViewTextBoxColumn";
+            this.codprodprovDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codprodprovDataGridViewTextBoxColumn.Width = 146;
+            // 
+            // cantidadDataGridViewTextBoxColumn2
+            // 
+            this.cantidadDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.cantidadDataGridViewTextBoxColumn2.DataPropertyName = "cantidad";
+            this.cantidadDataGridViewTextBoxColumn2.HeaderText = "Cant";
+            this.cantidadDataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.cantidadDataGridViewTextBoxColumn2.Name = "cantidadDataGridViewTextBoxColumn2";
+            this.cantidadDataGridViewTextBoxColumn2.ReadOnly = true;
+            this.cantidadDataGridViewTextBoxColumn2.Width = 64;
+            // 
+            // otDataGridViewTextBoxColumn2
+            // 
+            this.otDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.otDataGridViewTextBoxColumn2.DataPropertyName = "ot";
+            this.otDataGridViewTextBoxColumn2.HeaderText = "OT";
+            this.otDataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.otDataGridViewTextBoxColumn2.Name = "otDataGridViewTextBoxColumn2";
+            this.otDataGridViewTextBoxColumn2.ReadOnly = true;
+            this.otDataGridViewTextBoxColumn2.Width = 54;
+            // 
+            // folioDataGridViewTextBoxColumn
+            // 
+            this.folioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.folioDataGridViewTextBoxColumn.DataPropertyName = "folio";
+            this.folioDataGridViewTextBoxColumn.HeaderText = "Folio";
+            this.folioDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.folioDataGridViewTextBoxColumn.Name = "folioDataGridViewTextBoxColumn";
+            this.folioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.folioDataGridViewTextBoxColumn.Width = 68;
+            // 
+            // documentoDataGridViewTextBoxColumn1
+            // 
+            this.documentoDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.documentoDataGridViewTextBoxColumn1.DataPropertyName = "documento";
+            this.documentoDataGridViewTextBoxColumn1.HeaderText = "Documento";
+            this.documentoDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.documentoDataGridViewTextBoxColumn1.Name = "documentoDataGridViewTextBoxColumn1";
+            this.documentoDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.documentoDataGridViewTextBoxColumn1.Width = 111;
+            // 
+            // nomproveedorDataGridViewTextBoxColumn1
+            // 
+            this.nomproveedorDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.nomproveedorDataGridViewTextBoxColumn1.DataPropertyName = "nom_proveedor";
+            this.nomproveedorDataGridViewTextBoxColumn1.HeaderText = "Proveedor";
+            this.nomproveedorDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.nomproveedorDataGridViewTextBoxColumn1.Name = "nomproveedorDataGridViewTextBoxColumn1";
+            this.nomproveedorDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.nomproveedorDataGridViewTextBoxColumn1.Width = 106;
+            // 
+            // nommarcaDataGridViewTextBoxColumn1
+            // 
+            this.nommarcaDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.nommarcaDataGridViewTextBoxColumn1.DataPropertyName = "nom_marca";
+            this.nommarcaDataGridViewTextBoxColumn1.HeaderText = "Marca";
+            this.nommarcaDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.nommarcaDataGridViewTextBoxColumn1.Name = "nommarcaDataGridViewTextBoxColumn1";
+            this.nommarcaDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.nommarcaDataGridViewTextBoxColumn1.Width = 76;
+            // 
+            // valorDataGridViewTextBoxColumn1
+            // 
+            this.valorDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.valorDataGridViewTextBoxColumn1.DataPropertyName = "valor";
+            this.valorDataGridViewTextBoxColumn1.HeaderText = "Valor";
+            this.valorDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.valorDataGridViewTextBoxColumn1.Name = "valorDataGridViewTextBoxColumn1";
+            this.valorDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.valorDataGridViewTextBoxColumn1.Width = 70;
+            // 
+            // valorunitarioDataGridViewTextBoxColumn1
+            // 
+            this.valorunitarioDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.valorunitarioDataGridViewTextBoxColumn1.DataPropertyName = "valor_unitario";
+            this.valorunitarioDataGridViewTextBoxColumn1.HeaderText = "Valor Unitario";
+            this.valorunitarioDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.valorunitarioDataGridViewTextBoxColumn1.Name = "valorunitarioDataGridViewTextBoxColumn1";
+            this.valorunitarioDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.valorunitarioDataGridViewTextBoxColumn1.Width = 117;
+            // 
+            // historialMovimientoTablaBindingSource
+            // 
+            this.historialMovimientoTablaBindingSource.DataSource = typeof(Convertec_Bodega_Administracion.Model.HistorialMovimientoTabla);
+            // 
+            // codbodegaDataGridViewTextBoxColumn2
+            // 
+            this.codbodegaDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.codbodegaDataGridViewTextBoxColumn2.DataPropertyName = "cod_bodega";
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.codbodegaDataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle21;
+            this.codbodegaDataGridViewTextBoxColumn2.HeaderText = "Código";
+            this.codbodegaDataGridViewTextBoxColumn2.Name = "codbodegaDataGridViewTextBoxColumn2";
+            this.codbodegaDataGridViewTextBoxColumn2.ReadOnly = true;
+            this.codbodegaDataGridViewTextBoxColumn2.Width = 83;
+            // 
+            // descripcionDataGridViewTextBoxColumn2
+            // 
+            this.descripcionDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.descripcionDataGridViewTextBoxColumn2.DataPropertyName = "descripcion";
+            this.descripcionDataGridViewTextBoxColumn2.HeaderText = "Descripción";
+            this.descripcionDataGridViewTextBoxColumn2.Name = "descripcionDataGridViewTextBoxColumn2";
+            this.descripcionDataGridViewTextBoxColumn2.ReadOnly = true;
+            this.descripcionDataGridViewTextBoxColumn2.Width = 116;
+            // 
+            // stock
+            // 
+            this.stock.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.stock.DataPropertyName = "stock";
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.stock.DefaultCellStyle = dataGridViewCellStyle22;
+            this.stock.HeaderText = "Stock";
+            this.stock.Name = "stock";
+            this.stock.ReadOnly = true;
+            this.stock.Width = 72;
+            // 
+            // nomproveedorDataGridViewTextBoxColumn2
+            // 
+            this.nomproveedorDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.nomproveedorDataGridViewTextBoxColumn2.DataPropertyName = "nom_proveedor";
+            this.nomproveedorDataGridViewTextBoxColumn2.HeaderText = "Proveedor";
+            this.nomproveedorDataGridViewTextBoxColumn2.Name = "nomproveedorDataGridViewTextBoxColumn2";
+            this.nomproveedorDataGridViewTextBoxColumn2.ReadOnly = true;
+            this.nomproveedorDataGridViewTextBoxColumn2.Width = 106;
+            // 
+            // nommarcaDataGridViewTextBoxColumn2
+            // 
+            this.nommarcaDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.nommarcaDataGridViewTextBoxColumn2.DataPropertyName = "nom_marca";
+            this.nommarcaDataGridViewTextBoxColumn2.HeaderText = "Marca";
+            this.nommarcaDataGridViewTextBoxColumn2.Name = "nommarcaDataGridViewTextBoxColumn2";
+            this.nommarcaDataGridViewTextBoxColumn2.ReadOnly = true;
+            this.nommarcaDataGridViewTextBoxColumn2.Width = 76;
+            // 
+            // valorDataGridViewTextBoxColumn2
+            // 
+            this.valorDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.valorDataGridViewTextBoxColumn2.DataPropertyName = "valor";
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle23.Format = "C0";
+            dataGridViewCellStyle23.NullValue = null;
+            this.valorDataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle23;
+            this.valorDataGridViewTextBoxColumn2.HeaderText = "Valor";
+            this.valorDataGridViewTextBoxColumn2.Name = "valorDataGridViewTextBoxColumn2";
+            this.valorDataGridViewTextBoxColumn2.ReadOnly = true;
+            this.valorDataGridViewTextBoxColumn2.Width = 70;
+            // 
+            // valorunitarioDataGridViewTextBoxColumn2
+            // 
+            this.valorunitarioDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.valorunitarioDataGridViewTextBoxColumn2.DataPropertyName = "valor_unitario";
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle24.Format = "C0";
+            dataGridViewCellStyle24.NullValue = "-";
+            this.valorunitarioDataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle24;
+            this.valorunitarioDataGridViewTextBoxColumn2.HeaderText = "Valor Uni";
+            this.valorunitarioDataGridViewTextBoxColumn2.Name = "valorunitarioDataGridViewTextBoxColumn2";
+            this.valorunitarioDataGridViewTextBoxColumn2.ReadOnly = true;
+            this.valorunitarioDataGridViewTextBoxColumn2.Width = 97;
+            // 
+            // elementoStockBodegaBindingSource
+            // 
+            this.elementoStockBodegaBindingSource.DataSource = typeof(Convertec_Bodega_Administracion.Model.ElementoStockBodega);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "cod_bodega";
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle26;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Código";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 83;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "descripcion";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Descripción";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 116;
+            // 
+            // stock_imp
+            // 
+            this.stock_imp.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.stock_imp.DataPropertyName = "stock";
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.stock_imp.DefaultCellStyle = dataGridViewCellStyle27;
+            this.stock_imp.HeaderText = "Stock";
+            this.stock_imp.Name = "stock_imp";
+            this.stock_imp.ReadOnly = true;
+            this.stock_imp.Width = 72;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "nom_proveedor";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Proveedor";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Width = 106;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "nom_marca";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Marca";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.Width = 76;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "valor";
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle28.Format = "C0";
+            dataGridViewCellStyle28.NullValue = "-";
+            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle28;
+            this.dataGridViewTextBoxColumn7.HeaderText = "Valor";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.Width = 70;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "valor_unitario";
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle29.Format = "C0";
+            dataGridViewCellStyle29.NullValue = "-";
+            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle29;
+            this.dataGridViewTextBoxColumn8.HeaderText = "Valor Uni";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            this.dataGridViewTextBoxColumn8.Width = 97;
+            // 
+            // parteplanoDataGridViewTextBoxColumn1
+            // 
+            this.parteplanoDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.parteplanoDataGridViewTextBoxColumn1.DataPropertyName = "parte_plano";
+            this.parteplanoDataGridViewTextBoxColumn1.HeaderText = "Parte en Plano";
+            this.parteplanoDataGridViewTextBoxColumn1.Name = "parteplanoDataGridViewTextBoxColumn1";
+            this.parteplanoDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.parteplanoDataGridViewTextBoxColumn1.Width = 123;
+            // 
+            // descripcionDataGridViewTextBoxColumn3
+            // 
+            this.descripcionDataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.descripcionDataGridViewTextBoxColumn3.DataPropertyName = "descripcion";
+            this.descripcionDataGridViewTextBoxColumn3.HeaderText = "Descripción";
+            this.descripcionDataGridViewTextBoxColumn3.Name = "descripcionDataGridViewTextBoxColumn3";
+            this.descripcionDataGridViewTextBoxColumn3.ReadOnly = true;
+            this.descripcionDataGridViewTextBoxColumn3.Width = 116;
+            // 
+            // nomproveedorDataGridViewTextBoxColumn3
+            // 
+            this.nomproveedorDataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.nomproveedorDataGridViewTextBoxColumn3.DataPropertyName = "nom_proveedor";
+            this.nomproveedorDataGridViewTextBoxColumn3.HeaderText = "Proveedor";
+            this.nomproveedorDataGridViewTextBoxColumn3.Name = "nomproveedorDataGridViewTextBoxColumn3";
+            this.nomproveedorDataGridViewTextBoxColumn3.ReadOnly = true;
+            this.nomproveedorDataGridViewTextBoxColumn3.Width = 106;
+            // 
+            // nommarcaDataGridViewTextBoxColumn3
+            // 
+            this.nommarcaDataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.nommarcaDataGridViewTextBoxColumn3.DataPropertyName = "nom_marca";
+            this.nommarcaDataGridViewTextBoxColumn3.HeaderText = "Marca";
+            this.nommarcaDataGridViewTextBoxColumn3.Name = "nommarcaDataGridViewTextBoxColumn3";
+            this.nommarcaDataGridViewTextBoxColumn3.ReadOnly = true;
+            this.nommarcaDataGridViewTextBoxColumn3.Width = 76;
+            // 
+            // valorDataGridViewTextBoxColumn3
+            // 
+            this.valorDataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.valorDataGridViewTextBoxColumn3.DataPropertyName = "valor";
+            this.valorDataGridViewTextBoxColumn3.HeaderText = "Valor";
+            this.valorDataGridViewTextBoxColumn3.Name = "valorDataGridViewTextBoxColumn3";
+            this.valorDataGridViewTextBoxColumn3.ReadOnly = true;
+            this.valorDataGridViewTextBoxColumn3.Width = 70;
+            // 
+            // valorunitarioDataGridViewTextBoxColumn3
+            // 
+            this.valorunitarioDataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.valorunitarioDataGridViewTextBoxColumn3.DataPropertyName = "valor_unitario";
+            this.valorunitarioDataGridViewTextBoxColumn3.HeaderText = "Valor Unitario";
+            this.valorunitarioDataGridViewTextBoxColumn3.Name = "valorunitarioDataGridViewTextBoxColumn3";
+            this.valorunitarioDataGridViewTextBoxColumn3.ReadOnly = true;
+            this.valorunitarioDataGridViewTextBoxColumn3.Width = 117;
+            // 
+            // cantidadDataGridViewTextBoxColumn3
+            // 
+            this.cantidadDataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.cantidadDataGridViewTextBoxColumn3.DataPropertyName = "cantidad";
+            this.cantidadDataGridViewTextBoxColumn3.HeaderText = "Cant.";
+            this.cantidadDataGridViewTextBoxColumn3.Name = "cantidadDataGridViewTextBoxColumn3";
+            this.cantidadDataGridViewTextBoxColumn3.ReadOnly = true;
+            this.cantidadDataGridViewTextBoxColumn3.Width = 68;
+            // 
+            // elementoUtilizadoOTBindingSource
+            // 
+            this.elementoUtilizadoOTBindingSource.DataSource = typeof(Convertec_Bodega_Administracion.Model.ElementoUtilizadoOT);
+            // 
+            // codbodegaDataGridViewTextBoxColumn
+            // 
+            this.codbodegaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.codbodegaDataGridViewTextBoxColumn.DataPropertyName = "cod_bodega";
+            this.codbodegaDataGridViewTextBoxColumn.HeaderText = "Código";
+            this.codbodegaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.codbodegaDataGridViewTextBoxColumn.Name = "codbodegaDataGridViewTextBoxColumn";
+            this.codbodegaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codbodegaDataGridViewTextBoxColumn.Width = 83;
+            // 
+            // descripcionDataGridViewTextBoxColumn
+            // 
+            this.descripcionDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "descripcion";
+            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripción";
+            this.descripcionDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
+            this.descripcionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.descripcionDataGridViewTextBoxColumn.Width = 116;
+            // 
+            // cantidadDataGridViewTextBoxColumn
+            // 
+            this.cantidadDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.cantidadDataGridViewTextBoxColumn.DataPropertyName = "cantidad";
+            this.cantidadDataGridViewTextBoxColumn.HeaderText = "Cant";
+            this.cantidadDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.cantidadDataGridViewTextBoxColumn.Name = "cantidadDataGridViewTextBoxColumn";
+            this.cantidadDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cantidadDataGridViewTextBoxColumn.Width = 64;
+            // 
+            // fechamovDataGridViewTextBoxColumn
+            // 
+            this.fechamovDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.fechamovDataGridViewTextBoxColumn.DataPropertyName = "fecha_mov";
+            this.fechamovDataGridViewTextBoxColumn.HeaderText = "Fecha";
+            this.fechamovDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.fechamovDataGridViewTextBoxColumn.Name = "fechamovDataGridViewTextBoxColumn";
+            this.fechamovDataGridViewTextBoxColumn.ReadOnly = true;
+            this.fechamovDataGridViewTextBoxColumn.Width = 76;
+            // 
+            // otDataGridViewTextBoxColumn
+            // 
+            this.otDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.otDataGridViewTextBoxColumn.DataPropertyName = "ot";
+            this.otDataGridViewTextBoxColumn.HeaderText = "OT";
+            this.otDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.otDataGridViewTextBoxColumn.Name = "otDataGridViewTextBoxColumn";
+            this.otDataGridViewTextBoxColumn.ReadOnly = true;
+            this.otDataGridViewTextBoxColumn.Width = 54;
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nombreDataGridViewTextBoxColumn.Width = 88;
+            // 
+            // apellidosDataGridViewTextBoxColumn
+            // 
+            this.apellidosDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.apellidosDataGridViewTextBoxColumn.DataPropertyName = "apellidos";
+            this.apellidosDataGridViewTextBoxColumn.HeaderText = "Apellidos";
+            this.apellidosDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.apellidosDataGridViewTextBoxColumn.Name = "apellidosDataGridViewTextBoxColumn";
+            this.apellidosDataGridViewTextBoxColumn.ReadOnly = true;
+            this.apellidosDataGridViewTextBoxColumn.Width = 99;
+            // 
+            // obsmovDataGridViewTextBoxColumn
+            // 
+            this.obsmovDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.obsmovDataGridViewTextBoxColumn.DataPropertyName = "obs_mov";
+            this.obsmovDataGridViewTextBoxColumn.HeaderText = "Obs";
+            this.obsmovDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.obsmovDataGridViewTextBoxColumn.Name = "obsmovDataGridViewTextBoxColumn";
+            this.obsmovDataGridViewTextBoxColumn.ReadOnly = true;
+            this.obsmovDataGridViewTextBoxColumn.Width = 61;
+            // 
+            // movSalidasDataGridDTOBindingSource
+            // 
+            this.movSalidasDataGridDTOBindingSource.DataSource = typeof(Convertec_Bodega_Administracion.Model.MovSalidasDataGridDTO);
+            // 
+            // codbodegaDataGridViewTextBoxColumn1
+            // 
+            this.codbodegaDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.codbodegaDataGridViewTextBoxColumn1.DataPropertyName = "cod_bodega";
+            this.codbodegaDataGridViewTextBoxColumn1.HeaderText = "Código";
+            this.codbodegaDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.codbodegaDataGridViewTextBoxColumn1.Name = "codbodegaDataGridViewTextBoxColumn1";
+            this.codbodegaDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.codbodegaDataGridViewTextBoxColumn1.Width = 83;
+            // 
+            // descripcionDataGridViewTextBoxColumn1
+            // 
+            this.descripcionDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.descripcionDataGridViewTextBoxColumn1.DataPropertyName = "descripcion";
+            this.descripcionDataGridViewTextBoxColumn1.HeaderText = "Descripción";
+            this.descripcionDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.descripcionDataGridViewTextBoxColumn1.Name = "descripcionDataGridViewTextBoxColumn1";
+            this.descripcionDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.descripcionDataGridViewTextBoxColumn1.Width = 116;
+            // 
+            // cantidadDataGridViewTextBoxColumn1
+            // 
+            this.cantidadDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.cantidadDataGridViewTextBoxColumn1.DataPropertyName = "cantidad";
+            this.cantidadDataGridViewTextBoxColumn1.HeaderText = "Cant";
+            this.cantidadDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.cantidadDataGridViewTextBoxColumn1.Name = "cantidadDataGridViewTextBoxColumn1";
+            this.cantidadDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.cantidadDataGridViewTextBoxColumn1.Width = 64;
+            // 
+            // documentoDataGridViewTextBoxColumn
+            // 
+            this.documentoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.documentoDataGridViewTextBoxColumn.DataPropertyName = "documento";
+            this.documentoDataGridViewTextBoxColumn.HeaderText = "Documento";
+            this.documentoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.documentoDataGridViewTextBoxColumn.Name = "documentoDataGridViewTextBoxColumn";
+            this.documentoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.documentoDataGridViewTextBoxColumn.Width = 111;
+            // 
+            // valorDataGridViewTextBoxColumn
+            // 
+            this.valorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.valorDataGridViewTextBoxColumn.DataPropertyName = "valor";
+            this.valorDataGridViewTextBoxColumn.HeaderText = "Valor";
+            this.valorDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.valorDataGridViewTextBoxColumn.Name = "valorDataGridViewTextBoxColumn";
+            this.valorDataGridViewTextBoxColumn.ReadOnly = true;
+            this.valorDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // valorunitarioDataGridViewTextBoxColumn
+            // 
+            this.valorunitarioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.valorunitarioDataGridViewTextBoxColumn.DataPropertyName = "valor_unitario";
+            this.valorunitarioDataGridViewTextBoxColumn.HeaderText = "Valor Unitario";
+            this.valorunitarioDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.valorunitarioDataGridViewTextBoxColumn.Name = "valorunitarioDataGridViewTextBoxColumn";
+            this.valorunitarioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.valorunitarioDataGridViewTextBoxColumn.Width = 117;
+            // 
+            // nomproveedorDataGridViewTextBoxColumn
+            // 
+            this.nomproveedorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.nomproveedorDataGridViewTextBoxColumn.DataPropertyName = "nom_proveedor";
+            this.nomproveedorDataGridViewTextBoxColumn.HeaderText = "Proveedor";
+            this.nomproveedorDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nomproveedorDataGridViewTextBoxColumn.Name = "nomproveedorDataGridViewTextBoxColumn";
+            this.nomproveedorDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nomproveedorDataGridViewTextBoxColumn.Width = 106;
+            // 
+            // nommarcaDataGridViewTextBoxColumn
+            // 
+            this.nommarcaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.nommarcaDataGridViewTextBoxColumn.DataPropertyName = "nom_marca";
+            this.nommarcaDataGridViewTextBoxColumn.HeaderText = "Marca";
+            this.nommarcaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nommarcaDataGridViewTextBoxColumn.Name = "nommarcaDataGridViewTextBoxColumn";
+            this.nommarcaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nommarcaDataGridViewTextBoxColumn.Width = 76;
+            // 
+            // fechamovDataGridViewTextBoxColumn1
+            // 
+            this.fechamovDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.fechamovDataGridViewTextBoxColumn1.DataPropertyName = "fecha_mov";
+            this.fechamovDataGridViewTextBoxColumn1.HeaderText = "Fecha";
+            this.fechamovDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.fechamovDataGridViewTextBoxColumn1.Name = "fechamovDataGridViewTextBoxColumn1";
+            this.fechamovDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.fechamovDataGridViewTextBoxColumn1.Width = 76;
+            // 
+            // parteplanoDataGridViewTextBoxColumn
+            // 
+            this.parteplanoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.parteplanoDataGridViewTextBoxColumn.DataPropertyName = "parte_plano";
+            this.parteplanoDataGridViewTextBoxColumn.HeaderText = "Parte Plano";
+            this.parteplanoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.parteplanoDataGridViewTextBoxColumn.Name = "parteplanoDataGridViewTextBoxColumn";
+            this.parteplanoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.parteplanoDataGridViewTextBoxColumn.Width = 105;
+            // 
+            // otDataGridViewTextBoxColumn1
+            // 
+            this.otDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.otDataGridViewTextBoxColumn1.DataPropertyName = "ot";
+            this.otDataGridViewTextBoxColumn1.HeaderText = "OT";
+            this.otDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.otDataGridViewTextBoxColumn1.Name = "otDataGridViewTextBoxColumn1";
+            this.otDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.otDataGridViewTextBoxColumn1.Width = 54;
+            // 
+            // obsmovDataGridViewTextBoxColumn1
+            // 
+            this.obsmovDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.obsmovDataGridViewTextBoxColumn1.DataPropertyName = "obs_mov";
+            this.obsmovDataGridViewTextBoxColumn1.HeaderText = "Obs";
+            this.obsmovDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.obsmovDataGridViewTextBoxColumn1.Name = "obsmovDataGridViewTextBoxColumn1";
+            this.obsmovDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.obsmovDataGridViewTextBoxColumn1.Width = 61;
+            // 
+            // movIngresoDataGridDTOBindingSource
+            // 
+            this.movIngresoDataGridDTOBindingSource.DataSource = typeof(Convertec_Bodega_Administracion.Model.MovIngresoDataGridDTO);
+            // 
             // idDescripcionElementoBindingSource
             // 
             this.idDescripcionElementoBindingSource.DataSource = typeof(Convertec_Bodega_Administracion.Model.IdDescripcionElemento);
@@ -3344,7 +4022,7 @@ namespace Convertec_Bodega_Administracion
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(243)))), ((int)(((byte)(246)))));
-            this.ClientSize = new System.Drawing.Size(1254, 1041);
+            this.ClientSize = new System.Drawing.Size(1254, 729);
             this.Controls.Add(this.BodypanelGeneral);
             this.Controls.Add(this.HpanelHeader);
             this.Controls.Add(this.panelSidebar);
@@ -3366,9 +4044,7 @@ namespace Convertec_Bodega_Administracion
             this.HpanelHeader.ResumeLayout(false);
             this.HpanelHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SIdataGridViewSalidas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.movSalidasDataGridDTOBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SIdataGridViewIngresos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.movIngresoDataGridDTOBindingSource)).EndInit();
             this.splitContainerBodyPrincipal.Panel1.ResumeLayout(false);
             this.splitContainerBodyPrincipal.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerBodyPrincipal)).EndInit();
@@ -3410,7 +4086,6 @@ namespace Convertec_Bodega_Administracion
             this.MVpanelTablaElementos1.PerformLayout();
             this.MVpanelTablaMov2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.MVdataGridViewHistorial)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.historialMovimientoTablaBindingSource)).EndInit();
             this.MVpanelTablaMov1.ResumeLayout(false);
             this.MVpanelTablaMov1.PerformLayout();
             this.MVpanelBuscador.ResumeLayout(false);
@@ -3421,12 +4096,19 @@ namespace Convertec_Bodega_Administracion
             ((System.ComponentModel.ISupportInitialize)(this.MVpictureBoxProducto)).EndInit();
             this.BodyPanelSalidaIngreso.ResumeLayout(false);
             this.BodypanelGeneral.ResumeLayout(false);
+            this.BodyPanelCrearModifElemento.ResumeLayout(false);
+            this.tabControl1.ResumeLayout(false);
+            this.CMEtabCrear.ResumeLayout(false);
+            this.CEpanelL.ResumeLayout(false);
+            this.CEpanelL.PerformLayout();
+            this.CEpanelR.ResumeLayout(false);
+            this.CEpanelImagen.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.CEpictureBoxElem)).EndInit();
             this.BodyPanelInformes.ResumeLayout(false);
             this.INFtabControlInformes.ResumeLayout(false);
             this.INFtabPageStock.ResumeLayout(false);
             this.INFpanelStockBodega2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.INFdataGridViewStockBodega)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.elementoStockBodegaBindingSource)).EndInit();
             this.INFpanelStockBodega1.ResumeLayout(false);
             this.INFpanelStockBodega1.PerformLayout();
             this.INFtabPageImportacion.ResumeLayout(false);
@@ -3437,9 +4119,13 @@ namespace Convertec_Bodega_Administracion
             this.INFtabPagListadoOT.ResumeLayout(false);
             this.INFpanelListadoOT2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.INFdataGridViewListadoOT)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.elementoUtilizadoOTBindingSource)).EndInit();
             this.INFpanelListadoOT1.ResumeLayout(false);
             this.INFpanelListadoOT1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.historialMovimientoTablaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.elementoStockBodegaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.elementoUtilizadoOTBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.movSalidasDataGridDTOBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.movIngresoDataGridDTOBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.idDescripcionElementoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -3462,7 +4148,6 @@ namespace Convertec_Bodega_Administracion
         private System.Windows.Forms.BindingSource movIngresoDataGridDTOBindingSource;
         private System.Windows.Forms.SplitContainer splitContainerBodyPrincipal;
         private System.Windows.Forms.Label Hlabel1;
-        private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.DataGridViewTextBoxColumn codbodegaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidadDataGridViewTextBoxColumn;
@@ -3671,6 +4356,51 @@ namespace Convertec_Bodega_Administracion
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label IElabelPartePlano;
         private System.Windows.Forms.CheckBox INFcheckBoxCriticosStockImport;
+        private System.Windows.Forms.Panel BodyPanelCrearModifElemento;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage CMEtabCrear;
+        private System.Windows.Forms.TextBox CEtxtDescripcion;
+        private System.Windows.Forms.Panel CEpanelImagen;
+        private System.Windows.Forms.PictureBox CEpictureBoxElem;
+        private System.Windows.Forms.Label CElabel1;
+        private System.Windows.Forms.TabPage CMEtabModificar;
+        private System.Windows.Forms.Panel CEpanelL;
+        private System.Windows.Forms.RadioButton CEradioButtonUnidad;
+        private System.Windows.Forms.RadioButton CEradioButtonMetros;
+        private FontAwesome.Sharp.IconButton CEbtnAgregarMarca;
+        private System.Windows.Forms.ComboBox CEcomboBoxMarca;
+        private System.Windows.Forms.Label label12;
+        private FontAwesome.Sharp.IconButton CEbtnAgregarProv;
+        private System.Windows.Forms.ComboBox CEcomboBoxProv;
+        private System.Windows.Forms.Label CElabel10;
+        private System.Windows.Forms.Label CElabel7;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox CEtxtCodProv;
+        private System.Windows.Forms.TextBox CEtxtValorUnitario;
+        private System.Windows.Forms.TextBox CEtxtValor;
+        private System.Windows.Forms.Label CElabel9;
+        private System.Windows.Forms.Label CElabel5;
+        private System.Windows.Forms.Label CElabel4;
+        private System.Windows.Forms.Label CElabel6;
+        private System.Windows.Forms.RichTextBox CEtxtObs;
+        private System.Windows.Forms.Label CElabel11;
+        private System.Windows.Forms.TextBox CEtxtStock;
+        private System.Windows.Forms.Panel CEpanelR;
+        private System.Windows.Forms.Label CElabel8;
+        private System.Windows.Forms.TextBox CEtxtStockMin;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label CElabel3;
+        private System.Windows.Forms.TextBox CEtxtPartePlano;
+        private System.Windows.Forms.TextBox CEtxtCodBodega;
+        private System.Windows.Forms.Label CElabel2;
+        private FontAwesome.Sharp.IconButton CEbtnAgregarImg;
+        private System.Windows.Forms.OpenFileDialog CEopenFileDialogImagen;
+        private System.Windows.Forms.TextBox CEtxtDocumento;
+        private System.Windows.Forms.Label CElabel12;
+        private FontAwesome.Sharp.IconButton CEbtnCancelar;
+        private FontAwesome.Sharp.IconButton CEbtnAgregar;
+        private System.Windows.Forms.Label label1;
     }
 }
 

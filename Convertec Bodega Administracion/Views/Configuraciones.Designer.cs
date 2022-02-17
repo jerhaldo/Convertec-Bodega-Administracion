@@ -32,13 +32,13 @@ namespace Convertec_Bodega_Administracion.Views
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Configuraciones));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnBrowserImagePath = new FontAwesome.Sharp.IconButton();
             this.txtDirectorio = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnCancelar = new FontAwesome.Sharp.IconButton();
             this.btnGuardar = new FontAwesome.Sharp.IconButton();
             this.folderBrowserDialogImagePath = new System.Windows.Forms.FolderBrowserDialog();
-            this.btnBrowserImagePath = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -70,6 +70,23 @@ namespace Convertec_Bodega_Administracion.Views
             this.panel2.Padding = new System.Windows.Forms.Padding(30);
             this.panel2.Size = new System.Drawing.Size(491, 98);
             this.panel2.TabIndex = 0;
+            // 
+            // btnBrowserImagePath
+            // 
+            this.btnBrowserImagePath.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBrowserImagePath.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBrowserImagePath.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBrowserImagePath.IconChar = FontAwesome.Sharp.IconChar.FolderOpen;
+            this.btnBrowserImagePath.IconColor = System.Drawing.Color.DimGray;
+            this.btnBrowserImagePath.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBrowserImagePath.IconSize = 32;
+            this.btnBrowserImagePath.Location = new System.Drawing.Point(419, 26);
+            this.btnBrowserImagePath.Margin = new System.Windows.Forms.Padding(0);
+            this.btnBrowserImagePath.Name = "btnBrowserImagePath";
+            this.btnBrowserImagePath.Size = new System.Drawing.Size(40, 27);
+            this.btnBrowserImagePath.TabIndex = 6;
+            this.btnBrowserImagePath.UseVisualStyleBackColor = true;
+            this.btnBrowserImagePath.Click += new System.EventHandler(this.btnBrowserImagePath_Click);
             // 
             // txtDirectorio
             // 
@@ -159,22 +176,6 @@ namespace Convertec_Bodega_Administracion.Views
             this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // btnBrowserImagePath
-            // 
-            this.btnBrowserImagePath.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBrowserImagePath.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBrowserImagePath.IconChar = FontAwesome.Sharp.IconChar.FolderOpen;
-            this.btnBrowserImagePath.IconColor = System.Drawing.Color.DimGray;
-            this.btnBrowserImagePath.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnBrowserImagePath.IconSize = 32;
-            this.btnBrowserImagePath.Location = new System.Drawing.Point(419, 26);
-            this.btnBrowserImagePath.Margin = new System.Windows.Forms.Padding(0);
-            this.btnBrowserImagePath.Name = "btnBrowserImagePath";
-            this.btnBrowserImagePath.Size = new System.Drawing.Size(40, 27);
-            this.btnBrowserImagePath.TabIndex = 6;
-            this.btnBrowserImagePath.UseVisualStyleBackColor = true;
-            this.btnBrowserImagePath.Click += new System.EventHandler(this.btnBrowserImagePath_Click);
             // 
             // Configuraciones
             // 
