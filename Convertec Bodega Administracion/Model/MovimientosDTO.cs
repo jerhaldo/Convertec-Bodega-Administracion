@@ -41,6 +41,7 @@ namespace Convertec_Bodega_Administracion.Model
         public string nom_proveedor { get; set; }
         public string nom_marca { get; set; }
         public double stock { get; set; }
+        public double stock_min { get; set; }
         public int valor { get; set; }
         public string parte_plano { get; set; }
         public string ots { get; set; }

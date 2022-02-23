@@ -338,6 +338,7 @@ namespace Convertec_Bodega_Administracion.Business
                         nom_marca = m.nom_marca,
                         nom_proveedor = pr.nom_proveedor,
                         stock = p.stock,
+                        stock_min = p.stock_min,
                         ult_fecha_compra = p.ult_fecha_compra,
                         valor = p.valor,
                         parte_plano = p.parte_plano,
@@ -356,6 +357,7 @@ namespace Convertec_Bodega_Administracion.Business
                         nom_marca = prod.nom_marca,
                         nom_proveedor = prod.nom_proveedor,
                         stock = prod.stock,
+                        stock_min = prod.stock_min,
                         ult_fecha_compra = prod.ult_fecha_compra,
                         valor = prod.valor,
                         parte_plano = prod.parte_plano,
@@ -637,7 +639,7 @@ namespace Convertec_Bodega_Administracion.Business
                     from p in db.Producto
                     join m in db.Marca on p.id_marca equals m.id_marca
                     join pr in db.Proveedor on p.id_proveedor equals pr.id_proveedor
-                    where p.cod_bodega != null && p.obs.Contains("IMPORTACIÓN") && pr.nom_proveedor.Contains(proveedor) && m.nom_marca.Contains(marca) && p.stock <= p.stock_min
+                    where p.cod_bodega != null && p.importado && pr.nom_proveedor.Contains(proveedor) && m.nom_marca.Contains(marca) && p.stock <= p.stock_min
                     select new ElementoStockBodega
                     {
                         cod_bodega = p.cod_bodega,
@@ -657,7 +659,7 @@ namespace Convertec_Bodega_Administracion.Business
                     from p in db.Producto
                     join m in db.Marca on p.id_marca equals m.id_marca
                     join pr in db.Proveedor on p.id_proveedor equals pr.id_proveedor
-                    where p.cod_bodega != null && p.obs.Contains("IMPORTACIÓN") && pr.nom_proveedor.Contains(proveedor) && m.nom_marca.Contains(marca)
+                    where p.cod_bodega != null && p.importado && pr.nom_proveedor.Contains(proveedor) && m.nom_marca.Contains(marca)
                     select new ElementoStockBodega
                     {
                         cod_bodega = p.cod_bodega,

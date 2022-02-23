@@ -34,6 +34,7 @@ namespace Convertec_Bodega_Administracion
             //CheckDBConnection(false, true);
             this.BodyPanelSalidaIngreso.Dock = DockStyle.Fill;
             this.BodyPanelIngresoElementos.Dock = DockStyle.Fill;
+            this.BodyPanelCrearModifElemento.Dock = DockStyle.Fill;
             this.BodyPanelMovElementos.Dock = DockStyle.Fill;
             this.BodyPanelInformes.Dock = DockStyle.Fill;
             panelActive = BodyPanelMovElementos;
@@ -217,23 +218,30 @@ namespace Convertec_Bodega_Administracion
         {
             if (btnActive.Name != SidebarBtnMovElementos.Name)
             {
-                PopulateProdHistTable();
                 SetDefaultPanelsAndButtons(panelActive, btnActive);
                 SetVisible(BodyPanelMovElementos, SidebarBtnMovElementos);
+                if (BodyPanelMovElementos.Visible)
+                {
+                    PopulateProdHistTable();
+                }
             }
         }
 
         private void PopulateProdHistTable()
         {
             if(CheckDBConnection(false, true))
-            {
+            {                
                 tableProductoHist = MovimientoBusiness.ToDataTable(MovimientoBusiness.GetProductosDetalle());
                 MVdataGridViewProdHist.DataSource = tableProductoHist;
                 FormatTableProdHist(MVdataGridViewProdHist);
-            }
-            else
-            {
-                Console.WriteLine("PopulateHist");
+                
+                foreach (DataGridViewRow row in MVdataGridViewProdHist.Rows)
+                {
+                    if (Double.Parse(row.Cells["stock"].Value.ToString()) <= Double.Parse(row.Cells["stock_min"].Value.ToString()))
+                    {
+                        row.DefaultCellStyle.BackColor = Color.FromArgb(255, 102, 102);
+                    }
+                }
             }
         }
 
@@ -245,9 +253,10 @@ namespace Convertec_Bodega_Administracion
             dgv.Columns[3].HeaderText = "Proveedor";
             dgv.Columns[4].HeaderText = "Marca";
             dgv.Columns[5].HeaderText = "Stock";
-            dgv.Columns[6].HeaderText = "Valor";
-            dgv.Columns[7].HeaderText = "Parte Plano";
-            dgv.Columns[8].HeaderText = "OT";
+            dgv.Columns[6].HeaderText = "Stock Min";
+            dgv.Columns[7].HeaderText = "Valor";
+            dgv.Columns[8].HeaderText = "Parte Plano";
+            dgv.Columns[9].HeaderText = "OT";
             dgv.Columns["id_producto"].HeaderText = "ID";
             dgv.Columns["id_producto"].Visible = false;
 
@@ -301,7 +310,6 @@ namespace Convertec_Bodega_Administracion
                     {
                         if (row.Cells[5].Value != null)
                         {
-                            //row.DefaultCellStyle.ForeColor = Color.FromArgb(138, 183, 30);
                             row.DefaultCellStyle.BackColor = Color.FromArgb(138, 183, 30);
                         }
                     }
@@ -310,7 +318,7 @@ namespace Convertec_Bodega_Administracion
                     if (img != null)
                         MVpictureBoxProducto.Load(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "/Assets/imgProductos/" + img.image);
                     else
-                        MVpictureBoxProducto.Load(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "/Assets/logos/image-unavailable.png");
+                        MVpictureBoxProducto.Image = MVpictureBoxProducto.InitialImage;
 
                     foreach (Model.OtProducto ot in MovimientoBusiness.GetOtProducto(id))
                     {
@@ -324,7 +332,7 @@ namespace Convertec_Bodega_Administracion
             else
             {
                 MVtxtOtHist.Clear();
-                MVpictureBoxProducto.Load(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "/Assets/logos/image-unavailable.png");
+                MVpictureBoxProducto.Image = MVpictureBoxProducto.InitialImage;
             }
         }
 
@@ -350,9 +358,6 @@ namespace Convertec_Bodega_Administracion
             {
                 SIdataGridViewSalidas.DataSource = MovimientoBusiness.GetMovimientosSalidas();
                 SIdataGridViewIngresos.DataSource = MovimientoBusiness.GetMovimientosIngresos();
-            }else
-            {
-                Console.WriteLine("PopulatedatasalidaIngreso");
             }
         }
 
@@ -480,12 +485,12 @@ namespace Convertec_Bodega_Administracion
                     if (img != null)
                         IEpictureBoxProducto.Load(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "/Assets/imgProductos/" + img.image);
                     else
-                        IEpictureBoxProducto.Load(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "/Assets/logos/image-unavailable.png");
+                        IEpictureBoxProducto.Image = IEpictureBoxProducto.InitialImage;
                 }
             }
             else
             {
-                IEpictureBoxProducto.Load(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "/Assets/logos/image-unavailable.png");
+                IEpictureBoxProducto.Image = IEpictureBoxProducto.InitialImage;
             }
         }
 
@@ -785,9 +790,13 @@ namespace Convertec_Bodega_Administracion
         {
             if (btnActive.Name != SidebarBtnInformes.Name)
             {
-                PopulateStockBodegaTable();
                 SetDefaultPanelsAndButtons(panelActive, btnActive);
                 SetVisible(BodyPanelInformes, SidebarBtnInformes);
+                if (BodyPanelInformes.Visible)
+                {
+                    PopulateStockBodegaTable();
+                }
+
             }
         }
 
@@ -796,13 +805,7 @@ namespace Convertec_Bodega_Administracion
             if (CheckDBConnection(false, true))
             {
                 INFdataGridViewStockBodega.DataSource = MovimientoBusiness.ToDataTable(MovimientoBusiness.GetStockBodega(INFtxtFiltroProveedorStock.Text, INFtxtfiltroMarcaStock.Text, INFcheckBoxCriticosStock.Checked));
-                foreach (DataGridViewRow row in INFdataGridViewStockBodega.Rows)
-                {
-                    if (Double.Parse(row.Cells["stock"].Value.ToString()) <= Double.Parse(row.Cells["stock_min"].Value.ToString()))
-                    {
-                        row.DefaultCellStyle.BackColor = Color.FromArgb(255, 102, 102);
-                    }
-                }
+                INFCheckStockMin(INFdataGridViewStockBodega, "stock", "stock_min");
             }
         }
 
@@ -811,13 +814,7 @@ namespace Convertec_Bodega_Administracion
             if (CheckDBConnection(false, true))
             {
                 INFdataGridViewStockBodegaImportacion.DataSource = MovimientoBusiness.ToDataTable(MovimientoBusiness.GetStockBodegaImportacion(INFtxtFiltroProveedorStockImportacion.Text, INFtxtfiltroMarcaStockImportacion.Text, INFcheckBoxCriticosStockImport.Checked));
-                foreach (DataGridViewRow row in INFdataGridViewStockBodegaImportacion.Rows)
-                {
-                    if (Double.Parse(row.Cells["stock_imp"].Value.ToString()) <= Double.Parse(row.Cells["stock_min_imp"].Value.ToString()))
-                    {
-                        row.DefaultCellStyle.BackColor = Color.FromArgb(255, 102, 102);
-                    }
-                }
+                INFCheckStockMin(INFdataGridViewStockBodegaImportacion, "stock_imp", "stock_min_imp");
             }
         }
 
@@ -826,6 +823,17 @@ namespace Convertec_Bodega_Administracion
             if (CheckDBConnection(false, true))
             {
                 INFdataGridViewListadoOT.DataSource = MovimientoBusiness.ToDataTable(MovimientoBusiness.GetElementoUtilizadoOT(INFtxtOT.Text));
+            }
+        }
+
+        private void INFCheckStockMin(DataGridView datagrid, string stock_col, string stock_min_col)
+        {
+            foreach (DataGridViewRow row in datagrid.Rows)
+            {
+                if (Double.Parse(row.Cells[stock_col].Value.ToString()) <= Double.Parse(row.Cells[stock_min_col].Value.ToString()))
+                {
+                    row.DefaultCellStyle.BackColor = Color.FromArgb(255, 102, 102);
+                }
             }
         }
 
@@ -1096,7 +1104,6 @@ namespace Convertec_Bodega_Administracion
             else
             {
                 CEpictureBoxElem.Image = CEpictureBoxElem.InitialImage;
-                //CEpictureBoxElem.Load(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "/Assets/logos/image-unavailable.png");
             }
         }
 
@@ -1124,8 +1131,9 @@ namespace Convertec_Bodega_Administracion
             CEtxtStock.Text = "1";
             CEtxtStockMin.Text = "1";
             CEtxtDocumento.Clear();
-            CEtxtDocumento.Clear();
+            CEtxtCodProv.Clear();
             CEtxtObs.Clear();
+            CEradioButtonMetros.Checked = true;
             CEpictureBoxElem.Image = CEpictureBoxElem.InitialImage;
 
             try
@@ -1169,10 +1177,13 @@ namespace Convertec_Bodega_Administracion
 
         private void CECheckChange(object sender, EventArgs e)
         {
-            if (!CEradioButtonMetros.Checked)
-            {
-               
-            }
+            CEtxtStock.Text = "1";
+            CEtxtStockMin.Text = "1";
+        }
+
+        private void CMtxtValorUnitario_Leave(object sender, EventArgs e)
+        {
+            CEtxtValorUnitario.Text = "0";
         }
 
         #endregion

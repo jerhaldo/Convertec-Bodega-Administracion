@@ -50,16 +50,18 @@ namespace Convertec_Bodega_Administracion
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
             this.panelSidebar = new System.Windows.Forms.Panel();
             this.SidebarPanelMenuButton = new System.Windows.Forms.Panel();
@@ -79,7 +81,29 @@ namespace Convertec_Bodega_Administracion
             this.HlabelClock = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SIdataGridViewSalidas = new System.Windows.Forms.DataGridView();
+            this.codbodegaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechamovDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.otDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellidosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.obsmovDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.movSalidasDataGridDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.SIdataGridViewIngresos = new System.Windows.Forms.DataGridView();
+            this.codbodegaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidadDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.documentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorunitarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomproveedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nommarcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechamovDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.parteplanoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.otDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.obsmovDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.movIngresoDataGridDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.splitContainerBodyPrincipal = new System.Windows.Forms.SplitContainer();
             this.SIpanelSalidas2 = new System.Windows.Forms.Panel();
             this.SIpanelSalidas1 = new System.Windows.Forms.Panel();
@@ -167,7 +191,18 @@ namespace Convertec_Bodega_Administracion
             this.MVlabel4 = new System.Windows.Forms.Label();
             this.MVpanelTablaMov2 = new System.Windows.Forms.Panel();
             this.MVdataGridViewHistorial = new System.Windows.Forms.DataGridView();
+            this.fechamovDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codprodprovDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidadDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.otDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.folioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.documentoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomproveedorDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nommarcaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorunitarioDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.obs_mov2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.historialMovimientoTablaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.MVpanelTablaMov1 = new System.Windows.Forms.Panel();
             this.MVdateTimePickerFiltro = new System.Windows.Forms.DateTimePicker();
             this.MVlabel5 = new System.Windows.Forms.Label();
@@ -230,12 +265,61 @@ namespace Convertec_Bodega_Administracion
             this.CEpanelImagen = new System.Windows.Forms.Panel();
             this.CEpictureBoxElem = new System.Windows.Forms.PictureBox();
             this.CMEtabModificar = new System.Windows.Forms.TabPage();
+            this.CMpanelL = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.CMtxtDocumento = new System.Windows.Forms.TextBox();
+            this.CMlabel9 = new System.Windows.Forms.Label();
+            this.CMlabel8 = new System.Windows.Forms.Label();
+            this.CMtxtStockMin = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.CMlabel3 = new System.Windows.Forms.Label();
+            this.CMtxtPartePlano = new System.Windows.Forms.TextBox();
+            this.CMtxtCodBodega = new System.Windows.Forms.TextBox();
+            this.CMlabel2 = new System.Windows.Forms.Label();
+            this.CMradioButtonUnidad = new System.Windows.Forms.RadioButton();
+            this.CMradioButtonMetros = new System.Windows.Forms.RadioButton();
+            this.CMbtnAgregarMarca = new FontAwesome.Sharp.IconButton();
+            this.CMcomboBoxMarca = new System.Windows.Forms.ComboBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.CMbtnAgregarProv = new FontAwesome.Sharp.IconButton();
+            this.CMcomboBoxProv = new System.Windows.Forms.ComboBox();
+            this.CMlabel11 = new System.Windows.Forms.Label();
+            this.CMlabel7 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.CMtxtCodProv = new System.Windows.Forms.TextBox();
+            this.CMtxtValorUnitario = new System.Windows.Forms.TextBox();
+            this.CMtxtValor = new System.Windows.Forms.TextBox();
+            this.CMlabel10 = new System.Windows.Forms.Label();
+            this.CMlabel5 = new System.Windows.Forms.Label();
+            this.CMlabel4 = new System.Windows.Forms.Label();
+            this.CMlabel6 = new System.Windows.Forms.Label();
+            this.CMtxtObs = new System.Windows.Forms.RichTextBox();
+            this.CMlabel12 = new System.Windows.Forms.Label();
+            this.CMtxtStock = new System.Windows.Forms.TextBox();
+            this.CMlabel1 = new System.Windows.Forms.Label();
+            this.CMtxtDescripcion = new System.Windows.Forms.TextBox();
+            this.CMpanelR = new System.Windows.Forms.Panel();
+            this.CMbtnCancelar = new FontAwesome.Sharp.IconButton();
+            this.CMbtnEditar = new FontAwesome.Sharp.IconButton();
+            this.label33 = new System.Windows.Forms.Label();
+            this.CMbtnEditarImg = new FontAwesome.Sharp.IconButton();
+            this.CMpanelImagen = new System.Windows.Forms.Panel();
+            this.CMpictureBoxElem = new System.Windows.Forms.PictureBox();
             this.BodyPanelInformes = new System.Windows.Forms.Panel();
             this.INFtabControlInformes = new System.Windows.Forms.TabControl();
             this.INFtabPageStock = new System.Windows.Forms.TabPage();
             this.INFpanelStockBodega2 = new System.Windows.Forms.Panel();
             this.INFdataGridViewStockBodega = new System.Windows.Forms.DataGridView();
+            this.codbodegaDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stock_min = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomproveedorDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nommarcaDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorunitarioDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.elementoStockBodegaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.INFpanelStockBodega1 = new System.Windows.Forms.Panel();
             this.INFcheckBoxCriticosStock = new System.Windows.Forms.CheckBox();
             this.INFbtnExportarStock = new FontAwesome.Sharp.IconButton();
@@ -248,7 +332,14 @@ namespace Convertec_Bodega_Administracion
             this.INFtabPageImportacion = new System.Windows.Forms.TabPage();
             this.INFpanelStockImportacion2 = new System.Windows.Forms.Panel();
             this.INFdataGridViewStockBodegaImportacion = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stock_imp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stock_min_imp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.INFpanelStockImportacion1 = new System.Windows.Forms.Panel();
             this.INFcheckBoxCriticosStockImport = new System.Windows.Forms.CheckBox();
             this.INFbtnExportarStockImportacion = new FontAwesome.Sharp.IconButton();
@@ -261,9 +352,17 @@ namespace Convertec_Bodega_Administracion
             this.INFtabPagListadoOT = new System.Windows.Forms.TabPage();
             this.INFpanelListadoOT2 = new System.Windows.Forms.Panel();
             this.INFdataGridViewListadoOT = new System.Windows.Forms.DataGridView();
+            this.parteplanoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomproveedorDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nommarcaDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorunitarioDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidadDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bodega = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.compra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.elementoUtilizadoOTBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.INFpanelListadoOT1 = new System.Windows.Forms.Panel();
             this.INFbtnExportarListadoOT = new FontAwesome.Sharp.IconButton();
             this.INFbtnBuscarOT = new FontAwesome.Sharp.IconButton();
@@ -272,62 +371,6 @@ namespace Convertec_Bodega_Administracion
             this.ErrorValorToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.InfoToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.CEopenFileDialogImagen = new System.Windows.Forms.OpenFileDialog();
-            this.fechamovDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codprodprovDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidadDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.otDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.folioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.documentoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomproveedorDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nommarcaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valorDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valorunitarioDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.historialMovimientoTablaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.codbodegaDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomproveedorDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nommarcaDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valorDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valorunitarioDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.elementoStockBodegaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stock_imp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.parteplanoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomproveedorDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nommarcaDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valorDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valorunitarioDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidadDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.elementoUtilizadoOTBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.codbodegaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechamovDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.otDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellidosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.obsmovDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.movSalidasDataGridDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.codbodegaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidadDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.documentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valorunitarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomproveedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nommarcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechamovDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.parteplanoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.otDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.obsmovDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.movIngresoDataGridDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDescripcionElementoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panelSidebar.SuspendLayout();
             this.SidebarPanelMenuButton.SuspendLayout();
@@ -335,7 +378,9 @@ namespace Convertec_Bodega_Administracion
             ((System.ComponentModel.ISupportInitialize)(this.SidebarPictureBox1)).BeginInit();
             this.HpanelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SIdataGridViewSalidas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.movSalidasDataGridDTOBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SIdataGridViewIngresos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.movIngresoDataGridDTOBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerBodyPrincipal)).BeginInit();
             this.splitContainerBodyPrincipal.Panel1.SuspendLayout();
             this.splitContainerBodyPrincipal.Panel2.SuspendLayout();
@@ -369,6 +414,7 @@ namespace Convertec_Bodega_Administracion
             this.MVpanelTablaElementos1.SuspendLayout();
             this.MVpanelTablaMov2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MVdataGridViewHistorial)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.historialMovimientoTablaBindingSource)).BeginInit();
             this.MVpanelTablaMov1.SuspendLayout();
             this.MVpanelBuscador.SuspendLayout();
             this.MVpanelBuscadorLeft.SuspendLayout();
@@ -384,11 +430,18 @@ namespace Convertec_Bodega_Administracion
             this.CEpanelR.SuspendLayout();
             this.CEpanelImagen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CEpictureBoxElem)).BeginInit();
+            this.CMEtabModificar.SuspendLayout();
+            this.CMpanelL.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.CMpanelR.SuspendLayout();
+            this.CMpanelImagen.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CMpictureBoxElem)).BeginInit();
             this.BodyPanelInformes.SuspendLayout();
             this.INFtabControlInformes.SuspendLayout();
             this.INFtabPageStock.SuspendLayout();
             this.INFpanelStockBodega2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.INFdataGridViewStockBodega)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.elementoStockBodegaBindingSource)).BeginInit();
             this.INFpanelStockBodega1.SuspendLayout();
             this.INFtabPageImportacion.SuspendLayout();
             this.INFpanelStockImportacion2.SuspendLayout();
@@ -397,12 +450,8 @@ namespace Convertec_Bodega_Administracion
             this.INFtabPagListadoOT.SuspendLayout();
             this.INFpanelListadoOT2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.INFdataGridViewListadoOT)).BeginInit();
-            this.INFpanelListadoOT1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.historialMovimientoTablaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.elementoStockBodegaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.elementoUtilizadoOTBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.movSalidasDataGridDTOBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.movIngresoDataGridDTOBindingSource)).BeginInit();
+            this.INFpanelListadoOT1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.idDescripcionElementoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -432,7 +481,7 @@ namespace Convertec_Bodega_Administracion
             this.SidebarPanelMenuButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SidebarPanelMenuButton.Name = "SidebarPanelMenuButton";
             this.SidebarPanelMenuButton.Size = new System.Drawing.Size(212, 634);
-            this.SidebarPanelMenuButton.TabIndex = 7;
+            this.SidebarPanelMenuButton.TabIndex = 0;
             // 
             // SidebarBtnInformes
             // 
@@ -730,6 +779,90 @@ namespace Convertec_Bodega_Administracion
             this.SIdataGridViewSalidas.TabIndex = 2;
             this.SIdataGridViewSalidas.TabStop = false;
             // 
+            // codbodegaDataGridViewTextBoxColumn
+            // 
+            this.codbodegaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.codbodegaDataGridViewTextBoxColumn.DataPropertyName = "cod_bodega";
+            this.codbodegaDataGridViewTextBoxColumn.HeaderText = "Código";
+            this.codbodegaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.codbodegaDataGridViewTextBoxColumn.Name = "codbodegaDataGridViewTextBoxColumn";
+            this.codbodegaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codbodegaDataGridViewTextBoxColumn.Width = 83;
+            // 
+            // descripcionDataGridViewTextBoxColumn
+            // 
+            this.descripcionDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "descripcion";
+            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripción";
+            this.descripcionDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
+            this.descripcionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.descripcionDataGridViewTextBoxColumn.Width = 116;
+            // 
+            // cantidadDataGridViewTextBoxColumn
+            // 
+            this.cantidadDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.cantidadDataGridViewTextBoxColumn.DataPropertyName = "cantidad";
+            this.cantidadDataGridViewTextBoxColumn.HeaderText = "Cant";
+            this.cantidadDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.cantidadDataGridViewTextBoxColumn.Name = "cantidadDataGridViewTextBoxColumn";
+            this.cantidadDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cantidadDataGridViewTextBoxColumn.Width = 64;
+            // 
+            // fechamovDataGridViewTextBoxColumn
+            // 
+            this.fechamovDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.fechamovDataGridViewTextBoxColumn.DataPropertyName = "fecha_mov";
+            this.fechamovDataGridViewTextBoxColumn.HeaderText = "Fecha";
+            this.fechamovDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.fechamovDataGridViewTextBoxColumn.Name = "fechamovDataGridViewTextBoxColumn";
+            this.fechamovDataGridViewTextBoxColumn.ReadOnly = true;
+            this.fechamovDataGridViewTextBoxColumn.Width = 76;
+            // 
+            // otDataGridViewTextBoxColumn
+            // 
+            this.otDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.otDataGridViewTextBoxColumn.DataPropertyName = "ot";
+            this.otDataGridViewTextBoxColumn.HeaderText = "OT";
+            this.otDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.otDataGridViewTextBoxColumn.Name = "otDataGridViewTextBoxColumn";
+            this.otDataGridViewTextBoxColumn.ReadOnly = true;
+            this.otDataGridViewTextBoxColumn.Width = 54;
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nombreDataGridViewTextBoxColumn.Width = 88;
+            // 
+            // apellidosDataGridViewTextBoxColumn
+            // 
+            this.apellidosDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.apellidosDataGridViewTextBoxColumn.DataPropertyName = "apellidos";
+            this.apellidosDataGridViewTextBoxColumn.HeaderText = "Apellidos";
+            this.apellidosDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.apellidosDataGridViewTextBoxColumn.Name = "apellidosDataGridViewTextBoxColumn";
+            this.apellidosDataGridViewTextBoxColumn.ReadOnly = true;
+            this.apellidosDataGridViewTextBoxColumn.Width = 99;
+            // 
+            // obsmovDataGridViewTextBoxColumn
+            // 
+            this.obsmovDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.obsmovDataGridViewTextBoxColumn.DataPropertyName = "obs_mov";
+            this.obsmovDataGridViewTextBoxColumn.HeaderText = "Obs";
+            this.obsmovDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.obsmovDataGridViewTextBoxColumn.Name = "obsmovDataGridViewTextBoxColumn";
+            this.obsmovDataGridViewTextBoxColumn.ReadOnly = true;
+            this.obsmovDataGridViewTextBoxColumn.Width = 61;
+            // 
+            // movSalidasDataGridDTOBindingSource
+            // 
+            this.movSalidasDataGridDTOBindingSource.DataSource = typeof(Convertec_Bodega_Administracion.Model.MovSalidasDataGridDTO);
+            // 
             // SIdataGridViewIngresos
             // 
             this.SIdataGridViewIngresos.AllowUserToAddRows = false;
@@ -776,6 +909,130 @@ namespace Convertec_Bodega_Administracion
             this.SIdataGridViewIngresos.Size = new System.Drawing.Size(864, 1);
             this.SIdataGridViewIngresos.TabIndex = 2;
             this.SIdataGridViewIngresos.TabStop = false;
+            // 
+            // codbodegaDataGridViewTextBoxColumn1
+            // 
+            this.codbodegaDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.codbodegaDataGridViewTextBoxColumn1.DataPropertyName = "cod_bodega";
+            this.codbodegaDataGridViewTextBoxColumn1.HeaderText = "Código";
+            this.codbodegaDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.codbodegaDataGridViewTextBoxColumn1.Name = "codbodegaDataGridViewTextBoxColumn1";
+            this.codbodegaDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.codbodegaDataGridViewTextBoxColumn1.Width = 83;
+            // 
+            // descripcionDataGridViewTextBoxColumn1
+            // 
+            this.descripcionDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.descripcionDataGridViewTextBoxColumn1.DataPropertyName = "descripcion";
+            this.descripcionDataGridViewTextBoxColumn1.HeaderText = "Descripción";
+            this.descripcionDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.descripcionDataGridViewTextBoxColumn1.Name = "descripcionDataGridViewTextBoxColumn1";
+            this.descripcionDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.descripcionDataGridViewTextBoxColumn1.Width = 116;
+            // 
+            // cantidadDataGridViewTextBoxColumn1
+            // 
+            this.cantidadDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.cantidadDataGridViewTextBoxColumn1.DataPropertyName = "cantidad";
+            this.cantidadDataGridViewTextBoxColumn1.HeaderText = "Cant";
+            this.cantidadDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.cantidadDataGridViewTextBoxColumn1.Name = "cantidadDataGridViewTextBoxColumn1";
+            this.cantidadDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.cantidadDataGridViewTextBoxColumn1.Width = 64;
+            // 
+            // documentoDataGridViewTextBoxColumn
+            // 
+            this.documentoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.documentoDataGridViewTextBoxColumn.DataPropertyName = "documento";
+            this.documentoDataGridViewTextBoxColumn.HeaderText = "Documento";
+            this.documentoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.documentoDataGridViewTextBoxColumn.Name = "documentoDataGridViewTextBoxColumn";
+            this.documentoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.documentoDataGridViewTextBoxColumn.Width = 111;
+            // 
+            // valorDataGridViewTextBoxColumn
+            // 
+            this.valorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.valorDataGridViewTextBoxColumn.DataPropertyName = "valor";
+            this.valorDataGridViewTextBoxColumn.HeaderText = "Valor";
+            this.valorDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.valorDataGridViewTextBoxColumn.Name = "valorDataGridViewTextBoxColumn";
+            this.valorDataGridViewTextBoxColumn.ReadOnly = true;
+            this.valorDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // valorunitarioDataGridViewTextBoxColumn
+            // 
+            this.valorunitarioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.valorunitarioDataGridViewTextBoxColumn.DataPropertyName = "valor_unitario";
+            this.valorunitarioDataGridViewTextBoxColumn.HeaderText = "Valor Unitario";
+            this.valorunitarioDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.valorunitarioDataGridViewTextBoxColumn.Name = "valorunitarioDataGridViewTextBoxColumn";
+            this.valorunitarioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.valorunitarioDataGridViewTextBoxColumn.Width = 117;
+            // 
+            // nomproveedorDataGridViewTextBoxColumn
+            // 
+            this.nomproveedorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.nomproveedorDataGridViewTextBoxColumn.DataPropertyName = "nom_proveedor";
+            this.nomproveedorDataGridViewTextBoxColumn.HeaderText = "Proveedor";
+            this.nomproveedorDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nomproveedorDataGridViewTextBoxColumn.Name = "nomproveedorDataGridViewTextBoxColumn";
+            this.nomproveedorDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nomproveedorDataGridViewTextBoxColumn.Width = 106;
+            // 
+            // nommarcaDataGridViewTextBoxColumn
+            // 
+            this.nommarcaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.nommarcaDataGridViewTextBoxColumn.DataPropertyName = "nom_marca";
+            this.nommarcaDataGridViewTextBoxColumn.HeaderText = "Marca";
+            this.nommarcaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nommarcaDataGridViewTextBoxColumn.Name = "nommarcaDataGridViewTextBoxColumn";
+            this.nommarcaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nommarcaDataGridViewTextBoxColumn.Width = 76;
+            // 
+            // fechamovDataGridViewTextBoxColumn1
+            // 
+            this.fechamovDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.fechamovDataGridViewTextBoxColumn1.DataPropertyName = "fecha_mov";
+            this.fechamovDataGridViewTextBoxColumn1.HeaderText = "Fecha";
+            this.fechamovDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.fechamovDataGridViewTextBoxColumn1.Name = "fechamovDataGridViewTextBoxColumn1";
+            this.fechamovDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.fechamovDataGridViewTextBoxColumn1.Width = 76;
+            // 
+            // parteplanoDataGridViewTextBoxColumn
+            // 
+            this.parteplanoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.parteplanoDataGridViewTextBoxColumn.DataPropertyName = "parte_plano";
+            this.parteplanoDataGridViewTextBoxColumn.HeaderText = "Parte Plano";
+            this.parteplanoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.parteplanoDataGridViewTextBoxColumn.Name = "parteplanoDataGridViewTextBoxColumn";
+            this.parteplanoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.parteplanoDataGridViewTextBoxColumn.Width = 105;
+            // 
+            // otDataGridViewTextBoxColumn1
+            // 
+            this.otDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.otDataGridViewTextBoxColumn1.DataPropertyName = "ot";
+            this.otDataGridViewTextBoxColumn1.HeaderText = "OT";
+            this.otDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.otDataGridViewTextBoxColumn1.Name = "otDataGridViewTextBoxColumn1";
+            this.otDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.otDataGridViewTextBoxColumn1.Width = 54;
+            // 
+            // obsmovDataGridViewTextBoxColumn1
+            // 
+            this.obsmovDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.obsmovDataGridViewTextBoxColumn1.DataPropertyName = "obs_mov";
+            this.obsmovDataGridViewTextBoxColumn1.HeaderText = "Obs";
+            this.obsmovDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.obsmovDataGridViewTextBoxColumn1.Name = "obsmovDataGridViewTextBoxColumn1";
+            this.obsmovDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.obsmovDataGridViewTextBoxColumn1.Width = 61;
+            // 
+            // movIngresoDataGridDTOBindingSource
+            // 
+            this.movIngresoDataGridDTOBindingSource.DataSource = typeof(Convertec_Bodega_Administracion.Model.MovIngresoDataGridDTO);
             // 
             // splitContainerBodyPrincipal
             // 
@@ -1200,6 +1457,7 @@ namespace Convertec_Bodega_Administracion
             this.IEtxtDescripcion.Margin = new System.Windows.Forms.Padding(5, 0, 0, 10);
             this.IEtxtDescripcion.MaxLength = 50;
             this.IEtxtDescripcion.Name = "IEtxtDescripcion";
+            this.IEtxtDescripcion.ShortcutsEnabled = false;
             this.IEtxtDescripcion.Size = new System.Drawing.Size(436, 23);
             this.IEtxtDescripcion.TabIndex = 0;
             this.InfoToolTip.SetToolTip(this.IEtxtDescripcion, "Filtro de elementos.");
@@ -1362,6 +1620,7 @@ namespace Convertec_Bodega_Administracion
             this.IEtxtCodProv.Margin = new System.Windows.Forms.Padding(5, 0, 0, 10);
             this.IEtxtCodProv.MaxLength = 50;
             this.IEtxtCodProv.Name = "IEtxtCodProv";
+            this.IEtxtCodProv.ShortcutsEnabled = false;
             this.IEtxtCodProv.Size = new System.Drawing.Size(411, 23);
             this.IEtxtCodProv.TabIndex = 7;
             this.InfoToolTip.SetToolTip(this.IEtxtCodProv, "Código del proveedor que posee el elemento respecto a la tienda.\r\n*Campo NO Oblig" +
@@ -1374,6 +1633,7 @@ namespace Convertec_Bodega_Administracion
             this.IEtxtValorUni.Margin = new System.Windows.Forms.Padding(5, 0, 0, 10);
             this.IEtxtValorUni.MaxLength = 10;
             this.IEtxtValorUni.Name = "IEtxtValorUni";
+            this.IEtxtValorUni.ShortcutsEnabled = false;
             this.IEtxtValorUni.Size = new System.Drawing.Size(150, 23);
             this.IEtxtValorUni.TabIndex = 5;
             this.IEtxtValorUni.Text = "0";
@@ -1388,6 +1648,7 @@ namespace Convertec_Bodega_Administracion
             this.IEtxtValor.Margin = new System.Windows.Forms.Padding(5, 0, 10, 10);
             this.IEtxtValor.MaxLength = 10;
             this.IEtxtValor.Name = "IEtxtValor";
+            this.IEtxtValor.ShortcutsEnabled = false;
             this.IEtxtValor.Size = new System.Drawing.Size(150, 23);
             this.IEtxtValor.TabIndex = 4;
             this.IEtxtValor.Text = "0";
@@ -1402,6 +1663,7 @@ namespace Convertec_Bodega_Administracion
             this.IEtxtOT.Margin = new System.Windows.Forms.Padding(5, 0, 0, 10);
             this.IEtxtOT.MaxLength = 256;
             this.IEtxtOT.Name = "IEtxtOT";
+            this.IEtxtOT.ShortcutsEnabled = false;
             this.IEtxtOT.Size = new System.Drawing.Size(150, 23);
             this.IEtxtOT.TabIndex = 3;
             this.InfoToolTip.SetToolTip(this.IEtxtOT, "OT asignada para el elemento.\r\nSi no es destinada a ninguna OT en especifico corr" +
@@ -1415,6 +1677,7 @@ namespace Convertec_Bodega_Administracion
             this.IEtxtDocumento.Margin = new System.Windows.Forms.Padding(5, 0, 10, 10);
             this.IEtxtDocumento.MaxLength = 50;
             this.IEtxtDocumento.Name = "IEtxtDocumento";
+            this.IEtxtDocumento.ShortcutsEnabled = false;
             this.IEtxtDocumento.Size = new System.Drawing.Size(238, 23);
             this.IEtxtDocumento.TabIndex = 2;
             this.InfoToolTip.SetToolTip(this.IEtxtDocumento, "Nombre del documento (boleta, factura, etc). \r\n*Campo NO Obligatorio*");
@@ -1522,6 +1785,7 @@ namespace Convertec_Bodega_Administracion
             this.IEtxtCant.Margin = new System.Windows.Forms.Padding(5, 0, 10, 10);
             this.IEtxtCant.MaxLength = 5;
             this.IEtxtCant.Name = "IEtxtCant";
+            this.IEtxtCant.ShortcutsEnabled = false;
             this.IEtxtCant.Size = new System.Drawing.Size(150, 23);
             this.IEtxtCant.TabIndex = 6;
             this.IEtxtCant.Text = "1";
@@ -1570,7 +1834,7 @@ namespace Convertec_Bodega_Administracion
             this.IEbtnEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IEbtnEditar.IconSize = 30;
             this.IEbtnEditar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.IEbtnEditar.Location = new System.Drawing.Point(194, 11);
+            this.IEbtnEditar.Location = new System.Drawing.Point(201, 11);
             this.IEbtnEditar.Margin = new System.Windows.Forms.Padding(15, 0, 15, 0);
             this.IEbtnEditar.MinimumSize = new System.Drawing.Size(164, 46);
             this.IEbtnEditar.Name = "IEbtnEditar";
@@ -1598,7 +1862,7 @@ namespace Convertec_Bodega_Administracion
             this.IEbtnQuitar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IEbtnQuitar.IconSize = 30;
             this.IEbtnQuitar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.IEbtnQuitar.Location = new System.Drawing.Point(373, 11);
+            this.IEbtnQuitar.Location = new System.Drawing.Point(387, 11);
             this.IEbtnQuitar.Margin = new System.Windows.Forms.Padding(0);
             this.IEbtnQuitar.MinimumSize = new System.Drawing.Size(164, 46);
             this.IEbtnQuitar.Name = "IEbtnQuitar";
@@ -1868,12 +2132,13 @@ namespace Convertec_Bodega_Administracion
             this.BodyPanelMovElementos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.BodyPanelMovElementos.Controls.Add(this.MVpanelHistProdTable);
             this.BodyPanelMovElementos.Controls.Add(this.MVpanelBuscador);
+            this.BodyPanelMovElementos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BodyPanelMovElementos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BodyPanelMovElementos.ForeColor = System.Drawing.Color.Black;
-            this.BodyPanelMovElementos.Location = new System.Drawing.Point(0, 6);
+            this.BodyPanelMovElementos.Location = new System.Drawing.Point(0, 0);
             this.BodyPanelMovElementos.Margin = new System.Windows.Forms.Padding(0);
             this.BodyPanelMovElementos.Name = "BodyPanelMovElementos";
-            this.BodyPanelMovElementos.Size = new System.Drawing.Size(1042, 88);
+            this.BodyPanelMovElementos.Size = new System.Drawing.Size(1042, 634);
             this.BodyPanelMovElementos.TabIndex = 7;
             // 
             // MVpanelHistProdTable
@@ -1900,8 +2165,8 @@ namespace Convertec_Bodega_Administracion
             this.MVpanelHistProdTable.Panel2.Controls.Add(this.MVpanelTablaMov1);
             this.MVpanelHistProdTable.Panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MVpanelHistProdTable.Panel2.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
-            this.MVpanelHistProdTable.Size = new System.Drawing.Size(1042, 0);
-            this.MVpanelHistProdTable.SplitterDistance = 25;
+            this.MVpanelHistProdTable.Size = new System.Drawing.Size(1042, 375);
+            this.MVpanelHistProdTable.SplitterDistance = 173;
             this.MVpanelHistProdTable.SplitterWidth = 1;
             this.MVpanelHistProdTable.TabIndex = 3;
             this.MVpanelHistProdTable.TabStop = false;
@@ -1914,7 +2179,7 @@ namespace Convertec_Bodega_Administracion
             this.MVpanelTablaElementos2.Margin = new System.Windows.Forms.Padding(0);
             this.MVpanelTablaElementos2.Name = "MVpanelTablaElementos2";
             this.MVpanelTablaElementos2.Padding = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.MVpanelTablaElementos2.Size = new System.Drawing.Size(1012, 0);
+            this.MVpanelTablaElementos2.Size = new System.Drawing.Size(1012, 123);
             this.MVpanelTablaElementos2.TabIndex = 2;
             // 
             // MVdataGridViewProdHist
@@ -1940,7 +2205,7 @@ namespace Convertec_Bodega_Administracion
             this.MVdataGridViewProdHist.RowsDefaultCellStyle = dataGridViewCellStyle16;
             this.MVdataGridViewProdHist.RowTemplate.Height = 24;
             this.MVdataGridViewProdHist.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.MVdataGridViewProdHist.Size = new System.Drawing.Size(1000, 0);
+            this.MVdataGridViewProdHist.Size = new System.Drawing.Size(1000, 123);
             this.MVdataGridViewProdHist.TabIndex = 0;
             this.MVdataGridViewProdHist.TabStop = false;
             this.MVdataGridViewProdHist.SelectionChanged += new System.EventHandler(this.SelectionChangedCargarDatos);
@@ -1975,7 +2240,7 @@ namespace Convertec_Bodega_Administracion
             this.MVpanelTablaMov2.Margin = new System.Windows.Forms.Padding(0);
             this.MVpanelTablaMov2.Name = "MVpanelTablaMov2";
             this.MVpanelTablaMov2.Padding = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.MVpanelTablaMov2.Size = new System.Drawing.Size(1012, 0);
+            this.MVpanelTablaMov2.Size = new System.Drawing.Size(1012, 149);
             this.MVpanelTablaMov2.TabIndex = 1;
             // 
             // MVdataGridViewHistorial
@@ -2023,1462 +2288,9 @@ namespace Convertec_Bodega_Administracion
             dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MVdataGridViewHistorial.RowsDefaultCellStyle = dataGridViewCellStyle19;
             this.MVdataGridViewHistorial.RowTemplate.Height = 24;
-            this.MVdataGridViewHistorial.Size = new System.Drawing.Size(1000, 0);
+            this.MVdataGridViewHistorial.Size = new System.Drawing.Size(1000, 149);
             this.MVdataGridViewHistorial.TabIndex = 0;
             this.MVdataGridViewHistorial.TabStop = false;
-            // 
-            // obs_mov2
-            // 
-            this.obs_mov2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.obs_mov2.DataPropertyName = "obs_mov";
-            this.obs_mov2.HeaderText = "Obs";
-            this.obs_mov2.MinimumWidth = 6;
-            this.obs_mov2.Name = "obs_mov2";
-            this.obs_mov2.ReadOnly = true;
-            this.obs_mov2.Width = 61;
-            // 
-            // MVpanelTablaMov1
-            // 
-            this.MVpanelTablaMov1.Controls.Add(this.MVdateTimePickerFiltro);
-            this.MVpanelTablaMov1.Controls.Add(this.MVlabel5);
-            this.MVpanelTablaMov1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.MVpanelTablaMov1.Location = new System.Drawing.Point(15, 10);
-            this.MVpanelTablaMov1.Margin = new System.Windows.Forms.Padding(0);
-            this.MVpanelTablaMov1.Name = "MVpanelTablaMov1";
-            this.MVpanelTablaMov1.Size = new System.Drawing.Size(1012, 32);
-            this.MVpanelTablaMov1.TabIndex = 2;
-            // 
-            // MVdateTimePickerFiltro
-            // 
-            this.MVdateTimePickerFiltro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.MVdateTimePickerFiltro.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.MVdateTimePickerFiltro.CustomFormat = "yyyy";
-            this.MVdateTimePickerFiltro.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.MVdateTimePickerFiltro.Location = new System.Drawing.Point(804, 5);
-            this.MVdateTimePickerFiltro.MinDate = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
-            this.MVdateTimePickerFiltro.Name = "MVdateTimePickerFiltro";
-            this.MVdateTimePickerFiltro.ShowUpDown = true;
-            this.MVdateTimePickerFiltro.Size = new System.Drawing.Size(200, 22);
-            this.MVdateTimePickerFiltro.TabIndex = 9;
-            this.InfoToolTip.SetToolTip(this.MVdateTimePickerFiltro, "Filtra movimientos por el año indicado.");
-            this.MVdateTimePickerFiltro.ValueChanged += new System.EventHandler(this.MVdateTimePickerFiltro_ValueChanged);
-            // 
-            // MVlabel5
-            // 
-            this.MVlabel5.AutoSize = true;
-            this.MVlabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MVlabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(78)))), ((int)(((byte)(79)))));
-            this.MVlabel5.Location = new System.Drawing.Point(2, 8);
-            this.MVlabel5.Margin = new System.Windows.Forms.Padding(0);
-            this.MVlabel5.Name = "MVlabel5";
-            this.MVlabel5.Size = new System.Drawing.Size(99, 16);
-            this.MVlabel5.TabIndex = 0;
-            this.MVlabel5.Text = "Movimientos:";
-            // 
-            // MVpanelBuscador
-            // 
-            this.MVpanelBuscador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(243)))), ((int)(((byte)(246)))));
-            this.MVpanelBuscador.Controls.Add(this.MVpanelBuscadorLeft);
-            this.MVpanelBuscador.Controls.Add(this.MVpanelBuscadorRight);
-            this.MVpanelBuscador.Dock = System.Windows.Forms.DockStyle.Top;
-            this.MVpanelBuscador.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(78)))), ((int)(((byte)(79)))));
-            this.MVpanelBuscador.Location = new System.Drawing.Point(0, 0);
-            this.MVpanelBuscador.Margin = new System.Windows.Forms.Padding(0);
-            this.MVpanelBuscador.Name = "MVpanelBuscador";
-            this.MVpanelBuscador.Size = new System.Drawing.Size(1042, 259);
-            this.MVpanelBuscador.TabIndex = 2;
-            // 
-            // MVpanelBuscadorLeft
-            // 
-            this.MVpanelBuscadorLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(243)))), ((int)(((byte)(246)))));
-            this.MVpanelBuscadorLeft.Controls.Add(this.MVlabelDiv2);
-            this.MVpanelBuscadorLeft.Controls.Add(this.MVlabel1);
-            this.MVpanelBuscadorLeft.Controls.Add(this.MVtxtFiltroHist);
-            this.MVpanelBuscadorLeft.Controls.Add(this.MVlabel2);
-            this.MVpanelBuscadorLeft.Controls.Add(this.MVlabel3);
-            this.MVpanelBuscadorLeft.Controls.Add(this.MVtxtOtFilter);
-            this.MVpanelBuscadorLeft.Controls.Add(this.MVtxtOtHist);
-            this.MVpanelBuscadorLeft.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MVpanelBuscadorLeft.Location = new System.Drawing.Point(0, 0);
-            this.MVpanelBuscadorLeft.Margin = new System.Windows.Forms.Padding(0);
-            this.MVpanelBuscadorLeft.Name = "MVpanelBuscadorLeft";
-            this.MVpanelBuscadorLeft.Padding = new System.Windows.Forms.Padding(15, 10, 10, 10);
-            this.MVpanelBuscadorLeft.Size = new System.Drawing.Size(566, 259);
-            this.MVpanelBuscadorLeft.TabIndex = 9;
-            // 
-            // MVlabelDiv2
-            // 
-            this.MVlabelDiv2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.MVlabelDiv2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.MVlabelDiv2.ForeColor = System.Drawing.Color.Black;
-            this.MVlabelDiv2.Location = new System.Drawing.Point(-24, 272);
-            this.MVlabelDiv2.Margin = new System.Windows.Forms.Padding(0);
-            this.MVlabelDiv2.Name = "MVlabelDiv2";
-            this.MVlabelDiv2.Size = new System.Drawing.Size(1194, 2);
-            this.MVlabelDiv2.TabIndex = 8;
-            // 
-            // MVlabel1
-            // 
-            this.MVlabel1.AutoSize = true;
-            this.MVlabel1.Location = new System.Drawing.Point(15, 14);
-            this.MVlabel1.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
-            this.MVlabel1.Name = "MVlabel1";
-            this.MVlabel1.Size = new System.Drawing.Size(60, 16);
-            this.MVlabel1.TabIndex = 2;
-            this.MVlabel1.Text = "Buscar:";
-            // 
-            // MVtxtFiltroHist
-            // 
-            this.MVtxtFiltroHist.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.MVtxtFiltroHist.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MVtxtFiltroHist.Location = new System.Drawing.Point(142, 10);
-            this.MVtxtFiltroHist.Margin = new System.Windows.Forms.Padding(0);
-            this.MVtxtFiltroHist.Name = "MVtxtFiltroHist";
-            this.MVtxtFiltroHist.Size = new System.Drawing.Size(409, 22);
-            this.MVtxtFiltroHist.TabIndex = 0;
-            this.InfoToolTip.SetToolTip(this.MVtxtFiltroHist, "Filtro por elementos.");
-            this.MVtxtFiltroHist.TextChanged += new System.EventHandler(this.TableFilter);
-            // 
-            // MVlabel2
-            // 
-            this.MVlabel2.AutoSize = true;
-            this.MVlabel2.Location = new System.Drawing.Point(15, 61);
-            this.MVlabel2.Margin = new System.Windows.Forms.Padding(0);
-            this.MVlabel2.Name = "MVlabel2";
-            this.MVlabel2.Size = new System.Drawing.Size(112, 16);
-            this.MVlabel2.TabIndex = 7;
-            this.MVlabel2.Text = "Buscar por OT:";
-            // 
-            // MVlabel3
-            // 
-            this.MVlabel3.AutoSize = true;
-            this.MVlabel3.Location = new System.Drawing.Point(15, 106);
-            this.MVlabel3.Margin = new System.Windows.Forms.Padding(0);
-            this.MVlabel3.Name = "MVlabel3";
-            this.MVlabel3.Size = new System.Drawing.Size(104, 16);
-            this.MVlabel3.TabIndex = 3;
-            this.MVlabel3.Text = "Usado en OT:";
-            // 
-            // MVtxtOtFilter
-            // 
-            this.MVtxtOtFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.MVtxtOtFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MVtxtOtFilter.Location = new System.Drawing.Point(142, 57);
-            this.MVtxtOtFilter.Margin = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.MVtxtOtFilter.Name = "MVtxtOtFilter";
-            this.MVtxtOtFilter.Size = new System.Drawing.Size(409, 22);
-            this.MVtxtOtFilter.TabIndex = 6;
-            this.InfoToolTip.SetToolTip(this.MVtxtOtFilter, "Filtro por OT.");
-            this.MVtxtOtFilter.TextChanged += new System.EventHandler(this.TableFilter);
-            // 
-            // MVtxtOtHist
-            // 
-            this.MVtxtOtHist.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.MVtxtOtHist.Enabled = false;
-            this.MVtxtOtHist.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MVtxtOtHist.Location = new System.Drawing.Point(142, 107);
-            this.MVtxtOtHist.Margin = new System.Windows.Forms.Padding(0);
-            this.MVtxtOtHist.Name = "MVtxtOtHist";
-            this.MVtxtOtHist.Size = new System.Drawing.Size(409, 146);
-            this.MVtxtOtHist.TabIndex = 5;
-            this.MVtxtOtHist.Text = "";
-            // 
-            // MVpanelBuscadorRight
-            // 
-            this.MVpanelBuscadorRight.Controls.Add(this.MVlabelDiv3);
-            this.MVpanelBuscadorRight.Controls.Add(this.MVpanelImage);
-            this.MVpanelBuscadorRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.MVpanelBuscadorRight.Location = new System.Drawing.Point(566, 0);
-            this.MVpanelBuscadorRight.Margin = new System.Windows.Forms.Padding(0);
-            this.MVpanelBuscadorRight.Name = "MVpanelBuscadorRight";
-            this.MVpanelBuscadorRight.Size = new System.Drawing.Size(476, 259);
-            this.MVpanelBuscadorRight.TabIndex = 10;
-            // 
-            // MVlabelDiv3
-            // 
-            this.MVlabelDiv3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.MVlabelDiv3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.MVlabelDiv3.ForeColor = System.Drawing.Color.Black;
-            this.MVlabelDiv3.Location = new System.Drawing.Point(-32, 274);
-            this.MVlabelDiv3.Margin = new System.Windows.Forms.Padding(0);
-            this.MVlabelDiv3.Name = "MVlabelDiv3";
-            this.MVlabelDiv3.Size = new System.Drawing.Size(681, 2);
-            this.MVlabelDiv3.TabIndex = 9;
-            // 
-            // MVpanelImage
-            // 
-            this.MVpanelImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(243)))), ((int)(((byte)(246)))));
-            this.MVpanelImage.Controls.Add(this.MVpictureBoxProducto);
-            this.MVpanelImage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MVpanelImage.Location = new System.Drawing.Point(0, 0);
-            this.MVpanelImage.Margin = new System.Windows.Forms.Padding(0);
-            this.MVpanelImage.Name = "MVpanelImage";
-            this.MVpanelImage.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
-            this.MVpanelImage.Size = new System.Drawing.Size(476, 259);
-            this.MVpanelImage.TabIndex = 4;
-            // 
-            // MVpictureBoxProducto
-            // 
-            this.MVpictureBoxProducto.BackColor = System.Drawing.Color.White;
-            this.MVpictureBoxProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.MVpictureBoxProducto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.MVpictureBoxProducto.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MVpictureBoxProducto.Image = global::Convertec_Bodega_Administracion.Properties.Resources.image_unavailable;
-            this.MVpictureBoxProducto.InitialImage = global::Convertec_Bodega_Administracion.Properties.Resources.image_unavailable;
-            this.MVpictureBoxProducto.Location = new System.Drawing.Point(15, 10);
-            this.MVpictureBoxProducto.Margin = new System.Windows.Forms.Padding(12, 10, 12, 10);
-            this.MVpictureBoxProducto.Name = "MVpictureBoxProducto";
-            this.MVpictureBoxProducto.Size = new System.Drawing.Size(446, 239);
-            this.MVpictureBoxProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.MVpictureBoxProducto.TabIndex = 0;
-            this.MVpictureBoxProducto.TabStop = false;
-            // 
-            // BodyPanelSalidaIngreso
-            // 
-            this.BodyPanelSalidaIngreso.Controls.Add(this.splitContainerBodyPrincipal);
-            this.BodyPanelSalidaIngreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BodyPanelSalidaIngreso.Location = new System.Drawing.Point(5, 496);
-            this.BodyPanelSalidaIngreso.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.BodyPanelSalidaIngreso.Name = "BodyPanelSalidaIngreso";
-            this.BodyPanelSalidaIngreso.Size = new System.Drawing.Size(906, 87);
-            this.BodyPanelSalidaIngreso.TabIndex = 8;
-            this.BodyPanelSalidaIngreso.Visible = false;
-            // 
-            // BodypanelGeneral
-            // 
-            this.BodypanelGeneral.Controls.Add(this.BodyPanelCrearModifElemento);
-            this.BodypanelGeneral.Controls.Add(this.BodyPanelIngresoElementos);
-            this.BodypanelGeneral.Controls.Add(this.BodyPanelMovElementos);
-            this.BodypanelGeneral.Controls.Add(this.BodyPanelInformes);
-            this.BodypanelGeneral.Controls.Add(this.BodyPanelSalidaIngreso);
-            this.BodypanelGeneral.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BodypanelGeneral.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BodypanelGeneral.Location = new System.Drawing.Point(212, 95);
-            this.BodypanelGeneral.Margin = new System.Windows.Forms.Padding(0);
-            this.BodypanelGeneral.Name = "BodypanelGeneral";
-            this.BodypanelGeneral.Size = new System.Drawing.Size(1042, 634);
-            this.BodypanelGeneral.TabIndex = 8;
-            // 
-            // BodyPanelCrearModifElemento
-            // 
-            this.BodyPanelCrearModifElemento.Controls.Add(this.tabControl1);
-            this.BodyPanelCrearModifElemento.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BodyPanelCrearModifElemento.Location = new System.Drawing.Point(0, 0);
-            this.BodyPanelCrearModifElemento.Margin = new System.Windows.Forms.Padding(0);
-            this.BodyPanelCrearModifElemento.Name = "BodyPanelCrearModifElemento";
-            this.BodyPanelCrearModifElemento.Size = new System.Drawing.Size(1042, 634);
-            this.BodyPanelCrearModifElemento.TabIndex = 10;
-            this.BodyPanelCrearModifElemento.Visible = false;
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.CMEtabCrear);
-            this.tabControl1.Controls.Add(this.CMEtabModificar);
-            this.tabControl1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1042, 634);
-            this.tabControl1.TabIndex = 6;
-            // 
-            // CMEtabCrear
-            // 
-            this.CMEtabCrear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(243)))), ((int)(((byte)(246)))));
-            this.CMEtabCrear.Controls.Add(this.CEpanelL);
-            this.CMEtabCrear.Controls.Add(this.CEpanelR);
-            this.CMEtabCrear.Location = new System.Drawing.Point(4, 25);
-            this.CMEtabCrear.Margin = new System.Windows.Forms.Padding(0);
-            this.CMEtabCrear.Name = "CMEtabCrear";
-            this.CMEtabCrear.Size = new System.Drawing.Size(1034, 605);
-            this.CMEtabCrear.TabIndex = 0;
-            this.CMEtabCrear.Text = "Crear Elemento";
-            // 
-            // CEpanelL
-            // 
-            this.CEpanelL.Controls.Add(this.CEtxtDocumento);
-            this.CEpanelL.Controls.Add(this.CElabel12);
-            this.CEpanelL.Controls.Add(this.CElabel8);
-            this.CEpanelL.Controls.Add(this.CEtxtStockMin);
-            this.CEpanelL.Controls.Add(this.label25);
-            this.CEpanelL.Controls.Add(this.CElabel3);
-            this.CEpanelL.Controls.Add(this.CEtxtPartePlano);
-            this.CEpanelL.Controls.Add(this.CEtxtCodBodega);
-            this.CEpanelL.Controls.Add(this.CElabel2);
-            this.CEpanelL.Controls.Add(this.CEradioButtonUnidad);
-            this.CEpanelL.Controls.Add(this.CEradioButtonMetros);
-            this.CEpanelL.Controls.Add(this.CEbtnAgregarMarca);
-            this.CEpanelL.Controls.Add(this.CEcomboBoxMarca);
-            this.CEpanelL.Controls.Add(this.label12);
-            this.CEpanelL.Controls.Add(this.CEbtnAgregarProv);
-            this.CEpanelL.Controls.Add(this.CEcomboBoxProv);
-            this.CEpanelL.Controls.Add(this.CElabel10);
-            this.CEpanelL.Controls.Add(this.CElabel7);
-            this.CEpanelL.Controls.Add(this.label16);
-            this.CEpanelL.Controls.Add(this.label17);
-            this.CEpanelL.Controls.Add(this.CEtxtCodProv);
-            this.CEpanelL.Controls.Add(this.CEtxtValorUnitario);
-            this.CEpanelL.Controls.Add(this.CEtxtValor);
-            this.CEpanelL.Controls.Add(this.CElabel9);
-            this.CEpanelL.Controls.Add(this.CElabel5);
-            this.CEpanelL.Controls.Add(this.CElabel4);
-            this.CEpanelL.Controls.Add(this.CElabel6);
-            this.CEpanelL.Controls.Add(this.CEtxtObs);
-            this.CEpanelL.Controls.Add(this.CElabel11);
-            this.CEpanelL.Controls.Add(this.CEtxtStock);
-            this.CEpanelL.Controls.Add(this.CElabel1);
-            this.CEpanelL.Controls.Add(this.CEtxtDescripcion);
-            this.CEpanelL.Cursor = System.Windows.Forms.Cursors.Default;
-            this.CEpanelL.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CEpanelL.Location = new System.Drawing.Point(0, 0);
-            this.CEpanelL.Margin = new System.Windows.Forms.Padding(0);
-            this.CEpanelL.Name = "CEpanelL";
-            this.CEpanelL.Padding = new System.Windows.Forms.Padding(10);
-            this.CEpanelL.Size = new System.Drawing.Size(649, 605);
-            this.CEpanelL.TabIndex = 7;
-            // 
-            // CEtxtDocumento
-            // 
-            this.CEtxtDocumento.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.CEtxtDocumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CEtxtDocumento.Location = new System.Drawing.Point(136, 208);
-            this.CEtxtDocumento.Margin = new System.Windows.Forms.Padding(5, 0, 0, 10);
-            this.CEtxtDocumento.MaxLength = 50;
-            this.CEtxtDocumento.Name = "CEtxtDocumento";
-            this.CEtxtDocumento.Size = new System.Drawing.Size(503, 23);
-            this.CEtxtDocumento.TabIndex = 49;
-            this.InfoToolTip.SetToolTip(this.CEtxtDocumento, "Código del proveedor que posee el elemento respecto a la tienda.\r\n*Campo NO Oblig" +
-        "atorio*");
-            // 
-            // CElabel12
-            // 
-            this.CElabel12.AutoSize = true;
-            this.CElabel12.Location = new System.Drawing.Point(10, 212);
-            this.CElabel12.Name = "CElabel12";
-            this.CElabel12.Size = new System.Drawing.Size(90, 16);
-            this.CElabel12.TabIndex = 48;
-            this.CElabel12.Text = "Documento:";
-            // 
-            // CElabel8
-            // 
-            this.CElabel8.AutoSize = true;
-            this.CElabel8.Location = new System.Drawing.Point(10, 165);
-            this.CElabel8.Margin = new System.Windows.Forms.Padding(0);
-            this.CElabel8.Name = "CElabel8";
-            this.CElabel8.Size = new System.Drawing.Size(79, 16);
-            this.CElabel8.TabIndex = 46;
-            this.CElabel8.Text = "Stock Min:";
-            // 
-            // CEtxtStockMin
-            // 
-            this.CEtxtStockMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CEtxtStockMin.Location = new System.Drawing.Point(136, 163);
-            this.CEtxtStockMin.Margin = new System.Windows.Forms.Padding(5, 0, 10, 10);
-            this.CEtxtStockMin.MaxLength = 6;
-            this.CEtxtStockMin.Name = "CEtxtStockMin";
-            this.CEtxtStockMin.ShortcutsEnabled = false;
-            this.CEtxtStockMin.Size = new System.Drawing.Size(187, 23);
-            this.CEtxtStockMin.TabIndex = 47;
-            this.CEtxtStockMin.Text = "1";
-            this.InfoToolTip.SetToolTip(this.CEtxtStockMin, "Cantidad de elementos.\r\n*Campo Obligatorio*");
-            this.CEtxtStockMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CEcheckUnidadStockMin);
-            this.CEtxtStockMin.Leave += new System.EventHandler(this.CEParseDecimal);
-            // 
-            // label25
-            // 
-            this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label25.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label25.ForeColor = System.Drawing.Color.Black;
-            this.label25.Location = new System.Drawing.Point(-13, 85);
-            this.label25.Margin = new System.Windows.Forms.Padding(0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(668, 2);
-            this.label25.TabIndex = 45;
-            // 
-            // CElabel3
-            // 
-            this.CElabel3.AutoSize = true;
-            this.CElabel3.Location = new System.Drawing.Point(333, 56);
-            this.CElabel3.Margin = new System.Windows.Forms.Padding(0);
-            this.CElabel3.Name = "CElabel3";
-            this.CElabel3.Size = new System.Drawing.Size(114, 16);
-            this.CElabel3.TabIndex = 44;
-            this.CElabel3.Text = "Parte en Plano:";
-            // 
-            // CEtxtPartePlano
-            // 
-            this.CEtxtPartePlano.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.CEtxtPartePlano.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CEtxtPartePlano.Location = new System.Drawing.Point(452, 52);
-            this.CEtxtPartePlano.Margin = new System.Windows.Forms.Padding(5, 0, 0, 10);
-            this.CEtxtPartePlano.MaxLength = 50;
-            this.CEtxtPartePlano.Name = "CEtxtPartePlano";
-            this.CEtxtPartePlano.Size = new System.Drawing.Size(187, 23);
-            this.CEtxtPartePlano.TabIndex = 43;
-            this.InfoToolTip.SetToolTip(this.CEtxtPartePlano, "Filtro de elementos.");
-            // 
-            // CEtxtCodBodega
-            // 
-            this.CEtxtCodBodega.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CEtxtCodBodega.Location = new System.Drawing.Point(136, 52);
-            this.CEtxtCodBodega.Margin = new System.Windows.Forms.Padding(5, 0, 10, 10);
-            this.CEtxtCodBodega.MaxLength = 6;
-            this.CEtxtCodBodega.Name = "CEtxtCodBodega";
-            this.CEtxtCodBodega.Size = new System.Drawing.Size(187, 23);
-            this.CEtxtCodBodega.TabIndex = 42;
-            this.InfoToolTip.SetToolTip(this.CEtxtCodBodega, "Valor completo del elemento.\r\n*Campo Obligatorio*");
-            this.CEtxtCodBodega.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CheckNumberOnly);
-            // 
-            // CElabel2
-            // 
-            this.CElabel2.AutoSize = true;
-            this.CElabel2.Location = new System.Drawing.Point(10, 56);
-            this.CElabel2.Margin = new System.Windows.Forms.Padding(0);
-            this.CElabel2.Name = "CElabel2";
-            this.CElabel2.Size = new System.Drawing.Size(121, 16);
-            this.CElabel2.TabIndex = 41;
-            this.CElabel2.Text = "Código Bodega:";
-            // 
-            // CEradioButtonUnidad
-            // 
-            this.CEradioButtonUnidad.AutoSize = true;
-            this.CEradioButtonUnidad.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CEradioButtonUnidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CEradioButtonUnidad.Location = new System.Drawing.Point(464, 163);
-            this.CEradioButtonUnidad.Name = "CEradioButtonUnidad";
-            this.CEradioButtonUnidad.Size = new System.Drawing.Size(75, 20);
-            this.CEradioButtonUnidad.TabIndex = 40;
-            this.CEradioButtonUnidad.Text = "Unidad";
-            this.CEradioButtonUnidad.UseVisualStyleBackColor = true;
-            // 
-            // CEradioButtonMetros
-            // 
-            this.CEradioButtonMetros.AutoSize = true;
-            this.CEradioButtonMetros.Checked = true;
-            this.CEradioButtonMetros.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CEradioButtonMetros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CEradioButtonMetros.Location = new System.Drawing.Point(464, 132);
-            this.CEradioButtonMetros.Name = "CEradioButtonMetros";
-            this.CEradioButtonMetros.Size = new System.Drawing.Size(72, 20);
-            this.CEradioButtonMetros.TabIndex = 39;
-            this.CEradioButtonMetros.TabStop = true;
-            this.CEradioButtonMetros.Text = "Metros";
-            this.CEradioButtonMetros.UseVisualStyleBackColor = true;
-            this.CEradioButtonMetros.CheckedChanged += new System.EventHandler(this.CECheckChange);
-            // 
-            // CEbtnAgregarMarca
-            // 
-            this.CEbtnAgregarMarca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(183)))), ((int)(((byte)(30)))));
-            this.CEbtnAgregarMarca.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CEbtnAgregarMarca.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
-            this.CEbtnAgregarMarca.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(142)))), ((int)(((byte)(25)))));
-            this.CEbtnAgregarMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CEbtnAgregarMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CEbtnAgregarMarca.ForeColor = System.Drawing.Color.White;
-            this.CEbtnAgregarMarca.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            this.CEbtnAgregarMarca.IconColor = System.Drawing.Color.White;
-            this.CEbtnAgregarMarca.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.CEbtnAgregarMarca.IconSize = 25;
-            this.CEbtnAgregarMarca.Location = new System.Drawing.Point(614, 274);
-            this.CEbtnAgregarMarca.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.CEbtnAgregarMarca.Name = "CEbtnAgregarMarca";
-            this.CEbtnAgregarMarca.Size = new System.Drawing.Size(25, 25);
-            this.CEbtnAgregarMarca.TabIndex = 33;
-            this.CEbtnAgregarMarca.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.InfoToolTip.SetToolTip(this.CEbtnAgregarMarca, "Abre pantalla para agregar una nueva marca al sistema.");
-            this.CEbtnAgregarMarca.UseVisualStyleBackColor = false;
-            this.CEbtnAgregarMarca.Click += new System.EventHandler(this.CEbtnAgregarMarca_Click);
-            // 
-            // CEcomboBoxMarca
-            // 
-            this.CEcomboBoxMarca.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.CEcomboBoxMarca.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.CEcomboBoxMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CEcomboBoxMarca.FormattingEnabled = true;
-            this.CEcomboBoxMarca.Location = new System.Drawing.Point(424, 274);
-            this.CEcomboBoxMarca.Margin = new System.Windows.Forms.Padding(5, 0, 0, 10);
-            this.CEcomboBoxMarca.MinimumSize = new System.Drawing.Size(133, 0);
-            this.CEcomboBoxMarca.Name = "CEcomboBoxMarca";
-            this.CEcomboBoxMarca.Size = new System.Drawing.Size(185, 25);
-            this.CEcomboBoxMarca.TabIndex = 30;
-            this.CEcomboBoxMarca.Text = "--SELECCIONE MARCA--";
-            this.InfoToolTip.SetToolTip(this.CEcomboBoxMarca, "Seleccionar la marca correspondiente.\r\nSi no existe agregarla presionando el botó" +
-        "n que se encuentra a la derecha.\r\n*Campo Obligatorio*\r\n");
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(364, 278);
-            this.label12.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(55, 16);
-            this.label12.TabIndex = 35;
-            this.label12.Text = "Marca:";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // CEbtnAgregarProv
-            // 
-            this.CEbtnAgregarProv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(183)))), ((int)(((byte)(30)))));
-            this.CEbtnAgregarProv.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CEbtnAgregarProv.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
-            this.CEbtnAgregarProv.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(142)))), ((int)(((byte)(25)))));
-            this.CEbtnAgregarProv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CEbtnAgregarProv.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CEbtnAgregarProv.ForeColor = System.Drawing.Color.White;
-            this.CEbtnAgregarProv.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            this.CEbtnAgregarProv.IconColor = System.Drawing.Color.White;
-            this.CEbtnAgregarProv.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.CEbtnAgregarProv.IconSize = 25;
-            this.CEbtnAgregarProv.Location = new System.Drawing.Point(326, 274);
-            this.CEbtnAgregarProv.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.CEbtnAgregarProv.Name = "CEbtnAgregarProv";
-            this.CEbtnAgregarProv.Size = new System.Drawing.Size(25, 25);
-            this.CEbtnAgregarProv.TabIndex = 32;
-            this.CEbtnAgregarProv.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.InfoToolTip.SetToolTip(this.CEbtnAgregarProv, "Abre pantalla para agregar un nuevo proveedor al sistema.");
-            this.CEbtnAgregarProv.UseVisualStyleBackColor = false;
-            this.CEbtnAgregarProv.Click += new System.EventHandler(this.CEbtnAgregarProv_Click);
-            // 
-            // CEcomboBoxProv
-            // 
-            this.CEcomboBoxProv.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.CEcomboBoxProv.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.CEcomboBoxProv.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CEcomboBoxProv.FormattingEnabled = true;
-            this.CEcomboBoxProv.Location = new System.Drawing.Point(136, 274);
-            this.CEcomboBoxProv.Margin = new System.Windows.Forms.Padding(10, 0, 0, 10);
-            this.CEcomboBoxProv.MinimumSize = new System.Drawing.Size(133, 0);
-            this.CEcomboBoxProv.Name = "CEcomboBoxProv";
-            this.CEcomboBoxProv.Size = new System.Drawing.Size(185, 25);
-            this.CEcomboBoxProv.TabIndex = 29;
-            this.CEcomboBoxProv.Text = "--SELECCIONE PROVEEDOR--";
-            this.InfoToolTip.SetToolTip(this.CEcomboBoxProv, "Seleccionar al proveedor correspondiente.\r\nSi no existe agregarlo presionando el " +
-        "botón que se encuentra a la derecha.\r\n*Campo Obligatorio*");
-            // 
-            // CElabel10
-            // 
-            this.CElabel10.AutoSize = true;
-            this.CElabel10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CElabel10.Location = new System.Drawing.Point(10, 278);
-            this.CElabel10.Margin = new System.Windows.Forms.Padding(0);
-            this.CElabel10.Name = "CElabel10";
-            this.CElabel10.Size = new System.Drawing.Size(85, 16);
-            this.CElabel10.TabIndex = 34;
-            this.CElabel10.Text = "Proveedor:";
-            this.CElabel10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // CElabel7
-            // 
-            this.CElabel7.AutoSize = true;
-            this.CElabel7.Location = new System.Drawing.Point(333, 134);
-            this.CElabel7.Margin = new System.Windows.Forms.Padding(0);
-            this.CElabel7.Name = "CElabel7";
-            this.CElabel7.Size = new System.Drawing.Size(120, 16);
-            this.CElabel7.TabIndex = 38;
-            this.CElabel7.Text = "Tipo de Unidad:";
-            // 
-            // label16
-            // 
-            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label16.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(-9, 309);
-            this.label16.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(668, 2);
-            this.label16.TabIndex = 37;
-            // 
-            // label17
-            // 
-            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label17.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(-16, 196);
-            this.label17.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(668, 2);
-            this.label17.TabIndex = 36;
-            // 
-            // CEtxtCodProv
-            // 
-            this.CEtxtCodProv.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.CEtxtCodProv.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CEtxtCodProv.Location = new System.Drawing.Point(136, 241);
-            this.CEtxtCodProv.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.CEtxtCodProv.MaxLength = 50;
-            this.CEtxtCodProv.Name = "CEtxtCodProv";
-            this.CEtxtCodProv.Size = new System.Drawing.Size(503, 23);
-            this.CEtxtCodProv.TabIndex = 28;
-            this.InfoToolTip.SetToolTip(this.CEtxtCodProv, "Código del proveedor que posee el elemento respecto a la tienda.\r\n*Campo NO Oblig" +
-        "atorio*");
-            // 
-            // CEtxtValorUnitario
-            // 
-            this.CEtxtValorUnitario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CEtxtValorUnitario.Location = new System.Drawing.Point(452, 98);
-            this.CEtxtValorUnitario.Margin = new System.Windows.Forms.Padding(5, 10, 0, 10);
-            this.CEtxtValorUnitario.MaxLength = 10;
-            this.CEtxtValorUnitario.Name = "CEtxtValorUnitario";
-            this.CEtxtValorUnitario.ShortcutsEnabled = false;
-            this.CEtxtValorUnitario.Size = new System.Drawing.Size(187, 23);
-            this.CEtxtValorUnitario.TabIndex = 25;
-            this.CEtxtValorUnitario.Text = "0";
-            this.InfoToolTip.SetToolTip(this.CEtxtValorUnitario, "Valor individual del elemento.\r\n*Caampo Obligatorio*");
-            this.CEtxtValorUnitario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CheckNumberOnly);
-            // 
-            // CEtxtValor
-            // 
-            this.CEtxtValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CEtxtValor.Location = new System.Drawing.Point(136, 97);
-            this.CEtxtValor.Margin = new System.Windows.Forms.Padding(5, 10, 10, 10);
-            this.CEtxtValor.MaxLength = 10;
-            this.CEtxtValor.Name = "CEtxtValor";
-            this.CEtxtValor.ShortcutsEnabled = false;
-            this.CEtxtValor.Size = new System.Drawing.Size(187, 23);
-            this.CEtxtValor.TabIndex = 24;
-            this.CEtxtValor.Text = "0";
-            this.InfoToolTip.SetToolTip(this.CEtxtValor, "Valor completo del elemento.\r\n*Campo Obligatorio*");
-            this.CEtxtValor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CheckNumberOnly);
-            // 
-            // CElabel9
-            // 
-            this.CElabel9.AutoSize = true;
-            this.CElabel9.Location = new System.Drawing.Point(10, 245);
-            this.CElabel9.Margin = new System.Windows.Forms.Padding(0);
-            this.CElabel9.Name = "CElabel9";
-            this.CElabel9.Size = new System.Drawing.Size(117, 16);
-            this.CElabel9.TabIndex = 27;
-            this.CElabel9.Text = "Cod Proveedor:";
-            // 
-            // CElabel5
-            // 
-            this.CElabel5.AutoSize = true;
-            this.CElabel5.Location = new System.Drawing.Point(333, 101);
-            this.CElabel5.Margin = new System.Windows.Forms.Padding(0);
-            this.CElabel5.Name = "CElabel5";
-            this.CElabel5.Size = new System.Drawing.Size(107, 16);
-            this.CElabel5.TabIndex = 23;
-            this.CElabel5.Text = "Valor Unitario:";
-            // 
-            // CElabel4
-            // 
-            this.CElabel4.AutoSize = true;
-            this.CElabel4.Location = new System.Drawing.Point(11, 101);
-            this.CElabel4.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
-            this.CElabel4.Name = "CElabel4";
-            this.CElabel4.Size = new System.Drawing.Size(49, 16);
-            this.CElabel4.TabIndex = 22;
-            this.CElabel4.Text = "Valor:";
-            // 
-            // CElabel6
-            // 
-            this.CElabel6.AutoSize = true;
-            this.CElabel6.Location = new System.Drawing.Point(11, 134);
-            this.CElabel6.Margin = new System.Windows.Forms.Padding(0);
-            this.CElabel6.Name = "CElabel6";
-            this.CElabel6.Size = new System.Drawing.Size(96, 16);
-            this.CElabel6.TabIndex = 20;
-            this.CElabel6.Text = "Stock Inicial:";
-            // 
-            // CEtxtObs
-            // 
-            this.CEtxtObs.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.CEtxtObs.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CEtxtObs.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CEtxtObs.Location = new System.Drawing.Point(136, 321);
-            this.CEtxtObs.Margin = new System.Windows.Forms.Padding(5, 0, 0, 10);
-            this.CEtxtObs.MaxLength = 256;
-            this.CEtxtObs.Name = "CEtxtObs";
-            this.CEtxtObs.Size = new System.Drawing.Size(503, 145);
-            this.CEtxtObs.TabIndex = 31;
-            this.CEtxtObs.Text = "";
-            this.InfoToolTip.SetToolTip(this.CEtxtObs, "Campo de texto para agregar información adicional del elemento, compra, etc.\r\n*Ca" +
-        "mpo NO Obligatorio*");
-            // 
-            // CElabel11
-            // 
-            this.CElabel11.AutoSize = true;
-            this.CElabel11.Location = new System.Drawing.Point(10, 324);
-            this.CElabel11.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.CElabel11.Name = "CElabel11";
-            this.CElabel11.Size = new System.Drawing.Size(117, 16);
-            this.CElabel11.TabIndex = 21;
-            this.CElabel11.Text = "Observaciones:";
-            // 
-            // CEtxtStock
-            // 
-            this.CEtxtStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CEtxtStock.Location = new System.Drawing.Point(136, 130);
-            this.CEtxtStock.Margin = new System.Windows.Forms.Padding(5, 0, 10, 10);
-            this.CEtxtStock.MaxLength = 6;
-            this.CEtxtStock.Name = "CEtxtStock";
-            this.CEtxtStock.ShortcutsEnabled = false;
-            this.CEtxtStock.Size = new System.Drawing.Size(187, 23);
-            this.CEtxtStock.TabIndex = 26;
-            this.CEtxtStock.Text = "1";
-            this.InfoToolTip.SetToolTip(this.CEtxtStock, "Cantidad de elementos.\r\n*Campo Obligatorio*");
-            this.CEtxtStock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CEcheckUnidadStock);
-            this.CEtxtStock.Leave += new System.EventHandler(this.CEParseDecimal);
-            // 
-            // CElabel1
-            // 
-            this.CElabel1.AutoSize = true;
-            this.CElabel1.Location = new System.Drawing.Point(10, 20);
-            this.CElabel1.Margin = new System.Windows.Forms.Padding(0);
-            this.CElabel1.Name = "CElabel1";
-            this.CElabel1.Size = new System.Drawing.Size(95, 16);
-            this.CElabel1.TabIndex = 2;
-            this.CElabel1.Text = "Descripción:";
-            // 
-            // CEtxtDescripcion
-            // 
-            this.CEtxtDescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.CEtxtDescripcion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.CEtxtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CEtxtDescripcion.Location = new System.Drawing.Point(136, 19);
-            this.CEtxtDescripcion.Margin = new System.Windows.Forms.Padding(5, 0, 0, 10);
-            this.CEtxtDescripcion.MaxLength = 256;
-            this.CEtxtDescripcion.Name = "CEtxtDescripcion";
-            this.CEtxtDescripcion.Size = new System.Drawing.Size(503, 23);
-            this.CEtxtDescripcion.TabIndex = 1;
-            this.InfoToolTip.SetToolTip(this.CEtxtDescripcion, "Filtro de elementos.");
-            // 
-            // CEpanelR
-            // 
-            this.CEpanelR.Controls.Add(this.CEbtnCancelar);
-            this.CEpanelR.Controls.Add(this.CEbtnAgregar);
-            this.CEpanelR.Controls.Add(this.label1);
-            this.CEpanelR.Controls.Add(this.CEbtnAgregarImg);
-            this.CEpanelR.Controls.Add(this.CEpanelImagen);
-            this.CEpanelR.Cursor = System.Windows.Forms.Cursors.Default;
-            this.CEpanelR.Dock = System.Windows.Forms.DockStyle.Right;
-            this.CEpanelR.Location = new System.Drawing.Point(649, 0);
-            this.CEpanelR.Margin = new System.Windows.Forms.Padding(0);
-            this.CEpanelR.Name = "CEpanelR";
-            this.CEpanelR.Size = new System.Drawing.Size(385, 605);
-            this.CEpanelR.TabIndex = 6;
-            // 
-            // CEbtnCancelar
-            // 
-            this.CEbtnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(56)))), ((int)(((byte)(0)))));
-            this.CEbtnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CEbtnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
-            this.CEbtnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(41)))), ((int)(((byte)(2)))));
-            this.CEbtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CEbtnCancelar.ForeColor = System.Drawing.Color.White;
-            this.CEbtnCancelar.IconChar = FontAwesome.Sharp.IconChar.TimesCircle;
-            this.CEbtnCancelar.IconColor = System.Drawing.Color.White;
-            this.CEbtnCancelar.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.CEbtnCancelar.IconSize = 30;
-            this.CEbtnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.CEbtnCancelar.Location = new System.Drawing.Point(15, 314);
-            this.CEbtnCancelar.Margin = new System.Windows.Forms.Padding(12, 5, 12, 5);
-            this.CEbtnCancelar.Name = "CEbtnCancelar";
-            this.CEbtnCancelar.Size = new System.Drawing.Size(164, 40);
-            this.CEbtnCancelar.TabIndex = 52;
-            this.CEbtnCancelar.Text = "Cancelar";
-            this.CEbtnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.CEbtnCancelar.UseVisualStyleBackColor = false;
-            this.CEbtnCancelar.Click += new System.EventHandler(this.CEbtnCancelar_Click);
-            // 
-            // CEbtnAgregar
-            // 
-            this.CEbtnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(183)))), ((int)(((byte)(30)))));
-            this.CEbtnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CEbtnAgregar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
-            this.CEbtnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(142)))), ((int)(((byte)(25)))));
-            this.CEbtnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CEbtnAgregar.ForeColor = System.Drawing.Color.White;
-            this.CEbtnAgregar.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            this.CEbtnAgregar.IconColor = System.Drawing.Color.White;
-            this.CEbtnAgregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.CEbtnAgregar.IconSize = 30;
-            this.CEbtnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.CEbtnAgregar.Location = new System.Drawing.Point(210, 313);
-            this.CEbtnAgregar.Margin = new System.Windows.Forms.Padding(12, 5, 12, 5);
-            this.CEbtnAgregar.Name = "CEbtnAgregar";
-            this.CEbtnAgregar.Size = new System.Drawing.Size(160, 40);
-            this.CEbtnAgregar.TabIndex = 51;
-            this.CEbtnAgregar.Text = "Crear Elemento";
-            this.CEbtnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.CEbtnAgregar.UseVisualStyleBackColor = false;
-            this.CEbtnAgregar.Click += new System.EventHandler(this.CEbtnAgregar_Click);
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(-187, 309);
-            this.label1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(668, 2);
-            this.label1.TabIndex = 50;
-            // 
-            // CEbtnAgregarImg
-            // 
-            this.CEbtnAgregarImg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(183)))), ((int)(((byte)(30)))));
-            this.CEbtnAgregarImg.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CEbtnAgregarImg.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
-            this.CEbtnAgregarImg.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(142)))), ((int)(((byte)(25)))));
-            this.CEbtnAgregarImg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CEbtnAgregarImg.ForeColor = System.Drawing.Color.White;
-            this.CEbtnAgregarImg.IconChar = FontAwesome.Sharp.IconChar.Images;
-            this.CEbtnAgregarImg.IconColor = System.Drawing.Color.White;
-            this.CEbtnAgregarImg.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.CEbtnAgregarImg.IconSize = 30;
-            this.CEbtnAgregarImg.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.CEbtnAgregarImg.Location = new System.Drawing.Point(15, 264);
-            this.CEbtnAgregarImg.Margin = new System.Windows.Forms.Padding(12, 5, 12, 5);
-            this.CEbtnAgregarImg.Name = "CEbtnAgregarImg";
-            this.CEbtnAgregarImg.Size = new System.Drawing.Size(355, 40);
-            this.CEbtnAgregarImg.TabIndex = 6;
-            this.CEbtnAgregarImg.Text = "Agregar Imagen";
-            this.CEbtnAgregarImg.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.CEbtnAgregarImg.UseVisualStyleBackColor = false;
-            this.CEbtnAgregarImg.Click += new System.EventHandler(this.CEbtnAgregarImg_Click);
-            // 
-            // CEpanelImagen
-            // 
-            this.CEpanelImagen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(243)))), ((int)(((byte)(246)))));
-            this.CEpanelImagen.Controls.Add(this.CEpictureBoxElem);
-            this.CEpanelImagen.Dock = System.Windows.Forms.DockStyle.Top;
-            this.CEpanelImagen.Location = new System.Drawing.Point(0, 0);
-            this.CEpanelImagen.Margin = new System.Windows.Forms.Padding(0);
-            this.CEpanelImagen.Name = "CEpanelImagen";
-            this.CEpanelImagen.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
-            this.CEpanelImagen.Size = new System.Drawing.Size(385, 259);
-            this.CEpanelImagen.TabIndex = 5;
-            // 
-            // CEpictureBoxElem
-            // 
-            this.CEpictureBoxElem.BackColor = System.Drawing.Color.White;
-            this.CEpictureBoxElem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.CEpictureBoxElem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CEpictureBoxElem.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CEpictureBoxElem.Image = global::Convertec_Bodega_Administracion.Properties.Resources.image_unavailable;
-            this.CEpictureBoxElem.InitialImage = global::Convertec_Bodega_Administracion.Properties.Resources.image_unavailable;
-            this.CEpictureBoxElem.Location = new System.Drawing.Point(15, 10);
-            this.CEpictureBoxElem.Margin = new System.Windows.Forms.Padding(12, 10, 12, 10);
-            this.CEpictureBoxElem.Name = "CEpictureBoxElem";
-            this.CEpictureBoxElem.Size = new System.Drawing.Size(355, 239);
-            this.CEpictureBoxElem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.CEpictureBoxElem.TabIndex = 0;
-            this.CEpictureBoxElem.TabStop = false;
-            // 
-            // CMEtabModificar
-            // 
-            this.CMEtabModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(243)))), ((int)(((byte)(246)))));
-            this.CMEtabModificar.Location = new System.Drawing.Point(4, 25);
-            this.CMEtabModificar.Name = "CMEtabModificar";
-            this.CMEtabModificar.Padding = new System.Windows.Forms.Padding(3);
-            this.CMEtabModificar.Size = new System.Drawing.Size(1034, 605);
-            this.CMEtabModificar.TabIndex = 1;
-            this.CMEtabModificar.Text = "Modificar Elemento";
-            // 
-            // BodyPanelInformes
-            // 
-            this.BodyPanelInformes.Controls.Add(this.INFtabControlInformes);
-            this.BodyPanelInformes.Location = new System.Drawing.Point(0, 584);
-            this.BodyPanelInformes.Name = "BodyPanelInformes";
-            this.BodyPanelInformes.Size = new System.Drawing.Size(1042, 362);
-            this.BodyPanelInformes.TabIndex = 9;
-            this.BodyPanelInformes.Visible = false;
-            // 
-            // INFtabControlInformes
-            // 
-            this.INFtabControlInformes.Controls.Add(this.INFtabPageStock);
-            this.INFtabControlInformes.Controls.Add(this.INFtabPageImportacion);
-            this.INFtabControlInformes.Controls.Add(this.INFtabPagListadoOT);
-            this.INFtabControlInformes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.INFtabControlInformes.Location = new System.Drawing.Point(0, 0);
-            this.INFtabControlInformes.Name = "INFtabControlInformes";
-            this.INFtabControlInformes.SelectedIndex = 0;
-            this.INFtabControlInformes.Size = new System.Drawing.Size(1042, 362);
-            this.INFtabControlInformes.TabIndex = 0;
-            this.INFtabControlInformes.TabStop = false;
-            this.INFtabControlInformes.SelectedIndexChanged += new System.EventHandler(this.SelectedTabChanged);
-            // 
-            // INFtabPageStock
-            // 
-            this.INFtabPageStock.Controls.Add(this.INFpanelStockBodega2);
-            this.INFtabPageStock.Controls.Add(this.INFpanelStockBodega1);
-            this.INFtabPageStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.INFtabPageStock.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.INFtabPageStock.Location = new System.Drawing.Point(4, 25);
-            this.INFtabPageStock.Margin = new System.Windows.Forms.Padding(0);
-            this.INFtabPageStock.Name = "INFtabPageStock";
-            this.INFtabPageStock.Padding = new System.Windows.Forms.Padding(3);
-            this.INFtabPageStock.Size = new System.Drawing.Size(1034, 333);
-            this.INFtabPageStock.TabIndex = 0;
-            this.INFtabPageStock.Text = "Stock Bodega";
-            this.INFtabPageStock.UseVisualStyleBackColor = true;
-            // 
-            // INFpanelStockBodega2
-            // 
-            this.INFpanelStockBodega2.Controls.Add(this.INFdataGridViewStockBodega);
-            this.INFpanelStockBodega2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.INFpanelStockBodega2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.INFpanelStockBodega2.Location = new System.Drawing.Point(3, 53);
-            this.INFpanelStockBodega2.Name = "INFpanelStockBodega2";
-            this.INFpanelStockBodega2.Size = new System.Drawing.Size(1028, 277);
-            this.INFpanelStockBodega2.TabIndex = 2;
-            // 
-            // INFdataGridViewStockBodega
-            // 
-            this.INFdataGridViewStockBodega.AllowUserToAddRows = false;
-            this.INFdataGridViewStockBodega.AllowUserToDeleteRows = false;
-            this.INFdataGridViewStockBodega.AllowUserToOrderColumns = true;
-            this.INFdataGridViewStockBodega.AllowUserToResizeRows = false;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(255)))), ((int)(((byte)(242)))));
-            this.INFdataGridViewStockBodega.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle20;
-            this.INFdataGridViewStockBodega.AutoGenerateColumns = false;
-            this.INFdataGridViewStockBodega.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.INFdataGridViewStockBodega.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.codbodegaDataGridViewTextBoxColumn2,
-            this.descripcionDataGridViewTextBoxColumn2,
-            this.stock,
-            this.stock_min,
-            this.nomproveedorDataGridViewTextBoxColumn2,
-            this.nommarcaDataGridViewTextBoxColumn2,
-            this.valorDataGridViewTextBoxColumn2,
-            this.valorunitarioDataGridViewTextBoxColumn2});
-            this.INFdataGridViewStockBodega.DataSource = this.elementoStockBodegaBindingSource;
-            this.INFdataGridViewStockBodega.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.INFdataGridViewStockBodega.Location = new System.Drawing.Point(0, 0);
-            this.INFdataGridViewStockBodega.Name = "INFdataGridViewStockBodega";
-            this.INFdataGridViewStockBodega.ReadOnly = true;
-            this.INFdataGridViewStockBodega.RowHeadersVisible = false;
-            this.INFdataGridViewStockBodega.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.INFdataGridViewStockBodega.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.INFdataGridViewStockBodega.Size = new System.Drawing.Size(1028, 277);
-            this.INFdataGridViewStockBodega.TabIndex = 0;
-            // 
-            // stock_min
-            // 
-            this.stock_min.DataPropertyName = "stock_min";
-            this.stock_min.HeaderText = "Stock Min.";
-            this.stock_min.Name = "stock_min";
-            this.stock_min.ReadOnly = true;
-            // 
-            // INFpanelStockBodega1
-            // 
-            this.INFpanelStockBodega1.Controls.Add(this.INFcheckBoxCriticosStock);
-            this.INFpanelStockBodega1.Controls.Add(this.INFbtnExportarStock);
-            this.INFpanelStockBodega1.Controls.Add(this.INFbtnRestablecerFiltroStock);
-            this.INFpanelStockBodega1.Controls.Add(this.INFtxtfiltroMarcaStock);
-            this.INFpanelStockBodega1.Controls.Add(this.INFlabel3);
-            this.INFpanelStockBodega1.Controls.Add(this.INFbtnBuscarStock);
-            this.INFpanelStockBodega1.Controls.Add(this.INFtxtFiltroProveedorStock);
-            this.INFpanelStockBodega1.Controls.Add(this.INFlabel2);
-            this.INFpanelStockBodega1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.INFpanelStockBodega1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.INFpanelStockBodega1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(78)))), ((int)(((byte)(79)))));
-            this.INFpanelStockBodega1.Location = new System.Drawing.Point(3, 3);
-            this.INFpanelStockBodega1.Margin = new System.Windows.Forms.Padding(0);
-            this.INFpanelStockBodega1.Name = "INFpanelStockBodega1";
-            this.INFpanelStockBodega1.Padding = new System.Windows.Forms.Padding(10);
-            this.INFpanelStockBodega1.Size = new System.Drawing.Size(1028, 50);
-            this.INFpanelStockBodega1.TabIndex = 1;
-            // 
-            // INFcheckBoxCriticosStock
-            // 
-            this.INFcheckBoxCriticosStock.AutoSize = true;
-            this.INFcheckBoxCriticosStock.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.INFcheckBoxCriticosStock.Location = new System.Drawing.Point(753, 16);
-            this.INFcheckBoxCriticosStock.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.INFcheckBoxCriticosStock.Name = "INFcheckBoxCriticosStock";
-            this.INFcheckBoxCriticosStock.Size = new System.Drawing.Size(115, 20);
-            this.INFcheckBoxCriticosStock.TabIndex = 4;
-            this.INFcheckBoxCriticosStock.Text = "Solo Críticos";
-            this.InfoToolTip.SetToolTip(this.INFcheckBoxCriticosStock, "Si es activado solo muestra los elementos con stock crítico.");
-            this.INFcheckBoxCriticosStock.UseVisualStyleBackColor = true;
-            this.INFcheckBoxCriticosStock.CheckedChanged += new System.EventHandler(this.INFcheckBoxCriticos_CheckedChanged);
-            // 
-            // INFbtnExportarStock
-            // 
-            this.INFbtnExportarStock.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.INFbtnExportarStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(183)))), ((int)(((byte)(30)))));
-            this.INFbtnExportarStock.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.INFbtnExportarStock.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
-            this.INFbtnExportarStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.INFbtnExportarStock.ForeColor = System.Drawing.Color.White;
-            this.INFbtnExportarStock.IconChar = FontAwesome.Sharp.IconChar.FileExport;
-            this.INFbtnExportarStock.IconColor = System.Drawing.Color.White;
-            this.INFbtnExportarStock.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.INFbtnExportarStock.IconSize = 25;
-            this.INFbtnExportarStock.Location = new System.Drawing.Point(898, 10);
-            this.INFbtnExportarStock.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.INFbtnExportarStock.Name = "INFbtnExportarStock";
-            this.INFbtnExportarStock.Size = new System.Drawing.Size(120, 30);
-            this.INFbtnExportarStock.TabIndex = 5;
-            this.INFbtnExportarStock.Text = "Exportar";
-            this.INFbtnExportarStock.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.INFbtnExportarStock.UseVisualStyleBackColor = false;
-            this.INFbtnExportarStock.Click += new System.EventHandler(this.INFbtnExportarStock_Click);
-            // 
-            // INFbtnRestablecerFiltroStock
-            // 
-            this.INFbtnRestablecerFiltroStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(183)))), ((int)(((byte)(30)))));
-            this.INFbtnRestablecerFiltroStock.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.INFbtnRestablecerFiltroStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.INFbtnRestablecerFiltroStock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
-            this.INFbtnRestablecerFiltroStock.IconChar = FontAwesome.Sharp.IconChar.UndoAlt;
-            this.INFbtnRestablecerFiltroStock.IconColor = System.Drawing.Color.White;
-            this.INFbtnRestablecerFiltroStock.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.INFbtnRestablecerFiltroStock.IconSize = 25;
-            this.INFbtnRestablecerFiltroStock.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.INFbtnRestablecerFiltroStock.Location = new System.Drawing.Point(718, 10);
-            this.INFbtnRestablecerFiltroStock.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.INFbtnRestablecerFiltroStock.Name = "INFbtnRestablecerFiltroStock";
-            this.INFbtnRestablecerFiltroStock.Size = new System.Drawing.Size(30, 30);
-            this.INFbtnRestablecerFiltroStock.TabIndex = 3;
-            this.INFbtnRestablecerFiltroStock.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.INFbtnRestablecerFiltroStock.UseVisualStyleBackColor = false;
-            this.INFbtnRestablecerFiltroStock.Click += new System.EventHandler(this.INFbtnRestablecerFiltroStock_Click);
-            // 
-            // INFtxtfiltroMarcaStock
-            // 
-            this.INFtxtfiltroMarcaStock.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.INFtxtfiltroMarcaStock.Location = new System.Drawing.Point(426, 14);
-            this.INFtxtfiltroMarcaStock.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.INFtxtfiltroMarcaStock.MaxLength = 256;
-            this.INFtxtfiltroMarcaStock.Name = "INFtxtfiltroMarcaStock";
-            this.INFtxtfiltroMarcaStock.Size = new System.Drawing.Size(247, 22);
-            this.INFtxtfiltroMarcaStock.TabIndex = 1;
-            this.INFtxtfiltroMarcaStock.KeyDown += new System.Windows.Forms.KeyEventHandler(this.INFtxtfiltroMarcaStock_KeyDown);
-            // 
-            // INFlabel3
-            // 
-            this.INFlabel3.AutoSize = true;
-            this.INFlabel3.Location = new System.Drawing.Point(366, 17);
-            this.INFlabel3.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.INFlabel3.Name = "INFlabel3";
-            this.INFlabel3.Size = new System.Drawing.Size(55, 16);
-            this.INFlabel3.TabIndex = 6;
-            this.INFlabel3.Text = "Marca:";
-            // 
-            // INFbtnBuscarStock
-            // 
-            this.INFbtnBuscarStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(183)))), ((int)(((byte)(30)))));
-            this.INFbtnBuscarStock.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.INFbtnBuscarStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.INFbtnBuscarStock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
-            this.INFbtnBuscarStock.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.INFbtnBuscarStock.IconColor = System.Drawing.Color.White;
-            this.INFbtnBuscarStock.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.INFbtnBuscarStock.IconSize = 25;
-            this.INFbtnBuscarStock.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.INFbtnBuscarStock.Location = new System.Drawing.Point(683, 10);
-            this.INFbtnBuscarStock.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.INFbtnBuscarStock.Name = "INFbtnBuscarStock";
-            this.INFbtnBuscarStock.Size = new System.Drawing.Size(30, 30);
-            this.INFbtnBuscarStock.TabIndex = 2;
-            this.INFbtnBuscarStock.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.INFbtnBuscarStock.UseVisualStyleBackColor = false;
-            this.INFbtnBuscarStock.Click += new System.EventHandler(this.INFbtnBuscarStock_Click);
-            // 
-            // INFtxtFiltroProveedorStock
-            // 
-            this.INFtxtFiltroProveedorStock.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.INFtxtFiltroProveedorStock.Location = new System.Drawing.Point(104, 14);
-            this.INFtxtFiltroProveedorStock.Margin = new System.Windows.Forms.Padding(5, 0, 10, 0);
-            this.INFtxtFiltroProveedorStock.MaxLength = 256;
-            this.INFtxtFiltroProveedorStock.Name = "INFtxtFiltroProveedorStock";
-            this.INFtxtFiltroProveedorStock.Size = new System.Drawing.Size(247, 22);
-            this.INFtxtFiltroProveedorStock.TabIndex = 0;
-            this.INFtxtFiltroProveedorStock.KeyDown += new System.Windows.Forms.KeyEventHandler(this.INFtxtFiltroProveedorStock_KeyDown);
-            // 
-            // INFlabel2
-            // 
-            this.INFlabel2.AutoSize = true;
-            this.INFlabel2.Location = new System.Drawing.Point(14, 17);
-            this.INFlabel2.Margin = new System.Windows.Forms.Padding(0);
-            this.INFlabel2.Name = "INFlabel2";
-            this.INFlabel2.Size = new System.Drawing.Size(85, 16);
-            this.INFlabel2.TabIndex = 3;
-            this.INFlabel2.Text = "Proveedor:";
-            // 
-            // INFtabPageImportacion
-            // 
-            this.INFtabPageImportacion.Controls.Add(this.INFpanelStockImportacion2);
-            this.INFtabPageImportacion.Controls.Add(this.INFpanelStockImportacion1);
-            this.INFtabPageImportacion.Location = new System.Drawing.Point(4, 25);
-            this.INFtabPageImportacion.Margin = new System.Windows.Forms.Padding(0);
-            this.INFtabPageImportacion.Name = "INFtabPageImportacion";
-            this.INFtabPageImportacion.Padding = new System.Windows.Forms.Padding(3);
-            this.INFtabPageImportacion.Size = new System.Drawing.Size(1034, 333);
-            this.INFtabPageImportacion.TabIndex = 1;
-            this.INFtabPageImportacion.Text = "Stock Importación";
-            this.INFtabPageImportacion.UseVisualStyleBackColor = true;
-            // 
-            // INFpanelStockImportacion2
-            // 
-            this.INFpanelStockImportacion2.Controls.Add(this.INFdataGridViewStockBodegaImportacion);
-            this.INFpanelStockImportacion2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.INFpanelStockImportacion2.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.INFpanelStockImportacion2.Location = new System.Drawing.Point(3, 53);
-            this.INFpanelStockImportacion2.Name = "INFpanelStockImportacion2";
-            this.INFpanelStockImportacion2.Size = new System.Drawing.Size(1028, 277);
-            this.INFpanelStockImportacion2.TabIndex = 1;
-            // 
-            // INFdataGridViewStockBodegaImportacion
-            // 
-            this.INFdataGridViewStockBodegaImportacion.AllowUserToAddRows = false;
-            this.INFdataGridViewStockBodegaImportacion.AllowUserToDeleteRows = false;
-            this.INFdataGridViewStockBodegaImportacion.AllowUserToOrderColumns = true;
-            this.INFdataGridViewStockBodegaImportacion.AllowUserToResizeRows = false;
-            dataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(255)))), ((int)(((byte)(242)))));
-            this.INFdataGridViewStockBodegaImportacion.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle25;
-            this.INFdataGridViewStockBodegaImportacion.AutoGenerateColumns = false;
-            this.INFdataGridViewStockBodegaImportacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.INFdataGridViewStockBodegaImportacion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.stock_imp,
-            this.stock_min_imp,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8});
-            this.INFdataGridViewStockBodegaImportacion.DataSource = this.elementoStockBodegaBindingSource;
-            this.INFdataGridViewStockBodegaImportacion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.INFdataGridViewStockBodegaImportacion.Location = new System.Drawing.Point(0, 0);
-            this.INFdataGridViewStockBodegaImportacion.Name = "INFdataGridViewStockBodegaImportacion";
-            this.INFdataGridViewStockBodegaImportacion.ReadOnly = true;
-            this.INFdataGridViewStockBodegaImportacion.RowHeadersVisible = false;
-            this.INFdataGridViewStockBodegaImportacion.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.INFdataGridViewStockBodegaImportacion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.INFdataGridViewStockBodegaImportacion.Size = new System.Drawing.Size(1028, 277);
-            this.INFdataGridViewStockBodegaImportacion.TabIndex = 1;
-            this.INFdataGridViewStockBodegaImportacion.TabStop = false;
-            // 
-            // stock_min_imp
-            // 
-            this.stock_min_imp.DataPropertyName = "stock_min";
-            this.stock_min_imp.HeaderText = "Stock Min.";
-            this.stock_min_imp.Name = "stock_min_imp";
-            this.stock_min_imp.ReadOnly = true;
-            // 
-            // INFpanelStockImportacion1
-            // 
-            this.INFpanelStockImportacion1.Controls.Add(this.INFcheckBoxCriticosStockImport);
-            this.INFpanelStockImportacion1.Controls.Add(this.INFbtnExportarStockImportacion);
-            this.INFpanelStockImportacion1.Controls.Add(this.INFbtnRestablecerFiltroStockImportacion);
-            this.INFpanelStockImportacion1.Controls.Add(this.INFtxtfiltroMarcaStockImportacion);
-            this.INFpanelStockImportacion1.Controls.Add(this.INFlabel5);
-            this.INFpanelStockImportacion1.Controls.Add(this.INFbtnBuscarStockImportacion);
-            this.INFpanelStockImportacion1.Controls.Add(this.INFtxtFiltroProveedorStockImportacion);
-            this.INFpanelStockImportacion1.Controls.Add(this.INFlabel4);
-            this.INFpanelStockImportacion1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.INFpanelStockImportacion1.Location = new System.Drawing.Point(3, 3);
-            this.INFpanelStockImportacion1.Margin = new System.Windows.Forms.Padding(0);
-            this.INFpanelStockImportacion1.Name = "INFpanelStockImportacion1";
-            this.INFpanelStockImportacion1.Padding = new System.Windows.Forms.Padding(10);
-            this.INFpanelStockImportacion1.Size = new System.Drawing.Size(1028, 50);
-            this.INFpanelStockImportacion1.TabIndex = 0;
-            // 
-            // INFcheckBoxCriticosStockImport
-            // 
-            this.INFcheckBoxCriticosStockImport.AutoSize = true;
-            this.INFcheckBoxCriticosStockImport.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.INFcheckBoxCriticosStockImport.Location = new System.Drawing.Point(753, 16);
-            this.INFcheckBoxCriticosStockImport.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.INFcheckBoxCriticosStockImport.Name = "INFcheckBoxCriticosStockImport";
-            this.INFcheckBoxCriticosStockImport.Size = new System.Drawing.Size(115, 20);
-            this.INFcheckBoxCriticosStockImport.TabIndex = 13;
-            this.INFcheckBoxCriticosStockImport.Text = "Solo Críticos";
-            this.InfoToolTip.SetToolTip(this.INFcheckBoxCriticosStockImport, "Si es activado solo muestra los elementos con stock crítico.");
-            this.INFcheckBoxCriticosStockImport.UseVisualStyleBackColor = true;
-            this.INFcheckBoxCriticosStockImport.CheckedChanged += new System.EventHandler(this.INFcheckBoxCriticosStockImport_CheckedChanged);
-            // 
-            // INFbtnExportarStockImportacion
-            // 
-            this.INFbtnExportarStockImportacion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.INFbtnExportarStockImportacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(183)))), ((int)(((byte)(30)))));
-            this.INFbtnExportarStockImportacion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.INFbtnExportarStockImportacion.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
-            this.INFbtnExportarStockImportacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.INFbtnExportarStockImportacion.ForeColor = System.Drawing.Color.White;
-            this.INFbtnExportarStockImportacion.IconChar = FontAwesome.Sharp.IconChar.FileExport;
-            this.INFbtnExportarStockImportacion.IconColor = System.Drawing.Color.White;
-            this.INFbtnExportarStockImportacion.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.INFbtnExportarStockImportacion.IconSize = 25;
-            this.INFbtnExportarStockImportacion.Location = new System.Drawing.Point(898, 10);
-            this.INFbtnExportarStockImportacion.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.INFbtnExportarStockImportacion.Name = "INFbtnExportarStockImportacion";
-            this.INFbtnExportarStockImportacion.Size = new System.Drawing.Size(120, 30);
-            this.INFbtnExportarStockImportacion.TabIndex = 4;
-            this.INFbtnExportarStockImportacion.Text = "Exportar";
-            this.INFbtnExportarStockImportacion.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.INFbtnExportarStockImportacion.UseVisualStyleBackColor = false;
-            this.INFbtnExportarStockImportacion.Click += new System.EventHandler(this.INFbtnExportarStockImportacion_Click);
-            // 
-            // INFbtnRestablecerFiltroStockImportacion
-            // 
-            this.INFbtnRestablecerFiltroStockImportacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(183)))), ((int)(((byte)(30)))));
-            this.INFbtnRestablecerFiltroStockImportacion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.INFbtnRestablecerFiltroStockImportacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.INFbtnRestablecerFiltroStockImportacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
-            this.INFbtnRestablecerFiltroStockImportacion.IconChar = FontAwesome.Sharp.IconChar.UndoAlt;
-            this.INFbtnRestablecerFiltroStockImportacion.IconColor = System.Drawing.Color.White;
-            this.INFbtnRestablecerFiltroStockImportacion.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.INFbtnRestablecerFiltroStockImportacion.IconSize = 25;
-            this.INFbtnRestablecerFiltroStockImportacion.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.INFbtnRestablecerFiltroStockImportacion.Location = new System.Drawing.Point(718, 10);
-            this.INFbtnRestablecerFiltroStockImportacion.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.INFbtnRestablecerFiltroStockImportacion.Name = "INFbtnRestablecerFiltroStockImportacion";
-            this.INFbtnRestablecerFiltroStockImportacion.Size = new System.Drawing.Size(30, 30);
-            this.INFbtnRestablecerFiltroStockImportacion.TabIndex = 3;
-            this.INFbtnRestablecerFiltroStockImportacion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.INFbtnRestablecerFiltroStockImportacion.UseVisualStyleBackColor = false;
-            this.INFbtnRestablecerFiltroStockImportacion.Click += new System.EventHandler(this.INFbtnRestablecerFiltroStockImportacion_Click);
-            // 
-            // INFtxtfiltroMarcaStockImportacion
-            // 
-            this.INFtxtfiltroMarcaStockImportacion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.INFtxtfiltroMarcaStockImportacion.Location = new System.Drawing.Point(426, 14);
-            this.INFtxtfiltroMarcaStockImportacion.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.INFtxtfiltroMarcaStockImportacion.MaxLength = 256;
-            this.INFtxtfiltroMarcaStockImportacion.Name = "INFtxtfiltroMarcaStockImportacion";
-            this.INFtxtfiltroMarcaStockImportacion.Size = new System.Drawing.Size(247, 22);
-            this.INFtxtfiltroMarcaStockImportacion.TabIndex = 1;
-            this.INFtxtfiltroMarcaStockImportacion.KeyDown += new System.Windows.Forms.KeyEventHandler(this.INFtxtfiltroMarcaStockImportacion_KeyDown);
-            // 
-            // INFlabel5
-            // 
-            this.INFlabel5.AutoSize = true;
-            this.INFlabel5.Location = new System.Drawing.Point(366, 17);
-            this.INFlabel5.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.INFlabel5.Name = "INFlabel5";
-            this.INFlabel5.Size = new System.Drawing.Size(55, 16);
-            this.INFlabel5.TabIndex = 12;
-            this.INFlabel5.Text = "Marca:";
-            // 
-            // INFbtnBuscarStockImportacion
-            // 
-            this.INFbtnBuscarStockImportacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(183)))), ((int)(((byte)(30)))));
-            this.INFbtnBuscarStockImportacion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.INFbtnBuscarStockImportacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.INFbtnBuscarStockImportacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
-            this.INFbtnBuscarStockImportacion.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.INFbtnBuscarStockImportacion.IconColor = System.Drawing.Color.White;
-            this.INFbtnBuscarStockImportacion.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.INFbtnBuscarStockImportacion.IconSize = 25;
-            this.INFbtnBuscarStockImportacion.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.INFbtnBuscarStockImportacion.Location = new System.Drawing.Point(683, 10);
-            this.INFbtnBuscarStockImportacion.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.INFbtnBuscarStockImportacion.Name = "INFbtnBuscarStockImportacion";
-            this.INFbtnBuscarStockImportacion.Size = new System.Drawing.Size(30, 30);
-            this.INFbtnBuscarStockImportacion.TabIndex = 2;
-            this.INFbtnBuscarStockImportacion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.INFbtnBuscarStockImportacion.UseVisualStyleBackColor = false;
-            this.INFbtnBuscarStockImportacion.Click += new System.EventHandler(this.INFbtnBuscarStockImportacion_Click);
-            // 
-            // INFtxtFiltroProveedorStockImportacion
-            // 
-            this.INFtxtFiltroProveedorStockImportacion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.INFtxtFiltroProveedorStockImportacion.Location = new System.Drawing.Point(104, 14);
-            this.INFtxtFiltroProveedorStockImportacion.Margin = new System.Windows.Forms.Padding(5, 0, 10, 0);
-            this.INFtxtFiltroProveedorStockImportacion.MaxLength = 256;
-            this.INFtxtFiltroProveedorStockImportacion.Name = "INFtxtFiltroProveedorStockImportacion";
-            this.INFtxtFiltroProveedorStockImportacion.Size = new System.Drawing.Size(247, 22);
-            this.INFtxtFiltroProveedorStockImportacion.TabIndex = 0;
-            this.INFtxtFiltroProveedorStockImportacion.KeyDown += new System.Windows.Forms.KeyEventHandler(this.INFtxtFiltroProveedorStockImportacion_KeyDown);
-            // 
-            // INFlabel4
-            // 
-            this.INFlabel4.AutoSize = true;
-            this.INFlabel4.Location = new System.Drawing.Point(14, 17);
-            this.INFlabel4.Margin = new System.Windows.Forms.Padding(0);
-            this.INFlabel4.Name = "INFlabel4";
-            this.INFlabel4.Size = new System.Drawing.Size(85, 16);
-            this.INFlabel4.TabIndex = 9;
-            this.INFlabel4.Text = "Proveedor:";
-            // 
-            // INFtabPagListadoOT
-            // 
-            this.INFtabPagListadoOT.Controls.Add(this.INFpanelListadoOT2);
-            this.INFtabPagListadoOT.Controls.Add(this.INFpanelListadoOT1);
-            this.INFtabPagListadoOT.Location = new System.Drawing.Point(4, 25);
-            this.INFtabPagListadoOT.Margin = new System.Windows.Forms.Padding(0);
-            this.INFtabPagListadoOT.Name = "INFtabPagListadoOT";
-            this.INFtabPagListadoOT.Padding = new System.Windows.Forms.Padding(3);
-            this.INFtabPagListadoOT.Size = new System.Drawing.Size(1034, 333);
-            this.INFtabPagListadoOT.TabIndex = 2;
-            this.INFtabPagListadoOT.Text = "Lista Partes por OT";
-            this.INFtabPagListadoOT.UseVisualStyleBackColor = true;
-            // 
-            // INFpanelListadoOT2
-            // 
-            this.INFpanelListadoOT2.Controls.Add(this.INFdataGridViewListadoOT);
-            this.INFpanelListadoOT2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.INFpanelListadoOT2.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.INFpanelListadoOT2.Location = new System.Drawing.Point(3, 53);
-            this.INFpanelListadoOT2.Name = "INFpanelListadoOT2";
-            this.INFpanelListadoOT2.Size = new System.Drawing.Size(1028, 277);
-            this.INFpanelListadoOT2.TabIndex = 1;
-            // 
-            // INFdataGridViewListadoOT
-            // 
-            this.INFdataGridViewListadoOT.AllowUserToAddRows = false;
-            this.INFdataGridViewListadoOT.AllowUserToDeleteRows = false;
-            this.INFdataGridViewListadoOT.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(255)))), ((int)(((byte)(242)))));
-            this.INFdataGridViewListadoOT.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle30;
-            this.INFdataGridViewListadoOT.AutoGenerateColumns = false;
-            this.INFdataGridViewListadoOT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.INFdataGridViewListadoOT.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.parteplanoDataGridViewTextBoxColumn1,
-            this.descripcionDataGridViewTextBoxColumn3,
-            this.nomproveedorDataGridViewTextBoxColumn3,
-            this.nommarcaDataGridViewTextBoxColumn3,
-            this.valorDataGridViewTextBoxColumn3,
-            this.valorunitarioDataGridViewTextBoxColumn3,
-            this.cantidadDataGridViewTextBoxColumn3,
-            this.bodega,
-            this.compra,
-            this.subtotal});
-            this.INFdataGridViewListadoOT.DataSource = this.elementoUtilizadoOTBindingSource;
-            this.INFdataGridViewListadoOT.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.INFdataGridViewListadoOT.Location = new System.Drawing.Point(0, 0);
-            this.INFdataGridViewListadoOT.Name = "INFdataGridViewListadoOT";
-            this.INFdataGridViewListadoOT.ReadOnly = true;
-            this.INFdataGridViewListadoOT.RowHeadersVisible = false;
-            this.INFdataGridViewListadoOT.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.INFdataGridViewListadoOT.Size = new System.Drawing.Size(1028, 277);
-            this.INFdataGridViewListadoOT.TabIndex = 0;
-            this.INFdataGridViewListadoOT.TabStop = false;
-            // 
-            // bodega
-            // 
-            this.bodega.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.bodega.HeaderText = "Bodega";
-            this.bodega.Name = "bodega";
-            this.bodega.ReadOnly = true;
-            this.bodega.Visible = false;
-            this.bodega.Width = 69;
-            // 
-            // compra
-            // 
-            this.compra.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.compra.HeaderText = "Compra";
-            this.compra.Name = "compra";
-            this.compra.ReadOnly = true;
-            this.compra.Visible = false;
-            this.compra.Width = 68;
-            // 
-            // subtotal
-            // 
-            this.subtotal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.subtotal.HeaderText = "Subtotal";
-            this.subtotal.Name = "subtotal";
-            this.subtotal.ReadOnly = true;
-            this.subtotal.Visible = false;
-            this.subtotal.Width = 71;
-            // 
-            // INFpanelListadoOT1
-            // 
-            this.INFpanelListadoOT1.Controls.Add(this.INFbtnExportarListadoOT);
-            this.INFpanelListadoOT1.Controls.Add(this.INFbtnBuscarOT);
-            this.INFpanelListadoOT1.Controls.Add(this.INFtxtOT);
-            this.INFpanelListadoOT1.Controls.Add(this.INFlabel1);
-            this.INFpanelListadoOT1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.INFpanelListadoOT1.Location = new System.Drawing.Point(3, 3);
-            this.INFpanelListadoOT1.Margin = new System.Windows.Forms.Padding(0);
-            this.INFpanelListadoOT1.Name = "INFpanelListadoOT1";
-            this.INFpanelListadoOT1.Padding = new System.Windows.Forms.Padding(10);
-            this.INFpanelListadoOT1.Size = new System.Drawing.Size(1028, 50);
-            this.INFpanelListadoOT1.TabIndex = 0;
-            // 
-            // INFbtnExportarListadoOT
-            // 
-            this.INFbtnExportarListadoOT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.INFbtnExportarListadoOT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(183)))), ((int)(((byte)(30)))));
-            this.INFbtnExportarListadoOT.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.INFbtnExportarListadoOT.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
-            this.INFbtnExportarListadoOT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.INFbtnExportarListadoOT.ForeColor = System.Drawing.Color.White;
-            this.INFbtnExportarListadoOT.IconChar = FontAwesome.Sharp.IconChar.FileExport;
-            this.INFbtnExportarListadoOT.IconColor = System.Drawing.Color.White;
-            this.INFbtnExportarListadoOT.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.INFbtnExportarListadoOT.IconSize = 25;
-            this.INFbtnExportarListadoOT.Location = new System.Drawing.Point(898, 10);
-            this.INFbtnExportarListadoOT.Margin = new System.Windows.Forms.Padding(0);
-            this.INFbtnExportarListadoOT.Name = "INFbtnExportarListadoOT";
-            this.INFbtnExportarListadoOT.Size = new System.Drawing.Size(120, 30);
-            this.INFbtnExportarListadoOT.TabIndex = 2;
-            this.INFbtnExportarListadoOT.Text = "Exportar";
-            this.INFbtnExportarListadoOT.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.INFbtnExportarListadoOT.UseVisualStyleBackColor = false;
-            this.INFbtnExportarListadoOT.Click += new System.EventHandler(this.INFbtnExportarListadoOT_Click);
-            // 
-            // INFbtnBuscarOT
-            // 
-            this.INFbtnBuscarOT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(183)))), ((int)(((byte)(30)))));
-            this.INFbtnBuscarOT.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.INFbtnBuscarOT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.INFbtnBuscarOT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
-            this.INFbtnBuscarOT.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.INFbtnBuscarOT.IconColor = System.Drawing.Color.White;
-            this.INFbtnBuscarOT.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.INFbtnBuscarOT.IconSize = 25;
-            this.INFbtnBuscarOT.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.INFbtnBuscarOT.Location = new System.Drawing.Point(400, 10);
-            this.INFbtnBuscarOT.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.INFbtnBuscarOT.Name = "INFbtnBuscarOT";
-            this.INFbtnBuscarOT.Size = new System.Drawing.Size(30, 30);
-            this.INFbtnBuscarOT.TabIndex = 1;
-            this.INFbtnBuscarOT.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.INFbtnBuscarOT.UseVisualStyleBackColor = false;
-            this.INFbtnBuscarOT.Click += new System.EventHandler(this.INFbtnBuscarOT_Click);
-            // 
-            // INFtxtOT
-            // 
-            this.INFtxtOT.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.INFtxtOT.Location = new System.Drawing.Point(52, 14);
-            this.INFtxtOT.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.INFtxtOT.MaxLength = 256;
-            this.INFtxtOT.Name = "INFtxtOT";
-            this.INFtxtOT.Size = new System.Drawing.Size(338, 22);
-            this.INFtxtOT.TabIndex = 0;
-            this.INFtxtOT.KeyDown += new System.Windows.Forms.KeyEventHandler(this.INFtxtOT_KeyDown);
-            // 
-            // INFlabel1
-            // 
-            this.INFlabel1.AutoSize = true;
-            this.INFlabel1.Location = new System.Drawing.Point(14, 17);
-            this.INFlabel1.Margin = new System.Windows.Forms.Padding(0);
-            this.INFlabel1.Name = "INFlabel1";
-            this.INFlabel1.Size = new System.Drawing.Size(33, 16);
-            this.INFlabel1.TabIndex = 0;
-            this.INFlabel1.Text = "OT:";
-            // 
-            // ErrorValorToolTip
-            // 
-            this.ErrorValorToolTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Error;
-            this.ErrorValorToolTip.ToolTipTitle = "Error en Valor.";
-            // 
-            // InfoToolTip
-            // 
-            this.InfoToolTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.InfoToolTip.ToolTipTitle = "Info:";
-            // 
-            // CEopenFileDialogImagen
-            // 
-            this.CEopenFileDialogImagen.FileName = "CEopenFileDialogImagen";
             // 
             // fechamovDataGridViewTextBoxColumn2
             // 
@@ -3580,16 +2392,1566 @@ namespace Convertec_Bodega_Administracion
             this.valorunitarioDataGridViewTextBoxColumn1.ReadOnly = true;
             this.valorunitarioDataGridViewTextBoxColumn1.Width = 117;
             // 
+            // obs_mov2
+            // 
+            this.obs_mov2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.obs_mov2.DataPropertyName = "obs_mov";
+            this.obs_mov2.HeaderText = "Obs";
+            this.obs_mov2.MinimumWidth = 6;
+            this.obs_mov2.Name = "obs_mov2";
+            this.obs_mov2.ReadOnly = true;
+            this.obs_mov2.Width = 61;
+            // 
             // historialMovimientoTablaBindingSource
             // 
             this.historialMovimientoTablaBindingSource.DataSource = typeof(Convertec_Bodega_Administracion.Model.HistorialMovimientoTabla);
+            // 
+            // MVpanelTablaMov1
+            // 
+            this.MVpanelTablaMov1.Controls.Add(this.MVdateTimePickerFiltro);
+            this.MVpanelTablaMov1.Controls.Add(this.MVlabel5);
+            this.MVpanelTablaMov1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.MVpanelTablaMov1.Location = new System.Drawing.Point(15, 10);
+            this.MVpanelTablaMov1.Margin = new System.Windows.Forms.Padding(0);
+            this.MVpanelTablaMov1.Name = "MVpanelTablaMov1";
+            this.MVpanelTablaMov1.Size = new System.Drawing.Size(1012, 32);
+            this.MVpanelTablaMov1.TabIndex = 2;
+            // 
+            // MVdateTimePickerFiltro
+            // 
+            this.MVdateTimePickerFiltro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.MVdateTimePickerFiltro.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.MVdateTimePickerFiltro.CustomFormat = "yyyy";
+            this.MVdateTimePickerFiltro.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.MVdateTimePickerFiltro.Location = new System.Drawing.Point(804, 5);
+            this.MVdateTimePickerFiltro.MinDate = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
+            this.MVdateTimePickerFiltro.Name = "MVdateTimePickerFiltro";
+            this.MVdateTimePickerFiltro.ShowUpDown = true;
+            this.MVdateTimePickerFiltro.Size = new System.Drawing.Size(200, 22);
+            this.MVdateTimePickerFiltro.TabIndex = 9;
+            this.InfoToolTip.SetToolTip(this.MVdateTimePickerFiltro, "Filtra movimientos por el año indicado.");
+            this.MVdateTimePickerFiltro.ValueChanged += new System.EventHandler(this.MVdateTimePickerFiltro_ValueChanged);
+            // 
+            // MVlabel5
+            // 
+            this.MVlabel5.AutoSize = true;
+            this.MVlabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MVlabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(78)))), ((int)(((byte)(79)))));
+            this.MVlabel5.Location = new System.Drawing.Point(2, 8);
+            this.MVlabel5.Margin = new System.Windows.Forms.Padding(0);
+            this.MVlabel5.Name = "MVlabel5";
+            this.MVlabel5.Size = new System.Drawing.Size(99, 16);
+            this.MVlabel5.TabIndex = 0;
+            this.MVlabel5.Text = "Movimientos:";
+            // 
+            // MVpanelBuscador
+            // 
+            this.MVpanelBuscador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(243)))), ((int)(((byte)(246)))));
+            this.MVpanelBuscador.Controls.Add(this.MVpanelBuscadorLeft);
+            this.MVpanelBuscador.Controls.Add(this.MVpanelBuscadorRight);
+            this.MVpanelBuscador.Dock = System.Windows.Forms.DockStyle.Top;
+            this.MVpanelBuscador.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(78)))), ((int)(((byte)(79)))));
+            this.MVpanelBuscador.Location = new System.Drawing.Point(0, 0);
+            this.MVpanelBuscador.Margin = new System.Windows.Forms.Padding(0);
+            this.MVpanelBuscador.Name = "MVpanelBuscador";
+            this.MVpanelBuscador.Size = new System.Drawing.Size(1042, 259);
+            this.MVpanelBuscador.TabIndex = 2;
+            // 
+            // MVpanelBuscadorLeft
+            // 
+            this.MVpanelBuscadorLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(243)))), ((int)(((byte)(246)))));
+            this.MVpanelBuscadorLeft.Controls.Add(this.MVlabelDiv2);
+            this.MVpanelBuscadorLeft.Controls.Add(this.MVlabel1);
+            this.MVpanelBuscadorLeft.Controls.Add(this.MVtxtFiltroHist);
+            this.MVpanelBuscadorLeft.Controls.Add(this.MVlabel2);
+            this.MVpanelBuscadorLeft.Controls.Add(this.MVlabel3);
+            this.MVpanelBuscadorLeft.Controls.Add(this.MVtxtOtFilter);
+            this.MVpanelBuscadorLeft.Controls.Add(this.MVtxtOtHist);
+            this.MVpanelBuscadorLeft.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MVpanelBuscadorLeft.Location = new System.Drawing.Point(0, 0);
+            this.MVpanelBuscadorLeft.Margin = new System.Windows.Forms.Padding(0);
+            this.MVpanelBuscadorLeft.Name = "MVpanelBuscadorLeft";
+            this.MVpanelBuscadorLeft.Padding = new System.Windows.Forms.Padding(15, 10, 10, 10);
+            this.MVpanelBuscadorLeft.Size = new System.Drawing.Size(566, 259);
+            this.MVpanelBuscadorLeft.TabIndex = 9;
+            // 
+            // MVlabelDiv2
+            // 
+            this.MVlabelDiv2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.MVlabelDiv2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.MVlabelDiv2.ForeColor = System.Drawing.Color.Black;
+            this.MVlabelDiv2.Location = new System.Drawing.Point(-24, 272);
+            this.MVlabelDiv2.Margin = new System.Windows.Forms.Padding(0);
+            this.MVlabelDiv2.Name = "MVlabelDiv2";
+            this.MVlabelDiv2.Size = new System.Drawing.Size(1194, 2);
+            this.MVlabelDiv2.TabIndex = 8;
+            // 
+            // MVlabel1
+            // 
+            this.MVlabel1.AutoSize = true;
+            this.MVlabel1.Location = new System.Drawing.Point(15, 14);
+            this.MVlabel1.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
+            this.MVlabel1.Name = "MVlabel1";
+            this.MVlabel1.Size = new System.Drawing.Size(60, 16);
+            this.MVlabel1.TabIndex = 2;
+            this.MVlabel1.Text = "Buscar:";
+            // 
+            // MVtxtFiltroHist
+            // 
+            this.MVtxtFiltroHist.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.MVtxtFiltroHist.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.MVtxtFiltroHist.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MVtxtFiltroHist.Location = new System.Drawing.Point(142, 10);
+            this.MVtxtFiltroHist.Margin = new System.Windows.Forms.Padding(0);
+            this.MVtxtFiltroHist.Name = "MVtxtFiltroHist";
+            this.MVtxtFiltroHist.ShortcutsEnabled = false;
+            this.MVtxtFiltroHist.Size = new System.Drawing.Size(409, 22);
+            this.MVtxtFiltroHist.TabIndex = 0;
+            this.InfoToolTip.SetToolTip(this.MVtxtFiltroHist, "Filtro por elementos.");
+            this.MVtxtFiltroHist.TextChanged += new System.EventHandler(this.TableFilter);
+            // 
+            // MVlabel2
+            // 
+            this.MVlabel2.AutoSize = true;
+            this.MVlabel2.Location = new System.Drawing.Point(15, 61);
+            this.MVlabel2.Margin = new System.Windows.Forms.Padding(0);
+            this.MVlabel2.Name = "MVlabel2";
+            this.MVlabel2.Size = new System.Drawing.Size(112, 16);
+            this.MVlabel2.TabIndex = 7;
+            this.MVlabel2.Text = "Buscar por OT:";
+            // 
+            // MVlabel3
+            // 
+            this.MVlabel3.AutoSize = true;
+            this.MVlabel3.Location = new System.Drawing.Point(15, 106);
+            this.MVlabel3.Margin = new System.Windows.Forms.Padding(0);
+            this.MVlabel3.Name = "MVlabel3";
+            this.MVlabel3.Size = new System.Drawing.Size(104, 16);
+            this.MVlabel3.TabIndex = 3;
+            this.MVlabel3.Text = "Usado en OT:";
+            // 
+            // MVtxtOtFilter
+            // 
+            this.MVtxtOtFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.MVtxtOtFilter.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.MVtxtOtFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MVtxtOtFilter.Location = new System.Drawing.Point(142, 57);
+            this.MVtxtOtFilter.Margin = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.MVtxtOtFilter.Name = "MVtxtOtFilter";
+            this.MVtxtOtFilter.Size = new System.Drawing.Size(409, 22);
+            this.MVtxtOtFilter.TabIndex = 6;
+            this.InfoToolTip.SetToolTip(this.MVtxtOtFilter, "Filtro por OT.");
+            this.MVtxtOtFilter.TextChanged += new System.EventHandler(this.TableFilter);
+            // 
+            // MVtxtOtHist
+            // 
+            this.MVtxtOtHist.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.MVtxtOtHist.Enabled = false;
+            this.MVtxtOtHist.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MVtxtOtHist.Location = new System.Drawing.Point(142, 107);
+            this.MVtxtOtHist.Margin = new System.Windows.Forms.Padding(0);
+            this.MVtxtOtHist.Name = "MVtxtOtHist";
+            this.MVtxtOtHist.Size = new System.Drawing.Size(409, 146);
+            this.MVtxtOtHist.TabIndex = 5;
+            this.MVtxtOtHist.Text = "";
+            // 
+            // MVpanelBuscadorRight
+            // 
+            this.MVpanelBuscadorRight.Controls.Add(this.MVlabelDiv3);
+            this.MVpanelBuscadorRight.Controls.Add(this.MVpanelImage);
+            this.MVpanelBuscadorRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.MVpanelBuscadorRight.Location = new System.Drawing.Point(566, 0);
+            this.MVpanelBuscadorRight.Margin = new System.Windows.Forms.Padding(0);
+            this.MVpanelBuscadorRight.Name = "MVpanelBuscadorRight";
+            this.MVpanelBuscadorRight.Size = new System.Drawing.Size(476, 259);
+            this.MVpanelBuscadorRight.TabIndex = 10;
+            // 
+            // MVlabelDiv3
+            // 
+            this.MVlabelDiv3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.MVlabelDiv3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.MVlabelDiv3.ForeColor = System.Drawing.Color.Black;
+            this.MVlabelDiv3.Location = new System.Drawing.Point(-32, 274);
+            this.MVlabelDiv3.Margin = new System.Windows.Forms.Padding(0);
+            this.MVlabelDiv3.Name = "MVlabelDiv3";
+            this.MVlabelDiv3.Size = new System.Drawing.Size(681, 2);
+            this.MVlabelDiv3.TabIndex = 9;
+            // 
+            // MVpanelImage
+            // 
+            this.MVpanelImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(243)))), ((int)(((byte)(246)))));
+            this.MVpanelImage.Controls.Add(this.MVpictureBoxProducto);
+            this.MVpanelImage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MVpanelImage.Location = new System.Drawing.Point(0, 0);
+            this.MVpanelImage.Margin = new System.Windows.Forms.Padding(0);
+            this.MVpanelImage.Name = "MVpanelImage";
+            this.MVpanelImage.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
+            this.MVpanelImage.Size = new System.Drawing.Size(476, 259);
+            this.MVpanelImage.TabIndex = 4;
+            // 
+            // MVpictureBoxProducto
+            // 
+            this.MVpictureBoxProducto.BackColor = System.Drawing.Color.White;
+            this.MVpictureBoxProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.MVpictureBoxProducto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.MVpictureBoxProducto.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MVpictureBoxProducto.Image = global::Convertec_Bodega_Administracion.Properties.Resources.image_unavailable;
+            this.MVpictureBoxProducto.InitialImage = global::Convertec_Bodega_Administracion.Properties.Resources.image_unavailable;
+            this.MVpictureBoxProducto.Location = new System.Drawing.Point(15, 10);
+            this.MVpictureBoxProducto.Margin = new System.Windows.Forms.Padding(12, 10, 12, 10);
+            this.MVpictureBoxProducto.Name = "MVpictureBoxProducto";
+            this.MVpictureBoxProducto.Size = new System.Drawing.Size(446, 239);
+            this.MVpictureBoxProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.MVpictureBoxProducto.TabIndex = 0;
+            this.MVpictureBoxProducto.TabStop = false;
+            // 
+            // BodyPanelSalidaIngreso
+            // 
+            this.BodyPanelSalidaIngreso.Controls.Add(this.splitContainerBodyPrincipal);
+            this.BodyPanelSalidaIngreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BodyPanelSalidaIngreso.Location = new System.Drawing.Point(5, 496);
+            this.BodyPanelSalidaIngreso.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BodyPanelSalidaIngreso.Name = "BodyPanelSalidaIngreso";
+            this.BodyPanelSalidaIngreso.Size = new System.Drawing.Size(906, 87);
+            this.BodyPanelSalidaIngreso.TabIndex = 8;
+            this.BodyPanelSalidaIngreso.Visible = false;
+            // 
+            // BodypanelGeneral
+            // 
+            this.BodypanelGeneral.Controls.Add(this.BodyPanelMovElementos);
+            this.BodypanelGeneral.Controls.Add(this.BodyPanelCrearModifElemento);
+            this.BodypanelGeneral.Controls.Add(this.BodyPanelIngresoElementos);
+            this.BodypanelGeneral.Controls.Add(this.BodyPanelInformes);
+            this.BodypanelGeneral.Controls.Add(this.BodyPanelSalidaIngreso);
+            this.BodypanelGeneral.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BodypanelGeneral.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BodypanelGeneral.Location = new System.Drawing.Point(212, 95);
+            this.BodypanelGeneral.Margin = new System.Windows.Forms.Padding(0);
+            this.BodypanelGeneral.Name = "BodypanelGeneral";
+            this.BodypanelGeneral.Size = new System.Drawing.Size(1042, 634);
+            this.BodypanelGeneral.TabIndex = 8;
+            // 
+            // BodyPanelCrearModifElemento
+            // 
+            this.BodyPanelCrearModifElemento.Controls.Add(this.tabControl1);
+            this.BodyPanelCrearModifElemento.Location = new System.Drawing.Point(0, 226);
+            this.BodyPanelCrearModifElemento.Margin = new System.Windows.Forms.Padding(0);
+            this.BodyPanelCrearModifElemento.Name = "BodyPanelCrearModifElemento";
+            this.BodyPanelCrearModifElemento.Size = new System.Drawing.Size(1042, 96);
+            this.BodyPanelCrearModifElemento.TabIndex = 10;
+            this.BodyPanelCrearModifElemento.Visible = false;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.CMEtabCrear);
+            this.tabControl1.Controls.Add(this.CMEtabModificar);
+            this.tabControl1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1042, 96);
+            this.tabControl1.TabIndex = 6;
+            // 
+            // CMEtabCrear
+            // 
+            this.CMEtabCrear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(243)))), ((int)(((byte)(246)))));
+            this.CMEtabCrear.Controls.Add(this.CEpanelL);
+            this.CMEtabCrear.Controls.Add(this.CEpanelR);
+            this.CMEtabCrear.Location = new System.Drawing.Point(4, 25);
+            this.CMEtabCrear.Margin = new System.Windows.Forms.Padding(0);
+            this.CMEtabCrear.Name = "CMEtabCrear";
+            this.CMEtabCrear.Size = new System.Drawing.Size(1034, 67);
+            this.CMEtabCrear.TabIndex = 0;
+            this.CMEtabCrear.Text = "Crear Elemento";
+            // 
+            // CEpanelL
+            // 
+            this.CEpanelL.Controls.Add(this.CEtxtDocumento);
+            this.CEpanelL.Controls.Add(this.CElabel12);
+            this.CEpanelL.Controls.Add(this.CElabel8);
+            this.CEpanelL.Controls.Add(this.CEtxtStockMin);
+            this.CEpanelL.Controls.Add(this.label25);
+            this.CEpanelL.Controls.Add(this.CElabel3);
+            this.CEpanelL.Controls.Add(this.CEtxtPartePlano);
+            this.CEpanelL.Controls.Add(this.CEtxtCodBodega);
+            this.CEpanelL.Controls.Add(this.CElabel2);
+            this.CEpanelL.Controls.Add(this.CEradioButtonUnidad);
+            this.CEpanelL.Controls.Add(this.CEradioButtonMetros);
+            this.CEpanelL.Controls.Add(this.CEbtnAgregarMarca);
+            this.CEpanelL.Controls.Add(this.CEcomboBoxMarca);
+            this.CEpanelL.Controls.Add(this.label12);
+            this.CEpanelL.Controls.Add(this.CEbtnAgregarProv);
+            this.CEpanelL.Controls.Add(this.CEcomboBoxProv);
+            this.CEpanelL.Controls.Add(this.CElabel10);
+            this.CEpanelL.Controls.Add(this.CElabel7);
+            this.CEpanelL.Controls.Add(this.label16);
+            this.CEpanelL.Controls.Add(this.label17);
+            this.CEpanelL.Controls.Add(this.CEtxtCodProv);
+            this.CEpanelL.Controls.Add(this.CEtxtValorUnitario);
+            this.CEpanelL.Controls.Add(this.CEtxtValor);
+            this.CEpanelL.Controls.Add(this.CElabel9);
+            this.CEpanelL.Controls.Add(this.CElabel5);
+            this.CEpanelL.Controls.Add(this.CElabel4);
+            this.CEpanelL.Controls.Add(this.CElabel6);
+            this.CEpanelL.Controls.Add(this.CEtxtObs);
+            this.CEpanelL.Controls.Add(this.CElabel11);
+            this.CEpanelL.Controls.Add(this.CEtxtStock);
+            this.CEpanelL.Controls.Add(this.CElabel1);
+            this.CEpanelL.Controls.Add(this.CEtxtDescripcion);
+            this.CEpanelL.Cursor = System.Windows.Forms.Cursors.Default;
+            this.CEpanelL.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CEpanelL.Location = new System.Drawing.Point(0, 0);
+            this.CEpanelL.Margin = new System.Windows.Forms.Padding(0);
+            this.CEpanelL.Name = "CEpanelL";
+            this.CEpanelL.Padding = new System.Windows.Forms.Padding(10);
+            this.CEpanelL.Size = new System.Drawing.Size(649, 67);
+            this.CEpanelL.TabIndex = 2;
+            // 
+            // CEtxtDocumento
+            // 
+            this.CEtxtDocumento.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.CEtxtDocumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CEtxtDocumento.Location = new System.Drawing.Point(136, 208);
+            this.CEtxtDocumento.Margin = new System.Windows.Forms.Padding(5, 0, 0, 10);
+            this.CEtxtDocumento.MaxLength = 50;
+            this.CEtxtDocumento.Name = "CEtxtDocumento";
+            this.CEtxtDocumento.ShortcutsEnabled = false;
+            this.CEtxtDocumento.Size = new System.Drawing.Size(503, 23);
+            this.CEtxtDocumento.TabIndex = 9;
+            this.InfoToolTip.SetToolTip(this.CEtxtDocumento, "Código del proveedor que posee el elemento respecto a la tienda.\r\n*Campo NO Oblig" +
+        "atorio*");
+            // 
+            // CElabel12
+            // 
+            this.CElabel12.AutoSize = true;
+            this.CElabel12.Location = new System.Drawing.Point(10, 212);
+            this.CElabel12.Name = "CElabel12";
+            this.CElabel12.Size = new System.Drawing.Size(90, 16);
+            this.CElabel12.TabIndex = 48;
+            this.CElabel12.Text = "Documento:";
+            // 
+            // CElabel8
+            // 
+            this.CElabel8.AutoSize = true;
+            this.CElabel8.Location = new System.Drawing.Point(10, 165);
+            this.CElabel8.Margin = new System.Windows.Forms.Padding(0);
+            this.CElabel8.Name = "CElabel8";
+            this.CElabel8.Size = new System.Drawing.Size(79, 16);
+            this.CElabel8.TabIndex = 46;
+            this.CElabel8.Text = "Stock Min:";
+            // 
+            // CEtxtStockMin
+            // 
+            this.CEtxtStockMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CEtxtStockMin.Location = new System.Drawing.Point(136, 163);
+            this.CEtxtStockMin.Margin = new System.Windows.Forms.Padding(5, 0, 10, 10);
+            this.CEtxtStockMin.MaxLength = 6;
+            this.CEtxtStockMin.Name = "CEtxtStockMin";
+            this.CEtxtStockMin.ShortcutsEnabled = false;
+            this.CEtxtStockMin.Size = new System.Drawing.Size(187, 23);
+            this.CEtxtStockMin.TabIndex = 6;
+            this.CEtxtStockMin.Text = "1";
+            this.InfoToolTip.SetToolTip(this.CEtxtStockMin, "Cantidad de elementos.\r\n*Campo Obligatorio*");
+            this.CEtxtStockMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CEcheckUnidadStockMin);
+            this.CEtxtStockMin.Leave += new System.EventHandler(this.CEParseDecimal);
+            // 
+            // label25
+            // 
+            this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label25.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label25.ForeColor = System.Drawing.Color.Black;
+            this.label25.Location = new System.Drawing.Point(-13, 85);
+            this.label25.Margin = new System.Windows.Forms.Padding(0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(668, 2);
+            this.label25.TabIndex = 45;
+            // 
+            // CElabel3
+            // 
+            this.CElabel3.AutoSize = true;
+            this.CElabel3.Location = new System.Drawing.Point(333, 56);
+            this.CElabel3.Margin = new System.Windows.Forms.Padding(0);
+            this.CElabel3.Name = "CElabel3";
+            this.CElabel3.Size = new System.Drawing.Size(114, 16);
+            this.CElabel3.TabIndex = 44;
+            this.CElabel3.Text = "Parte en Plano:";
+            // 
+            // CEtxtPartePlano
+            // 
+            this.CEtxtPartePlano.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.CEtxtPartePlano.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CEtxtPartePlano.Location = new System.Drawing.Point(452, 52);
+            this.CEtxtPartePlano.Margin = new System.Windows.Forms.Padding(5, 0, 0, 10);
+            this.CEtxtPartePlano.MaxLength = 50;
+            this.CEtxtPartePlano.Name = "CEtxtPartePlano";
+            this.CEtxtPartePlano.ShortcutsEnabled = false;
+            this.CEtxtPartePlano.Size = new System.Drawing.Size(187, 23);
+            this.CEtxtPartePlano.TabIndex = 2;
+            this.InfoToolTip.SetToolTip(this.CEtxtPartePlano, "Filtro de elementos.");
+            // 
+            // CEtxtCodBodega
+            // 
+            this.CEtxtCodBodega.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CEtxtCodBodega.Location = new System.Drawing.Point(136, 52);
+            this.CEtxtCodBodega.Margin = new System.Windows.Forms.Padding(5, 0, 10, 10);
+            this.CEtxtCodBodega.MaxLength = 6;
+            this.CEtxtCodBodega.Name = "CEtxtCodBodega";
+            this.CEtxtCodBodega.ShortcutsEnabled = false;
+            this.CEtxtCodBodega.Size = new System.Drawing.Size(187, 23);
+            this.CEtxtCodBodega.TabIndex = 1;
+            this.InfoToolTip.SetToolTip(this.CEtxtCodBodega, "Valor completo del elemento.\r\n*Campo Obligatorio*");
+            this.CEtxtCodBodega.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CheckNumberOnly);
+            // 
+            // CElabel2
+            // 
+            this.CElabel2.AutoSize = true;
+            this.CElabel2.Location = new System.Drawing.Point(10, 56);
+            this.CElabel2.Margin = new System.Windows.Forms.Padding(0);
+            this.CElabel2.Name = "CElabel2";
+            this.CElabel2.Size = new System.Drawing.Size(121, 16);
+            this.CElabel2.TabIndex = 41;
+            this.CElabel2.Text = "Código Bodega:";
+            // 
+            // CEradioButtonUnidad
+            // 
+            this.CEradioButtonUnidad.AutoSize = true;
+            this.CEradioButtonUnidad.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CEradioButtonUnidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CEradioButtonUnidad.Location = new System.Drawing.Point(464, 163);
+            this.CEradioButtonUnidad.Name = "CEradioButtonUnidad";
+            this.CEradioButtonUnidad.Size = new System.Drawing.Size(75, 20);
+            this.CEradioButtonUnidad.TabIndex = 8;
+            this.CEradioButtonUnidad.Text = "Unidad";
+            this.CEradioButtonUnidad.UseVisualStyleBackColor = true;
+            this.CEradioButtonUnidad.CheckedChanged += new System.EventHandler(this.CECheckChange);
+            // 
+            // CEradioButtonMetros
+            // 
+            this.CEradioButtonMetros.AutoSize = true;
+            this.CEradioButtonMetros.Checked = true;
+            this.CEradioButtonMetros.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CEradioButtonMetros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CEradioButtonMetros.Location = new System.Drawing.Point(464, 132);
+            this.CEradioButtonMetros.Name = "CEradioButtonMetros";
+            this.CEradioButtonMetros.Size = new System.Drawing.Size(72, 20);
+            this.CEradioButtonMetros.TabIndex = 7;
+            this.CEradioButtonMetros.TabStop = true;
+            this.CEradioButtonMetros.Text = "Metros";
+            this.CEradioButtonMetros.UseVisualStyleBackColor = true;
+            this.CEradioButtonMetros.CheckedChanged += new System.EventHandler(this.CECheckChange);
+            // 
+            // CEbtnAgregarMarca
+            // 
+            this.CEbtnAgregarMarca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(183)))), ((int)(((byte)(30)))));
+            this.CEbtnAgregarMarca.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CEbtnAgregarMarca.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
+            this.CEbtnAgregarMarca.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(142)))), ((int)(((byte)(25)))));
+            this.CEbtnAgregarMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CEbtnAgregarMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CEbtnAgregarMarca.ForeColor = System.Drawing.Color.White;
+            this.CEbtnAgregarMarca.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.CEbtnAgregarMarca.IconColor = System.Drawing.Color.White;
+            this.CEbtnAgregarMarca.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.CEbtnAgregarMarca.IconSize = 25;
+            this.CEbtnAgregarMarca.Location = new System.Drawing.Point(614, 274);
+            this.CEbtnAgregarMarca.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.CEbtnAgregarMarca.Name = "CEbtnAgregarMarca";
+            this.CEbtnAgregarMarca.Size = new System.Drawing.Size(25, 25);
+            this.CEbtnAgregarMarca.TabIndex = 18;
+            this.CEbtnAgregarMarca.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.InfoToolTip.SetToolTip(this.CEbtnAgregarMarca, "Abre pantalla para agregar una nueva marca al sistema.");
+            this.CEbtnAgregarMarca.UseVisualStyleBackColor = false;
+            this.CEbtnAgregarMarca.Click += new System.EventHandler(this.CEbtnAgregarMarca_Click);
+            // 
+            // CEcomboBoxMarca
+            // 
+            this.CEcomboBoxMarca.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.CEcomboBoxMarca.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.CEcomboBoxMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CEcomboBoxMarca.FormattingEnabled = true;
+            this.CEcomboBoxMarca.Location = new System.Drawing.Point(424, 274);
+            this.CEcomboBoxMarca.Margin = new System.Windows.Forms.Padding(5, 0, 0, 10);
+            this.CEcomboBoxMarca.MinimumSize = new System.Drawing.Size(133, 0);
+            this.CEcomboBoxMarca.Name = "CEcomboBoxMarca";
+            this.CEcomboBoxMarca.Size = new System.Drawing.Size(185, 25);
+            this.CEcomboBoxMarca.TabIndex = 12;
+            this.CEcomboBoxMarca.Text = "--SELECCIONE MARCA--";
+            this.InfoToolTip.SetToolTip(this.CEcomboBoxMarca, "Seleccionar la marca correspondiente.\r\nSi no existe agregarla presionando el botó" +
+        "n que se encuentra a la derecha.\r\n*Campo Obligatorio*\r\n");
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(364, 278);
+            this.label12.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(55, 16);
+            this.label12.TabIndex = 35;
+            this.label12.Text = "Marca:";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // CEbtnAgregarProv
+            // 
+            this.CEbtnAgregarProv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(183)))), ((int)(((byte)(30)))));
+            this.CEbtnAgregarProv.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CEbtnAgregarProv.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
+            this.CEbtnAgregarProv.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(142)))), ((int)(((byte)(25)))));
+            this.CEbtnAgregarProv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CEbtnAgregarProv.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CEbtnAgregarProv.ForeColor = System.Drawing.Color.White;
+            this.CEbtnAgregarProv.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.CEbtnAgregarProv.IconColor = System.Drawing.Color.White;
+            this.CEbtnAgregarProv.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.CEbtnAgregarProv.IconSize = 25;
+            this.CEbtnAgregarProv.Location = new System.Drawing.Point(326, 274);
+            this.CEbtnAgregarProv.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.CEbtnAgregarProv.Name = "CEbtnAgregarProv";
+            this.CEbtnAgregarProv.Size = new System.Drawing.Size(25, 25);
+            this.CEbtnAgregarProv.TabIndex = 17;
+            this.CEbtnAgregarProv.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.InfoToolTip.SetToolTip(this.CEbtnAgregarProv, "Abre pantalla para agregar un nuevo proveedor al sistema.");
+            this.CEbtnAgregarProv.UseVisualStyleBackColor = false;
+            this.CEbtnAgregarProv.Click += new System.EventHandler(this.CEbtnAgregarProv_Click);
+            // 
+            // CEcomboBoxProv
+            // 
+            this.CEcomboBoxProv.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.CEcomboBoxProv.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.CEcomboBoxProv.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CEcomboBoxProv.FormattingEnabled = true;
+            this.CEcomboBoxProv.Location = new System.Drawing.Point(136, 274);
+            this.CEcomboBoxProv.Margin = new System.Windows.Forms.Padding(10, 0, 0, 10);
+            this.CEcomboBoxProv.MinimumSize = new System.Drawing.Size(133, 0);
+            this.CEcomboBoxProv.Name = "CEcomboBoxProv";
+            this.CEcomboBoxProv.Size = new System.Drawing.Size(185, 25);
+            this.CEcomboBoxProv.TabIndex = 11;
+            this.CEcomboBoxProv.Text = "--SELECCIONE PROVEEDOR--";
+            this.InfoToolTip.SetToolTip(this.CEcomboBoxProv, "Seleccionar al proveedor correspondiente.\r\nSi no existe agregarlo presionando el " +
+        "botón que se encuentra a la derecha.\r\n*Campo Obligatorio*");
+            // 
+            // CElabel10
+            // 
+            this.CElabel10.AutoSize = true;
+            this.CElabel10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CElabel10.Location = new System.Drawing.Point(10, 278);
+            this.CElabel10.Margin = new System.Windows.Forms.Padding(0);
+            this.CElabel10.Name = "CElabel10";
+            this.CElabel10.Size = new System.Drawing.Size(85, 16);
+            this.CElabel10.TabIndex = 34;
+            this.CElabel10.Text = "Proveedor:";
+            this.CElabel10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // CElabel7
+            // 
+            this.CElabel7.AutoSize = true;
+            this.CElabel7.Location = new System.Drawing.Point(333, 134);
+            this.CElabel7.Margin = new System.Windows.Forms.Padding(0);
+            this.CElabel7.Name = "CElabel7";
+            this.CElabel7.Size = new System.Drawing.Size(120, 16);
+            this.CElabel7.TabIndex = 38;
+            this.CElabel7.Text = "Tipo de Unidad:";
+            // 
+            // label16
+            // 
+            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label16.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label16.ForeColor = System.Drawing.Color.Black;
+            this.label16.Location = new System.Drawing.Point(-9, 309);
+            this.label16.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(668, 2);
+            this.label16.TabIndex = 37;
+            // 
+            // label17
+            // 
+            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label17.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label17.ForeColor = System.Drawing.Color.Black;
+            this.label17.Location = new System.Drawing.Point(-16, 196);
+            this.label17.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(668, 2);
+            this.label17.TabIndex = 36;
+            // 
+            // CEtxtCodProv
+            // 
+            this.CEtxtCodProv.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.CEtxtCodProv.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CEtxtCodProv.Location = new System.Drawing.Point(136, 241);
+            this.CEtxtCodProv.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.CEtxtCodProv.MaxLength = 50;
+            this.CEtxtCodProv.Name = "CEtxtCodProv";
+            this.CEtxtCodProv.ShortcutsEnabled = false;
+            this.CEtxtCodProv.Size = new System.Drawing.Size(503, 23);
+            this.CEtxtCodProv.TabIndex = 10;
+            this.InfoToolTip.SetToolTip(this.CEtxtCodProv, "Código del proveedor que posee el elemento respecto a la tienda.\r\n*Campo NO Oblig" +
+        "atorio*");
+            // 
+            // CEtxtValorUnitario
+            // 
+            this.CEtxtValorUnitario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CEtxtValorUnitario.Location = new System.Drawing.Point(452, 98);
+            this.CEtxtValorUnitario.Margin = new System.Windows.Forms.Padding(5, 10, 0, 10);
+            this.CEtxtValorUnitario.MaxLength = 10;
+            this.CEtxtValorUnitario.Name = "CEtxtValorUnitario";
+            this.CEtxtValorUnitario.ShortcutsEnabled = false;
+            this.CEtxtValorUnitario.Size = new System.Drawing.Size(187, 23);
+            this.CEtxtValorUnitario.TabIndex = 4;
+            this.CEtxtValorUnitario.Text = "0";
+            this.InfoToolTip.SetToolTip(this.CEtxtValorUnitario, "Valor individual del elemento.\r\n*Caampo Obligatorio*");
+            this.CEtxtValorUnitario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CheckNumberOnly);
+            // 
+            // CEtxtValor
+            // 
+            this.CEtxtValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CEtxtValor.Location = new System.Drawing.Point(136, 97);
+            this.CEtxtValor.Margin = new System.Windows.Forms.Padding(5, 10, 10, 10);
+            this.CEtxtValor.MaxLength = 10;
+            this.CEtxtValor.Name = "CEtxtValor";
+            this.CEtxtValor.ShortcutsEnabled = false;
+            this.CEtxtValor.Size = new System.Drawing.Size(187, 23);
+            this.CEtxtValor.TabIndex = 3;
+            this.CEtxtValor.Text = "0";
+            this.InfoToolTip.SetToolTip(this.CEtxtValor, "Valor completo del elemento.\r\n*Campo Obligatorio*");
+            this.CEtxtValor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CheckNumberOnly);
+            // 
+            // CElabel9
+            // 
+            this.CElabel9.AutoSize = true;
+            this.CElabel9.Location = new System.Drawing.Point(10, 245);
+            this.CElabel9.Margin = new System.Windows.Forms.Padding(0);
+            this.CElabel9.Name = "CElabel9";
+            this.CElabel9.Size = new System.Drawing.Size(117, 16);
+            this.CElabel9.TabIndex = 27;
+            this.CElabel9.Text = "Cod Proveedor:";
+            // 
+            // CElabel5
+            // 
+            this.CElabel5.AutoSize = true;
+            this.CElabel5.Location = new System.Drawing.Point(333, 101);
+            this.CElabel5.Margin = new System.Windows.Forms.Padding(0);
+            this.CElabel5.Name = "CElabel5";
+            this.CElabel5.Size = new System.Drawing.Size(107, 16);
+            this.CElabel5.TabIndex = 23;
+            this.CElabel5.Text = "Valor Unitario:";
+            // 
+            // CElabel4
+            // 
+            this.CElabel4.AutoSize = true;
+            this.CElabel4.Location = new System.Drawing.Point(11, 101);
+            this.CElabel4.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            this.CElabel4.Name = "CElabel4";
+            this.CElabel4.Size = new System.Drawing.Size(49, 16);
+            this.CElabel4.TabIndex = 22;
+            this.CElabel4.Text = "Valor:";
+            // 
+            // CElabel6
+            // 
+            this.CElabel6.AutoSize = true;
+            this.CElabel6.Location = new System.Drawing.Point(11, 134);
+            this.CElabel6.Margin = new System.Windows.Forms.Padding(0);
+            this.CElabel6.Name = "CElabel6";
+            this.CElabel6.Size = new System.Drawing.Size(96, 16);
+            this.CElabel6.TabIndex = 20;
+            this.CElabel6.Text = "Stock Inicial:";
+            // 
+            // CEtxtObs
+            // 
+            this.CEtxtObs.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CEtxtObs.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CEtxtObs.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CEtxtObs.Location = new System.Drawing.Point(136, 321);
+            this.CEtxtObs.Margin = new System.Windows.Forms.Padding(5, 0, 0, 10);
+            this.CEtxtObs.MaxLength = 256;
+            this.CEtxtObs.Name = "CEtxtObs";
+            this.CEtxtObs.Size = new System.Drawing.Size(503, 145);
+            this.CEtxtObs.TabIndex = 13;
+            this.CEtxtObs.Text = "";
+            this.InfoToolTip.SetToolTip(this.CEtxtObs, "Campo de texto para agregar información adicional del elemento, compra, etc.\r\n*Ca" +
+        "mpo NO Obligatorio*");
+            // 
+            // CElabel11
+            // 
+            this.CElabel11.AutoSize = true;
+            this.CElabel11.Location = new System.Drawing.Point(10, 324);
+            this.CElabel11.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.CElabel11.Name = "CElabel11";
+            this.CElabel11.Size = new System.Drawing.Size(117, 16);
+            this.CElabel11.TabIndex = 21;
+            this.CElabel11.Text = "Observaciones:";
+            // 
+            // CEtxtStock
+            // 
+            this.CEtxtStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CEtxtStock.Location = new System.Drawing.Point(136, 130);
+            this.CEtxtStock.Margin = new System.Windows.Forms.Padding(5, 0, 10, 10);
+            this.CEtxtStock.MaxLength = 6;
+            this.CEtxtStock.Name = "CEtxtStock";
+            this.CEtxtStock.ShortcutsEnabled = false;
+            this.CEtxtStock.Size = new System.Drawing.Size(187, 23);
+            this.CEtxtStock.TabIndex = 5;
+            this.CEtxtStock.Text = "1";
+            this.InfoToolTip.SetToolTip(this.CEtxtStock, "Cantidad de elementos.\r\n*Campo Obligatorio*");
+            this.CEtxtStock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CEcheckUnidadStock);
+            this.CEtxtStock.Leave += new System.EventHandler(this.CEParseDecimal);
+            // 
+            // CElabel1
+            // 
+            this.CElabel1.AutoSize = true;
+            this.CElabel1.Location = new System.Drawing.Point(10, 20);
+            this.CElabel1.Margin = new System.Windows.Forms.Padding(0);
+            this.CElabel1.Name = "CElabel1";
+            this.CElabel1.Size = new System.Drawing.Size(95, 16);
+            this.CElabel1.TabIndex = 2;
+            this.CElabel1.Text = "Descripción:";
+            // 
+            // CEtxtDescripcion
+            // 
+            this.CEtxtDescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CEtxtDescripcion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.CEtxtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CEtxtDescripcion.Location = new System.Drawing.Point(136, 19);
+            this.CEtxtDescripcion.Margin = new System.Windows.Forms.Padding(5, 0, 0, 10);
+            this.CEtxtDescripcion.MaxLength = 256;
+            this.CEtxtDescripcion.Name = "CEtxtDescripcion";
+            this.CEtxtDescripcion.ShortcutsEnabled = false;
+            this.CEtxtDescripcion.Size = new System.Drawing.Size(503, 23);
+            this.CEtxtDescripcion.TabIndex = 0;
+            this.InfoToolTip.SetToolTip(this.CEtxtDescripcion, "Filtro de elementos.");
+            // 
+            // CEpanelR
+            // 
+            this.CEpanelR.Controls.Add(this.CEbtnCancelar);
+            this.CEpanelR.Controls.Add(this.CEbtnAgregar);
+            this.CEpanelR.Controls.Add(this.label1);
+            this.CEpanelR.Controls.Add(this.CEbtnAgregarImg);
+            this.CEpanelR.Controls.Add(this.CEpanelImagen);
+            this.CEpanelR.Cursor = System.Windows.Forms.Cursors.Default;
+            this.CEpanelR.Dock = System.Windows.Forms.DockStyle.Right;
+            this.CEpanelR.Location = new System.Drawing.Point(649, 0);
+            this.CEpanelR.Margin = new System.Windows.Forms.Padding(0);
+            this.CEpanelR.Name = "CEpanelR";
+            this.CEpanelR.Size = new System.Drawing.Size(385, 67);
+            this.CEpanelR.TabIndex = 3;
+            // 
+            // CEbtnCancelar
+            // 
+            this.CEbtnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(56)))), ((int)(((byte)(0)))));
+            this.CEbtnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CEbtnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
+            this.CEbtnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(41)))), ((int)(((byte)(2)))));
+            this.CEbtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CEbtnCancelar.ForeColor = System.Drawing.Color.White;
+            this.CEbtnCancelar.IconChar = FontAwesome.Sharp.IconChar.TimesCircle;
+            this.CEbtnCancelar.IconColor = System.Drawing.Color.White;
+            this.CEbtnCancelar.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.CEbtnCancelar.IconSize = 30;
+            this.CEbtnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.CEbtnCancelar.Location = new System.Drawing.Point(15, 314);
+            this.CEbtnCancelar.Margin = new System.Windows.Forms.Padding(12, 5, 12, 5);
+            this.CEbtnCancelar.Name = "CEbtnCancelar";
+            this.CEbtnCancelar.Size = new System.Drawing.Size(164, 40);
+            this.CEbtnCancelar.TabIndex = 15;
+            this.CEbtnCancelar.Text = "Cancelar";
+            this.CEbtnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.CEbtnCancelar.UseVisualStyleBackColor = false;
+            this.CEbtnCancelar.Click += new System.EventHandler(this.CEbtnCancelar_Click);
+            // 
+            // CEbtnAgregar
+            // 
+            this.CEbtnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(183)))), ((int)(((byte)(30)))));
+            this.CEbtnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CEbtnAgregar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
+            this.CEbtnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(142)))), ((int)(((byte)(25)))));
+            this.CEbtnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CEbtnAgregar.ForeColor = System.Drawing.Color.White;
+            this.CEbtnAgregar.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.CEbtnAgregar.IconColor = System.Drawing.Color.White;
+            this.CEbtnAgregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.CEbtnAgregar.IconSize = 30;
+            this.CEbtnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.CEbtnAgregar.Location = new System.Drawing.Point(210, 313);
+            this.CEbtnAgregar.Margin = new System.Windows.Forms.Padding(12, 5, 12, 5);
+            this.CEbtnAgregar.Name = "CEbtnAgregar";
+            this.CEbtnAgregar.Size = new System.Drawing.Size(160, 40);
+            this.CEbtnAgregar.TabIndex = 16;
+            this.CEbtnAgregar.Text = "Crear Elemento";
+            this.CEbtnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.CEbtnAgregar.UseVisualStyleBackColor = false;
+            this.CEbtnAgregar.Click += new System.EventHandler(this.CEbtnAgregar_Click);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(-187, 309);
+            this.label1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(668, 2);
+            this.label1.TabIndex = 50;
+            // 
+            // CEbtnAgregarImg
+            // 
+            this.CEbtnAgregarImg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(183)))), ((int)(((byte)(30)))));
+            this.CEbtnAgregarImg.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CEbtnAgregarImg.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
+            this.CEbtnAgregarImg.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(142)))), ((int)(((byte)(25)))));
+            this.CEbtnAgregarImg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CEbtnAgregarImg.ForeColor = System.Drawing.Color.White;
+            this.CEbtnAgregarImg.IconChar = FontAwesome.Sharp.IconChar.Images;
+            this.CEbtnAgregarImg.IconColor = System.Drawing.Color.White;
+            this.CEbtnAgregarImg.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.CEbtnAgregarImg.IconSize = 30;
+            this.CEbtnAgregarImg.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.CEbtnAgregarImg.Location = new System.Drawing.Point(15, 264);
+            this.CEbtnAgregarImg.Margin = new System.Windows.Forms.Padding(12, 5, 12, 5);
+            this.CEbtnAgregarImg.Name = "CEbtnAgregarImg";
+            this.CEbtnAgregarImg.Size = new System.Drawing.Size(355, 40);
+            this.CEbtnAgregarImg.TabIndex = 14;
+            this.CEbtnAgregarImg.Text = "Agregar Imagen";
+            this.CEbtnAgregarImg.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.CEbtnAgregarImg.UseVisualStyleBackColor = false;
+            this.CEbtnAgregarImg.Click += new System.EventHandler(this.CEbtnAgregarImg_Click);
+            // 
+            // CEpanelImagen
+            // 
+            this.CEpanelImagen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(243)))), ((int)(((byte)(246)))));
+            this.CEpanelImagen.Controls.Add(this.CEpictureBoxElem);
+            this.CEpanelImagen.Dock = System.Windows.Forms.DockStyle.Top;
+            this.CEpanelImagen.Location = new System.Drawing.Point(0, 0);
+            this.CEpanelImagen.Margin = new System.Windows.Forms.Padding(0);
+            this.CEpanelImagen.Name = "CEpanelImagen";
+            this.CEpanelImagen.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
+            this.CEpanelImagen.Size = new System.Drawing.Size(385, 259);
+            this.CEpanelImagen.TabIndex = 5;
+            // 
+            // CEpictureBoxElem
+            // 
+            this.CEpictureBoxElem.BackColor = System.Drawing.Color.White;
+            this.CEpictureBoxElem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.CEpictureBoxElem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CEpictureBoxElem.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CEpictureBoxElem.Image = global::Convertec_Bodega_Administracion.Properties.Resources.image_unavailable;
+            this.CEpictureBoxElem.InitialImage = global::Convertec_Bodega_Administracion.Properties.Resources.image_unavailable;
+            this.CEpictureBoxElem.Location = new System.Drawing.Point(15, 10);
+            this.CEpictureBoxElem.Margin = new System.Windows.Forms.Padding(12, 10, 12, 10);
+            this.CEpictureBoxElem.Name = "CEpictureBoxElem";
+            this.CEpictureBoxElem.Size = new System.Drawing.Size(355, 239);
+            this.CEpictureBoxElem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.CEpictureBoxElem.TabIndex = 0;
+            this.CEpictureBoxElem.TabStop = false;
+            // 
+            // CMEtabModificar
+            // 
+            this.CMEtabModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(243)))), ((int)(((byte)(246)))));
+            this.CMEtabModificar.Controls.Add(this.CMpanelL);
+            this.CMEtabModificar.Controls.Add(this.CMpanelR);
+            this.CMEtabModificar.Location = new System.Drawing.Point(4, 25);
+            this.CMEtabModificar.Margin = new System.Windows.Forms.Padding(0);
+            this.CMEtabModificar.Name = "CMEtabModificar";
+            this.CMEtabModificar.Size = new System.Drawing.Size(1034, 67);
+            this.CMEtabModificar.TabIndex = 1;
+            this.CMEtabModificar.Text = "Modificar Elemento";
+            // 
+            // CMpanelL
+            // 
+            this.CMpanelL.Controls.Add(this.dataGridView1);
+            this.CMpanelL.Controls.Add(this.CMtxtDocumento);
+            this.CMpanelL.Controls.Add(this.CMlabel9);
+            this.CMpanelL.Controls.Add(this.CMlabel8);
+            this.CMpanelL.Controls.Add(this.CMtxtStockMin);
+            this.CMpanelL.Controls.Add(this.label18);
+            this.CMpanelL.Controls.Add(this.CMlabel3);
+            this.CMpanelL.Controls.Add(this.CMtxtPartePlano);
+            this.CMpanelL.Controls.Add(this.CMtxtCodBodega);
+            this.CMpanelL.Controls.Add(this.CMlabel2);
+            this.CMpanelL.Controls.Add(this.CMradioButtonUnidad);
+            this.CMpanelL.Controls.Add(this.CMradioButtonMetros);
+            this.CMpanelL.Controls.Add(this.CMbtnAgregarMarca);
+            this.CMpanelL.Controls.Add(this.CMcomboBoxMarca);
+            this.CMpanelL.Controls.Add(this.label21);
+            this.CMpanelL.Controls.Add(this.CMbtnAgregarProv);
+            this.CMpanelL.Controls.Add(this.CMcomboBoxProv);
+            this.CMpanelL.Controls.Add(this.CMlabel11);
+            this.CMpanelL.Controls.Add(this.CMlabel7);
+            this.CMpanelL.Controls.Add(this.label24);
+            this.CMpanelL.Controls.Add(this.label26);
+            this.CMpanelL.Controls.Add(this.CMtxtCodProv);
+            this.CMpanelL.Controls.Add(this.CMtxtValorUnitario);
+            this.CMpanelL.Controls.Add(this.CMtxtValor);
+            this.CMpanelL.Controls.Add(this.CMlabel10);
+            this.CMpanelL.Controls.Add(this.CMlabel5);
+            this.CMpanelL.Controls.Add(this.CMlabel4);
+            this.CMpanelL.Controls.Add(this.CMlabel6);
+            this.CMpanelL.Controls.Add(this.CMtxtObs);
+            this.CMpanelL.Controls.Add(this.CMlabel12);
+            this.CMpanelL.Controls.Add(this.CMtxtStock);
+            this.CMpanelL.Controls.Add(this.CMlabel1);
+            this.CMpanelL.Controls.Add(this.CMtxtDescripcion);
+            this.CMpanelL.Cursor = System.Windows.Forms.Cursors.Default;
+            this.CMpanelL.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CMpanelL.Location = new System.Drawing.Point(0, 0);
+            this.CMpanelL.Margin = new System.Windows.Forms.Padding(0);
+            this.CMpanelL.Name = "CMpanelL";
+            this.CMpanelL.Padding = new System.Windows.Forms.Padding(10);
+            this.CMpanelL.Size = new System.Drawing.Size(649, 67);
+            this.CMpanelL.TabIndex = 4;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(255)))), ((int)(((byte)(242)))));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle20;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(243)))), ((int)(((byte)(246)))));
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dataGridView1.Location = new System.Drawing.Point(14, 52);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 51;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle21;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(625, 97);
+            this.dataGridView1.TabIndex = 49;
+            this.dataGridView1.TabStop = false;
+            // 
+            // CMtxtDocumento
+            // 
+            this.CMtxtDocumento.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.CMtxtDocumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CMtxtDocumento.Location = new System.Drawing.Point(136, 315);
+            this.CMtxtDocumento.Margin = new System.Windows.Forms.Padding(5, 0, 0, 10);
+            this.CMtxtDocumento.MaxLength = 50;
+            this.CMtxtDocumento.Name = "CMtxtDocumento";
+            this.CMtxtDocumento.ShortcutsEnabled = false;
+            this.CMtxtDocumento.Size = new System.Drawing.Size(503, 23);
+            this.CMtxtDocumento.TabIndex = 9;
+            this.InfoToolTip.SetToolTip(this.CMtxtDocumento, "Código del proveedor que posee el elemento respecto a la tienda.\r\n*Campo NO Oblig" +
+        "atorio*");
+            // 
+            // CMlabel9
+            // 
+            this.CMlabel9.AutoSize = true;
+            this.CMlabel9.Location = new System.Drawing.Point(10, 319);
+            this.CMlabel9.Name = "CMlabel9";
+            this.CMlabel9.Size = new System.Drawing.Size(90, 16);
+            this.CMlabel9.TabIndex = 48;
+            this.CMlabel9.Text = "Documento:";
+            // 
+            // CMlabel8
+            // 
+            this.CMlabel8.AutoSize = true;
+            this.CMlabel8.Location = new System.Drawing.Point(10, 272);
+            this.CMlabel8.Margin = new System.Windows.Forms.Padding(0);
+            this.CMlabel8.Name = "CMlabel8";
+            this.CMlabel8.Size = new System.Drawing.Size(79, 16);
+            this.CMlabel8.TabIndex = 46;
+            this.CMlabel8.Text = "Stock Min:";
+            // 
+            // CMtxtStockMin
+            // 
+            this.CMtxtStockMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CMtxtStockMin.Location = new System.Drawing.Point(136, 270);
+            this.CMtxtStockMin.Margin = new System.Windows.Forms.Padding(5, 0, 10, 10);
+            this.CMtxtStockMin.MaxLength = 6;
+            this.CMtxtStockMin.Name = "CMtxtStockMin";
+            this.CMtxtStockMin.ShortcutsEnabled = false;
+            this.CMtxtStockMin.Size = new System.Drawing.Size(187, 23);
+            this.CMtxtStockMin.TabIndex = 6;
+            this.CMtxtStockMin.Text = "1";
+            this.InfoToolTip.SetToolTip(this.CMtxtStockMin, "Cantidad de elementos.\r\n*Campo Obligatorio*");
+            // 
+            // label18
+            // 
+            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label18.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label18.ForeColor = System.Drawing.Color.Black;
+            this.label18.Location = new System.Drawing.Point(-13, 192);
+            this.label18.Margin = new System.Windows.Forms.Padding(0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(668, 2);
+            this.label18.TabIndex = 45;
+            // 
+            // CMlabel3
+            // 
+            this.CMlabel3.AutoSize = true;
+            this.CMlabel3.Location = new System.Drawing.Point(333, 163);
+            this.CMlabel3.Margin = new System.Windows.Forms.Padding(0);
+            this.CMlabel3.Name = "CMlabel3";
+            this.CMlabel3.Size = new System.Drawing.Size(114, 16);
+            this.CMlabel3.TabIndex = 44;
+            this.CMlabel3.Text = "Parte en Plano:";
+            // 
+            // CMtxtPartePlano
+            // 
+            this.CMtxtPartePlano.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.CMtxtPartePlano.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CMtxtPartePlano.Location = new System.Drawing.Point(452, 159);
+            this.CMtxtPartePlano.Margin = new System.Windows.Forms.Padding(5, 0, 0, 10);
+            this.CMtxtPartePlano.MaxLength = 50;
+            this.CMtxtPartePlano.Name = "CMtxtPartePlano";
+            this.CMtxtPartePlano.ShortcutsEnabled = false;
+            this.CMtxtPartePlano.Size = new System.Drawing.Size(187, 23);
+            this.CMtxtPartePlano.TabIndex = 2;
+            this.InfoToolTip.SetToolTip(this.CMtxtPartePlano, "Filtro de elementos.");
+            // 
+            // CMtxtCodBodega
+            // 
+            this.CMtxtCodBodega.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CMtxtCodBodega.Location = new System.Drawing.Point(136, 159);
+            this.CMtxtCodBodega.Margin = new System.Windows.Forms.Padding(5, 0, 10, 10);
+            this.CMtxtCodBodega.MaxLength = 6;
+            this.CMtxtCodBodega.Name = "CMtxtCodBodega";
+            this.CMtxtCodBodega.ShortcutsEnabled = false;
+            this.CMtxtCodBodega.Size = new System.Drawing.Size(187, 23);
+            this.CMtxtCodBodega.TabIndex = 1;
+            this.InfoToolTip.SetToolTip(this.CMtxtCodBodega, "Valor completo del elemento.\r\n*Campo Obligatorio*");
+            // 
+            // CMlabel2
+            // 
+            this.CMlabel2.AutoSize = true;
+            this.CMlabel2.Location = new System.Drawing.Point(10, 163);
+            this.CMlabel2.Margin = new System.Windows.Forms.Padding(0);
+            this.CMlabel2.Name = "CMlabel2";
+            this.CMlabel2.Size = new System.Drawing.Size(121, 16);
+            this.CMlabel2.TabIndex = 41;
+            this.CMlabel2.Text = "Código Bodega:";
+            // 
+            // CMradioButtonUnidad
+            // 
+            this.CMradioButtonUnidad.AutoSize = true;
+            this.CMradioButtonUnidad.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CMradioButtonUnidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CMradioButtonUnidad.Location = new System.Drawing.Point(464, 270);
+            this.CMradioButtonUnidad.Name = "CMradioButtonUnidad";
+            this.CMradioButtonUnidad.Size = new System.Drawing.Size(75, 20);
+            this.CMradioButtonUnidad.TabIndex = 8;
+            this.CMradioButtonUnidad.Text = "Unidad";
+            this.CMradioButtonUnidad.UseVisualStyleBackColor = true;
+            // 
+            // CMradioButtonMetros
+            // 
+            this.CMradioButtonMetros.AutoSize = true;
+            this.CMradioButtonMetros.Checked = true;
+            this.CMradioButtonMetros.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CMradioButtonMetros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CMradioButtonMetros.Location = new System.Drawing.Point(464, 239);
+            this.CMradioButtonMetros.Name = "CMradioButtonMetros";
+            this.CMradioButtonMetros.Size = new System.Drawing.Size(72, 20);
+            this.CMradioButtonMetros.TabIndex = 7;
+            this.CMradioButtonMetros.TabStop = true;
+            this.CMradioButtonMetros.Text = "Metros";
+            this.CMradioButtonMetros.UseVisualStyleBackColor = true;
+            // 
+            // CMbtnAgregarMarca
+            // 
+            this.CMbtnAgregarMarca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(183)))), ((int)(((byte)(30)))));
+            this.CMbtnAgregarMarca.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CMbtnAgregarMarca.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
+            this.CMbtnAgregarMarca.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(142)))), ((int)(((byte)(25)))));
+            this.CMbtnAgregarMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CMbtnAgregarMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CMbtnAgregarMarca.ForeColor = System.Drawing.Color.White;
+            this.CMbtnAgregarMarca.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.CMbtnAgregarMarca.IconColor = System.Drawing.Color.White;
+            this.CMbtnAgregarMarca.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.CMbtnAgregarMarca.IconSize = 25;
+            this.CMbtnAgregarMarca.Location = new System.Drawing.Point(614, 381);
+            this.CMbtnAgregarMarca.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.CMbtnAgregarMarca.Name = "CMbtnAgregarMarca";
+            this.CMbtnAgregarMarca.Size = new System.Drawing.Size(25, 25);
+            this.CMbtnAgregarMarca.TabIndex = 18;
+            this.CMbtnAgregarMarca.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.InfoToolTip.SetToolTip(this.CMbtnAgregarMarca, "Abre pantalla para agregar una nueva marca al sistema.");
+            this.CMbtnAgregarMarca.UseVisualStyleBackColor = false;
+            // 
+            // CMcomboBoxMarca
+            // 
+            this.CMcomboBoxMarca.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.CMcomboBoxMarca.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.CMcomboBoxMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CMcomboBoxMarca.FormattingEnabled = true;
+            this.CMcomboBoxMarca.Location = new System.Drawing.Point(424, 381);
+            this.CMcomboBoxMarca.Margin = new System.Windows.Forms.Padding(5, 0, 0, 10);
+            this.CMcomboBoxMarca.MinimumSize = new System.Drawing.Size(133, 0);
+            this.CMcomboBoxMarca.Name = "CMcomboBoxMarca";
+            this.CMcomboBoxMarca.Size = new System.Drawing.Size(185, 25);
+            this.CMcomboBoxMarca.TabIndex = 12;
+            this.CMcomboBoxMarca.Text = "--SELECCIONE MARCA--";
+            this.InfoToolTip.SetToolTip(this.CMcomboBoxMarca, "Seleccionar la marca correspondiente.\r\nSi no existe agregarla presionando el botó" +
+        "n que se encuentra a la derecha.\r\n*Campo Obligatorio*\r\n");
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(364, 385);
+            this.label21.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(55, 16);
+            this.label21.TabIndex = 35;
+            this.label21.Text = "Marca:";
+            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // CMbtnAgregarProv
+            // 
+            this.CMbtnAgregarProv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(183)))), ((int)(((byte)(30)))));
+            this.CMbtnAgregarProv.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CMbtnAgregarProv.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
+            this.CMbtnAgregarProv.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(142)))), ((int)(((byte)(25)))));
+            this.CMbtnAgregarProv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CMbtnAgregarProv.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CMbtnAgregarProv.ForeColor = System.Drawing.Color.White;
+            this.CMbtnAgregarProv.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.CMbtnAgregarProv.IconColor = System.Drawing.Color.White;
+            this.CMbtnAgregarProv.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.CMbtnAgregarProv.IconSize = 25;
+            this.CMbtnAgregarProv.Location = new System.Drawing.Point(326, 381);
+            this.CMbtnAgregarProv.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.CMbtnAgregarProv.Name = "CMbtnAgregarProv";
+            this.CMbtnAgregarProv.Size = new System.Drawing.Size(25, 25);
+            this.CMbtnAgregarProv.TabIndex = 17;
+            this.CMbtnAgregarProv.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.InfoToolTip.SetToolTip(this.CMbtnAgregarProv, "Abre pantalla para agregar un nuevo proveedor al sistema.");
+            this.CMbtnAgregarProv.UseVisualStyleBackColor = false;
+            // 
+            // CMcomboBoxProv
+            // 
+            this.CMcomboBoxProv.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.CMcomboBoxProv.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.CMcomboBoxProv.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CMcomboBoxProv.FormattingEnabled = true;
+            this.CMcomboBoxProv.Location = new System.Drawing.Point(136, 381);
+            this.CMcomboBoxProv.Margin = new System.Windows.Forms.Padding(10, 0, 0, 10);
+            this.CMcomboBoxProv.MinimumSize = new System.Drawing.Size(133, 0);
+            this.CMcomboBoxProv.Name = "CMcomboBoxProv";
+            this.CMcomboBoxProv.Size = new System.Drawing.Size(185, 25);
+            this.CMcomboBoxProv.TabIndex = 11;
+            this.CMcomboBoxProv.Text = "--SELECCIONE PROVEEDOR--";
+            this.InfoToolTip.SetToolTip(this.CMcomboBoxProv, "Seleccionar al proveedor correspondiente.\r\nSi no existe agregarlo presionando el " +
+        "botón que se encuentra a la derecha.\r\n*Campo Obligatorio*");
+            // 
+            // CMlabel11
+            // 
+            this.CMlabel11.AutoSize = true;
+            this.CMlabel11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CMlabel11.Location = new System.Drawing.Point(10, 385);
+            this.CMlabel11.Margin = new System.Windows.Forms.Padding(0);
+            this.CMlabel11.Name = "CMlabel11";
+            this.CMlabel11.Size = new System.Drawing.Size(85, 16);
+            this.CMlabel11.TabIndex = 34;
+            this.CMlabel11.Text = "Proveedor:";
+            this.CMlabel11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // CMlabel7
+            // 
+            this.CMlabel7.AutoSize = true;
+            this.CMlabel7.Location = new System.Drawing.Point(333, 241);
+            this.CMlabel7.Margin = new System.Windows.Forms.Padding(0);
+            this.CMlabel7.Name = "CMlabel7";
+            this.CMlabel7.Size = new System.Drawing.Size(120, 16);
+            this.CMlabel7.TabIndex = 38;
+            this.CMlabel7.Text = "Tipo de Unidad:";
+            // 
+            // label24
+            // 
+            this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label24.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label24.ForeColor = System.Drawing.Color.Black;
+            this.label24.Location = new System.Drawing.Point(-9, 416);
+            this.label24.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(668, 2);
+            this.label24.TabIndex = 37;
+            // 
+            // label26
+            // 
+            this.label26.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label26.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label26.ForeColor = System.Drawing.Color.Black;
+            this.label26.Location = new System.Drawing.Point(-16, 303);
+            this.label26.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(668, 2);
+            this.label26.TabIndex = 36;
+            // 
+            // CMtxtCodProv
+            // 
+            this.CMtxtCodProv.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.CMtxtCodProv.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CMtxtCodProv.Location = new System.Drawing.Point(136, 348);
+            this.CMtxtCodProv.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.CMtxtCodProv.MaxLength = 50;
+            this.CMtxtCodProv.Name = "CMtxtCodProv";
+            this.CMtxtCodProv.ShortcutsEnabled = false;
+            this.CMtxtCodProv.Size = new System.Drawing.Size(503, 23);
+            this.CMtxtCodProv.TabIndex = 10;
+            this.InfoToolTip.SetToolTip(this.CMtxtCodProv, "Código del proveedor que posee el elemento respecto a la tienda.\r\n*Campo NO Oblig" +
+        "atorio*");
+            // 
+            // CMtxtValorUnitario
+            // 
+            this.CMtxtValorUnitario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CMtxtValorUnitario.Location = new System.Drawing.Point(452, 205);
+            this.CMtxtValorUnitario.Margin = new System.Windows.Forms.Padding(5, 10, 0, 10);
+            this.CMtxtValorUnitario.MaxLength = 10;
+            this.CMtxtValorUnitario.Name = "CMtxtValorUnitario";
+            this.CMtxtValorUnitario.ShortcutsEnabled = false;
+            this.CMtxtValorUnitario.Size = new System.Drawing.Size(187, 23);
+            this.CMtxtValorUnitario.TabIndex = 4;
+            this.CMtxtValorUnitario.Text = "0";
+            this.InfoToolTip.SetToolTip(this.CMtxtValorUnitario, "Valor individual del elemento.\r\n*Caampo Obligatorio*");
+            this.CMtxtValorUnitario.Leave += new System.EventHandler(this.CMtxtValorUnitario_Leave);
+            // 
+            // CMtxtValor
+            // 
+            this.CMtxtValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CMtxtValor.Location = new System.Drawing.Point(136, 204);
+            this.CMtxtValor.Margin = new System.Windows.Forms.Padding(5, 10, 10, 10);
+            this.CMtxtValor.MaxLength = 10;
+            this.CMtxtValor.Name = "CMtxtValor";
+            this.CMtxtValor.ShortcutsEnabled = false;
+            this.CMtxtValor.Size = new System.Drawing.Size(187, 23);
+            this.CMtxtValor.TabIndex = 3;
+            this.CMtxtValor.Text = "0";
+            this.InfoToolTip.SetToolTip(this.CMtxtValor, "Valor completo del elemento.\r\n*Campo Obligatorio*");
+            // 
+            // CMlabel10
+            // 
+            this.CMlabel10.AutoSize = true;
+            this.CMlabel10.Location = new System.Drawing.Point(10, 352);
+            this.CMlabel10.Margin = new System.Windows.Forms.Padding(0);
+            this.CMlabel10.Name = "CMlabel10";
+            this.CMlabel10.Size = new System.Drawing.Size(117, 16);
+            this.CMlabel10.TabIndex = 27;
+            this.CMlabel10.Text = "Cod Proveedor:";
+            // 
+            // CMlabel5
+            // 
+            this.CMlabel5.AutoSize = true;
+            this.CMlabel5.Location = new System.Drawing.Point(333, 208);
+            this.CMlabel5.Margin = new System.Windows.Forms.Padding(0);
+            this.CMlabel5.Name = "CMlabel5";
+            this.CMlabel5.Size = new System.Drawing.Size(107, 16);
+            this.CMlabel5.TabIndex = 23;
+            this.CMlabel5.Text = "Valor Unitario:";
+            // 
+            // CMlabel4
+            // 
+            this.CMlabel4.AutoSize = true;
+            this.CMlabel4.Location = new System.Drawing.Point(11, 208);
+            this.CMlabel4.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            this.CMlabel4.Name = "CMlabel4";
+            this.CMlabel4.Size = new System.Drawing.Size(49, 16);
+            this.CMlabel4.TabIndex = 22;
+            this.CMlabel4.Text = "Valor:";
+            // 
+            // CMlabel6
+            // 
+            this.CMlabel6.AutoSize = true;
+            this.CMlabel6.Location = new System.Drawing.Point(11, 241);
+            this.CMlabel6.Margin = new System.Windows.Forms.Padding(0);
+            this.CMlabel6.Name = "CMlabel6";
+            this.CMlabel6.Size = new System.Drawing.Size(96, 16);
+            this.CMlabel6.TabIndex = 20;
+            this.CMlabel6.Text = "Stock Inicial:";
+            // 
+            // CMtxtObs
+            // 
+            this.CMtxtObs.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CMtxtObs.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CMtxtObs.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CMtxtObs.Location = new System.Drawing.Point(136, 428);
+            this.CMtxtObs.Margin = new System.Windows.Forms.Padding(5, 0, 0, 10);
+            this.CMtxtObs.MaxLength = 256;
+            this.CMtxtObs.Name = "CMtxtObs";
+            this.CMtxtObs.Size = new System.Drawing.Size(503, 145);
+            this.CMtxtObs.TabIndex = 13;
+            this.CMtxtObs.Text = "";
+            this.InfoToolTip.SetToolTip(this.CMtxtObs, "Campo de texto para agregar información adicional del elemento, compra, etc.\r\n*Ca" +
+        "mpo NO Obligatorio*");
+            // 
+            // CMlabel12
+            // 
+            this.CMlabel12.AutoSize = true;
+            this.CMlabel12.Location = new System.Drawing.Point(10, 431);
+            this.CMlabel12.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.CMlabel12.Name = "CMlabel12";
+            this.CMlabel12.Size = new System.Drawing.Size(117, 16);
+            this.CMlabel12.TabIndex = 21;
+            this.CMlabel12.Text = "Observaciones:";
+            // 
+            // CMtxtStock
+            // 
+            this.CMtxtStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CMtxtStock.Location = new System.Drawing.Point(136, 237);
+            this.CMtxtStock.Margin = new System.Windows.Forms.Padding(5, 0, 10, 10);
+            this.CMtxtStock.MaxLength = 6;
+            this.CMtxtStock.Name = "CMtxtStock";
+            this.CMtxtStock.ShortcutsEnabled = false;
+            this.CMtxtStock.Size = new System.Drawing.Size(187, 23);
+            this.CMtxtStock.TabIndex = 5;
+            this.CMtxtStock.Text = "1";
+            this.InfoToolTip.SetToolTip(this.CMtxtStock, "Cantidad de elementos.\r\n*Campo Obligatorio*");
+            // 
+            // CMlabel1
+            // 
+            this.CMlabel1.AutoSize = true;
+            this.CMlabel1.Location = new System.Drawing.Point(10, 20);
+            this.CMlabel1.Margin = new System.Windows.Forms.Padding(0);
+            this.CMlabel1.Name = "CMlabel1";
+            this.CMlabel1.Size = new System.Drawing.Size(95, 16);
+            this.CMlabel1.TabIndex = 2;
+            this.CMlabel1.Text = "Descripción:";
+            // 
+            // CMtxtDescripcion
+            // 
+            this.CMtxtDescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CMtxtDescripcion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.CMtxtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CMtxtDescripcion.Location = new System.Drawing.Point(136, 19);
+            this.CMtxtDescripcion.Margin = new System.Windows.Forms.Padding(5, 0, 0, 10);
+            this.CMtxtDescripcion.MaxLength = 256;
+            this.CMtxtDescripcion.Name = "CMtxtDescripcion";
+            this.CMtxtDescripcion.ShortcutsEnabled = false;
+            this.CMtxtDescripcion.Size = new System.Drawing.Size(503, 23);
+            this.CMtxtDescripcion.TabIndex = 0;
+            this.InfoToolTip.SetToolTip(this.CMtxtDescripcion, "Filtro de elementos.");
+            // 
+            // CMpanelR
+            // 
+            this.CMpanelR.Controls.Add(this.CMbtnCancelar);
+            this.CMpanelR.Controls.Add(this.CMbtnEditar);
+            this.CMpanelR.Controls.Add(this.label33);
+            this.CMpanelR.Controls.Add(this.CMbtnEditarImg);
+            this.CMpanelR.Controls.Add(this.CMpanelImagen);
+            this.CMpanelR.Cursor = System.Windows.Forms.Cursors.Default;
+            this.CMpanelR.Dock = System.Windows.Forms.DockStyle.Right;
+            this.CMpanelR.Location = new System.Drawing.Point(649, 0);
+            this.CMpanelR.Margin = new System.Windows.Forms.Padding(0);
+            this.CMpanelR.Name = "CMpanelR";
+            this.CMpanelR.Size = new System.Drawing.Size(385, 67);
+            this.CMpanelR.TabIndex = 5;
+            // 
+            // CMbtnCancelar
+            // 
+            this.CMbtnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(56)))), ((int)(((byte)(0)))));
+            this.CMbtnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CMbtnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
+            this.CMbtnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(41)))), ((int)(((byte)(2)))));
+            this.CMbtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CMbtnCancelar.ForeColor = System.Drawing.Color.White;
+            this.CMbtnCancelar.IconChar = FontAwesome.Sharp.IconChar.TimesCircle;
+            this.CMbtnCancelar.IconColor = System.Drawing.Color.White;
+            this.CMbtnCancelar.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.CMbtnCancelar.IconSize = 30;
+            this.CMbtnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.CMbtnCancelar.Location = new System.Drawing.Point(15, 314);
+            this.CMbtnCancelar.Margin = new System.Windows.Forms.Padding(12, 5, 12, 5);
+            this.CMbtnCancelar.Name = "CMbtnCancelar";
+            this.CMbtnCancelar.Size = new System.Drawing.Size(164, 40);
+            this.CMbtnCancelar.TabIndex = 15;
+            this.CMbtnCancelar.Text = "Cancelar";
+            this.CMbtnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.CMbtnCancelar.UseVisualStyleBackColor = false;
+            // 
+            // CMbtnEditar
+            // 
+            this.CMbtnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(183)))), ((int)(((byte)(30)))));
+            this.CMbtnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CMbtnEditar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
+            this.CMbtnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(142)))), ((int)(((byte)(25)))));
+            this.CMbtnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CMbtnEditar.ForeColor = System.Drawing.Color.White;
+            this.CMbtnEditar.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.CMbtnEditar.IconColor = System.Drawing.Color.White;
+            this.CMbtnEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.CMbtnEditar.IconSize = 30;
+            this.CMbtnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.CMbtnEditar.Location = new System.Drawing.Point(210, 313);
+            this.CMbtnEditar.Margin = new System.Windows.Forms.Padding(12, 5, 12, 5);
+            this.CMbtnEditar.Name = "CMbtnEditar";
+            this.CMbtnEditar.Size = new System.Drawing.Size(160, 40);
+            this.CMbtnEditar.TabIndex = 16;
+            this.CMbtnEditar.Text = "Editar Elemento";
+            this.CMbtnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.CMbtnEditar.UseVisualStyleBackColor = false;
+            // 
+            // label33
+            // 
+            this.label33.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label33.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label33.ForeColor = System.Drawing.Color.Black;
+            this.label33.Location = new System.Drawing.Point(-187, 309);
+            this.label33.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(668, 2);
+            this.label33.TabIndex = 50;
+            // 
+            // CMbtnEditarImg
+            // 
+            this.CMbtnEditarImg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(183)))), ((int)(((byte)(30)))));
+            this.CMbtnEditarImg.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CMbtnEditarImg.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
+            this.CMbtnEditarImg.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(142)))), ((int)(((byte)(25)))));
+            this.CMbtnEditarImg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CMbtnEditarImg.ForeColor = System.Drawing.Color.White;
+            this.CMbtnEditarImg.IconChar = FontAwesome.Sharp.IconChar.Images;
+            this.CMbtnEditarImg.IconColor = System.Drawing.Color.White;
+            this.CMbtnEditarImg.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.CMbtnEditarImg.IconSize = 30;
+            this.CMbtnEditarImg.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.CMbtnEditarImg.Location = new System.Drawing.Point(15, 264);
+            this.CMbtnEditarImg.Margin = new System.Windows.Forms.Padding(12, 5, 12, 5);
+            this.CMbtnEditarImg.Name = "CMbtnEditarImg";
+            this.CMbtnEditarImg.Size = new System.Drawing.Size(355, 40);
+            this.CMbtnEditarImg.TabIndex = 14;
+            this.CMbtnEditarImg.Text = "Cambiar Imagen";
+            this.CMbtnEditarImg.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.CMbtnEditarImg.UseVisualStyleBackColor = false;
+            // 
+            // CMpanelImagen
+            // 
+            this.CMpanelImagen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(243)))), ((int)(((byte)(246)))));
+            this.CMpanelImagen.Controls.Add(this.CMpictureBoxElem);
+            this.CMpanelImagen.Dock = System.Windows.Forms.DockStyle.Top;
+            this.CMpanelImagen.Location = new System.Drawing.Point(0, 0);
+            this.CMpanelImagen.Margin = new System.Windows.Forms.Padding(0);
+            this.CMpanelImagen.Name = "CMpanelImagen";
+            this.CMpanelImagen.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
+            this.CMpanelImagen.Size = new System.Drawing.Size(385, 259);
+            this.CMpanelImagen.TabIndex = 5;
+            // 
+            // CMpictureBoxElem
+            // 
+            this.CMpictureBoxElem.BackColor = System.Drawing.Color.White;
+            this.CMpictureBoxElem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.CMpictureBoxElem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CMpictureBoxElem.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CMpictureBoxElem.Image = global::Convertec_Bodega_Administracion.Properties.Resources.image_unavailable;
+            this.CMpictureBoxElem.InitialImage = global::Convertec_Bodega_Administracion.Properties.Resources.image_unavailable;
+            this.CMpictureBoxElem.Location = new System.Drawing.Point(15, 10);
+            this.CMpictureBoxElem.Margin = new System.Windows.Forms.Padding(12, 10, 12, 10);
+            this.CMpictureBoxElem.Name = "CMpictureBoxElem";
+            this.CMpictureBoxElem.Size = new System.Drawing.Size(355, 239);
+            this.CMpictureBoxElem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.CMpictureBoxElem.TabIndex = 0;
+            this.CMpictureBoxElem.TabStop = false;
+            // 
+            // BodyPanelInformes
+            // 
+            this.BodyPanelInformes.Controls.Add(this.INFtabControlInformes);
+            this.BodyPanelInformes.Location = new System.Drawing.Point(0, 584);
+            this.BodyPanelInformes.Name = "BodyPanelInformes";
+            this.BodyPanelInformes.Size = new System.Drawing.Size(1042, 362);
+            this.BodyPanelInformes.TabIndex = 9;
+            this.BodyPanelInformes.Visible = false;
+            // 
+            // INFtabControlInformes
+            // 
+            this.INFtabControlInformes.Controls.Add(this.INFtabPageStock);
+            this.INFtabControlInformes.Controls.Add(this.INFtabPageImportacion);
+            this.INFtabControlInformes.Controls.Add(this.INFtabPagListadoOT);
+            this.INFtabControlInformes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.INFtabControlInformes.Location = new System.Drawing.Point(0, 0);
+            this.INFtabControlInformes.Name = "INFtabControlInformes";
+            this.INFtabControlInformes.SelectedIndex = 0;
+            this.INFtabControlInformes.Size = new System.Drawing.Size(1042, 362);
+            this.INFtabControlInformes.TabIndex = 0;
+            this.INFtabControlInformes.TabStop = false;
+            this.INFtabControlInformes.SelectedIndexChanged += new System.EventHandler(this.SelectedTabChanged);
+            // 
+            // INFtabPageStock
+            // 
+            this.INFtabPageStock.Controls.Add(this.INFpanelStockBodega2);
+            this.INFtabPageStock.Controls.Add(this.INFpanelStockBodega1);
+            this.INFtabPageStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.INFtabPageStock.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.INFtabPageStock.Location = new System.Drawing.Point(4, 25);
+            this.INFtabPageStock.Margin = new System.Windows.Forms.Padding(0);
+            this.INFtabPageStock.Name = "INFtabPageStock";
+            this.INFtabPageStock.Padding = new System.Windows.Forms.Padding(3);
+            this.INFtabPageStock.Size = new System.Drawing.Size(1034, 333);
+            this.INFtabPageStock.TabIndex = 0;
+            this.INFtabPageStock.Text = "Stock Bodega";
+            this.INFtabPageStock.UseVisualStyleBackColor = true;
+            // 
+            // INFpanelStockBodega2
+            // 
+            this.INFpanelStockBodega2.Controls.Add(this.INFdataGridViewStockBodega);
+            this.INFpanelStockBodega2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.INFpanelStockBodega2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.INFpanelStockBodega2.Location = new System.Drawing.Point(3, 53);
+            this.INFpanelStockBodega2.Name = "INFpanelStockBodega2";
+            this.INFpanelStockBodega2.Size = new System.Drawing.Size(1028, 277);
+            this.INFpanelStockBodega2.TabIndex = 2;
+            // 
+            // INFdataGridViewStockBodega
+            // 
+            this.INFdataGridViewStockBodega.AllowUserToAddRows = false;
+            this.INFdataGridViewStockBodega.AllowUserToDeleteRows = false;
+            this.INFdataGridViewStockBodega.AllowUserToOrderColumns = true;
+            this.INFdataGridViewStockBodega.AllowUserToResizeRows = false;
+            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(255)))), ((int)(((byte)(242)))));
+            this.INFdataGridViewStockBodega.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle22;
+            this.INFdataGridViewStockBodega.AutoGenerateColumns = false;
+            this.INFdataGridViewStockBodega.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.INFdataGridViewStockBodega.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.codbodegaDataGridViewTextBoxColumn2,
+            this.descripcionDataGridViewTextBoxColumn2,
+            this.stock,
+            this.stock_min,
+            this.nomproveedorDataGridViewTextBoxColumn2,
+            this.nommarcaDataGridViewTextBoxColumn2,
+            this.valorDataGridViewTextBoxColumn2,
+            this.valorunitarioDataGridViewTextBoxColumn2});
+            this.INFdataGridViewStockBodega.DataSource = this.elementoStockBodegaBindingSource;
+            this.INFdataGridViewStockBodega.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.INFdataGridViewStockBodega.Location = new System.Drawing.Point(0, 0);
+            this.INFdataGridViewStockBodega.Name = "INFdataGridViewStockBodega";
+            this.INFdataGridViewStockBodega.ReadOnly = true;
+            this.INFdataGridViewStockBodega.RowHeadersVisible = false;
+            this.INFdataGridViewStockBodega.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.INFdataGridViewStockBodega.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.INFdataGridViewStockBodega.Size = new System.Drawing.Size(1028, 277);
+            this.INFdataGridViewStockBodega.TabIndex = 0;
             // 
             // codbodegaDataGridViewTextBoxColumn2
             // 
             this.codbodegaDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.codbodegaDataGridViewTextBoxColumn2.DataPropertyName = "cod_bodega";
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.codbodegaDataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.codbodegaDataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle23;
             this.codbodegaDataGridViewTextBoxColumn2.HeaderText = "Código";
             this.codbodegaDataGridViewTextBoxColumn2.Name = "codbodegaDataGridViewTextBoxColumn2";
             this.codbodegaDataGridViewTextBoxColumn2.ReadOnly = true;
@@ -3608,12 +3970,19 @@ namespace Convertec_Bodega_Administracion
             // 
             this.stock.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.stock.DataPropertyName = "stock";
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.stock.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.stock.DefaultCellStyle = dataGridViewCellStyle24;
             this.stock.HeaderText = "Stock";
             this.stock.Name = "stock";
             this.stock.ReadOnly = true;
             this.stock.Width = 72;
+            // 
+            // stock_min
+            // 
+            this.stock_min.DataPropertyName = "stock_min";
+            this.stock_min.HeaderText = "Stock Min.";
+            this.stock_min.Name = "stock_min";
+            this.stock_min.ReadOnly = true;
             // 
             // nomproveedorDataGridViewTextBoxColumn2
             // 
@@ -3637,10 +4006,10 @@ namespace Convertec_Bodega_Administracion
             // 
             this.valorDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.valorDataGridViewTextBoxColumn2.DataPropertyName = "valor";
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle23.Format = "C0";
-            dataGridViewCellStyle23.NullValue = null;
-            this.valorDataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle25.Format = "C0";
+            dataGridViewCellStyle25.NullValue = null;
+            this.valorDataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle25;
             this.valorDataGridViewTextBoxColumn2.HeaderText = "Valor";
             this.valorDataGridViewTextBoxColumn2.Name = "valorDataGridViewTextBoxColumn2";
             this.valorDataGridViewTextBoxColumn2.ReadOnly = true;
@@ -3650,10 +4019,10 @@ namespace Convertec_Bodega_Administracion
             // 
             this.valorunitarioDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.valorunitarioDataGridViewTextBoxColumn2.DataPropertyName = "valor_unitario";
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle24.Format = "C0";
-            dataGridViewCellStyle24.NullValue = "-";
-            this.valorunitarioDataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle26.Format = "C0";
+            dataGridViewCellStyle26.NullValue = "-";
+            this.valorunitarioDataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle26;
             this.valorunitarioDataGridViewTextBoxColumn2.HeaderText = "Valor Uni";
             this.valorunitarioDataGridViewTextBoxColumn2.Name = "valorunitarioDataGridViewTextBoxColumn2";
             this.valorunitarioDataGridViewTextBoxColumn2.ReadOnly = true;
@@ -3663,12 +4032,206 @@ namespace Convertec_Bodega_Administracion
             // 
             this.elementoStockBodegaBindingSource.DataSource = typeof(Convertec_Bodega_Administracion.Model.ElementoStockBodega);
             // 
+            // INFpanelStockBodega1
+            // 
+            this.INFpanelStockBodega1.Controls.Add(this.INFcheckBoxCriticosStock);
+            this.INFpanelStockBodega1.Controls.Add(this.INFbtnExportarStock);
+            this.INFpanelStockBodega1.Controls.Add(this.INFbtnRestablecerFiltroStock);
+            this.INFpanelStockBodega1.Controls.Add(this.INFtxtfiltroMarcaStock);
+            this.INFpanelStockBodega1.Controls.Add(this.INFlabel3);
+            this.INFpanelStockBodega1.Controls.Add(this.INFbtnBuscarStock);
+            this.INFpanelStockBodega1.Controls.Add(this.INFtxtFiltroProveedorStock);
+            this.INFpanelStockBodega1.Controls.Add(this.INFlabel2);
+            this.INFpanelStockBodega1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.INFpanelStockBodega1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.INFpanelStockBodega1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(78)))), ((int)(((byte)(79)))));
+            this.INFpanelStockBodega1.Location = new System.Drawing.Point(3, 3);
+            this.INFpanelStockBodega1.Margin = new System.Windows.Forms.Padding(0);
+            this.INFpanelStockBodega1.Name = "INFpanelStockBodega1";
+            this.INFpanelStockBodega1.Padding = new System.Windows.Forms.Padding(10);
+            this.INFpanelStockBodega1.Size = new System.Drawing.Size(1028, 50);
+            this.INFpanelStockBodega1.TabIndex = 1;
+            // 
+            // INFcheckBoxCriticosStock
+            // 
+            this.INFcheckBoxCriticosStock.AutoSize = true;
+            this.INFcheckBoxCriticosStock.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.INFcheckBoxCriticosStock.Location = new System.Drawing.Point(753, 16);
+            this.INFcheckBoxCriticosStock.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.INFcheckBoxCriticosStock.Name = "INFcheckBoxCriticosStock";
+            this.INFcheckBoxCriticosStock.Size = new System.Drawing.Size(115, 20);
+            this.INFcheckBoxCriticosStock.TabIndex = 4;
+            this.INFcheckBoxCriticosStock.Text = "Solo Críticos";
+            this.InfoToolTip.SetToolTip(this.INFcheckBoxCriticosStock, "Si es activado solo muestra los elementos con stock crítico.");
+            this.INFcheckBoxCriticosStock.UseVisualStyleBackColor = true;
+            this.INFcheckBoxCriticosStock.CheckedChanged += new System.EventHandler(this.INFcheckBoxCriticos_CheckedChanged);
+            // 
+            // INFbtnExportarStock
+            // 
+            this.INFbtnExportarStock.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.INFbtnExportarStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(183)))), ((int)(((byte)(30)))));
+            this.INFbtnExportarStock.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.INFbtnExportarStock.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
+            this.INFbtnExportarStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.INFbtnExportarStock.ForeColor = System.Drawing.Color.White;
+            this.INFbtnExportarStock.IconChar = FontAwesome.Sharp.IconChar.FileExport;
+            this.INFbtnExportarStock.IconColor = System.Drawing.Color.White;
+            this.INFbtnExportarStock.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.INFbtnExportarStock.IconSize = 25;
+            this.INFbtnExportarStock.Location = new System.Drawing.Point(898, 10);
+            this.INFbtnExportarStock.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.INFbtnExportarStock.Name = "INFbtnExportarStock";
+            this.INFbtnExportarStock.Size = new System.Drawing.Size(120, 30);
+            this.INFbtnExportarStock.TabIndex = 5;
+            this.INFbtnExportarStock.Text = "Exportar";
+            this.INFbtnExportarStock.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.INFbtnExportarStock.UseVisualStyleBackColor = false;
+            this.INFbtnExportarStock.Click += new System.EventHandler(this.INFbtnExportarStock_Click);
+            // 
+            // INFbtnRestablecerFiltroStock
+            // 
+            this.INFbtnRestablecerFiltroStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(183)))), ((int)(((byte)(30)))));
+            this.INFbtnRestablecerFiltroStock.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.INFbtnRestablecerFiltroStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.INFbtnRestablecerFiltroStock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
+            this.INFbtnRestablecerFiltroStock.IconChar = FontAwesome.Sharp.IconChar.UndoAlt;
+            this.INFbtnRestablecerFiltroStock.IconColor = System.Drawing.Color.White;
+            this.INFbtnRestablecerFiltroStock.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.INFbtnRestablecerFiltroStock.IconSize = 25;
+            this.INFbtnRestablecerFiltroStock.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.INFbtnRestablecerFiltroStock.Location = new System.Drawing.Point(718, 10);
+            this.INFbtnRestablecerFiltroStock.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.INFbtnRestablecerFiltroStock.Name = "INFbtnRestablecerFiltroStock";
+            this.INFbtnRestablecerFiltroStock.Size = new System.Drawing.Size(30, 30);
+            this.INFbtnRestablecerFiltroStock.TabIndex = 3;
+            this.INFbtnRestablecerFiltroStock.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.INFbtnRestablecerFiltroStock.UseVisualStyleBackColor = false;
+            this.INFbtnRestablecerFiltroStock.Click += new System.EventHandler(this.INFbtnRestablecerFiltroStock_Click);
+            // 
+            // INFtxtfiltroMarcaStock
+            // 
+            this.INFtxtfiltroMarcaStock.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.INFtxtfiltroMarcaStock.Location = new System.Drawing.Point(426, 14);
+            this.INFtxtfiltroMarcaStock.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.INFtxtfiltroMarcaStock.MaxLength = 256;
+            this.INFtxtfiltroMarcaStock.Name = "INFtxtfiltroMarcaStock";
+            this.INFtxtfiltroMarcaStock.ShortcutsEnabled = false;
+            this.INFtxtfiltroMarcaStock.Size = new System.Drawing.Size(247, 22);
+            this.INFtxtfiltroMarcaStock.TabIndex = 1;
+            this.INFtxtfiltroMarcaStock.KeyDown += new System.Windows.Forms.KeyEventHandler(this.INFtxtfiltroMarcaStock_KeyDown);
+            // 
+            // INFlabel3
+            // 
+            this.INFlabel3.AutoSize = true;
+            this.INFlabel3.Location = new System.Drawing.Point(366, 17);
+            this.INFlabel3.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.INFlabel3.Name = "INFlabel3";
+            this.INFlabel3.Size = new System.Drawing.Size(55, 16);
+            this.INFlabel3.TabIndex = 6;
+            this.INFlabel3.Text = "Marca:";
+            // 
+            // INFbtnBuscarStock
+            // 
+            this.INFbtnBuscarStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(183)))), ((int)(((byte)(30)))));
+            this.INFbtnBuscarStock.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.INFbtnBuscarStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.INFbtnBuscarStock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
+            this.INFbtnBuscarStock.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.INFbtnBuscarStock.IconColor = System.Drawing.Color.White;
+            this.INFbtnBuscarStock.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.INFbtnBuscarStock.IconSize = 25;
+            this.INFbtnBuscarStock.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.INFbtnBuscarStock.Location = new System.Drawing.Point(683, 10);
+            this.INFbtnBuscarStock.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.INFbtnBuscarStock.Name = "INFbtnBuscarStock";
+            this.INFbtnBuscarStock.Size = new System.Drawing.Size(30, 30);
+            this.INFbtnBuscarStock.TabIndex = 2;
+            this.INFbtnBuscarStock.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.INFbtnBuscarStock.UseVisualStyleBackColor = false;
+            this.INFbtnBuscarStock.Click += new System.EventHandler(this.INFbtnBuscarStock_Click);
+            // 
+            // INFtxtFiltroProveedorStock
+            // 
+            this.INFtxtFiltroProveedorStock.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.INFtxtFiltroProveedorStock.Location = new System.Drawing.Point(104, 14);
+            this.INFtxtFiltroProveedorStock.Margin = new System.Windows.Forms.Padding(5, 0, 10, 0);
+            this.INFtxtFiltroProveedorStock.MaxLength = 256;
+            this.INFtxtFiltroProveedorStock.Name = "INFtxtFiltroProveedorStock";
+            this.INFtxtFiltroProveedorStock.ShortcutsEnabled = false;
+            this.INFtxtFiltroProveedorStock.Size = new System.Drawing.Size(247, 22);
+            this.INFtxtFiltroProveedorStock.TabIndex = 0;
+            this.INFtxtFiltroProveedorStock.KeyDown += new System.Windows.Forms.KeyEventHandler(this.INFtxtFiltroProveedorStock_KeyDown);
+            // 
+            // INFlabel2
+            // 
+            this.INFlabel2.AutoSize = true;
+            this.INFlabel2.Location = new System.Drawing.Point(14, 17);
+            this.INFlabel2.Margin = new System.Windows.Forms.Padding(0);
+            this.INFlabel2.Name = "INFlabel2";
+            this.INFlabel2.Size = new System.Drawing.Size(85, 16);
+            this.INFlabel2.TabIndex = 3;
+            this.INFlabel2.Text = "Proveedor:";
+            // 
+            // INFtabPageImportacion
+            // 
+            this.INFtabPageImportacion.Controls.Add(this.INFpanelStockImportacion2);
+            this.INFtabPageImportacion.Controls.Add(this.INFpanelStockImportacion1);
+            this.INFtabPageImportacion.Location = new System.Drawing.Point(4, 25);
+            this.INFtabPageImportacion.Margin = new System.Windows.Forms.Padding(0);
+            this.INFtabPageImportacion.Name = "INFtabPageImportacion";
+            this.INFtabPageImportacion.Padding = new System.Windows.Forms.Padding(3);
+            this.INFtabPageImportacion.Size = new System.Drawing.Size(1034, 333);
+            this.INFtabPageImportacion.TabIndex = 1;
+            this.INFtabPageImportacion.Text = "Stock Importación";
+            this.INFtabPageImportacion.UseVisualStyleBackColor = true;
+            // 
+            // INFpanelStockImportacion2
+            // 
+            this.INFpanelStockImportacion2.Controls.Add(this.INFdataGridViewStockBodegaImportacion);
+            this.INFpanelStockImportacion2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.INFpanelStockImportacion2.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.INFpanelStockImportacion2.Location = new System.Drawing.Point(3, 53);
+            this.INFpanelStockImportacion2.Name = "INFpanelStockImportacion2";
+            this.INFpanelStockImportacion2.Size = new System.Drawing.Size(1028, 277);
+            this.INFpanelStockImportacion2.TabIndex = 1;
+            // 
+            // INFdataGridViewStockBodegaImportacion
+            // 
+            this.INFdataGridViewStockBodegaImportacion.AllowUserToAddRows = false;
+            this.INFdataGridViewStockBodegaImportacion.AllowUserToDeleteRows = false;
+            this.INFdataGridViewStockBodegaImportacion.AllowUserToOrderColumns = true;
+            this.INFdataGridViewStockBodegaImportacion.AllowUserToResizeRows = false;
+            dataGridViewCellStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(255)))), ((int)(((byte)(242)))));
+            this.INFdataGridViewStockBodegaImportacion.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle27;
+            this.INFdataGridViewStockBodegaImportacion.AutoGenerateColumns = false;
+            this.INFdataGridViewStockBodegaImportacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.INFdataGridViewStockBodegaImportacion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.stock_imp,
+            this.stock_min_imp,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8});
+            this.INFdataGridViewStockBodegaImportacion.DataSource = this.elementoStockBodegaBindingSource;
+            this.INFdataGridViewStockBodegaImportacion.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.INFdataGridViewStockBodegaImportacion.Location = new System.Drawing.Point(0, 0);
+            this.INFdataGridViewStockBodegaImportacion.Name = "INFdataGridViewStockBodegaImportacion";
+            this.INFdataGridViewStockBodegaImportacion.ReadOnly = true;
+            this.INFdataGridViewStockBodegaImportacion.RowHeadersVisible = false;
+            this.INFdataGridViewStockBodegaImportacion.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.INFdataGridViewStockBodegaImportacion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.INFdataGridViewStockBodegaImportacion.Size = new System.Drawing.Size(1028, 277);
+            this.INFdataGridViewStockBodegaImportacion.TabIndex = 1;
+            this.INFdataGridViewStockBodegaImportacion.TabStop = false;
+            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.dataGridViewTextBoxColumn1.DataPropertyName = "cod_bodega";
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle28;
             this.dataGridViewTextBoxColumn1.HeaderText = "Código";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
@@ -3687,12 +4250,19 @@ namespace Convertec_Bodega_Administracion
             // 
             this.stock_imp.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.stock_imp.DataPropertyName = "stock";
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.stock_imp.DefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.stock_imp.DefaultCellStyle = dataGridViewCellStyle29;
             this.stock_imp.HeaderText = "Stock";
             this.stock_imp.Name = "stock_imp";
             this.stock_imp.ReadOnly = true;
             this.stock_imp.Width = 72;
+            // 
+            // stock_min_imp
+            // 
+            this.stock_min_imp.DataPropertyName = "stock_min";
+            this.stock_min_imp.HeaderText = "Stock Min.";
+            this.stock_min_imp.Name = "stock_min_imp";
+            this.stock_min_imp.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn5
             // 
@@ -3716,10 +4286,10 @@ namespace Convertec_Bodega_Administracion
             // 
             this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.dataGridViewTextBoxColumn7.DataPropertyName = "valor";
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle28.Format = "C0";
-            dataGridViewCellStyle28.NullValue = "-";
-            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle30.Format = "C0";
+            dataGridViewCellStyle30.NullValue = "-";
+            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle30;
             this.dataGridViewTextBoxColumn7.HeaderText = "Valor";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.ReadOnly = true;
@@ -3729,14 +4299,206 @@ namespace Convertec_Bodega_Administracion
             // 
             this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.dataGridViewTextBoxColumn8.DataPropertyName = "valor_unitario";
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle29.Format = "C0";
-            dataGridViewCellStyle29.NullValue = "-";
-            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle31.Format = "C0";
+            dataGridViewCellStyle31.NullValue = "-";
+            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle31;
             this.dataGridViewTextBoxColumn8.HeaderText = "Valor Uni";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.ReadOnly = true;
             this.dataGridViewTextBoxColumn8.Width = 97;
+            // 
+            // INFpanelStockImportacion1
+            // 
+            this.INFpanelStockImportacion1.Controls.Add(this.INFcheckBoxCriticosStockImport);
+            this.INFpanelStockImportacion1.Controls.Add(this.INFbtnExportarStockImportacion);
+            this.INFpanelStockImportacion1.Controls.Add(this.INFbtnRestablecerFiltroStockImportacion);
+            this.INFpanelStockImportacion1.Controls.Add(this.INFtxtfiltroMarcaStockImportacion);
+            this.INFpanelStockImportacion1.Controls.Add(this.INFlabel5);
+            this.INFpanelStockImportacion1.Controls.Add(this.INFbtnBuscarStockImportacion);
+            this.INFpanelStockImportacion1.Controls.Add(this.INFtxtFiltroProveedorStockImportacion);
+            this.INFpanelStockImportacion1.Controls.Add(this.INFlabel4);
+            this.INFpanelStockImportacion1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.INFpanelStockImportacion1.Location = new System.Drawing.Point(3, 3);
+            this.INFpanelStockImportacion1.Margin = new System.Windows.Forms.Padding(0);
+            this.INFpanelStockImportacion1.Name = "INFpanelStockImportacion1";
+            this.INFpanelStockImportacion1.Padding = new System.Windows.Forms.Padding(10);
+            this.INFpanelStockImportacion1.Size = new System.Drawing.Size(1028, 50);
+            this.INFpanelStockImportacion1.TabIndex = 0;
+            // 
+            // INFcheckBoxCriticosStockImport
+            // 
+            this.INFcheckBoxCriticosStockImport.AutoSize = true;
+            this.INFcheckBoxCriticosStockImport.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.INFcheckBoxCriticosStockImport.Location = new System.Drawing.Point(753, 16);
+            this.INFcheckBoxCriticosStockImport.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.INFcheckBoxCriticosStockImport.Name = "INFcheckBoxCriticosStockImport";
+            this.INFcheckBoxCriticosStockImport.Size = new System.Drawing.Size(115, 20);
+            this.INFcheckBoxCriticosStockImport.TabIndex = 13;
+            this.INFcheckBoxCriticosStockImport.Text = "Solo Críticos";
+            this.InfoToolTip.SetToolTip(this.INFcheckBoxCriticosStockImport, "Si es activado solo muestra los elementos con stock crítico.");
+            this.INFcheckBoxCriticosStockImport.UseVisualStyleBackColor = true;
+            this.INFcheckBoxCriticosStockImport.CheckedChanged += new System.EventHandler(this.INFcheckBoxCriticosStockImport_CheckedChanged);
+            // 
+            // INFbtnExportarStockImportacion
+            // 
+            this.INFbtnExportarStockImportacion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.INFbtnExportarStockImportacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(183)))), ((int)(((byte)(30)))));
+            this.INFbtnExportarStockImportacion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.INFbtnExportarStockImportacion.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
+            this.INFbtnExportarStockImportacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.INFbtnExportarStockImportacion.ForeColor = System.Drawing.Color.White;
+            this.INFbtnExportarStockImportacion.IconChar = FontAwesome.Sharp.IconChar.FileExport;
+            this.INFbtnExportarStockImportacion.IconColor = System.Drawing.Color.White;
+            this.INFbtnExportarStockImportacion.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.INFbtnExportarStockImportacion.IconSize = 25;
+            this.INFbtnExportarStockImportacion.Location = new System.Drawing.Point(898, 10);
+            this.INFbtnExportarStockImportacion.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.INFbtnExportarStockImportacion.Name = "INFbtnExportarStockImportacion";
+            this.INFbtnExportarStockImportacion.Size = new System.Drawing.Size(120, 30);
+            this.INFbtnExportarStockImportacion.TabIndex = 4;
+            this.INFbtnExportarStockImportacion.Text = "Exportar";
+            this.INFbtnExportarStockImportacion.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.INFbtnExportarStockImportacion.UseVisualStyleBackColor = false;
+            this.INFbtnExportarStockImportacion.Click += new System.EventHandler(this.INFbtnExportarStockImportacion_Click);
+            // 
+            // INFbtnRestablecerFiltroStockImportacion
+            // 
+            this.INFbtnRestablecerFiltroStockImportacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(183)))), ((int)(((byte)(30)))));
+            this.INFbtnRestablecerFiltroStockImportacion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.INFbtnRestablecerFiltroStockImportacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.INFbtnRestablecerFiltroStockImportacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
+            this.INFbtnRestablecerFiltroStockImportacion.IconChar = FontAwesome.Sharp.IconChar.UndoAlt;
+            this.INFbtnRestablecerFiltroStockImportacion.IconColor = System.Drawing.Color.White;
+            this.INFbtnRestablecerFiltroStockImportacion.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.INFbtnRestablecerFiltroStockImportacion.IconSize = 25;
+            this.INFbtnRestablecerFiltroStockImportacion.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.INFbtnRestablecerFiltroStockImportacion.Location = new System.Drawing.Point(718, 10);
+            this.INFbtnRestablecerFiltroStockImportacion.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.INFbtnRestablecerFiltroStockImportacion.Name = "INFbtnRestablecerFiltroStockImportacion";
+            this.INFbtnRestablecerFiltroStockImportacion.Size = new System.Drawing.Size(30, 30);
+            this.INFbtnRestablecerFiltroStockImportacion.TabIndex = 3;
+            this.INFbtnRestablecerFiltroStockImportacion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.INFbtnRestablecerFiltroStockImportacion.UseVisualStyleBackColor = false;
+            this.INFbtnRestablecerFiltroStockImportacion.Click += new System.EventHandler(this.INFbtnRestablecerFiltroStockImportacion_Click);
+            // 
+            // INFtxtfiltroMarcaStockImportacion
+            // 
+            this.INFtxtfiltroMarcaStockImportacion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.INFtxtfiltroMarcaStockImportacion.Location = new System.Drawing.Point(426, 14);
+            this.INFtxtfiltroMarcaStockImportacion.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.INFtxtfiltroMarcaStockImportacion.MaxLength = 256;
+            this.INFtxtfiltroMarcaStockImportacion.Name = "INFtxtfiltroMarcaStockImportacion";
+            this.INFtxtfiltroMarcaStockImportacion.ShortcutsEnabled = false;
+            this.INFtxtfiltroMarcaStockImportacion.Size = new System.Drawing.Size(247, 22);
+            this.INFtxtfiltroMarcaStockImportacion.TabIndex = 1;
+            this.INFtxtfiltroMarcaStockImportacion.KeyDown += new System.Windows.Forms.KeyEventHandler(this.INFtxtfiltroMarcaStockImportacion_KeyDown);
+            // 
+            // INFlabel5
+            // 
+            this.INFlabel5.AutoSize = true;
+            this.INFlabel5.Location = new System.Drawing.Point(366, 17);
+            this.INFlabel5.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.INFlabel5.Name = "INFlabel5";
+            this.INFlabel5.Size = new System.Drawing.Size(55, 16);
+            this.INFlabel5.TabIndex = 12;
+            this.INFlabel5.Text = "Marca:";
+            // 
+            // INFbtnBuscarStockImportacion
+            // 
+            this.INFbtnBuscarStockImportacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(183)))), ((int)(((byte)(30)))));
+            this.INFbtnBuscarStockImportacion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.INFbtnBuscarStockImportacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.INFbtnBuscarStockImportacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
+            this.INFbtnBuscarStockImportacion.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.INFbtnBuscarStockImportacion.IconColor = System.Drawing.Color.White;
+            this.INFbtnBuscarStockImportacion.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.INFbtnBuscarStockImportacion.IconSize = 25;
+            this.INFbtnBuscarStockImportacion.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.INFbtnBuscarStockImportacion.Location = new System.Drawing.Point(683, 10);
+            this.INFbtnBuscarStockImportacion.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.INFbtnBuscarStockImportacion.Name = "INFbtnBuscarStockImportacion";
+            this.INFbtnBuscarStockImportacion.Size = new System.Drawing.Size(30, 30);
+            this.INFbtnBuscarStockImportacion.TabIndex = 2;
+            this.INFbtnBuscarStockImportacion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.INFbtnBuscarStockImportacion.UseVisualStyleBackColor = false;
+            this.INFbtnBuscarStockImportacion.Click += new System.EventHandler(this.INFbtnBuscarStockImportacion_Click);
+            // 
+            // INFtxtFiltroProveedorStockImportacion
+            // 
+            this.INFtxtFiltroProveedorStockImportacion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.INFtxtFiltroProveedorStockImportacion.Location = new System.Drawing.Point(104, 14);
+            this.INFtxtFiltroProveedorStockImportacion.Margin = new System.Windows.Forms.Padding(5, 0, 10, 0);
+            this.INFtxtFiltroProveedorStockImportacion.MaxLength = 256;
+            this.INFtxtFiltroProveedorStockImportacion.Name = "INFtxtFiltroProveedorStockImportacion";
+            this.INFtxtFiltroProveedorStockImportacion.ShortcutsEnabled = false;
+            this.INFtxtFiltroProveedorStockImportacion.Size = new System.Drawing.Size(247, 22);
+            this.INFtxtFiltroProveedorStockImportacion.TabIndex = 0;
+            this.INFtxtFiltroProveedorStockImportacion.KeyDown += new System.Windows.Forms.KeyEventHandler(this.INFtxtFiltroProveedorStockImportacion_KeyDown);
+            // 
+            // INFlabel4
+            // 
+            this.INFlabel4.AutoSize = true;
+            this.INFlabel4.Location = new System.Drawing.Point(14, 17);
+            this.INFlabel4.Margin = new System.Windows.Forms.Padding(0);
+            this.INFlabel4.Name = "INFlabel4";
+            this.INFlabel4.Size = new System.Drawing.Size(85, 16);
+            this.INFlabel4.TabIndex = 9;
+            this.INFlabel4.Text = "Proveedor:";
+            // 
+            // INFtabPagListadoOT
+            // 
+            this.INFtabPagListadoOT.Controls.Add(this.INFpanelListadoOT2);
+            this.INFtabPagListadoOT.Controls.Add(this.INFpanelListadoOT1);
+            this.INFtabPagListadoOT.Location = new System.Drawing.Point(4, 25);
+            this.INFtabPagListadoOT.Margin = new System.Windows.Forms.Padding(0);
+            this.INFtabPagListadoOT.Name = "INFtabPagListadoOT";
+            this.INFtabPagListadoOT.Padding = new System.Windows.Forms.Padding(3);
+            this.INFtabPagListadoOT.Size = new System.Drawing.Size(1034, 333);
+            this.INFtabPagListadoOT.TabIndex = 2;
+            this.INFtabPagListadoOT.Text = "Lista Partes por OT";
+            this.INFtabPagListadoOT.UseVisualStyleBackColor = true;
+            // 
+            // INFpanelListadoOT2
+            // 
+            this.INFpanelListadoOT2.Controls.Add(this.INFdataGridViewListadoOT);
+            this.INFpanelListadoOT2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.INFpanelListadoOT2.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.INFpanelListadoOT2.Location = new System.Drawing.Point(3, 53);
+            this.INFpanelListadoOT2.Name = "INFpanelListadoOT2";
+            this.INFpanelListadoOT2.Size = new System.Drawing.Size(1028, 277);
+            this.INFpanelListadoOT2.TabIndex = 1;
+            // 
+            // INFdataGridViewListadoOT
+            // 
+            this.INFdataGridViewListadoOT.AllowUserToAddRows = false;
+            this.INFdataGridViewListadoOT.AllowUserToDeleteRows = false;
+            this.INFdataGridViewListadoOT.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(255)))), ((int)(((byte)(242)))));
+            this.INFdataGridViewListadoOT.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle32;
+            this.INFdataGridViewListadoOT.AutoGenerateColumns = false;
+            this.INFdataGridViewListadoOT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.INFdataGridViewListadoOT.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.parteplanoDataGridViewTextBoxColumn1,
+            this.descripcionDataGridViewTextBoxColumn3,
+            this.nomproveedorDataGridViewTextBoxColumn3,
+            this.nommarcaDataGridViewTextBoxColumn3,
+            this.valorDataGridViewTextBoxColumn3,
+            this.valorunitarioDataGridViewTextBoxColumn3,
+            this.cantidadDataGridViewTextBoxColumn3,
+            this.bodega,
+            this.compra,
+            this.subtotal});
+            this.INFdataGridViewListadoOT.DataSource = this.elementoUtilizadoOTBindingSource;
+            this.INFdataGridViewListadoOT.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.INFdataGridViewListadoOT.Location = new System.Drawing.Point(0, 0);
+            this.INFdataGridViewListadoOT.Name = "INFdataGridViewListadoOT";
+            this.INFdataGridViewListadoOT.ReadOnly = true;
+            this.INFdataGridViewListadoOT.RowHeadersVisible = false;
+            this.INFdataGridViewListadoOT.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.INFdataGridViewListadoOT.Size = new System.Drawing.Size(1028, 277);
+            this.INFdataGridViewListadoOT.TabIndex = 0;
+            this.INFdataGridViewListadoOT.TabStop = false;
             // 
             // parteplanoDataGridViewTextBoxColumn1
             // 
@@ -3801,217 +4563,125 @@ namespace Convertec_Bodega_Administracion
             this.cantidadDataGridViewTextBoxColumn3.ReadOnly = true;
             this.cantidadDataGridViewTextBoxColumn3.Width = 68;
             // 
+            // bodega
+            // 
+            this.bodega.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.bodega.HeaderText = "Bodega";
+            this.bodega.Name = "bodega";
+            this.bodega.ReadOnly = true;
+            this.bodega.Visible = false;
+            // 
+            // compra
+            // 
+            this.compra.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.compra.HeaderText = "Compra";
+            this.compra.Name = "compra";
+            this.compra.ReadOnly = true;
+            this.compra.Visible = false;
+            // 
+            // subtotal
+            // 
+            this.subtotal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.subtotal.HeaderText = "Subtotal";
+            this.subtotal.Name = "subtotal";
+            this.subtotal.ReadOnly = true;
+            this.subtotal.Visible = false;
+            // 
             // elementoUtilizadoOTBindingSource
             // 
             this.elementoUtilizadoOTBindingSource.DataSource = typeof(Convertec_Bodega_Administracion.Model.ElementoUtilizadoOT);
             // 
-            // codbodegaDataGridViewTextBoxColumn
+            // INFpanelListadoOT1
             // 
-            this.codbodegaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.codbodegaDataGridViewTextBoxColumn.DataPropertyName = "cod_bodega";
-            this.codbodegaDataGridViewTextBoxColumn.HeaderText = "Código";
-            this.codbodegaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.codbodegaDataGridViewTextBoxColumn.Name = "codbodegaDataGridViewTextBoxColumn";
-            this.codbodegaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.codbodegaDataGridViewTextBoxColumn.Width = 83;
+            this.INFpanelListadoOT1.Controls.Add(this.INFbtnExportarListadoOT);
+            this.INFpanelListadoOT1.Controls.Add(this.INFbtnBuscarOT);
+            this.INFpanelListadoOT1.Controls.Add(this.INFtxtOT);
+            this.INFpanelListadoOT1.Controls.Add(this.INFlabel1);
+            this.INFpanelListadoOT1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.INFpanelListadoOT1.Location = new System.Drawing.Point(3, 3);
+            this.INFpanelListadoOT1.Margin = new System.Windows.Forms.Padding(0);
+            this.INFpanelListadoOT1.Name = "INFpanelListadoOT1";
+            this.INFpanelListadoOT1.Padding = new System.Windows.Forms.Padding(10);
+            this.INFpanelListadoOT1.Size = new System.Drawing.Size(1028, 50);
+            this.INFpanelListadoOT1.TabIndex = 0;
             // 
-            // descripcionDataGridViewTextBoxColumn
+            // INFbtnExportarListadoOT
             // 
-            this.descripcionDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "descripcion";
-            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripción";
-            this.descripcionDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
-            this.descripcionDataGridViewTextBoxColumn.ReadOnly = true;
-            this.descripcionDataGridViewTextBoxColumn.Width = 116;
+            this.INFbtnExportarListadoOT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.INFbtnExportarListadoOT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(183)))), ((int)(((byte)(30)))));
+            this.INFbtnExportarListadoOT.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.INFbtnExportarListadoOT.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
+            this.INFbtnExportarListadoOT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.INFbtnExportarListadoOT.ForeColor = System.Drawing.Color.White;
+            this.INFbtnExportarListadoOT.IconChar = FontAwesome.Sharp.IconChar.FileExport;
+            this.INFbtnExportarListadoOT.IconColor = System.Drawing.Color.White;
+            this.INFbtnExportarListadoOT.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.INFbtnExportarListadoOT.IconSize = 25;
+            this.INFbtnExportarListadoOT.Location = new System.Drawing.Point(898, 10);
+            this.INFbtnExportarListadoOT.Margin = new System.Windows.Forms.Padding(0);
+            this.INFbtnExportarListadoOT.Name = "INFbtnExportarListadoOT";
+            this.INFbtnExportarListadoOT.Size = new System.Drawing.Size(120, 30);
+            this.INFbtnExportarListadoOT.TabIndex = 2;
+            this.INFbtnExportarListadoOT.Text = "Exportar";
+            this.INFbtnExportarListadoOT.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.INFbtnExportarListadoOT.UseVisualStyleBackColor = false;
+            this.INFbtnExportarListadoOT.Click += new System.EventHandler(this.INFbtnExportarListadoOT_Click);
             // 
-            // cantidadDataGridViewTextBoxColumn
+            // INFbtnBuscarOT
             // 
-            this.cantidadDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.cantidadDataGridViewTextBoxColumn.DataPropertyName = "cantidad";
-            this.cantidadDataGridViewTextBoxColumn.HeaderText = "Cant";
-            this.cantidadDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.cantidadDataGridViewTextBoxColumn.Name = "cantidadDataGridViewTextBoxColumn";
-            this.cantidadDataGridViewTextBoxColumn.ReadOnly = true;
-            this.cantidadDataGridViewTextBoxColumn.Width = 64;
+            this.INFbtnBuscarOT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(183)))), ((int)(((byte)(30)))));
+            this.INFbtnBuscarOT.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.INFbtnBuscarOT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.INFbtnBuscarOT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
+            this.INFbtnBuscarOT.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.INFbtnBuscarOT.IconColor = System.Drawing.Color.White;
+            this.INFbtnBuscarOT.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.INFbtnBuscarOT.IconSize = 25;
+            this.INFbtnBuscarOT.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.INFbtnBuscarOT.Location = new System.Drawing.Point(400, 10);
+            this.INFbtnBuscarOT.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.INFbtnBuscarOT.Name = "INFbtnBuscarOT";
+            this.INFbtnBuscarOT.Size = new System.Drawing.Size(30, 30);
+            this.INFbtnBuscarOT.TabIndex = 1;
+            this.INFbtnBuscarOT.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.INFbtnBuscarOT.UseVisualStyleBackColor = false;
+            this.INFbtnBuscarOT.Click += new System.EventHandler(this.INFbtnBuscarOT_Click);
             // 
-            // fechamovDataGridViewTextBoxColumn
+            // INFtxtOT
             // 
-            this.fechamovDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.fechamovDataGridViewTextBoxColumn.DataPropertyName = "fecha_mov";
-            this.fechamovDataGridViewTextBoxColumn.HeaderText = "Fecha";
-            this.fechamovDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.fechamovDataGridViewTextBoxColumn.Name = "fechamovDataGridViewTextBoxColumn";
-            this.fechamovDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fechamovDataGridViewTextBoxColumn.Width = 76;
+            this.INFtxtOT.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.INFtxtOT.Location = new System.Drawing.Point(52, 14);
+            this.INFtxtOT.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.INFtxtOT.MaxLength = 256;
+            this.INFtxtOT.Name = "INFtxtOT";
+            this.INFtxtOT.ShortcutsEnabled = false;
+            this.INFtxtOT.Size = new System.Drawing.Size(338, 22);
+            this.INFtxtOT.TabIndex = 0;
+            this.INFtxtOT.KeyDown += new System.Windows.Forms.KeyEventHandler(this.INFtxtOT_KeyDown);
             // 
-            // otDataGridViewTextBoxColumn
+            // INFlabel1
             // 
-            this.otDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.otDataGridViewTextBoxColumn.DataPropertyName = "ot";
-            this.otDataGridViewTextBoxColumn.HeaderText = "OT";
-            this.otDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.otDataGridViewTextBoxColumn.Name = "otDataGridViewTextBoxColumn";
-            this.otDataGridViewTextBoxColumn.ReadOnly = true;
-            this.otDataGridViewTextBoxColumn.Width = 54;
+            this.INFlabel1.AutoSize = true;
+            this.INFlabel1.Location = new System.Drawing.Point(14, 17);
+            this.INFlabel1.Margin = new System.Windows.Forms.Padding(0);
+            this.INFlabel1.Name = "INFlabel1";
+            this.INFlabel1.Size = new System.Drawing.Size(33, 16);
+            this.INFlabel1.TabIndex = 0;
+            this.INFlabel1.Text = "OT:";
             // 
-            // nombreDataGridViewTextBoxColumn
+            // ErrorValorToolTip
             // 
-            this.nombreDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nombreDataGridViewTextBoxColumn.Width = 88;
+            this.ErrorValorToolTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Error;
+            this.ErrorValorToolTip.ToolTipTitle = "Error en Valor.";
             // 
-            // apellidosDataGridViewTextBoxColumn
+            // InfoToolTip
             // 
-            this.apellidosDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.apellidosDataGridViewTextBoxColumn.DataPropertyName = "apellidos";
-            this.apellidosDataGridViewTextBoxColumn.HeaderText = "Apellidos";
-            this.apellidosDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.apellidosDataGridViewTextBoxColumn.Name = "apellidosDataGridViewTextBoxColumn";
-            this.apellidosDataGridViewTextBoxColumn.ReadOnly = true;
-            this.apellidosDataGridViewTextBoxColumn.Width = 99;
+            this.InfoToolTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.InfoToolTip.ToolTipTitle = "Info:";
             // 
-            // obsmovDataGridViewTextBoxColumn
+            // CEopenFileDialogImagen
             // 
-            this.obsmovDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.obsmovDataGridViewTextBoxColumn.DataPropertyName = "obs_mov";
-            this.obsmovDataGridViewTextBoxColumn.HeaderText = "Obs";
-            this.obsmovDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.obsmovDataGridViewTextBoxColumn.Name = "obsmovDataGridViewTextBoxColumn";
-            this.obsmovDataGridViewTextBoxColumn.ReadOnly = true;
-            this.obsmovDataGridViewTextBoxColumn.Width = 61;
-            // 
-            // movSalidasDataGridDTOBindingSource
-            // 
-            this.movSalidasDataGridDTOBindingSource.DataSource = typeof(Convertec_Bodega_Administracion.Model.MovSalidasDataGridDTO);
-            // 
-            // codbodegaDataGridViewTextBoxColumn1
-            // 
-            this.codbodegaDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.codbodegaDataGridViewTextBoxColumn1.DataPropertyName = "cod_bodega";
-            this.codbodegaDataGridViewTextBoxColumn1.HeaderText = "Código";
-            this.codbodegaDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.codbodegaDataGridViewTextBoxColumn1.Name = "codbodegaDataGridViewTextBoxColumn1";
-            this.codbodegaDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.codbodegaDataGridViewTextBoxColumn1.Width = 83;
-            // 
-            // descripcionDataGridViewTextBoxColumn1
-            // 
-            this.descripcionDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.descripcionDataGridViewTextBoxColumn1.DataPropertyName = "descripcion";
-            this.descripcionDataGridViewTextBoxColumn1.HeaderText = "Descripción";
-            this.descripcionDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.descripcionDataGridViewTextBoxColumn1.Name = "descripcionDataGridViewTextBoxColumn1";
-            this.descripcionDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.descripcionDataGridViewTextBoxColumn1.Width = 116;
-            // 
-            // cantidadDataGridViewTextBoxColumn1
-            // 
-            this.cantidadDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.cantidadDataGridViewTextBoxColumn1.DataPropertyName = "cantidad";
-            this.cantidadDataGridViewTextBoxColumn1.HeaderText = "Cant";
-            this.cantidadDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.cantidadDataGridViewTextBoxColumn1.Name = "cantidadDataGridViewTextBoxColumn1";
-            this.cantidadDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.cantidadDataGridViewTextBoxColumn1.Width = 64;
-            // 
-            // documentoDataGridViewTextBoxColumn
-            // 
-            this.documentoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.documentoDataGridViewTextBoxColumn.DataPropertyName = "documento";
-            this.documentoDataGridViewTextBoxColumn.HeaderText = "Documento";
-            this.documentoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.documentoDataGridViewTextBoxColumn.Name = "documentoDataGridViewTextBoxColumn";
-            this.documentoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.documentoDataGridViewTextBoxColumn.Width = 111;
-            // 
-            // valorDataGridViewTextBoxColumn
-            // 
-            this.valorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.valorDataGridViewTextBoxColumn.DataPropertyName = "valor";
-            this.valorDataGridViewTextBoxColumn.HeaderText = "Valor";
-            this.valorDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.valorDataGridViewTextBoxColumn.Name = "valorDataGridViewTextBoxColumn";
-            this.valorDataGridViewTextBoxColumn.ReadOnly = true;
-            this.valorDataGridViewTextBoxColumn.Width = 70;
-            // 
-            // valorunitarioDataGridViewTextBoxColumn
-            // 
-            this.valorunitarioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.valorunitarioDataGridViewTextBoxColumn.DataPropertyName = "valor_unitario";
-            this.valorunitarioDataGridViewTextBoxColumn.HeaderText = "Valor Unitario";
-            this.valorunitarioDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.valorunitarioDataGridViewTextBoxColumn.Name = "valorunitarioDataGridViewTextBoxColumn";
-            this.valorunitarioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.valorunitarioDataGridViewTextBoxColumn.Width = 117;
-            // 
-            // nomproveedorDataGridViewTextBoxColumn
-            // 
-            this.nomproveedorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.nomproveedorDataGridViewTextBoxColumn.DataPropertyName = "nom_proveedor";
-            this.nomproveedorDataGridViewTextBoxColumn.HeaderText = "Proveedor";
-            this.nomproveedorDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nomproveedorDataGridViewTextBoxColumn.Name = "nomproveedorDataGridViewTextBoxColumn";
-            this.nomproveedorDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nomproveedorDataGridViewTextBoxColumn.Width = 106;
-            // 
-            // nommarcaDataGridViewTextBoxColumn
-            // 
-            this.nommarcaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.nommarcaDataGridViewTextBoxColumn.DataPropertyName = "nom_marca";
-            this.nommarcaDataGridViewTextBoxColumn.HeaderText = "Marca";
-            this.nommarcaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nommarcaDataGridViewTextBoxColumn.Name = "nommarcaDataGridViewTextBoxColumn";
-            this.nommarcaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nommarcaDataGridViewTextBoxColumn.Width = 76;
-            // 
-            // fechamovDataGridViewTextBoxColumn1
-            // 
-            this.fechamovDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.fechamovDataGridViewTextBoxColumn1.DataPropertyName = "fecha_mov";
-            this.fechamovDataGridViewTextBoxColumn1.HeaderText = "Fecha";
-            this.fechamovDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.fechamovDataGridViewTextBoxColumn1.Name = "fechamovDataGridViewTextBoxColumn1";
-            this.fechamovDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.fechamovDataGridViewTextBoxColumn1.Width = 76;
-            // 
-            // parteplanoDataGridViewTextBoxColumn
-            // 
-            this.parteplanoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.parteplanoDataGridViewTextBoxColumn.DataPropertyName = "parte_plano";
-            this.parteplanoDataGridViewTextBoxColumn.HeaderText = "Parte Plano";
-            this.parteplanoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.parteplanoDataGridViewTextBoxColumn.Name = "parteplanoDataGridViewTextBoxColumn";
-            this.parteplanoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.parteplanoDataGridViewTextBoxColumn.Width = 105;
-            // 
-            // otDataGridViewTextBoxColumn1
-            // 
-            this.otDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.otDataGridViewTextBoxColumn1.DataPropertyName = "ot";
-            this.otDataGridViewTextBoxColumn1.HeaderText = "OT";
-            this.otDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.otDataGridViewTextBoxColumn1.Name = "otDataGridViewTextBoxColumn1";
-            this.otDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.otDataGridViewTextBoxColumn1.Width = 54;
-            // 
-            // obsmovDataGridViewTextBoxColumn1
-            // 
-            this.obsmovDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.obsmovDataGridViewTextBoxColumn1.DataPropertyName = "obs_mov";
-            this.obsmovDataGridViewTextBoxColumn1.HeaderText = "Obs";
-            this.obsmovDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.obsmovDataGridViewTextBoxColumn1.Name = "obsmovDataGridViewTextBoxColumn1";
-            this.obsmovDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.obsmovDataGridViewTextBoxColumn1.Width = 61;
-            // 
-            // movIngresoDataGridDTOBindingSource
-            // 
-            this.movIngresoDataGridDTOBindingSource.DataSource = typeof(Convertec_Bodega_Administracion.Model.MovIngresoDataGridDTO);
+            this.CEopenFileDialogImagen.FileName = "CEopenFileDialogImagen";
             // 
             // idDescripcionElementoBindingSource
             // 
@@ -4044,7 +4714,9 @@ namespace Convertec_Bodega_Administracion
             this.HpanelHeader.ResumeLayout(false);
             this.HpanelHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SIdataGridViewSalidas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.movSalidasDataGridDTOBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SIdataGridViewIngresos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.movIngresoDataGridDTOBindingSource)).EndInit();
             this.splitContainerBodyPrincipal.Panel1.ResumeLayout(false);
             this.splitContainerBodyPrincipal.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerBodyPrincipal)).EndInit();
@@ -4086,6 +4758,7 @@ namespace Convertec_Bodega_Administracion
             this.MVpanelTablaElementos1.PerformLayout();
             this.MVpanelTablaMov2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.MVdataGridViewHistorial)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.historialMovimientoTablaBindingSource)).EndInit();
             this.MVpanelTablaMov1.ResumeLayout(false);
             this.MVpanelTablaMov1.PerformLayout();
             this.MVpanelBuscador.ResumeLayout(false);
@@ -4104,11 +4777,19 @@ namespace Convertec_Bodega_Administracion
             this.CEpanelR.ResumeLayout(false);
             this.CEpanelImagen.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.CEpictureBoxElem)).EndInit();
+            this.CMEtabModificar.ResumeLayout(false);
+            this.CMpanelL.ResumeLayout(false);
+            this.CMpanelL.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.CMpanelR.ResumeLayout(false);
+            this.CMpanelImagen.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.CMpictureBoxElem)).EndInit();
             this.BodyPanelInformes.ResumeLayout(false);
             this.INFtabControlInformes.ResumeLayout(false);
             this.INFtabPageStock.ResumeLayout(false);
             this.INFpanelStockBodega2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.INFdataGridViewStockBodega)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.elementoStockBodegaBindingSource)).EndInit();
             this.INFpanelStockBodega1.ResumeLayout(false);
             this.INFpanelStockBodega1.PerformLayout();
             this.INFtabPageImportacion.ResumeLayout(false);
@@ -4119,13 +4800,9 @@ namespace Convertec_Bodega_Administracion
             this.INFtabPagListadoOT.ResumeLayout(false);
             this.INFpanelListadoOT2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.INFdataGridViewListadoOT)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.elementoUtilizadoOTBindingSource)).EndInit();
             this.INFpanelListadoOT1.ResumeLayout(false);
             this.INFpanelListadoOT1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.historialMovimientoTablaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.elementoStockBodegaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.elementoUtilizadoOTBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.movSalidasDataGridDTOBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.movIngresoDataGridDTOBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.idDescripcionElementoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -4401,6 +5078,47 @@ namespace Convertec_Bodega_Administracion
         private FontAwesome.Sharp.IconButton CEbtnCancelar;
         private FontAwesome.Sharp.IconButton CEbtnAgregar;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel CMpanelL;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox CMtxtDocumento;
+        private System.Windows.Forms.Label CMlabel9;
+        private System.Windows.Forms.Label CMlabel8;
+        private System.Windows.Forms.TextBox CMtxtStockMin;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label CMlabel3;
+        private System.Windows.Forms.TextBox CMtxtPartePlano;
+        private System.Windows.Forms.TextBox CMtxtCodBodega;
+        private System.Windows.Forms.Label CMlabel2;
+        private System.Windows.Forms.RadioButton CMradioButtonUnidad;
+        private System.Windows.Forms.RadioButton CMradioButtonMetros;
+        private FontAwesome.Sharp.IconButton CMbtnAgregarMarca;
+        private System.Windows.Forms.ComboBox CMcomboBoxMarca;
+        private System.Windows.Forms.Label label21;
+        private FontAwesome.Sharp.IconButton CMbtnAgregarProv;
+        private System.Windows.Forms.ComboBox CMcomboBoxProv;
+        private System.Windows.Forms.Label CMlabel11;
+        private System.Windows.Forms.Label CMlabel7;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.TextBox CMtxtCodProv;
+        private System.Windows.Forms.TextBox CMtxtValorUnitario;
+        private System.Windows.Forms.TextBox CMtxtValor;
+        private System.Windows.Forms.Label CMlabel10;
+        private System.Windows.Forms.Label CMlabel5;
+        private System.Windows.Forms.Label CMlabel4;
+        private System.Windows.Forms.Label CMlabel6;
+        private System.Windows.Forms.RichTextBox CMtxtObs;
+        private System.Windows.Forms.Label CMlabel12;
+        private System.Windows.Forms.TextBox CMtxtStock;
+        private System.Windows.Forms.Label CMlabel1;
+        private System.Windows.Forms.TextBox CMtxtDescripcion;
+        private System.Windows.Forms.Panel CMpanelR;
+        private FontAwesome.Sharp.IconButton CMbtnCancelar;
+        private FontAwesome.Sharp.IconButton CMbtnEditar;
+        private System.Windows.Forms.Label label33;
+        private FontAwesome.Sharp.IconButton CMbtnEditarImg;
+        private System.Windows.Forms.Panel CMpanelImagen;
+        private System.Windows.Forms.PictureBox CMpictureBoxElem;
     }
 }
 

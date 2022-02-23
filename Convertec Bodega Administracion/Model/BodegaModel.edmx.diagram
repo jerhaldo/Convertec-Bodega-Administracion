@@ -4,15 +4,15 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="929c620637f64410bd301aa014a0e88e" Name="Diagram1">
-        <EntityTypeShape EntityType="ConvertecBodegaModel.Imagen_Producto" Width="1.5" PointX="8.25" PointY="3.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="ConvertecBodegaModel.Ingreso_Prod" Width="1.5" PointX="3" PointY="4.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="ConvertecBodegaModel.Marca" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
-        <EntityTypeShape EntityType="ConvertecBodegaModel.Movimiento" Width="1.5" PointX="8.25" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ConvertecBodegaModel.Producto" Width="1.5" PointX="6" PointY="3.625" IsExpanded="true" />
+      <Diagram DiagramId="bd6fb57958804c38a742f0d0fd38d291" Name="Diagram1">
+        <EntityTypeShape EntityType="ConvertecBodegaModel.Imagen_Producto" Width="1.5" PointX="8.25" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ConvertecBodegaModel.Ingreso_Prod" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ConvertecBodegaModel.Marca" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ConvertecBodegaModel.Movimiento" Width="1.5" PointX="8.25" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ConvertecBodegaModel.Producto" Width="1.5" PointX="6" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ConvertecBodegaModel.Proveedor" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ConvertecBodegaModel.Salida_Prod" Width="1.5" PointX="10.5" PointY="6.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="ConvertecBodegaModel.Trabajador" Width="1.5" PointX="8.25" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ConvertecBodegaModel.Salida_Prod" Width="1.5" PointX="10.5" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ConvertecBodegaModel.Trabajador" Width="1.5" PointX="8.25" PointY="10.375" IsExpanded="true" />
         <AssociationConnector Association="ConvertecBodegaModel.FK_Imagen_Producto_Producto" ManuallyRouted="false" />
         <AssociationConnector Association="ConvertecBodegaModel.FK_Ingreso_Prod_Marca" ManuallyRouted="false" />
         <AssociationConnector Association="ConvertecBodegaModel.FK_Ingreso_Prod_Movimiento" ManuallyRouted="false" />

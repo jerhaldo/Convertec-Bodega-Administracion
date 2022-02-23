@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="ConvertecBodegaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="ConvertecBodegaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Imagen_Producto">
           <Key>
             <PropertyRef Name="id_image" />
@@ -61,6 +61,7 @@
           <Property Name="parte_plano" Type="varchar" MaxLength="50" />
           <Property Name="obs" Type="varchar" MaxLength="256" />
           <Property Name="borrado" Type="bit" Nullable="false" />
+          <Property Name="importado" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="Proveedor">
           <Key>
@@ -249,7 +250,8 @@
             <End Role="Salida_Prod" EntitySet="Salida_Prod" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ConvertecBodegaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -318,6 +320,7 @@
           <Property Name="parte_plano" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="obs" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
           <Property Name="borrado" Type="Boolean" Nullable="false" />
+          <Property Name="importado" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="Imagen_Producto" Relationship="Self.FK_Imagen_Producto_Producto" FromRole="Producto" ToRole="Imagen_Producto" />
           <NavigationProperty Name="Marca" Relationship="Self.FK_Producto_Marca" FromRole="Producto" ToRole="Marca" />
           <NavigationProperty Name="Movimiento" Relationship="Self.FK_Movimiento_Producto" FromRole="Producto" ToRole="Movimiento" />
@@ -331,10 +334,10 @@
           <Property Name="nom_proveedor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Ingreso_Prod" Relationship="Self.FK_Ingreso_Prod_Proveedor" FromRole="Proveedor" ToRole="Ingreso_Prod" />
-          <NavigationProperty Name="Producto" Relationship="Self.FK_Producto_Proveedor" FromRole="Proveedor" ToRole="Producto" />
           <Property Name="vendedor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="rut_empresa" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Ingreso_Prod" Relationship="Self.FK_Ingreso_Prod_Proveedor" FromRole="Proveedor" ToRole="Ingreso_Prod" />
+          <NavigationProperty Name="Producto" Relationship="Self.FK_Producto_Proveedor" FromRole="Proveedor" ToRole="Producto" />
         </EntityType>
         <EntityType Name="Salida_Prod">
           <Key>
@@ -580,18 +583,19 @@
                 <ScalarProperty Name="parte_plano" ColumnName="parte_plano" />
                 <ScalarProperty Name="obs" ColumnName="obs" />
                 <ScalarProperty Name="borrado" ColumnName="borrado" />
+                <ScalarProperty Name="importado" ColumnName="importado" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Proveedor">
             <EntityTypeMapping TypeName="ConvertecBodegaModel.Proveedor">
               <MappingFragment StoreEntitySet="Proveedor">
-                <ScalarProperty Name="rut_empresa" ColumnName="rut_empresa" />
-                <ScalarProperty Name="vendedor" ColumnName="vendedor" />
                 <ScalarProperty Name="id_proveedor" ColumnName="id_proveedor" />
                 <ScalarProperty Name="nom_proveedor" ColumnName="nom_proveedor" />
                 <ScalarProperty Name="telefono" ColumnName="telefono" />
                 <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="vendedor" ColumnName="vendedor" />
+                <ScalarProperty Name="rut_empresa" ColumnName="rut_empresa" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -630,7 +634,7 @@
         <DesignerProperty Name="EnablePluralization" Value="false" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
-        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>
     </Options>
     <!-- Diagram content (shape and connector positions) -->

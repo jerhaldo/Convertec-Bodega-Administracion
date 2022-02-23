@@ -237,8 +237,8 @@
     <Content Include="favicon.ico" />
     <Content Include="Model\BodegaModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>BodegaModel.Context.cs</LastGenOutput>
       <DependentUpon>BodegaModel.edmx</DependentUpon>
+      <LastGenOutput>BodegaModel.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Model\BodegaModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
