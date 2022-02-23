@@ -191,17 +191,6 @@ namespace Convertec_Bodega_Administracion
             this.MVlabel4 = new System.Windows.Forms.Label();
             this.MVpanelTablaMov2 = new System.Windows.Forms.Panel();
             this.MVdataGridViewHistorial = new System.Windows.Forms.DataGridView();
-            this.fechamovDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codprodprovDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidadDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.otDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.folioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.documentoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomproveedorDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nommarcaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valorDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valorunitarioDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.obs_mov2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.historialMovimientoTablaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.MVpanelTablaMov1 = new System.Windows.Forms.Panel();
             this.MVdateTimePickerFiltro = new System.Windows.Forms.DateTimePicker();
@@ -372,6 +361,18 @@ namespace Convertec_Bodega_Administracion
             this.InfoToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.CEopenFileDialogImagen = new System.Windows.Forms.OpenFileDialog();
             this.idDescripcionElementoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fechamovDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codprodprovDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidadDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.otDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.trabajador = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.folioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.documentoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomproveedorDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nommarcaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorunitarioDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.obs_mov2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelSidebar.SuspendLayout();
             this.SidebarPanelMenuButton.SuspendLayout();
             this.SidebarPanelHeader.SuspendLayout();
@@ -2268,6 +2269,7 @@ namespace Convertec_Bodega_Administracion
             this.codprodprovDataGridViewTextBoxColumn,
             this.cantidadDataGridViewTextBoxColumn2,
             this.otDataGridViewTextBoxColumn2,
+            this.trabajador,
             this.folioDataGridViewTextBoxColumn,
             this.documentoDataGridViewTextBoxColumn1,
             this.nomproveedorDataGridViewTextBoxColumn1,
@@ -2291,116 +2293,6 @@ namespace Convertec_Bodega_Administracion
             this.MVdataGridViewHistorial.Size = new System.Drawing.Size(1000, 149);
             this.MVdataGridViewHistorial.TabIndex = 0;
             this.MVdataGridViewHistorial.TabStop = false;
-            // 
-            // fechamovDataGridViewTextBoxColumn2
-            // 
-            this.fechamovDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.fechamovDataGridViewTextBoxColumn2.DataPropertyName = "fecha_mov";
-            this.fechamovDataGridViewTextBoxColumn2.HeaderText = "Fecha";
-            this.fechamovDataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.fechamovDataGridViewTextBoxColumn2.Name = "fechamovDataGridViewTextBoxColumn2";
-            this.fechamovDataGridViewTextBoxColumn2.ReadOnly = true;
-            this.fechamovDataGridViewTextBoxColumn2.Width = 76;
-            // 
-            // codprodprovDataGridViewTextBoxColumn
-            // 
-            this.codprodprovDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.codprodprovDataGridViewTextBoxColumn.DataPropertyName = "cod_prod_prov";
-            this.codprodprovDataGridViewTextBoxColumn.HeaderText = "Código Proveedor";
-            this.codprodprovDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.codprodprovDataGridViewTextBoxColumn.Name = "codprodprovDataGridViewTextBoxColumn";
-            this.codprodprovDataGridViewTextBoxColumn.ReadOnly = true;
-            this.codprodprovDataGridViewTextBoxColumn.Width = 146;
-            // 
-            // cantidadDataGridViewTextBoxColumn2
-            // 
-            this.cantidadDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.cantidadDataGridViewTextBoxColumn2.DataPropertyName = "cantidad";
-            this.cantidadDataGridViewTextBoxColumn2.HeaderText = "Cant";
-            this.cantidadDataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.cantidadDataGridViewTextBoxColumn2.Name = "cantidadDataGridViewTextBoxColumn2";
-            this.cantidadDataGridViewTextBoxColumn2.ReadOnly = true;
-            this.cantidadDataGridViewTextBoxColumn2.Width = 64;
-            // 
-            // otDataGridViewTextBoxColumn2
-            // 
-            this.otDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.otDataGridViewTextBoxColumn2.DataPropertyName = "ot";
-            this.otDataGridViewTextBoxColumn2.HeaderText = "OT";
-            this.otDataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.otDataGridViewTextBoxColumn2.Name = "otDataGridViewTextBoxColumn2";
-            this.otDataGridViewTextBoxColumn2.ReadOnly = true;
-            this.otDataGridViewTextBoxColumn2.Width = 54;
-            // 
-            // folioDataGridViewTextBoxColumn
-            // 
-            this.folioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.folioDataGridViewTextBoxColumn.DataPropertyName = "folio";
-            this.folioDataGridViewTextBoxColumn.HeaderText = "Folio";
-            this.folioDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.folioDataGridViewTextBoxColumn.Name = "folioDataGridViewTextBoxColumn";
-            this.folioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.folioDataGridViewTextBoxColumn.Width = 68;
-            // 
-            // documentoDataGridViewTextBoxColumn1
-            // 
-            this.documentoDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.documentoDataGridViewTextBoxColumn1.DataPropertyName = "documento";
-            this.documentoDataGridViewTextBoxColumn1.HeaderText = "Documento";
-            this.documentoDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.documentoDataGridViewTextBoxColumn1.Name = "documentoDataGridViewTextBoxColumn1";
-            this.documentoDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.documentoDataGridViewTextBoxColumn1.Width = 111;
-            // 
-            // nomproveedorDataGridViewTextBoxColumn1
-            // 
-            this.nomproveedorDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.nomproveedorDataGridViewTextBoxColumn1.DataPropertyName = "nom_proveedor";
-            this.nomproveedorDataGridViewTextBoxColumn1.HeaderText = "Proveedor";
-            this.nomproveedorDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.nomproveedorDataGridViewTextBoxColumn1.Name = "nomproveedorDataGridViewTextBoxColumn1";
-            this.nomproveedorDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.nomproveedorDataGridViewTextBoxColumn1.Width = 106;
-            // 
-            // nommarcaDataGridViewTextBoxColumn1
-            // 
-            this.nommarcaDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.nommarcaDataGridViewTextBoxColumn1.DataPropertyName = "nom_marca";
-            this.nommarcaDataGridViewTextBoxColumn1.HeaderText = "Marca";
-            this.nommarcaDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.nommarcaDataGridViewTextBoxColumn1.Name = "nommarcaDataGridViewTextBoxColumn1";
-            this.nommarcaDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.nommarcaDataGridViewTextBoxColumn1.Width = 76;
-            // 
-            // valorDataGridViewTextBoxColumn1
-            // 
-            this.valorDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.valorDataGridViewTextBoxColumn1.DataPropertyName = "valor";
-            this.valorDataGridViewTextBoxColumn1.HeaderText = "Valor";
-            this.valorDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.valorDataGridViewTextBoxColumn1.Name = "valorDataGridViewTextBoxColumn1";
-            this.valorDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.valorDataGridViewTextBoxColumn1.Width = 70;
-            // 
-            // valorunitarioDataGridViewTextBoxColumn1
-            // 
-            this.valorunitarioDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.valorunitarioDataGridViewTextBoxColumn1.DataPropertyName = "valor_unitario";
-            this.valorunitarioDataGridViewTextBoxColumn1.HeaderText = "Valor Unitario";
-            this.valorunitarioDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.valorunitarioDataGridViewTextBoxColumn1.Name = "valorunitarioDataGridViewTextBoxColumn1";
-            this.valorunitarioDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.valorunitarioDataGridViewTextBoxColumn1.Width = 117;
-            // 
-            // obs_mov2
-            // 
-            this.obs_mov2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.obs_mov2.DataPropertyName = "obs_mov";
-            this.obs_mov2.HeaderText = "Obs";
-            this.obs_mov2.MinimumWidth = 6;
-            this.obs_mov2.Name = "obs_mov2";
-            this.obs_mov2.ReadOnly = true;
-            this.obs_mov2.Width = 61;
             // 
             // historialMovimientoTablaBindingSource
             // 
@@ -4687,6 +4579,123 @@ namespace Convertec_Bodega_Administracion
             // 
             this.idDescripcionElementoBindingSource.DataSource = typeof(Convertec_Bodega_Administracion.Model.IdDescripcionElemento);
             // 
+            // fechamovDataGridViewTextBoxColumn2
+            // 
+            this.fechamovDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.fechamovDataGridViewTextBoxColumn2.DataPropertyName = "fecha_mov";
+            this.fechamovDataGridViewTextBoxColumn2.HeaderText = "Fecha";
+            this.fechamovDataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.fechamovDataGridViewTextBoxColumn2.Name = "fechamovDataGridViewTextBoxColumn2";
+            this.fechamovDataGridViewTextBoxColumn2.ReadOnly = true;
+            this.fechamovDataGridViewTextBoxColumn2.Width = 76;
+            // 
+            // codprodprovDataGridViewTextBoxColumn
+            // 
+            this.codprodprovDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.codprodprovDataGridViewTextBoxColumn.DataPropertyName = "cod_prod_prov";
+            this.codprodprovDataGridViewTextBoxColumn.HeaderText = "Código Proveedor";
+            this.codprodprovDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.codprodprovDataGridViewTextBoxColumn.Name = "codprodprovDataGridViewTextBoxColumn";
+            this.codprodprovDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codprodprovDataGridViewTextBoxColumn.Width = 146;
+            // 
+            // cantidadDataGridViewTextBoxColumn2
+            // 
+            this.cantidadDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.cantidadDataGridViewTextBoxColumn2.DataPropertyName = "cantidad";
+            this.cantidadDataGridViewTextBoxColumn2.HeaderText = "Cant";
+            this.cantidadDataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.cantidadDataGridViewTextBoxColumn2.Name = "cantidadDataGridViewTextBoxColumn2";
+            this.cantidadDataGridViewTextBoxColumn2.ReadOnly = true;
+            this.cantidadDataGridViewTextBoxColumn2.Width = 64;
+            // 
+            // otDataGridViewTextBoxColumn2
+            // 
+            this.otDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.otDataGridViewTextBoxColumn2.DataPropertyName = "ot";
+            this.otDataGridViewTextBoxColumn2.HeaderText = "OT";
+            this.otDataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.otDataGridViewTextBoxColumn2.Name = "otDataGridViewTextBoxColumn2";
+            this.otDataGridViewTextBoxColumn2.ReadOnly = true;
+            this.otDataGridViewTextBoxColumn2.Width = 54;
+            // 
+            // trabajador
+            // 
+            this.trabajador.DataPropertyName = "trabajador";
+            this.trabajador.HeaderText = "Trabajador";
+            this.trabajador.Name = "trabajador";
+            this.trabajador.ReadOnly = true;
+            // 
+            // folioDataGridViewTextBoxColumn
+            // 
+            this.folioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.folioDataGridViewTextBoxColumn.DataPropertyName = "folio";
+            this.folioDataGridViewTextBoxColumn.HeaderText = "Folio";
+            this.folioDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.folioDataGridViewTextBoxColumn.Name = "folioDataGridViewTextBoxColumn";
+            this.folioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.folioDataGridViewTextBoxColumn.Width = 68;
+            // 
+            // documentoDataGridViewTextBoxColumn1
+            // 
+            this.documentoDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.documentoDataGridViewTextBoxColumn1.DataPropertyName = "documento";
+            this.documentoDataGridViewTextBoxColumn1.HeaderText = "Documento";
+            this.documentoDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.documentoDataGridViewTextBoxColumn1.Name = "documentoDataGridViewTextBoxColumn1";
+            this.documentoDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.documentoDataGridViewTextBoxColumn1.Width = 111;
+            // 
+            // nomproveedorDataGridViewTextBoxColumn1
+            // 
+            this.nomproveedorDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.nomproveedorDataGridViewTextBoxColumn1.DataPropertyName = "nom_proveedor";
+            this.nomproveedorDataGridViewTextBoxColumn1.HeaderText = "Proveedor";
+            this.nomproveedorDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.nomproveedorDataGridViewTextBoxColumn1.Name = "nomproveedorDataGridViewTextBoxColumn1";
+            this.nomproveedorDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.nomproveedorDataGridViewTextBoxColumn1.Width = 106;
+            // 
+            // nommarcaDataGridViewTextBoxColumn1
+            // 
+            this.nommarcaDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.nommarcaDataGridViewTextBoxColumn1.DataPropertyName = "nom_marca";
+            this.nommarcaDataGridViewTextBoxColumn1.HeaderText = "Marca";
+            this.nommarcaDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.nommarcaDataGridViewTextBoxColumn1.Name = "nommarcaDataGridViewTextBoxColumn1";
+            this.nommarcaDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.nommarcaDataGridViewTextBoxColumn1.Width = 76;
+            // 
+            // valorDataGridViewTextBoxColumn1
+            // 
+            this.valorDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.valorDataGridViewTextBoxColumn1.DataPropertyName = "valor";
+            this.valorDataGridViewTextBoxColumn1.HeaderText = "Valor";
+            this.valorDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.valorDataGridViewTextBoxColumn1.Name = "valorDataGridViewTextBoxColumn1";
+            this.valorDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.valorDataGridViewTextBoxColumn1.Width = 70;
+            // 
+            // valorunitarioDataGridViewTextBoxColumn1
+            // 
+            this.valorunitarioDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.valorunitarioDataGridViewTextBoxColumn1.DataPropertyName = "valor_unitario";
+            this.valorunitarioDataGridViewTextBoxColumn1.HeaderText = "Valor Unitario";
+            this.valorunitarioDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.valorunitarioDataGridViewTextBoxColumn1.Name = "valorunitarioDataGridViewTextBoxColumn1";
+            this.valorunitarioDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.valorunitarioDataGridViewTextBoxColumn1.Width = 117;
+            // 
+            // obs_mov2
+            // 
+            this.obs_mov2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.obs_mov2.DataPropertyName = "obs_mov";
+            this.obs_mov2.HeaderText = "Obs";
+            this.obs_mov2.MinimumWidth = 6;
+            this.obs_mov2.Name = "obs_mov2";
+            this.obs_mov2.ReadOnly = true;
+            this.obs_mov2.Width = 61;
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
@@ -4939,17 +4948,6 @@ namespace Convertec_Bodega_Administracion
         private System.Windows.Forms.ToolTip ErrorValorToolTip;
         private FontAwesome.Sharp.IconButton IEbtnEditar;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechamovDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codprodprovDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cantidadDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn otDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn folioDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn documentoDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nomproveedorDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nommarcaDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn valorDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn valorunitarioDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn obs_mov2;
         private FontAwesome.Sharp.IconButton HbtnConfiguracion;
         private System.Windows.Forms.BindingSource idDescripcionElementoBindingSource;
         private System.Windows.Forms.TextBox IEtxtDescripcion;
@@ -5119,6 +5117,18 @@ namespace Convertec_Bodega_Administracion
         private FontAwesome.Sharp.IconButton CMbtnEditarImg;
         private System.Windows.Forms.Panel CMpanelImagen;
         private System.Windows.Forms.PictureBox CMpictureBoxElem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechamovDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codprodprovDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cantidadDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn otDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn trabajador;
+        private System.Windows.Forms.DataGridViewTextBoxColumn folioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn documentoDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomproveedorDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nommarcaDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valorDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valorunitarioDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn obs_mov2;
     }
 }
 

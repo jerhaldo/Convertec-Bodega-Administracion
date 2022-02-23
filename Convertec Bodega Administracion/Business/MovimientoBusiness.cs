@@ -133,6 +133,9 @@ namespace Convertec_Bodega_Administracion.Business
                         join mar in db.Marca on ii.id_marca equals mar.id_marca
                             into Marca
                             from mm in Marca.DefaultIfEmpty()
+                        join tra in db.Trabajador on ss.id_trabajador equals tra.id_trabajador
+                            into Trabajador
+                            from tt in Trabajador.DefaultIfEmpty()
                         where p.id_producto == id && m.fecha_mov.Year == anno
                         orderby m.fecha_mov descending
                         select new HistorialMovimientoTabla
@@ -147,7 +150,8 @@ namespace Convertec_Bodega_Administracion.Business
                             valor = ii.valor,
                             valor_unitario = ii.valor_unitario,
                             cod_prod_prov = ii.cod_prod_prov,
-                            obs_mov = m.obs_mov
+                            obs_mov = m.obs_mov,
+                            trabajador = tt.nombre + " " + tt.apellidos
                         }
                     ).ToList();
                 }

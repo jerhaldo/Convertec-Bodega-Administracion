@@ -436,10 +436,6 @@ namespace Convertec_Bodega_Administracion
                 IEdataGridViewProd.DataSource = tableProducto;
                 FormatTableProd(IEdataGridViewProd);
             }
-            else
-            {
-                Console.WriteLine("PopulateHistProdTable");
-            }
         }
 
         private int IESelectedRow()

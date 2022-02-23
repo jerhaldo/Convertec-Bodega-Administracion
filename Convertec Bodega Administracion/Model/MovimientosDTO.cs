@@ -93,7 +93,8 @@ namespace Convertec_Bodega_Administracion.Model
         public Nullable<int> valor { get; set; }
         public Nullable<int> valor_unitario { get; set; }
         public string obs_mov { get; set; }
-        
+        public string trabajador { get; set; }
+
     }
 
     class IdDescripcionElemento
