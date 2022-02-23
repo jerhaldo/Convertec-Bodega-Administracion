@@ -48,7 +48,7 @@ namespace Convertec_Bodega_Administracion.Business
             }
         }
 
-        public static List<MovSalidasDataGridDTO> GetMovimientosSalidas()
+        public static List<MovSalidasDataGridDTO> GetMovimientosSalidas(System.DateTime fecha)
         {
             using (var db = new ConvertecBodegaEntities())
             {
@@ -57,6 +57,7 @@ namespace Convertec_Bodega_Administracion.Business
                     join s in db.Salida_Prod on m.id_mov equals s.id_mov
                     join p in db.Producto on m.id_producto equals p.id_producto
                     join t in db.Trabajador on s.id_trabajador equals t.id_trabajador
+                    where m.fecha_mov.Day == fecha.Day && m.fecha_mov.Month == fecha.Month && m.fecha_mov.Year == fecha.Year
                     orderby m.fecha_mov descending
                     select new MovSalidasDataGridDTO
                     {
@@ -77,7 +78,7 @@ namespace Convertec_Bodega_Administracion.Business
             }
         }
 
-        public static List<MovIngresoDataGridDTO> GetMovimientosIngresos()
+        public static List<MovIngresoDataGridDTO> GetMovimientosIngresos(System.DateTime fecha)
         {
             using (var db = new ConvertecBodegaEntities())
             {
@@ -87,6 +88,7 @@ namespace Convertec_Bodega_Administracion.Business
                     join p in db.Producto on m.id_producto equals p.id_producto
                     join pr in db.Proveedor on p.id_proveedor equals pr.id_proveedor
                     join mr in db.Marca on p.id_marca equals mr.id_marca
+                    where m.fecha_mov.Day == fecha.Day && m.fecha_mov.Month == fecha.Month && m.fecha_mov.Year == fecha.Year
                     orderby m.fecha_mov descending
                     select new MovIngresoDataGridDTO
                     {

@@ -81,28 +81,28 @@ namespace Convertec_Bodega_Administracion
             this.HlabelClock = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SIdataGridViewSalidas = new System.Windows.Forms.DataGridView();
-            this.codbodegaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechamovDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.otDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellidosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.obsmovDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SdvgFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SdvgCodBodega = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SdvgDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SdvgCant = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SdvgOt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SdvgNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SdvgApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SdvgObs = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.movSalidasDataGridDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.SIdataGridViewIngresos = new System.Windows.Forms.DataGridView();
-            this.codbodegaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidadDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.documentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valorunitarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomproveedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nommarcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechamovDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.parteplanoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.otDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.obsmovDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdvgFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdvgCodBodega = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdvgDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdvgOt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdvgCant = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdvgValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdvgValorUni = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdvgDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdvgProv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdvgMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdvgPartePlano = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdvgObs = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.movIngresoDataGridDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.splitContainerBodyPrincipal = new System.Windows.Forms.SplitContainer();
             this.SIpanelSalidas2 = new System.Windows.Forms.Panel();
@@ -191,6 +191,18 @@ namespace Convertec_Bodega_Administracion
             this.MVlabel4 = new System.Windows.Forms.Label();
             this.MVpanelTablaMov2 = new System.Windows.Forms.Panel();
             this.MVdataGridViewHistorial = new System.Windows.Forms.DataGridView();
+            this.MVdvgFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MVdvgCodProv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MVdvgCant = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MVdvgOt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MVdvgTrabajador = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MVdvgFolio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MVdvgDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MVdvgProv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MVdvgMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MVdvgValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MVdvgValorUni = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MVdvgObsMov = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.historialMovimientoTablaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.MVpanelTablaMov1 = new System.Windows.Forms.Panel();
             this.MVdateTimePickerFiltro = new System.Windows.Forms.DateTimePicker();
@@ -209,6 +221,9 @@ namespace Convertec_Bodega_Administracion
             this.MVpanelImage = new System.Windows.Forms.Panel();
             this.MVpictureBoxProducto = new System.Windows.Forms.PictureBox();
             this.BodyPanelSalidaIngreso = new System.Windows.Forms.Panel();
+            this.SIpanelSplit = new System.Windows.Forms.Panel();
+            this.SIpanelHeader = new System.Windows.Forms.Panel();
+            this.SIdateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.BodypanelGeneral = new System.Windows.Forms.Panel();
             this.BodyPanelCrearModifElemento = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -361,18 +376,6 @@ namespace Convertec_Bodega_Administracion
             this.InfoToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.CEopenFileDialogImagen = new System.Windows.Forms.OpenFileDialog();
             this.idDescripcionElementoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.fechamovDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codprodprovDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidadDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.otDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.trabajador = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.folioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.documentoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomproveedorDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nommarcaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valorDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valorunitarioDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.obs_mov2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelSidebar.SuspendLayout();
             this.SidebarPanelMenuButton.SuspendLayout();
             this.SidebarPanelHeader.SuspendLayout();
@@ -423,6 +426,8 @@ namespace Convertec_Bodega_Administracion
             this.MVpanelImage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MVpictureBoxProducto)).BeginInit();
             this.BodyPanelSalidaIngreso.SuspendLayout();
+            this.SIpanelSplit.SuspendLayout();
+            this.SIpanelHeader.SuspendLayout();
             this.BodypanelGeneral.SuspendLayout();
             this.BodyPanelCrearModifElemento.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -757,14 +762,14 @@ namespace Convertec_Bodega_Administracion
             this.SIdataGridViewSalidas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.SIdataGridViewSalidas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.SIdataGridViewSalidas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.codbodegaDataGridViewTextBoxColumn,
-            this.descripcionDataGridViewTextBoxColumn,
-            this.cantidadDataGridViewTextBoxColumn,
-            this.fechamovDataGridViewTextBoxColumn,
-            this.otDataGridViewTextBoxColumn,
-            this.nombreDataGridViewTextBoxColumn,
-            this.apellidosDataGridViewTextBoxColumn,
-            this.obsmovDataGridViewTextBoxColumn});
+            this.SdvgFecha,
+            this.SdvgCodBodega,
+            this.SdvgDescripcion,
+            this.SdvgCant,
+            this.SdvgOt,
+            this.SdvgNombre,
+            this.SdvgApellido,
+            this.SdvgObs});
             this.SIdataGridViewSalidas.DataSource = this.movSalidasDataGridDTOBindingSource;
             this.SIdataGridViewSalidas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SIdataGridViewSalidas.Location = new System.Drawing.Point(6, 0);
@@ -776,89 +781,89 @@ namespace Convertec_Bodega_Administracion
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SIdataGridViewSalidas.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.SIdataGridViewSalidas.RowTemplate.Height = 24;
-            this.SIdataGridViewSalidas.Size = new System.Drawing.Size(864, 0);
+            this.SIdataGridViewSalidas.Size = new System.Drawing.Size(1010, 0);
             this.SIdataGridViewSalidas.TabIndex = 2;
             this.SIdataGridViewSalidas.TabStop = false;
             // 
-            // codbodegaDataGridViewTextBoxColumn
+            // SdvgFecha
             // 
-            this.codbodegaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.codbodegaDataGridViewTextBoxColumn.DataPropertyName = "cod_bodega";
-            this.codbodegaDataGridViewTextBoxColumn.HeaderText = "Código";
-            this.codbodegaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.codbodegaDataGridViewTextBoxColumn.Name = "codbodegaDataGridViewTextBoxColumn";
-            this.codbodegaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.codbodegaDataGridViewTextBoxColumn.Width = 83;
+            this.SdvgFecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.SdvgFecha.DataPropertyName = "fecha_mov";
+            this.SdvgFecha.HeaderText = "Fecha";
+            this.SdvgFecha.MinimumWidth = 6;
+            this.SdvgFecha.Name = "SdvgFecha";
+            this.SdvgFecha.ReadOnly = true;
+            this.SdvgFecha.Width = 76;
             // 
-            // descripcionDataGridViewTextBoxColumn
+            // SdvgCodBodega
             // 
-            this.descripcionDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "descripcion";
-            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripción";
-            this.descripcionDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
-            this.descripcionDataGridViewTextBoxColumn.ReadOnly = true;
-            this.descripcionDataGridViewTextBoxColumn.Width = 116;
+            this.SdvgCodBodega.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.SdvgCodBodega.DataPropertyName = "cod_bodega";
+            this.SdvgCodBodega.HeaderText = "Código";
+            this.SdvgCodBodega.MinimumWidth = 6;
+            this.SdvgCodBodega.Name = "SdvgCodBodega";
+            this.SdvgCodBodega.ReadOnly = true;
+            this.SdvgCodBodega.Width = 83;
             // 
-            // cantidadDataGridViewTextBoxColumn
+            // SdvgDescripcion
             // 
-            this.cantidadDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.cantidadDataGridViewTextBoxColumn.DataPropertyName = "cantidad";
-            this.cantidadDataGridViewTextBoxColumn.HeaderText = "Cant";
-            this.cantidadDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.cantidadDataGridViewTextBoxColumn.Name = "cantidadDataGridViewTextBoxColumn";
-            this.cantidadDataGridViewTextBoxColumn.ReadOnly = true;
-            this.cantidadDataGridViewTextBoxColumn.Width = 64;
+            this.SdvgDescripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.SdvgDescripcion.DataPropertyName = "descripcion";
+            this.SdvgDescripcion.HeaderText = "Descripción";
+            this.SdvgDescripcion.MinimumWidth = 6;
+            this.SdvgDescripcion.Name = "SdvgDescripcion";
+            this.SdvgDescripcion.ReadOnly = true;
+            this.SdvgDescripcion.Width = 116;
             // 
-            // fechamovDataGridViewTextBoxColumn
+            // SdvgCant
             // 
-            this.fechamovDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.fechamovDataGridViewTextBoxColumn.DataPropertyName = "fecha_mov";
-            this.fechamovDataGridViewTextBoxColumn.HeaderText = "Fecha";
-            this.fechamovDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.fechamovDataGridViewTextBoxColumn.Name = "fechamovDataGridViewTextBoxColumn";
-            this.fechamovDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fechamovDataGridViewTextBoxColumn.Width = 76;
+            this.SdvgCant.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.SdvgCant.DataPropertyName = "cantidad";
+            this.SdvgCant.HeaderText = "Cant";
+            this.SdvgCant.MinimumWidth = 6;
+            this.SdvgCant.Name = "SdvgCant";
+            this.SdvgCant.ReadOnly = true;
+            this.SdvgCant.Width = 64;
             // 
-            // otDataGridViewTextBoxColumn
+            // SdvgOt
             // 
-            this.otDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.otDataGridViewTextBoxColumn.DataPropertyName = "ot";
-            this.otDataGridViewTextBoxColumn.HeaderText = "OT";
-            this.otDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.otDataGridViewTextBoxColumn.Name = "otDataGridViewTextBoxColumn";
-            this.otDataGridViewTextBoxColumn.ReadOnly = true;
-            this.otDataGridViewTextBoxColumn.Width = 54;
+            this.SdvgOt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.SdvgOt.DataPropertyName = "ot";
+            this.SdvgOt.HeaderText = "OT";
+            this.SdvgOt.MinimumWidth = 6;
+            this.SdvgOt.Name = "SdvgOt";
+            this.SdvgOt.ReadOnly = true;
+            this.SdvgOt.Width = 54;
             // 
-            // nombreDataGridViewTextBoxColumn
+            // SdvgNombre
             // 
-            this.nombreDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nombreDataGridViewTextBoxColumn.Width = 88;
+            this.SdvgNombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.SdvgNombre.DataPropertyName = "nombre";
+            this.SdvgNombre.HeaderText = "Nombre";
+            this.SdvgNombre.MinimumWidth = 6;
+            this.SdvgNombre.Name = "SdvgNombre";
+            this.SdvgNombre.ReadOnly = true;
+            this.SdvgNombre.Width = 88;
             // 
-            // apellidosDataGridViewTextBoxColumn
+            // SdvgApellido
             // 
-            this.apellidosDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.apellidosDataGridViewTextBoxColumn.DataPropertyName = "apellidos";
-            this.apellidosDataGridViewTextBoxColumn.HeaderText = "Apellidos";
-            this.apellidosDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.apellidosDataGridViewTextBoxColumn.Name = "apellidosDataGridViewTextBoxColumn";
-            this.apellidosDataGridViewTextBoxColumn.ReadOnly = true;
-            this.apellidosDataGridViewTextBoxColumn.Width = 99;
+            this.SdvgApellido.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.SdvgApellido.DataPropertyName = "apellidos";
+            this.SdvgApellido.HeaderText = "Apellidos";
+            this.SdvgApellido.MinimumWidth = 6;
+            this.SdvgApellido.Name = "SdvgApellido";
+            this.SdvgApellido.ReadOnly = true;
+            this.SdvgApellido.Width = 99;
             // 
-            // obsmovDataGridViewTextBoxColumn
+            // SdvgObs
             // 
-            this.obsmovDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.obsmovDataGridViewTextBoxColumn.DataPropertyName = "obs_mov";
-            this.obsmovDataGridViewTextBoxColumn.HeaderText = "Obs";
-            this.obsmovDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.obsmovDataGridViewTextBoxColumn.Name = "obsmovDataGridViewTextBoxColumn";
-            this.obsmovDataGridViewTextBoxColumn.ReadOnly = true;
-            this.obsmovDataGridViewTextBoxColumn.Width = 61;
+            this.SdvgObs.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.SdvgObs.DataPropertyName = "obs_mov";
+            this.SdvgObs.HeaderText = "Obs";
+            this.SdvgObs.MinimumWidth = 6;
+            this.SdvgObs.Name = "SdvgObs";
+            this.SdvgObs.ReadOnly = true;
+            this.SdvgObs.Width = 61;
             // 
             // movSalidasDataGridDTOBindingSource
             // 
@@ -884,18 +889,18 @@ namespace Convertec_Bodega_Administracion
             this.SIdataGridViewIngresos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.SIdataGridViewIngresos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.SIdataGridViewIngresos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.codbodegaDataGridViewTextBoxColumn1,
-            this.descripcionDataGridViewTextBoxColumn1,
-            this.cantidadDataGridViewTextBoxColumn1,
-            this.documentoDataGridViewTextBoxColumn,
-            this.valorDataGridViewTextBoxColumn,
-            this.valorunitarioDataGridViewTextBoxColumn,
-            this.nomproveedorDataGridViewTextBoxColumn,
-            this.nommarcaDataGridViewTextBoxColumn,
-            this.fechamovDataGridViewTextBoxColumn1,
-            this.parteplanoDataGridViewTextBoxColumn,
-            this.otDataGridViewTextBoxColumn1,
-            this.obsmovDataGridViewTextBoxColumn1});
+            this.IdvgFecha,
+            this.IdvgCodBodega,
+            this.IdvgDescripcion,
+            this.IdvgOt,
+            this.IdvgCant,
+            this.IdvgValor,
+            this.IdvgValorUni,
+            this.IdvgDocumento,
+            this.IdvgProv,
+            this.IdvgMarca,
+            this.IdvgPartePlano,
+            this.IdvgObs});
             this.SIdataGridViewIngresos.DataSource = this.movIngresoDataGridDTOBindingSource;
             this.SIdataGridViewIngresos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SIdataGridViewIngresos.Location = new System.Drawing.Point(6, 0);
@@ -907,129 +912,129 @@ namespace Convertec_Bodega_Administracion
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SIdataGridViewIngresos.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.SIdataGridViewIngresos.RowTemplate.Height = 24;
-            this.SIdataGridViewIngresos.Size = new System.Drawing.Size(864, 1);
+            this.SIdataGridViewIngresos.Size = new System.Drawing.Size(1010, 7);
             this.SIdataGridViewIngresos.TabIndex = 2;
             this.SIdataGridViewIngresos.TabStop = false;
             // 
-            // codbodegaDataGridViewTextBoxColumn1
+            // IdvgFecha
             // 
-            this.codbodegaDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.codbodegaDataGridViewTextBoxColumn1.DataPropertyName = "cod_bodega";
-            this.codbodegaDataGridViewTextBoxColumn1.HeaderText = "Código";
-            this.codbodegaDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.codbodegaDataGridViewTextBoxColumn1.Name = "codbodegaDataGridViewTextBoxColumn1";
-            this.codbodegaDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.codbodegaDataGridViewTextBoxColumn1.Width = 83;
+            this.IdvgFecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.IdvgFecha.DataPropertyName = "fecha_mov";
+            this.IdvgFecha.HeaderText = "Fecha";
+            this.IdvgFecha.MinimumWidth = 6;
+            this.IdvgFecha.Name = "IdvgFecha";
+            this.IdvgFecha.ReadOnly = true;
+            this.IdvgFecha.Width = 76;
             // 
-            // descripcionDataGridViewTextBoxColumn1
+            // IdvgCodBodega
             // 
-            this.descripcionDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.descripcionDataGridViewTextBoxColumn1.DataPropertyName = "descripcion";
-            this.descripcionDataGridViewTextBoxColumn1.HeaderText = "Descripción";
-            this.descripcionDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.descripcionDataGridViewTextBoxColumn1.Name = "descripcionDataGridViewTextBoxColumn1";
-            this.descripcionDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.descripcionDataGridViewTextBoxColumn1.Width = 116;
+            this.IdvgCodBodega.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.IdvgCodBodega.DataPropertyName = "cod_bodega";
+            this.IdvgCodBodega.HeaderText = "Código";
+            this.IdvgCodBodega.MinimumWidth = 6;
+            this.IdvgCodBodega.Name = "IdvgCodBodega";
+            this.IdvgCodBodega.ReadOnly = true;
+            this.IdvgCodBodega.Width = 83;
             // 
-            // cantidadDataGridViewTextBoxColumn1
+            // IdvgDescripcion
             // 
-            this.cantidadDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.cantidadDataGridViewTextBoxColumn1.DataPropertyName = "cantidad";
-            this.cantidadDataGridViewTextBoxColumn1.HeaderText = "Cant";
-            this.cantidadDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.cantidadDataGridViewTextBoxColumn1.Name = "cantidadDataGridViewTextBoxColumn1";
-            this.cantidadDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.cantidadDataGridViewTextBoxColumn1.Width = 64;
+            this.IdvgDescripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.IdvgDescripcion.DataPropertyName = "descripcion";
+            this.IdvgDescripcion.HeaderText = "Descripción";
+            this.IdvgDescripcion.MinimumWidth = 6;
+            this.IdvgDescripcion.Name = "IdvgDescripcion";
+            this.IdvgDescripcion.ReadOnly = true;
+            this.IdvgDescripcion.Width = 116;
             // 
-            // documentoDataGridViewTextBoxColumn
+            // IdvgOt
             // 
-            this.documentoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.documentoDataGridViewTextBoxColumn.DataPropertyName = "documento";
-            this.documentoDataGridViewTextBoxColumn.HeaderText = "Documento";
-            this.documentoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.documentoDataGridViewTextBoxColumn.Name = "documentoDataGridViewTextBoxColumn";
-            this.documentoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.documentoDataGridViewTextBoxColumn.Width = 111;
+            this.IdvgOt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.IdvgOt.DataPropertyName = "ot";
+            this.IdvgOt.HeaderText = "OT";
+            this.IdvgOt.MinimumWidth = 6;
+            this.IdvgOt.Name = "IdvgOt";
+            this.IdvgOt.ReadOnly = true;
+            this.IdvgOt.Width = 54;
             // 
-            // valorDataGridViewTextBoxColumn
+            // IdvgCant
             // 
-            this.valorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.valorDataGridViewTextBoxColumn.DataPropertyName = "valor";
-            this.valorDataGridViewTextBoxColumn.HeaderText = "Valor";
-            this.valorDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.valorDataGridViewTextBoxColumn.Name = "valorDataGridViewTextBoxColumn";
-            this.valorDataGridViewTextBoxColumn.ReadOnly = true;
-            this.valorDataGridViewTextBoxColumn.Width = 70;
+            this.IdvgCant.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.IdvgCant.DataPropertyName = "cantidad";
+            this.IdvgCant.HeaderText = "Cant";
+            this.IdvgCant.MinimumWidth = 6;
+            this.IdvgCant.Name = "IdvgCant";
+            this.IdvgCant.ReadOnly = true;
+            this.IdvgCant.Width = 64;
             // 
-            // valorunitarioDataGridViewTextBoxColumn
+            // IdvgValor
             // 
-            this.valorunitarioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.valorunitarioDataGridViewTextBoxColumn.DataPropertyName = "valor_unitario";
-            this.valorunitarioDataGridViewTextBoxColumn.HeaderText = "Valor Unitario";
-            this.valorunitarioDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.valorunitarioDataGridViewTextBoxColumn.Name = "valorunitarioDataGridViewTextBoxColumn";
-            this.valorunitarioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.valorunitarioDataGridViewTextBoxColumn.Width = 117;
+            this.IdvgValor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.IdvgValor.DataPropertyName = "valor";
+            this.IdvgValor.HeaderText = "Valor";
+            this.IdvgValor.MinimumWidth = 6;
+            this.IdvgValor.Name = "IdvgValor";
+            this.IdvgValor.ReadOnly = true;
+            this.IdvgValor.Width = 70;
             // 
-            // nomproveedorDataGridViewTextBoxColumn
+            // IdvgValorUni
             // 
-            this.nomproveedorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.nomproveedorDataGridViewTextBoxColumn.DataPropertyName = "nom_proveedor";
-            this.nomproveedorDataGridViewTextBoxColumn.HeaderText = "Proveedor";
-            this.nomproveedorDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nomproveedorDataGridViewTextBoxColumn.Name = "nomproveedorDataGridViewTextBoxColumn";
-            this.nomproveedorDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nomproveedorDataGridViewTextBoxColumn.Width = 106;
+            this.IdvgValorUni.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.IdvgValorUni.DataPropertyName = "valor_unitario";
+            this.IdvgValorUni.HeaderText = "Valor Unitario";
+            this.IdvgValorUni.MinimumWidth = 6;
+            this.IdvgValorUni.Name = "IdvgValorUni";
+            this.IdvgValorUni.ReadOnly = true;
+            this.IdvgValorUni.Width = 117;
             // 
-            // nommarcaDataGridViewTextBoxColumn
+            // IdvgDocumento
             // 
-            this.nommarcaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.nommarcaDataGridViewTextBoxColumn.DataPropertyName = "nom_marca";
-            this.nommarcaDataGridViewTextBoxColumn.HeaderText = "Marca";
-            this.nommarcaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nommarcaDataGridViewTextBoxColumn.Name = "nommarcaDataGridViewTextBoxColumn";
-            this.nommarcaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nommarcaDataGridViewTextBoxColumn.Width = 76;
+            this.IdvgDocumento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.IdvgDocumento.DataPropertyName = "documento";
+            this.IdvgDocumento.HeaderText = "Documento";
+            this.IdvgDocumento.MinimumWidth = 6;
+            this.IdvgDocumento.Name = "IdvgDocumento";
+            this.IdvgDocumento.ReadOnly = true;
+            this.IdvgDocumento.Width = 111;
             // 
-            // fechamovDataGridViewTextBoxColumn1
+            // IdvgProv
             // 
-            this.fechamovDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.fechamovDataGridViewTextBoxColumn1.DataPropertyName = "fecha_mov";
-            this.fechamovDataGridViewTextBoxColumn1.HeaderText = "Fecha";
-            this.fechamovDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.fechamovDataGridViewTextBoxColumn1.Name = "fechamovDataGridViewTextBoxColumn1";
-            this.fechamovDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.fechamovDataGridViewTextBoxColumn1.Width = 76;
+            this.IdvgProv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.IdvgProv.DataPropertyName = "nom_proveedor";
+            this.IdvgProv.HeaderText = "Proveedor";
+            this.IdvgProv.MinimumWidth = 6;
+            this.IdvgProv.Name = "IdvgProv";
+            this.IdvgProv.ReadOnly = true;
+            this.IdvgProv.Width = 106;
             // 
-            // parteplanoDataGridViewTextBoxColumn
+            // IdvgMarca
             // 
-            this.parteplanoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.parteplanoDataGridViewTextBoxColumn.DataPropertyName = "parte_plano";
-            this.parteplanoDataGridViewTextBoxColumn.HeaderText = "Parte Plano";
-            this.parteplanoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.parteplanoDataGridViewTextBoxColumn.Name = "parteplanoDataGridViewTextBoxColumn";
-            this.parteplanoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.parteplanoDataGridViewTextBoxColumn.Width = 105;
+            this.IdvgMarca.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.IdvgMarca.DataPropertyName = "nom_marca";
+            this.IdvgMarca.HeaderText = "Marca";
+            this.IdvgMarca.MinimumWidth = 6;
+            this.IdvgMarca.Name = "IdvgMarca";
+            this.IdvgMarca.ReadOnly = true;
+            this.IdvgMarca.Width = 76;
             // 
-            // otDataGridViewTextBoxColumn1
+            // IdvgPartePlano
             // 
-            this.otDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.otDataGridViewTextBoxColumn1.DataPropertyName = "ot";
-            this.otDataGridViewTextBoxColumn1.HeaderText = "OT";
-            this.otDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.otDataGridViewTextBoxColumn1.Name = "otDataGridViewTextBoxColumn1";
-            this.otDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.otDataGridViewTextBoxColumn1.Width = 54;
+            this.IdvgPartePlano.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.IdvgPartePlano.DataPropertyName = "parte_plano";
+            this.IdvgPartePlano.HeaderText = "Parte Plano";
+            this.IdvgPartePlano.MinimumWidth = 6;
+            this.IdvgPartePlano.Name = "IdvgPartePlano";
+            this.IdvgPartePlano.ReadOnly = true;
+            this.IdvgPartePlano.Width = 105;
             // 
-            // obsmovDataGridViewTextBoxColumn1
+            // IdvgObs
             // 
-            this.obsmovDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.obsmovDataGridViewTextBoxColumn1.DataPropertyName = "obs_mov";
-            this.obsmovDataGridViewTextBoxColumn1.HeaderText = "Obs";
-            this.obsmovDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.obsmovDataGridViewTextBoxColumn1.Name = "obsmovDataGridViewTextBoxColumn1";
-            this.obsmovDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.obsmovDataGridViewTextBoxColumn1.Width = 61;
+            this.IdvgObs.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.IdvgObs.DataPropertyName = "obs_mov";
+            this.IdvgObs.HeaderText = "Obs";
+            this.IdvgObs.MinimumWidth = 6;
+            this.IdvgObs.Name = "IdvgObs";
+            this.IdvgObs.ReadOnly = true;
+            this.IdvgObs.Width = 61;
             // 
             // movIngresoDataGridDTOBindingSource
             // 
@@ -1040,7 +1045,7 @@ namespace Convertec_Bodega_Administracion
             this.splitContainerBodyPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(78)))), ((int)(((byte)(79)))));
             this.splitContainerBodyPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainerBodyPrincipal.Location = new System.Drawing.Point(0, 0);
-            this.splitContainerBodyPrincipal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.splitContainerBodyPrincipal.Margin = new System.Windows.Forms.Padding(0);
             this.splitContainerBodyPrincipal.Name = "splitContainerBodyPrincipal";
             this.splitContainerBodyPrincipal.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -1050,7 +1055,7 @@ namespace Convertec_Bodega_Administracion
             this.splitContainerBodyPrincipal.Panel1.Controls.Add(this.SIpanelSalidas2);
             this.splitContainerBodyPrincipal.Panel1.Controls.Add(this.SIpanelSalidas1);
             this.splitContainerBodyPrincipal.Panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.splitContainerBodyPrincipal.Panel1.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
+            this.splitContainerBodyPrincipal.Panel1.Padding = new System.Windows.Forms.Padding(10);
             // 
             // splitContainerBodyPrincipal.Panel2
             // 
@@ -1058,9 +1063,9 @@ namespace Convertec_Bodega_Administracion
             this.splitContainerBodyPrincipal.Panel2.Controls.Add(this.SIpanelIngresos2);
             this.splitContainerBodyPrincipal.Panel2.Controls.Add(this.SIpanelIngresos1);
             this.splitContainerBodyPrincipal.Panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.splitContainerBodyPrincipal.Panel2.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
-            this.splitContainerBodyPrincipal.Size = new System.Drawing.Size(906, 87);
-            this.splitContainerBodyPrincipal.SplitterDistance = 32;
+            this.splitContainerBodyPrincipal.Panel2.Padding = new System.Windows.Forms.Padding(10);
+            this.splitContainerBodyPrincipal.Size = new System.Drawing.Size(1042, 110);
+            this.splitContainerBodyPrincipal.SplitterDistance = 49;
             this.splitContainerBodyPrincipal.TabIndex = 5;
             // 
             // SIpanelSalidas2
@@ -1068,11 +1073,11 @@ namespace Convertec_Bodega_Administracion
             this.SIpanelSalidas2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(243)))), ((int)(((byte)(246)))));
             this.SIpanelSalidas2.Controls.Add(this.SIdataGridViewSalidas);
             this.SIpanelSalidas2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SIpanelSalidas2.Location = new System.Drawing.Point(15, 40);
+            this.SIpanelSalidas2.Location = new System.Drawing.Point(10, 40);
             this.SIpanelSalidas2.Margin = new System.Windows.Forms.Padding(0);
             this.SIpanelSalidas2.Name = "SIpanelSalidas2";
             this.SIpanelSalidas2.Padding = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.SIpanelSalidas2.Size = new System.Drawing.Size(876, 0);
+            this.SIpanelSalidas2.Size = new System.Drawing.Size(1022, 0);
             this.SIpanelSalidas2.TabIndex = 5;
             // 
             // SIpanelSalidas1
@@ -1080,10 +1085,10 @@ namespace Convertec_Bodega_Administracion
             this.SIpanelSalidas1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(243)))), ((int)(((byte)(246)))));
             this.SIpanelSalidas1.Controls.Add(this.SIlabel1);
             this.SIpanelSalidas1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.SIpanelSalidas1.Location = new System.Drawing.Point(15, 10);
+            this.SIpanelSalidas1.Location = new System.Drawing.Point(10, 10);
             this.SIpanelSalidas1.Margin = new System.Windows.Forms.Padding(0);
             this.SIpanelSalidas1.Name = "SIpanelSalidas1";
-            this.SIpanelSalidas1.Size = new System.Drawing.Size(876, 30);
+            this.SIpanelSalidas1.Size = new System.Drawing.Size(1022, 30);
             this.SIpanelSalidas1.TabIndex = 4;
             // 
             // SIlabel1
@@ -1102,11 +1107,11 @@ namespace Convertec_Bodega_Administracion
             this.SIpanelIngresos2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(243)))), ((int)(((byte)(246)))));
             this.SIpanelIngresos2.Controls.Add(this.SIdataGridViewIngresos);
             this.SIpanelIngresos2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SIpanelIngresos2.Location = new System.Drawing.Point(15, 40);
+            this.SIpanelIngresos2.Location = new System.Drawing.Point(10, 40);
             this.SIpanelIngresos2.Margin = new System.Windows.Forms.Padding(0);
             this.SIpanelIngresos2.Name = "SIpanelIngresos2";
             this.SIpanelIngresos2.Padding = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.SIpanelIngresos2.Size = new System.Drawing.Size(876, 1);
+            this.SIpanelIngresos2.Size = new System.Drawing.Size(1022, 7);
             this.SIpanelIngresos2.TabIndex = 6;
             // 
             // SIpanelIngresos1
@@ -1114,10 +1119,10 @@ namespace Convertec_Bodega_Administracion
             this.SIpanelIngresos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(243)))), ((int)(((byte)(246)))));
             this.SIpanelIngresos1.Controls.Add(this.SIlabel2);
             this.SIpanelIngresos1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.SIpanelIngresos1.Location = new System.Drawing.Point(15, 10);
+            this.SIpanelIngresos1.Location = new System.Drawing.Point(10, 10);
             this.SIpanelIngresos1.Margin = new System.Windows.Forms.Padding(0);
             this.SIpanelIngresos1.Name = "SIpanelIngresos1";
-            this.SIpanelIngresos1.Size = new System.Drawing.Size(876, 30);
+            this.SIpanelIngresos1.Size = new System.Drawing.Size(1022, 30);
             this.SIpanelIngresos1.TabIndex = 5;
             // 
             // SIlabel2
@@ -2133,13 +2138,12 @@ namespace Convertec_Bodega_Administracion
             this.BodyPanelMovElementos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.BodyPanelMovElementos.Controls.Add(this.MVpanelHistProdTable);
             this.BodyPanelMovElementos.Controls.Add(this.MVpanelBuscador);
-            this.BodyPanelMovElementos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BodyPanelMovElementos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BodyPanelMovElementos.ForeColor = System.Drawing.Color.Black;
-            this.BodyPanelMovElementos.Location = new System.Drawing.Point(0, 0);
+            this.BodyPanelMovElementos.Location = new System.Drawing.Point(0, 2);
             this.BodyPanelMovElementos.Margin = new System.Windows.Forms.Padding(0);
             this.BodyPanelMovElementos.Name = "BodyPanelMovElementos";
-            this.BodyPanelMovElementos.Size = new System.Drawing.Size(1042, 634);
+            this.BodyPanelMovElementos.Size = new System.Drawing.Size(1042, 85);
             this.BodyPanelMovElementos.TabIndex = 7;
             // 
             // MVpanelHistProdTable
@@ -2166,8 +2170,8 @@ namespace Convertec_Bodega_Administracion
             this.MVpanelHistProdTable.Panel2.Controls.Add(this.MVpanelTablaMov1);
             this.MVpanelHistProdTable.Panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MVpanelHistProdTable.Panel2.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
-            this.MVpanelHistProdTable.Size = new System.Drawing.Size(1042, 375);
-            this.MVpanelHistProdTable.SplitterDistance = 173;
+            this.MVpanelHistProdTable.Size = new System.Drawing.Size(1042, 0);
+            this.MVpanelHistProdTable.SplitterDistance = 25;
             this.MVpanelHistProdTable.SplitterWidth = 1;
             this.MVpanelHistProdTable.TabIndex = 3;
             this.MVpanelHistProdTable.TabStop = false;
@@ -2180,7 +2184,7 @@ namespace Convertec_Bodega_Administracion
             this.MVpanelTablaElementos2.Margin = new System.Windows.Forms.Padding(0);
             this.MVpanelTablaElementos2.Name = "MVpanelTablaElementos2";
             this.MVpanelTablaElementos2.Padding = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.MVpanelTablaElementos2.Size = new System.Drawing.Size(1012, 123);
+            this.MVpanelTablaElementos2.Size = new System.Drawing.Size(1012, 0);
             this.MVpanelTablaElementos2.TabIndex = 2;
             // 
             // MVdataGridViewProdHist
@@ -2206,7 +2210,7 @@ namespace Convertec_Bodega_Administracion
             this.MVdataGridViewProdHist.RowsDefaultCellStyle = dataGridViewCellStyle16;
             this.MVdataGridViewProdHist.RowTemplate.Height = 24;
             this.MVdataGridViewProdHist.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.MVdataGridViewProdHist.Size = new System.Drawing.Size(1000, 123);
+            this.MVdataGridViewProdHist.Size = new System.Drawing.Size(1000, 0);
             this.MVdataGridViewProdHist.TabIndex = 0;
             this.MVdataGridViewProdHist.TabStop = false;
             this.MVdataGridViewProdHist.SelectionChanged += new System.EventHandler(this.SelectionChangedCargarDatos);
@@ -2241,7 +2245,7 @@ namespace Convertec_Bodega_Administracion
             this.MVpanelTablaMov2.Margin = new System.Windows.Forms.Padding(0);
             this.MVpanelTablaMov2.Name = "MVpanelTablaMov2";
             this.MVpanelTablaMov2.Padding = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.MVpanelTablaMov2.Size = new System.Drawing.Size(1012, 149);
+            this.MVpanelTablaMov2.Size = new System.Drawing.Size(1012, 0);
             this.MVpanelTablaMov2.TabIndex = 1;
             // 
             // MVdataGridViewHistorial
@@ -2265,18 +2269,18 @@ namespace Convertec_Bodega_Administracion
             this.MVdataGridViewHistorial.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
             this.MVdataGridViewHistorial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.MVdataGridViewHistorial.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.fechamovDataGridViewTextBoxColumn2,
-            this.codprodprovDataGridViewTextBoxColumn,
-            this.cantidadDataGridViewTextBoxColumn2,
-            this.otDataGridViewTextBoxColumn2,
-            this.trabajador,
-            this.folioDataGridViewTextBoxColumn,
-            this.documentoDataGridViewTextBoxColumn1,
-            this.nomproveedorDataGridViewTextBoxColumn1,
-            this.nommarcaDataGridViewTextBoxColumn1,
-            this.valorDataGridViewTextBoxColumn1,
-            this.valorunitarioDataGridViewTextBoxColumn1,
-            this.obs_mov2});
+            this.MVdvgFecha,
+            this.MVdvgCodProv,
+            this.MVdvgCant,
+            this.MVdvgOt,
+            this.MVdvgTrabajador,
+            this.MVdvgFolio,
+            this.MVdvgDocumento,
+            this.MVdvgProv,
+            this.MVdvgMarca,
+            this.MVdvgValor,
+            this.MVdvgValorUni,
+            this.MVdvgObsMov});
             this.MVdataGridViewHistorial.Cursor = System.Windows.Forms.Cursors.Hand;
             this.MVdataGridViewHistorial.DataSource = this.historialMovimientoTablaBindingSource;
             this.MVdataGridViewHistorial.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -2290,9 +2294,126 @@ namespace Convertec_Bodega_Administracion
             dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MVdataGridViewHistorial.RowsDefaultCellStyle = dataGridViewCellStyle19;
             this.MVdataGridViewHistorial.RowTemplate.Height = 24;
-            this.MVdataGridViewHistorial.Size = new System.Drawing.Size(1000, 149);
+            this.MVdataGridViewHistorial.Size = new System.Drawing.Size(1000, 0);
             this.MVdataGridViewHistorial.TabIndex = 0;
             this.MVdataGridViewHistorial.TabStop = false;
+            // 
+            // MVdvgFecha
+            // 
+            this.MVdvgFecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.MVdvgFecha.DataPropertyName = "fecha_mov";
+            this.MVdvgFecha.HeaderText = "Fecha";
+            this.MVdvgFecha.MinimumWidth = 6;
+            this.MVdvgFecha.Name = "MVdvgFecha";
+            this.MVdvgFecha.ReadOnly = true;
+            this.MVdvgFecha.Width = 76;
+            // 
+            // MVdvgCodProv
+            // 
+            this.MVdvgCodProv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.MVdvgCodProv.DataPropertyName = "cod_prod_prov";
+            this.MVdvgCodProv.HeaderText = "Código Proveedor";
+            this.MVdvgCodProv.MinimumWidth = 6;
+            this.MVdvgCodProv.Name = "MVdvgCodProv";
+            this.MVdvgCodProv.ReadOnly = true;
+            this.MVdvgCodProv.Width = 146;
+            // 
+            // MVdvgCant
+            // 
+            this.MVdvgCant.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.MVdvgCant.DataPropertyName = "cantidad";
+            this.MVdvgCant.HeaderText = "Cant";
+            this.MVdvgCant.MinimumWidth = 6;
+            this.MVdvgCant.Name = "MVdvgCant";
+            this.MVdvgCant.ReadOnly = true;
+            this.MVdvgCant.Width = 64;
+            // 
+            // MVdvgOt
+            // 
+            this.MVdvgOt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.MVdvgOt.DataPropertyName = "ot";
+            this.MVdvgOt.HeaderText = "OT";
+            this.MVdvgOt.MinimumWidth = 6;
+            this.MVdvgOt.Name = "MVdvgOt";
+            this.MVdvgOt.ReadOnly = true;
+            this.MVdvgOt.Width = 54;
+            // 
+            // MVdvgTrabajador
+            // 
+            this.MVdvgTrabajador.DataPropertyName = "trabajador";
+            this.MVdvgTrabajador.HeaderText = "Trabajador";
+            this.MVdvgTrabajador.Name = "MVdvgTrabajador";
+            this.MVdvgTrabajador.ReadOnly = true;
+            // 
+            // MVdvgFolio
+            // 
+            this.MVdvgFolio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.MVdvgFolio.DataPropertyName = "folio";
+            this.MVdvgFolio.HeaderText = "Folio";
+            this.MVdvgFolio.MinimumWidth = 6;
+            this.MVdvgFolio.Name = "MVdvgFolio";
+            this.MVdvgFolio.ReadOnly = true;
+            this.MVdvgFolio.Width = 68;
+            // 
+            // MVdvgDocumento
+            // 
+            this.MVdvgDocumento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.MVdvgDocumento.DataPropertyName = "documento";
+            this.MVdvgDocumento.HeaderText = "Documento";
+            this.MVdvgDocumento.MinimumWidth = 6;
+            this.MVdvgDocumento.Name = "MVdvgDocumento";
+            this.MVdvgDocumento.ReadOnly = true;
+            this.MVdvgDocumento.Width = 111;
+            // 
+            // MVdvgProv
+            // 
+            this.MVdvgProv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.MVdvgProv.DataPropertyName = "nom_proveedor";
+            this.MVdvgProv.HeaderText = "Proveedor";
+            this.MVdvgProv.MinimumWidth = 6;
+            this.MVdvgProv.Name = "MVdvgProv";
+            this.MVdvgProv.ReadOnly = true;
+            this.MVdvgProv.Width = 106;
+            // 
+            // MVdvgMarca
+            // 
+            this.MVdvgMarca.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.MVdvgMarca.DataPropertyName = "nom_marca";
+            this.MVdvgMarca.HeaderText = "Marca";
+            this.MVdvgMarca.MinimumWidth = 6;
+            this.MVdvgMarca.Name = "MVdvgMarca";
+            this.MVdvgMarca.ReadOnly = true;
+            this.MVdvgMarca.Width = 76;
+            // 
+            // MVdvgValor
+            // 
+            this.MVdvgValor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.MVdvgValor.DataPropertyName = "valor";
+            this.MVdvgValor.HeaderText = "Valor";
+            this.MVdvgValor.MinimumWidth = 6;
+            this.MVdvgValor.Name = "MVdvgValor";
+            this.MVdvgValor.ReadOnly = true;
+            this.MVdvgValor.Width = 70;
+            // 
+            // MVdvgValorUni
+            // 
+            this.MVdvgValorUni.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.MVdvgValorUni.DataPropertyName = "valor_unitario";
+            this.MVdvgValorUni.HeaderText = "Valor Unitario";
+            this.MVdvgValorUni.MinimumWidth = 6;
+            this.MVdvgValorUni.Name = "MVdvgValorUni";
+            this.MVdvgValorUni.ReadOnly = true;
+            this.MVdvgValorUni.Width = 117;
+            // 
+            // MVdvgObsMov
+            // 
+            this.MVdvgObsMov.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.MVdvgObsMov.DataPropertyName = "obs_mov";
+            this.MVdvgObsMov.HeaderText = "Obs";
+            this.MVdvgObsMov.MinimumWidth = 6;
+            this.MVdvgObsMov.Name = "MVdvgObsMov";
+            this.MVdvgObsMov.ReadOnly = true;
+            this.MVdvgObsMov.Width = 61;
             // 
             // historialMovimientoTablaBindingSource
             // 
@@ -2505,22 +2626,57 @@ namespace Convertec_Bodega_Administracion
             // 
             // BodyPanelSalidaIngreso
             // 
-            this.BodyPanelSalidaIngreso.Controls.Add(this.splitContainerBodyPrincipal);
+            this.BodyPanelSalidaIngreso.Controls.Add(this.SIpanelSplit);
+            this.BodyPanelSalidaIngreso.Controls.Add(this.SIpanelHeader);
             this.BodyPanelSalidaIngreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BodyPanelSalidaIngreso.Location = new System.Drawing.Point(5, 496);
+            this.BodyPanelSalidaIngreso.Location = new System.Drawing.Point(0, 408);
             this.BodyPanelSalidaIngreso.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BodyPanelSalidaIngreso.Name = "BodyPanelSalidaIngreso";
-            this.BodyPanelSalidaIngreso.Size = new System.Drawing.Size(906, 87);
+            this.BodyPanelSalidaIngreso.Size = new System.Drawing.Size(1042, 142);
             this.BodyPanelSalidaIngreso.TabIndex = 8;
             this.BodyPanelSalidaIngreso.Visible = false;
             // 
+            // SIpanelSplit
+            // 
+            this.SIpanelSplit.Controls.Add(this.splitContainerBodyPrincipal);
+            this.SIpanelSplit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SIpanelSplit.Location = new System.Drawing.Point(0, 32);
+            this.SIpanelSplit.Name = "SIpanelSplit";
+            this.SIpanelSplit.Size = new System.Drawing.Size(1042, 110);
+            this.SIpanelSplit.TabIndex = 8;
+            // 
+            // SIpanelHeader
+            // 
+            this.SIpanelHeader.Controls.Add(this.SIdateTimePicker);
+            this.SIpanelHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.SIpanelHeader.Location = new System.Drawing.Point(0, 0);
+            this.SIpanelHeader.Margin = new System.Windows.Forms.Padding(0);
+            this.SIpanelHeader.Name = "SIpanelHeader";
+            this.SIpanelHeader.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
+            this.SIpanelHeader.Size = new System.Drawing.Size(1042, 32);
+            this.SIpanelHeader.TabIndex = 7;
+            // 
+            // SIdateTimePicker
+            // 
+            this.SIdateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.SIdateTimePicker.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SIdateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.SIdateTimePicker.Location = new System.Drawing.Point(905, 5);
+            this.SIdateTimePicker.Margin = new System.Windows.Forms.Padding(0);
+            this.SIdateTimePicker.MinDate = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
+            this.SIdateTimePicker.Name = "SIdateTimePicker";
+            this.SIdateTimePicker.Size = new System.Drawing.Size(127, 22);
+            this.SIdateTimePicker.TabIndex = 6;
+            this.SIdateTimePicker.Value = new System.DateTime(2022, 2, 23, 15, 30, 18, 0);
+            this.SIdateTimePicker.ValueChanged += new System.EventHandler(this.SIdateTimePicker_ValueChanged);
+            // 
             // BodypanelGeneral
             // 
-            this.BodypanelGeneral.Controls.Add(this.BodyPanelMovElementos);
             this.BodypanelGeneral.Controls.Add(this.BodyPanelCrearModifElemento);
+            this.BodypanelGeneral.Controls.Add(this.BodyPanelSalidaIngreso);
+            this.BodypanelGeneral.Controls.Add(this.BodyPanelMovElementos);
             this.BodypanelGeneral.Controls.Add(this.BodyPanelIngresoElementos);
             this.BodypanelGeneral.Controls.Add(this.BodyPanelInformes);
-            this.BodypanelGeneral.Controls.Add(this.BodyPanelSalidaIngreso);
             this.BodypanelGeneral.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BodypanelGeneral.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BodypanelGeneral.Location = new System.Drawing.Point(212, 95);
@@ -2532,10 +2688,11 @@ namespace Convertec_Bodega_Administracion
             // BodyPanelCrearModifElemento
             // 
             this.BodyPanelCrearModifElemento.Controls.Add(this.tabControl1);
-            this.BodyPanelCrearModifElemento.Location = new System.Drawing.Point(0, 226);
+            this.BodyPanelCrearModifElemento.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BodyPanelCrearModifElemento.Location = new System.Drawing.Point(0, 0);
             this.BodyPanelCrearModifElemento.Margin = new System.Windows.Forms.Padding(0);
             this.BodyPanelCrearModifElemento.Name = "BodyPanelCrearModifElemento";
-            this.BodyPanelCrearModifElemento.Size = new System.Drawing.Size(1042, 96);
+            this.BodyPanelCrearModifElemento.Size = new System.Drawing.Size(1042, 634);
             this.BodyPanelCrearModifElemento.TabIndex = 10;
             this.BodyPanelCrearModifElemento.Visible = false;
             // 
@@ -2548,7 +2705,7 @@ namespace Convertec_Bodega_Administracion
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1042, 96);
+            this.tabControl1.Size = new System.Drawing.Size(1042, 634);
             this.tabControl1.TabIndex = 6;
             // 
             // CMEtabCrear
@@ -2559,7 +2716,7 @@ namespace Convertec_Bodega_Administracion
             this.CMEtabCrear.Location = new System.Drawing.Point(4, 25);
             this.CMEtabCrear.Margin = new System.Windows.Forms.Padding(0);
             this.CMEtabCrear.Name = "CMEtabCrear";
-            this.CMEtabCrear.Size = new System.Drawing.Size(1034, 67);
+            this.CMEtabCrear.Size = new System.Drawing.Size(1034, 605);
             this.CMEtabCrear.TabIndex = 0;
             this.CMEtabCrear.Text = "Crear Elemento";
             // 
@@ -2603,7 +2760,7 @@ namespace Convertec_Bodega_Administracion
             this.CEpanelL.Margin = new System.Windows.Forms.Padding(0);
             this.CEpanelL.Name = "CEpanelL";
             this.CEpanelL.Padding = new System.Windows.Forms.Padding(10);
-            this.CEpanelL.Size = new System.Drawing.Size(649, 67);
+            this.CEpanelL.Size = new System.Drawing.Size(649, 605);
             this.CEpanelL.TabIndex = 2;
             // 
             // CEtxtDocumento
@@ -3035,7 +3192,7 @@ namespace Convertec_Bodega_Administracion
             this.CEpanelR.Location = new System.Drawing.Point(649, 0);
             this.CEpanelR.Margin = new System.Windows.Forms.Padding(0);
             this.CEpanelR.Name = "CEpanelR";
-            this.CEpanelR.Size = new System.Drawing.Size(385, 67);
+            this.CEpanelR.Size = new System.Drawing.Size(385, 605);
             this.CEpanelR.TabIndex = 3;
             // 
             // CEbtnCancelar
@@ -4579,123 +4736,6 @@ namespace Convertec_Bodega_Administracion
             // 
             this.idDescripcionElementoBindingSource.DataSource = typeof(Convertec_Bodega_Administracion.Model.IdDescripcionElemento);
             // 
-            // fechamovDataGridViewTextBoxColumn2
-            // 
-            this.fechamovDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.fechamovDataGridViewTextBoxColumn2.DataPropertyName = "fecha_mov";
-            this.fechamovDataGridViewTextBoxColumn2.HeaderText = "Fecha";
-            this.fechamovDataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.fechamovDataGridViewTextBoxColumn2.Name = "fechamovDataGridViewTextBoxColumn2";
-            this.fechamovDataGridViewTextBoxColumn2.ReadOnly = true;
-            this.fechamovDataGridViewTextBoxColumn2.Width = 76;
-            // 
-            // codprodprovDataGridViewTextBoxColumn
-            // 
-            this.codprodprovDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.codprodprovDataGridViewTextBoxColumn.DataPropertyName = "cod_prod_prov";
-            this.codprodprovDataGridViewTextBoxColumn.HeaderText = "Código Proveedor";
-            this.codprodprovDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.codprodprovDataGridViewTextBoxColumn.Name = "codprodprovDataGridViewTextBoxColumn";
-            this.codprodprovDataGridViewTextBoxColumn.ReadOnly = true;
-            this.codprodprovDataGridViewTextBoxColumn.Width = 146;
-            // 
-            // cantidadDataGridViewTextBoxColumn2
-            // 
-            this.cantidadDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.cantidadDataGridViewTextBoxColumn2.DataPropertyName = "cantidad";
-            this.cantidadDataGridViewTextBoxColumn2.HeaderText = "Cant";
-            this.cantidadDataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.cantidadDataGridViewTextBoxColumn2.Name = "cantidadDataGridViewTextBoxColumn2";
-            this.cantidadDataGridViewTextBoxColumn2.ReadOnly = true;
-            this.cantidadDataGridViewTextBoxColumn2.Width = 64;
-            // 
-            // otDataGridViewTextBoxColumn2
-            // 
-            this.otDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.otDataGridViewTextBoxColumn2.DataPropertyName = "ot";
-            this.otDataGridViewTextBoxColumn2.HeaderText = "OT";
-            this.otDataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.otDataGridViewTextBoxColumn2.Name = "otDataGridViewTextBoxColumn2";
-            this.otDataGridViewTextBoxColumn2.ReadOnly = true;
-            this.otDataGridViewTextBoxColumn2.Width = 54;
-            // 
-            // trabajador
-            // 
-            this.trabajador.DataPropertyName = "trabajador";
-            this.trabajador.HeaderText = "Trabajador";
-            this.trabajador.Name = "trabajador";
-            this.trabajador.ReadOnly = true;
-            // 
-            // folioDataGridViewTextBoxColumn
-            // 
-            this.folioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.folioDataGridViewTextBoxColumn.DataPropertyName = "folio";
-            this.folioDataGridViewTextBoxColumn.HeaderText = "Folio";
-            this.folioDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.folioDataGridViewTextBoxColumn.Name = "folioDataGridViewTextBoxColumn";
-            this.folioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.folioDataGridViewTextBoxColumn.Width = 68;
-            // 
-            // documentoDataGridViewTextBoxColumn1
-            // 
-            this.documentoDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.documentoDataGridViewTextBoxColumn1.DataPropertyName = "documento";
-            this.documentoDataGridViewTextBoxColumn1.HeaderText = "Documento";
-            this.documentoDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.documentoDataGridViewTextBoxColumn1.Name = "documentoDataGridViewTextBoxColumn1";
-            this.documentoDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.documentoDataGridViewTextBoxColumn1.Width = 111;
-            // 
-            // nomproveedorDataGridViewTextBoxColumn1
-            // 
-            this.nomproveedorDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.nomproveedorDataGridViewTextBoxColumn1.DataPropertyName = "nom_proveedor";
-            this.nomproveedorDataGridViewTextBoxColumn1.HeaderText = "Proveedor";
-            this.nomproveedorDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.nomproveedorDataGridViewTextBoxColumn1.Name = "nomproveedorDataGridViewTextBoxColumn1";
-            this.nomproveedorDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.nomproveedorDataGridViewTextBoxColumn1.Width = 106;
-            // 
-            // nommarcaDataGridViewTextBoxColumn1
-            // 
-            this.nommarcaDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.nommarcaDataGridViewTextBoxColumn1.DataPropertyName = "nom_marca";
-            this.nommarcaDataGridViewTextBoxColumn1.HeaderText = "Marca";
-            this.nommarcaDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.nommarcaDataGridViewTextBoxColumn1.Name = "nommarcaDataGridViewTextBoxColumn1";
-            this.nommarcaDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.nommarcaDataGridViewTextBoxColumn1.Width = 76;
-            // 
-            // valorDataGridViewTextBoxColumn1
-            // 
-            this.valorDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.valorDataGridViewTextBoxColumn1.DataPropertyName = "valor";
-            this.valorDataGridViewTextBoxColumn1.HeaderText = "Valor";
-            this.valorDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.valorDataGridViewTextBoxColumn1.Name = "valorDataGridViewTextBoxColumn1";
-            this.valorDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.valorDataGridViewTextBoxColumn1.Width = 70;
-            // 
-            // valorunitarioDataGridViewTextBoxColumn1
-            // 
-            this.valorunitarioDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.valorunitarioDataGridViewTextBoxColumn1.DataPropertyName = "valor_unitario";
-            this.valorunitarioDataGridViewTextBoxColumn1.HeaderText = "Valor Unitario";
-            this.valorunitarioDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.valorunitarioDataGridViewTextBoxColumn1.Name = "valorunitarioDataGridViewTextBoxColumn1";
-            this.valorunitarioDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.valorunitarioDataGridViewTextBoxColumn1.Width = 117;
-            // 
-            // obs_mov2
-            // 
-            this.obs_mov2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.obs_mov2.DataPropertyName = "obs_mov";
-            this.obs_mov2.HeaderText = "Obs";
-            this.obs_mov2.MinimumWidth = 6;
-            this.obs_mov2.Name = "obs_mov2";
-            this.obs_mov2.ReadOnly = true;
-            this.obs_mov2.Width = 61;
-            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
@@ -4777,6 +4817,8 @@ namespace Convertec_Bodega_Administracion
             this.MVpanelImage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.MVpictureBoxProducto)).EndInit();
             this.BodyPanelSalidaIngreso.ResumeLayout(false);
+            this.SIpanelSplit.ResumeLayout(false);
+            this.SIpanelHeader.ResumeLayout(false);
             this.BodypanelGeneral.ResumeLayout(false);
             this.BodyPanelCrearModifElemento.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
@@ -4834,26 +4876,6 @@ namespace Convertec_Bodega_Administracion
         private System.Windows.Forms.BindingSource movIngresoDataGridDTOBindingSource;
         private System.Windows.Forms.SplitContainer splitContainerBodyPrincipal;
         private System.Windows.Forms.Label Hlabel1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codbodegaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cantidadDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechamovDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn otDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn apellidosDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn obsmovDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codbodegaDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cantidadDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn documentoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn valorDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn valorunitarioDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nomproveedorDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nommarcaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechamovDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn parteplanoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn otDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn obsmovDataGridViewTextBoxColumn1;
         private System.Windows.Forms.Panel SidebarPanelMenuButton;
         private System.Windows.Forms.Panel SidebarPanelHeader;
         private System.Windows.Forms.Panel BodyPanelIngresoElementos;
@@ -5117,18 +5139,41 @@ namespace Convertec_Bodega_Administracion
         private FontAwesome.Sharp.IconButton CMbtnEditarImg;
         private System.Windows.Forms.Panel CMpanelImagen;
         private System.Windows.Forms.PictureBox CMpictureBoxElem;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechamovDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codprodprovDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cantidadDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn otDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn trabajador;
-        private System.Windows.Forms.DataGridViewTextBoxColumn folioDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn documentoDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nomproveedorDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nommarcaDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn valorDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn valorunitarioDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn obs_mov2;
+        private System.Windows.Forms.Panel SIpanelHeader;
+        private System.Windows.Forms.DateTimePicker SIdateTimePicker;
+        private System.Windows.Forms.Panel SIpanelSplit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SdvgFecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SdvgCodBodega;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SdvgDescripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SdvgCant;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SdvgOt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SdvgNombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SdvgApellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SdvgObs;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdvgFecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdvgCodBodega;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdvgDescripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdvgOt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdvgCant;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdvgValor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdvgValorUni;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdvgDocumento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdvgProv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdvgMarca;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdvgPartePlano;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdvgObs;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MVdvgFecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MVdvgCodProv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MVdvgCant;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MVdvgOt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MVdvgTrabajador;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MVdvgFolio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MVdvgDocumento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MVdvgProv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MVdvgMarca;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MVdvgValor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MVdvgValorUni;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MVdvgObsMov;
     }
 }
 

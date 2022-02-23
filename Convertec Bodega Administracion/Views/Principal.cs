@@ -19,7 +19,6 @@ namespace Convertec_Bodega_Administracion
         private Panel panelActive;
         private FontAwesome.Sharp.IconButton btnActive;
         private bool IEUnidad;
-        private int anno;
 
         public FormPrincipal()
         {
@@ -42,7 +41,6 @@ namespace Convertec_Bodega_Administracion
             SetDefaultPanelsAndButtons(panelActive, btnActive);
             PopulateProdHistTable();
             SetVisible(BodyPanelMovElementos, SidebarBtnMovElementos);
-            anno = MVdateTimePickerFiltro.Value.Year;
         }
 
         //Metodos Generales
@@ -274,6 +272,7 @@ namespace Convertec_Bodega_Administracion
                             + "or nom_proveedor LIKE '%" + MVtxtFiltroHist.Text + "%'"
                             + "or nom_marca LIKE '%" + MVtxtFiltroHist.Text + "%'"
                             + "or stock LIKE '%" + MVtxtFiltroHist.Text + "%'"
+                            + "or stock_min LIKE '%" + MVtxtFiltroHist.Text + "%'"
                             + "or valor LIKE '%" + MVtxtFiltroHist.Text + "%'"
                             + "or parte_plano LIKE '%" + MVtxtFiltroHist.Text + "%')"
                             + "and ots LIKE '%" + MVtxtOtFilter.Text + "%'";
@@ -308,7 +307,7 @@ namespace Convertec_Bodega_Administracion
                     MVdataGridViewHistorial.DataSource = MovimientoBusiness.GetHistorial(id, anno);
                     foreach (DataGridViewRow row in MVdataGridViewHistorial.Rows)
                     {
-                        if (row.Cells[5].Value != null)
+                        if (row.Cells["MVdvgFolio"].Value == null)
                         {
                             row.DefaultCellStyle.BackColor = Color.FromArgb(138, 183, 30);
                         }
@@ -338,12 +337,9 @@ namespace Convertec_Bodega_Administracion
 
         private void MVdateTimePickerFiltro_ValueChanged(object sender, EventArgs e)
         {
-            if(this.anno != MVdateTimePickerFiltro.Value.Year)
-            {
-                this.anno = MVdateTimePickerFiltro.Value.Year;
-                CargarDatos(this.anno);
-            }
-            
+            CargarDatos(MVdateTimePickerFiltro.Value.Year);
+
+
         }
 
         #endregion
@@ -356,8 +352,8 @@ namespace Convertec_Bodega_Administracion
         {
             if (CheckDBConnection(false, true))
             {
-                SIdataGridViewSalidas.DataSource = MovimientoBusiness.GetMovimientosSalidas();
-                SIdataGridViewIngresos.DataSource = MovimientoBusiness.GetMovimientosIngresos();
+                SIdataGridViewSalidas.DataSource = MovimientoBusiness.GetMovimientosSalidas(SIdateTimePicker.Value);
+                SIdataGridViewIngresos.DataSource = MovimientoBusiness.GetMovimientosIngresos(SIdateTimePicker.Value);
             }
         }
 
@@ -369,6 +365,11 @@ namespace Convertec_Bodega_Administracion
                 SetDefaultPanelsAndButtons(panelActive, btnActive);
                 SetVisible(BodyPanelSalidaIngreso, SidebarBtnSalidaIngreso);
             }
+        }
+
+        private void SIdateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            PopulateDataSalidaIngreso();
         }
 
         #endregion
